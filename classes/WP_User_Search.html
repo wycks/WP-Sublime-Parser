@@ -1,0 +1,623 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_User_Search</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_WP_User_Search" title="WP_User_Search :: PHP4 Constructor - Sets up the object properties."><span class="description">PHP4 Constructor - Sets up the object properties.</span><pre>WP_User_Search()</pre></a></li>
+<li class="method public "><a href="#method_do_paging" title="do_paging :: {@internal Missing Short Description}}"><span class="description">{@internal Missing Short Description}}</span><pre>do_paging()</pre></a></li>
+<li class="method public "><a href="#method_get_results" title="get_results :: {@internal Missing Short Description}}"><span class="description">{@internal Missing Short Description}}</span><pre>get_results()</pre></a></li>
+<li class="method public "><a href="#method_is_search" title="is_search :: Whether there are search terms."><span class="description">Whether there are search terms.</span><pre>is_search()</pre></a></li>
+<li class="method public "><a href="#method_page_links" title="page_links :: Displaying paging text."><span class="description">Displaying paging text.</span><pre>page_links()</pre></a></li>
+<li class="method public "><a href="#method_prepare_query" title="prepare_query :: {@internal Missing Short Description}}"><span class="description">{@internal Missing Short Description}}</span><pre>prepare_query()</pre></a></li>
+<li class="method public "><a href="#method_prepare_vars_for_template_usage" title="prepare_vars_for_template_usage :: {@internal Missing Short Description}}"><span class="description">{@internal Missing Short Description}}</span><pre>prepare_vars_for_template_usage()</pre></a></li>
+<li class="method public "><a href="#method_query" title="query :: {@internal Missing Short Description}}"><span class="description">{@internal Missing Short Description}}</span><pre>query()</pre></a></li>
+<li class="method public "><a href="#method_results_are_paged" title="results_are_paged :: Whether paging is enabled."><span class="description">Whether paging is enabled.</span><pre>results_are_paged()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_first_user" title="$first_user :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$first_user</pre></a></li>
+<li class="property public "><a href="#property_last_user" title="$last_user :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$last_user</pre></a></li>
+<li class="property public "><a href="#property_page" title="$page :: Page number."><span class="description">Page number.</span><pre>$page</pre></a></li>
+<li class="property public "><a href="#property_paging_text" title="$paging_text :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$paging_text</pre></a></li>
+<li class="property public "><a href="#property_query_from" title="$query_from :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$query_from</pre></a></li>
+<li class="property public "><a href="#property_query_limit" title="$query_limit :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$query_limit</pre></a></li>
+<li class="property public "><a href="#property_query_orderby" title="$query_orderby :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$query_orderby</pre></a></li>
+<li class="property public "><a href="#property_query_where" title="$query_where :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$query_where</pre></a></li>
+<li class="property public "><a href="#property_raw_page" title="$raw_page :: Raw page number."><span class="description">Raw page number.</span><pre>$raw_page</pre></a></li>
+<li class="property public "><a href="#property_results" title="$results :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$results</pre></a></li>
+<li class="property public "><a href="#property_role" title="$role :: Role name that users have."><span class="description">Role name that users have.</span><pre>$role</pre></a></li>
+<li class="property public "><a href="#property_search_errors" title="$search_errors :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$search_errors</pre></a></li>
+<li class="property public "><a href="#property_search_term" title="$search_term :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$search_term</pre></a></li>
+<li class="property public "><a href="#property_too_many_total_users" title="$too_many_total_users :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$too_many_total_users</pre></a></li>
+<li class="property public "><a href="#property_total_users_for_query" title="$total_users_for_query :: {@internal Missing Description}}"><span class="description">{@internal Missing Description}}</span><pre>$total_users_for_query</pre></a></li>
+<li class="property public "><a href="#property_users_per_page" title="$users_per_page :: Amount of users to display per page."><span class="description">Amount of users to display per page.</span><pre>$users_per_page</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_User_Search"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_User_Search.html">WP_User_Search</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">WordPress User Search class.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_WP_User_Search"></a><div class="element clickable method public method_WP_User_Search" data-toggle="collapse" data-target=".method_WP_User_Search .collapse">
+<h2>PHP4 Constructor - Sets up the object properties.</h2>
+<pre>WP_User_Search(string $search_term, int $page, string $role) : <a href="../classes/WP_User_Search.html">\WP_User_Search</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$search_term</h4>
+<code>string</code><p>Search terms string.</p></div>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>int</code><p>Optional. Page ID.</p></div>
+<div class="subelement argument">
+<h4>$role</h4>
+<code>string</code><p>Role name.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/WP_User_Search.html">\WP_User_Search</a></code></div>
+</div></div>
+</div>
+<a id="method_do_paging"></a><div class="element clickable method public method_do_paging" data-toggle="collapse" data-target=".method_do_paging .collapse">
+<h2>{@internal Missing Short Description}}</h2>
+<pre>do_paging() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p></p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_get_results"></a><div class="element clickable method public method_get_results" data-toggle="collapse" data-target=".method_get_results .collapse">
+<h2>{@internal Missing Short Description}}</h2>
+<pre>get_results() : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p></p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="method_is_search"></a><div class="element clickable method public method_is_search" data-toggle="collapse" data-target=".method_is_search .collapse">
+<h2>Whether there are search terms.</h2>
+<pre>is_search() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_page_links"></a><div class="element clickable method public method_page_links" data-toggle="collapse" data-target=".method_page_links .collapse">
+<h2>Displaying paging text.</h2>
+<pre>page_links() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\do_paging()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_prepare_query"></a><div class="element clickable method public method_prepare_query" data-toggle="collapse" data-target=".method_prepare_query .collapse">
+<h2>{@internal Missing Short Description}}</h2>
+<pre>prepare_query() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p></p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_prepare_vars_for_template_usage"></a><div class="element clickable method public method_prepare_vars_for_template_usage" data-toggle="collapse" data-target=".method_prepare_vars_for_template_usage .collapse">
+<h2>{@internal Missing Short Description}}</h2>
+<pre>prepare_vars_for_template_usage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p></p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_query"></a><div class="element clickable method public method_query" data-toggle="collapse" data-target=".method_query .collapse">
+<h2>{@internal Missing Short Description}}</h2>
+<pre>query() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p></p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_results_are_paged"></a><div class="element clickable method public method_results_are_paged" data-toggle="collapse" data-target=".method_results_are_paged .collapse">
+<h2>Whether paging is enabled.</h2>
+<pre>results_are_paged() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\do_paging()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_first_user"> </a><div class="element clickable property public property_first_user" data-toggle="collapse" data-target=".property_first_user .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$first_user : \unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_last_user"> </a><div class="element clickable property public property_last_user" data-toggle="collapse" data-target=".property_last_user .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$last_user : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_page"> </a><div class="element clickable property public property_page" data-toggle="collapse" data-target=".property_page .collapse">
+<h2>Page number.</h2>
+<pre>$page : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_paging_text"> </a><div class="element clickable property public property_paging_text" data-toggle="collapse" data-target=".property_paging_text .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$paging_text : \unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_query_from"> </a><div class="element clickable property public property_query_from" data-toggle="collapse" data-target=".property_query_from .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$query_from : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_query_limit"> </a><div class="element clickable property public property_query_limit" data-toggle="collapse" data-target=".property_query_limit .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$query_limit : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_query_orderby"> </a><div class="element clickable property public property_query_orderby" data-toggle="collapse" data-target=".property_query_orderby .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$query_orderby : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_query_where"> </a><div class="element clickable property public property_query_where" data-toggle="collapse" data-target=".property_query_where .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$query_where : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_raw_page"> </a><div class="element clickable property public property_raw_page" data-toggle="collapse" data-target=".property_raw_page .collapse">
+<h2>Raw page number.</h2>
+<pre>$raw_page : int | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_results"> </a><div class="element clickable property public property_results" data-toggle="collapse" data-target=".property_results .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$results : \unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_role"> </a><div class="element clickable property public property_role" data-toggle="collapse" data-target=".property_role .collapse">
+<h2>Role name that users have.</h2>
+<pre>$role : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_search_errors"> </a><div class="element clickable property public property_search_errors" data-toggle="collapse" data-target=".property_search_errors .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$search_errors : \unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_search_term"> </a><div class="element clickable property public property_search_term" data-toggle="collapse" data-target=".property_search_term .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$search_term : \unknown_type</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_too_many_total_users"> </a><div class="element clickable property public property_too_many_total_users" data-toggle="collapse" data-target=".property_too_many_total_users .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$too_many_total_users : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_total_users_for_query"> </a><div class="element clickable property public property_total_users_for_query" data-toggle="collapse" data-target=".property_total_users_for_query .collapse">
+<h2>{@internal Missing Description}}</h2>
+<pre>$total_users_for_query : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_users_per_page"> </a><div class="element clickable property public property_users_per_page" data-toggle="collapse" data-target=".property_users_per_page .collapse">
+<h2>Amount of users to display per page.</h2>
+<pre>$users_per_page : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:02-05:00.<br></footer></div>
+</div>
+</body>
+</html>

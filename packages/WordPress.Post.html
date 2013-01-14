@@ -1,0 +1,4422 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Post</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.Post.html" title="Post"><i class="icon-folder-open"></i>Post</a><ul class="nav nav-list nav-packages"><li>
+<a href="../packages/WordPress.Post.Revisions.html" title="Revisions"><i class="icon-folder-open"></i>Revisions</a><ul class="nav nav-list nav-packages"></ul>
+</li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function__add_post_type_submenus" title="_add_post_type_submenus :: Adds submenus for post types."><span class="description">Adds submenus for post types.</span><pre>_add_post_type_submenus</pre></a></li>
+<li class="function  "><a href="#function__future_post_hook" title="_future_post_hook :: Hook used to schedule publication for a post marked for the future."><span class="description">Hook used to schedule publication for a post marked for the future.</span><pre>_future_post_hook</pre></a></li>
+<li class="function  "><a href="#function__get_custom_object_labels" title="_get_custom_object_labels :: Builds an object with custom-something object (post type, taxonomy) labels out of a custom-something object"><span class="description">Builds an object with custom-something object (post type, taxonomy) labels out of a custom-something object</span><pre>_get_custom_object_labels</pre></a></li>
+<li class="function  "><a href="#function__get_last_post_time" title="_get_last_post_time :: Retrieve latest post date data based on timezone."><span class="description">Retrieve latest post date data based on timezone.</span><pre>_get_last_post_time</pre></a></li>
+<li class="function  "><a href="#function__get_post_ancestors" title="_get_post_ancestors :: Retrieve post ancestors and append to post ancestors property."><span class="description">Retrieve post ancestors and append to post ancestors property.</span><pre>_get_post_ancestors</pre></a></li>
+<li class="function  "><a href="#function__page_traverse_name" title="_page_traverse_name :: function to traverse and return all the nested children post names of a root page."><span class="description">function to traverse and return all the nested children post names of a root page.</span><pre>_page_traverse_name</pre></a></li>
+<li class="function  "><a href="#function__post_format_get_term" title="_post_format_get_term :: Remove the post format prefix from the name property of the term object created by get_term()."><span class="description">Remove the post format prefix from the name property of the term object created by get_term().</span><pre>_post_format_get_term</pre></a></li>
+<li class="function  "><a href="#function__post_format_get_terms" title="_post_format_get_terms :: Remove the post format prefix from the name property of the term objects created by get_terms()."><span class="description">Remove the post format prefix from the name property of the term objects created by get_terms().</span><pre>_post_format_get_terms</pre></a></li>
+<li class="function  "><a href="#function__post_format_link" title="_post_format_link :: Filters the post format term link to remove the format prefix."><span class="description">Filters the post format term link to remove the format prefix.</span><pre>_post_format_link</pre></a></li>
+<li class="function  "><a href="#function__post_format_request" title="_post_format_request :: Filters the request to allow for the format prefix."><span class="description">Filters the request to allow for the format prefix.</span><pre>_post_format_request</pre></a></li>
+<li class="function  "><a href="#function__post_format_wp_get_object_terms" title="_post_format_wp_get_object_terms :: Remove the post format prefix from the name property of the term objects created by wp_get_object_terms()."><span class="description">Remove the post format prefix from the name property of the term objects created by wp_get_object_terms().</span><pre>_post_format_wp_get_object_terms</pre></a></li>
+<li class="function  "><a href="#function__post_type_meta_capabilities" title="_post_type_meta_capabilities :: Stores or returns a list of post type meta caps for map_meta_cap()."><span class="description">Stores or returns a list of post type meta caps for map_meta_cap().</span><pre>_post_type_meta_capabilities</pre></a></li>
+<li class="function  "><a href="#function__prime_post_caches" title="_prime_post_caches :: Adds any posts from the given ids to the cache that do not already exist in cache"><span class="description">Adds any posts from the given ids to the cache that do not already exist in cache</span><pre>_prime_post_caches</pre></a></li>
+<li class="function  "><a href="#function__publish_post_hook" title="_publish_post_hook :: Hook to schedule pings and enclosures when a post is published."><span class="description">Hook to schedule pings and enclosures when a post is published.</span><pre>_publish_post_hook</pre></a></li>
+<li class="function  "><a href="#function__save_post_hook" title="_save_post_hook :: Hook used to prevent page/post cache from staying dirty when a post is saved."><span class="description">Hook used to prevent page/post cache from staying dirty when a post is saved.</span><pre>_save_post_hook</pre></a></li>
+<li class="function  "><a href="#function__set_preview" title="_set_preview :: "><span class="description">_set_preview()
+        </span><pre>_set_preview</pre></a></li>
+<li class="function  "><a href="#function__show_post_preview" title="_show_post_preview :: "><span class="description">_show_post_preview()
+        </span><pre>_show_post_preview</pre></a></li>
+<li class="function  "><a href="#function__transition_post_status" title="_transition_post_status :: Hook for managing future post transitions to published."><span class="description">Hook for managing future post transitions to published.</span><pre>_transition_post_status</pre></a></li>
+<li class="function  "><a href="#function__update_term_count_on_transition_post_status" title="_update_term_count_on_transition_post_status :: Update the custom taxonomies' term counts when a post's status is changed."><span class="description">Update the custom taxonomies' term counts when a post's status is changed.</span><pre>_update_term_count_on_transition_post_status</pre></a></li>
+<li class="function  "><a href="#function__wp_relative_upload_path" title="_wp_relative_upload_path :: Return relative path to an uploaded file."><span class="description">Return relative path to an uploaded file.</span><pre>_wp_relative_upload_path</pre></a></li>
+<li class="function  "><a href="#function_add_ping" title="add_ping :: Add a URL to those already pung."><span class="description">Add a URL to those already pung.</span><pre>add_ping</pre></a></li>
+<li class="function  "><a href="#function_add_post_meta" title="add_post_meta :: Add meta data field to a post."><span class="description">Add meta data field to a post.</span><pre>add_post_meta</pre></a></li>
+<li class="function  "><a href="#function_add_post_type_support" title="add_post_type_support :: Register support of certain features for a post type."><span class="description">Register support of certain features for a post type.</span><pre>add_post_type_support</pre></a></li>
+<li class="function  "><a href="#function_check_and_publish_future_post" title="check_and_publish_future_post :: Publish future post and make sure post ID has future post status."><span class="description">Publish future post and make sure post ID has future post status.</span><pre>check_and_publish_future_post</pre></a></li>
+<li class="function  "><a href="#function_create_initial_post_types" title="create_initial_post_types :: Creates the initial post types when 'init' action is fired."><span class="description">Creates the initial post types when 'init' action is fired.</span><pre>create_initial_post_types</pre></a></li>
+<li class="function  "><a href="#function_delete_post_meta" title="delete_post_meta :: Remove metadata matching criteria from a post."><span class="description">Remove metadata matching criteria from a post.</span><pre>delete_post_meta</pre></a></li>
+<li class="function  "><a href="#function_delete_post_meta_by_key" title="delete_post_meta_by_key :: Delete everything from post meta matching meta key."><span class="description">Delete everything from post meta matching meta key.</span><pre>delete_post_meta_by_key</pre></a></li>
+<li class="function  "><a href="#function_delete_post_thumbnail" title="delete_post_thumbnail :: Removes a post thumbnail."><span class="description">Removes a post thumbnail.</span><pre>delete_post_thumbnail</pre></a></li>
+<li class="function  "><a href="#function_get_all_page_ids" title="get_all_page_ids :: Get a list of page IDs."><span class="description">Get a list of page IDs.</span><pre>get_all_page_ids</pre></a></li>
+<li class="function  "><a href="#function_get_all_post_type_supports" title="get_all_post_type_supports :: Get all the post type features"><span class="description">Get all the post type features</span><pre>get_all_post_type_supports</pre></a></li>
+<li class="function  "><a href="#function_get_attached_file" title="get_attached_file :: Retrieve attached file path based on attachment ID."><span class="description">Retrieve attached file path based on attachment ID.</span><pre>get_attached_file</pre></a></li>
+<li class="function  "><a href="#function_get_comment_statuses" title="get_comment_statuses :: Retrieve all of the WordPress supported comment statuses."><span class="description">Retrieve all of the WordPress supported comment statuses.</span><pre>get_comment_statuses</pre></a></li>
+<li class="function  "><a href="#function_get_enclosed" title="get_enclosed :: Retrieve enclosures already enclosed for a post."><span class="description">Retrieve enclosures already enclosed for a post.</span><pre>get_enclosed</pre></a></li>
+<li class="function  "><a href="#function_get_extended" title="get_extended :: Get extended entry info (&lt;!--more--&gt;)."><span class="description">Get extended entry info (&lt;!--more--&gt;).</span><pre>get_extended</pre></a></li>
+<li class="function  "><a href="#function_get_lastpostdate" title="get_lastpostdate :: Retrieve the date that the last post was published."><span class="description">Retrieve the date that the last post was published.</span><pre>get_lastpostdate</pre></a></li>
+<li class="function  "><a href="#function_get_lastpostmodified" title="get_lastpostmodified :: Retrieve last post modified date depending on timezone."><span class="description">Retrieve last post modified date depending on timezone.</span><pre>get_lastpostmodified</pre></a></li>
+<li class="function  "><a href="#function_get_page" title="get_page :: Retrieves page data given a page ID or page object."><span class="description">Retrieves page data given a page ID or page object.</span><pre>get_page</pre></a></li>
+<li class="function  "><a href="#function_get_page_by_path" title="get_page_by_path :: Retrieves a page given its path."><span class="description">Retrieves a page given its path.</span><pre>get_page_by_path</pre></a></li>
+<li class="function  "><a href="#function_get_page_by_title" title="get_page_by_title :: Retrieve a page given its title."><span class="description">Retrieve a page given its title.</span><pre>get_page_by_title</pre></a></li>
+<li class="function  "><a href="#function_get_page_children" title="get_page_children :: Retrieve child pages from list of pages matching page ID."><span class="description">Retrieve child pages from list of pages matching page ID.</span><pre>get_page_children</pre></a></li>
+<li class="function  "><a href="#function_get_page_hierarchy" title="get_page_hierarchy :: Order the pages with children under parents in a flat list."><span class="description">Order the pages with children under parents in a flat list.</span><pre>get_page_hierarchy</pre></a></li>
+<li class="function  "><a href="#function_get_page_statuses" title="get_page_statuses :: Retrieve all of the WordPress support page statuses."><span class="description">Retrieve all of the WordPress support page statuses.</span><pre>get_page_statuses</pre></a></li>
+<li class="function  "><a href="#function_get_page_uri" title="get_page_uri :: Builds URI for a page."><span class="description">Builds URI for a page.</span><pre>get_page_uri</pre></a></li>
+<li class="function  "><a href="#function_get_pages" title="get_pages :: Retrieve a list of pages."><span class="description">Retrieve a list of pages.</span><pre>get_pages</pre></a></li>
+<li class="function  "><a href="#function_get_post" title="get_post :: Retrieves post data given a post ID or post object."><span class="description">Retrieves post data given a post ID or post object.</span><pre>get_post</pre></a></li>
+<li class="function  "><a href="#function_get_post_ancestors" title="get_post_ancestors :: Retrieve ancestors of a post."><span class="description">Retrieve ancestors of a post.</span><pre>get_post_ancestors</pre></a></li>
+<li class="function  "><a href="#function_get_post_custom" title="get_post_custom :: Retrieve post meta fields, based on post ID."><span class="description">Retrieve post meta fields, based on post ID.</span><pre>get_post_custom</pre></a></li>
+<li class="function  "><a href="#function_get_post_custom_keys" title="get_post_custom_keys :: Retrieve meta field names for a post."><span class="description">Retrieve meta field names for a post.</span><pre>get_post_custom_keys</pre></a></li>
+<li class="function  "><a href="#function_get_post_custom_values" title="get_post_custom_values :: Retrieve values for a custom post field."><span class="description">Retrieve values for a custom post field.</span><pre>get_post_custom_values</pre></a></li>
+<li class="function  "><a href="#function_get_post_field" title="get_post_field :: Retrieve data from a post field based on Post ID."><span class="description">Retrieve data from a post field based on Post ID.</span><pre>get_post_field</pre></a></li>
+<li class="function  "><a href="#function_get_post_format" title="get_post_format :: Retrieve the format slug for a post"><span class="description">Retrieve the format slug for a post</span><pre>get_post_format</pre></a></li>
+<li class="function  "><a href="#function_get_post_format_link" title="get_post_format_link :: Returns a link to a post format index."><span class="description">Returns a link to a post format index.</span><pre>get_post_format_link</pre></a></li>
+<li class="function  "><a href="#function_get_post_format_slugs" title="get_post_format_slugs :: Retrieves an array of post format slugs."><span class="description">Retrieves an array of post format slugs.</span><pre>get_post_format_slugs</pre></a></li>
+<li class="function  "><a href="#function_get_post_format_string" title="get_post_format_string :: Returns a pretty, translated version of a post format slug"><span class="description">Returns a pretty, translated version of a post format slug</span><pre>get_post_format_string</pre></a></li>
+<li class="function  "><a href="#function_get_post_format_strings" title="get_post_format_strings :: Returns an array of post format slugs to their translated and pretty display versions"><span class="description">Returns an array of post format slugs to their translated and pretty display versions</span><pre>get_post_format_strings</pre></a></li>
+<li class="function  "><a href="#function_get_post_meta" title="get_post_meta :: Retrieve post meta field for a post."><span class="description">Retrieve post meta field for a post.</span><pre>get_post_meta</pre></a></li>
+<li class="function  "><a href="#function_get_post_mime_type" title="get_post_mime_type :: Retrieve the mime type of an attachment based on the ID."><span class="description">Retrieve the mime type of an attachment based on the ID.</span><pre>get_post_mime_type</pre></a></li>
+<li class="function  "><a href="#function_get_post_stati" title="get_post_stati :: Get a list of all registered post status objects."><span class="description">Get a list of all registered post status objects.</span><pre>get_post_stati</pre></a></li>
+<li class="function  "><a href="#function_get_post_status" title="get_post_status :: Retrieve the post status based on the Post ID."><span class="description">Retrieve the post status based on the Post ID.</span><pre>get_post_status</pre></a></li>
+<li class="function  "><a href="#function_get_post_status_object" title="get_post_status_object :: Retrieve a post status object by name"><span class="description">Retrieve a post status object by name</span><pre>get_post_status_object</pre></a></li>
+<li class="function  "><a href="#function_get_post_statuses" title="get_post_statuses :: Retrieve all of the WordPress supported post statuses."><span class="description">Retrieve all of the WordPress supported post statuses.</span><pre>get_post_statuses</pre></a></li>
+<li class="function  "><a href="#function_get_post_type" title="get_post_type :: Retrieve the post type of the current post or of a given post."><span class="description">Retrieve the post type of the current post or of a given post.</span><pre>get_post_type</pre></a></li>
+<li class="function  "><a href="#function_get_post_type_capabilities" title="get_post_type_capabilities :: Builds an object with all post type capabilities out of a post type object"><span class="description">Builds an object with all post type capabilities out of a post type object</span><pre>get_post_type_capabilities</pre></a></li>
+<li class="function  "><a href="#function_get_post_type_labels" title="get_post_type_labels :: Builds an object with all post type labels out of a post type object"><span class="description">Builds an object with all post type labels out of a post type object</span><pre>get_post_type_labels</pre></a></li>
+<li class="function  "><a href="#function_get_post_type_object" title="get_post_type_object :: Retrieve a post type object by name"><span class="description">Retrieve a post type object by name</span><pre>get_post_type_object</pre></a></li>
+<li class="function  "><a href="#function_get_post_types" title="get_post_types :: Get a list of all registered post type objects."><span class="description">Get a list of all registered post type objects.</span><pre>get_post_types</pre></a></li>
+<li class="function  "><a href="#function_get_posts" title="get_posts :: Retrieve list of latest posts or posts matching criteria."><span class="description">Retrieve list of latest posts or posts matching criteria.</span><pre>get_posts</pre></a></li>
+<li class="function  "><a href="#function_get_posts_by_author_sql" title="get_posts_by_author_sql :: Retrieve the post SQL based on capability, author, and type."><span class="description">Retrieve the post SQL based on capability, author, and type.</span><pre>get_posts_by_author_sql</pre></a></li>
+<li class="function  "><a href="#function_get_private_posts_cap_sql" title="get_private_posts_cap_sql :: Retrieve the private post SQL based on capability."><span class="description">Retrieve the private post SQL based on capability.</span><pre>get_private_posts_cap_sql</pre></a></li>
+<li class="function  "><a href="#function_get_pung" title="get_pung :: Retrieve URLs already pinged for a post."><span class="description">Retrieve URLs already pinged for a post.</span><pre>get_pung</pre></a></li>
+<li class="function  "><a href="#function_get_to_ping" title="get_to_ping :: Retrieve URLs that need to be pinged."><span class="description">Retrieve URLs that need to be pinged.</span><pre>get_to_ping</pre></a></li>
+<li class="function  "><a href="#function_has_post_format" title="has_post_format :: Check if a post has a particular format"><span class="description">Check if a post has a particular format</span><pre>has_post_format</pre></a></li>
+<li class="function  "><a href="#function_is_local_attachment" title="is_local_attachment :: Check if the attachment URI is local one and is really an attachment."><span class="description">Check if the attachment URI is local one and is really an attachment.</span><pre>is_local_attachment</pre></a></li>
+<li class="function  "><a href="#function_is_post_type_hierarchical" title="is_post_type_hierarchical :: Whether the post type is hierarchical."><span class="description">Whether the post type is hierarchical.</span><pre>is_post_type_hierarchical</pre></a></li>
+<li class="function  "><a href="#function_is_sticky" title="is_sticky :: Check if post is sticky."><span class="description">Check if post is sticky.</span><pre>is_sticky</pre></a></li>
+<li class="function  "><a href="#function_post_type_exists" title="post_type_exists :: Checks if a post type is registered."><span class="description">Checks if a post type is registered.</span><pre>post_type_exists</pre></a></li>
+<li class="function  "><a href="#function_post_type_supports" title="post_type_supports :: Checks a post type's support for a given feature"><span class="description">Checks a post type's support for a given feature</span><pre>post_type_supports</pre></a></li>
+<li class="function  "><a href="#function_register_post_status" title="register_post_status :: Register a post status."><span class="description">Register a post status.</span><pre>register_post_status</pre></a></li>
+<li class="function  "><a href="#function_register_post_type" title="register_post_type :: Register a post type."><span class="description">Register a post type.</span><pre>register_post_type</pre></a></li>
+<li class="function  "><a href="#function_remove_post_type_support" title="remove_post_type_support :: Remove support for a feature from a post type."><span class="description">Remove support for a feature from a post type.</span><pre>remove_post_type_support</pre></a></li>
+<li class="function  "><a href="#function_sanitize_post" title="sanitize_post :: Sanitize every post field."><span class="description">Sanitize every post field.</span><pre>sanitize_post</pre></a></li>
+<li class="function  "><a href="#function_sanitize_post_field" title="sanitize_post_field :: Sanitize post field based on context."><span class="description">Sanitize post field based on context.</span><pre>sanitize_post_field</pre></a></li>
+<li class="function  "><a href="#function_set_post_format" title="set_post_format :: Assign a format to a post"><span class="description">Assign a format to a post</span><pre>set_post_format</pre></a></li>
+<li class="function  "><a href="#function_set_post_thumbnail" title="set_post_thumbnail :: Sets a post thumbnail."><span class="description">Sets a post thumbnail.</span><pre>set_post_thumbnail</pre></a></li>
+<li class="function  "><a href="#function_set_post_type" title="set_post_type :: Updates the post type for the post ID."><span class="description">Updates the post type for the post ID.</span><pre>set_post_type</pre></a></li>
+<li class="function  "><a href="#function_stick_post" title="stick_post :: Make a post sticky."><span class="description">Make a post sticky.</span><pre>stick_post</pre></a></li>
+<li class="function  "><a href="#function_trackback_url_list" title="trackback_url_list :: Do trackbacks for a list of URLs."><span class="description">Do trackbacks for a list of URLs.</span><pre>trackback_url_list</pre></a></li>
+<li class="function  "><a href="#function_unstick_post" title="unstick_post :: Unstick a post."><span class="description">Unstick a post.</span><pre>unstick_post</pre></a></li>
+<li class="function  "><a href="#function_update_attached_file" title="update_attached_file :: Update attachment file path based on attachment ID."><span class="description">Update attachment file path based on attachment ID.</span><pre>update_attached_file</pre></a></li>
+<li class="function  "><a href="#function_update_post_meta" title="update_post_meta :: Update post meta field based on post ID."><span class="description">Update post meta field based on post ID.</span><pre>update_post_meta</pre></a></li>
+<li class="function  "><a href="#function_wp_add_post_tags" title="wp_add_post_tags :: Adds tags to a post."><span class="description">Adds tags to a post.</span><pre>wp_add_post_tags</pre></a></li>
+<li class="function  "><a href="#function_wp_attachment_is_image" title="wp_attachment_is_image :: Check if the attachment is an image."><span class="description">Check if the attachment is an image.</span><pre>wp_attachment_is_image</pre></a></li>
+<li class="function  "><a href="#function_wp_check_for_changed_slugs" title="wp_check_for_changed_slugs :: Checked for changed slugs for published post objects and save the old slug."><span class="description">Checked for changed slugs for published post objects and save the old slug.</span><pre>wp_check_for_changed_slugs</pre></a></li>
+<li class="function  "><a href="#function_wp_check_post_hierarchy_for_loops" title="wp_check_post_hierarchy_for_loops :: Checks the given subset of the post hierarchy for hierarchy loops."><span class="description">Checks the given subset of the post hierarchy for hierarchy loops.</span><pre>wp_check_post_hierarchy_for_loops</pre></a></li>
+<li class="function  "><a href="#function_wp_count_attachments" title="wp_count_attachments :: Count number of attachments for the mime type(s)."><span class="description">Count number of attachments for the mime type(s).</span><pre>wp_count_attachments</pre></a></li>
+<li class="function  "><a href="#function_wp_count_posts" title="wp_count_posts :: Count number of posts of a post type and is user has permissions to view."><span class="description">Count number of posts of a post type and is user has permissions to view.</span><pre>wp_count_posts</pre></a></li>
+<li class="function  "><a href="#function_wp_delete_attachment" title="wp_delete_attachment :: Trashes or deletes an attachment."><span class="description">Trashes or deletes an attachment.</span><pre>wp_delete_attachment</pre></a></li>
+<li class="function  "><a href="#function_wp_delete_auto_drafts" title="wp_delete_auto_drafts :: Deletes auto-drafts for new posts that are &gt; 7 days old"><span class="description">Deletes auto-drafts for new posts that are &gt; 7 days old</span><pre>wp_delete_auto_drafts</pre></a></li>
+<li class="function  "><a href="#function_wp_delete_post" title="wp_delete_post :: Trashes or deletes a post or page."><span class="description">Trashes or deletes a post or page.</span><pre>wp_delete_post</pre></a></li>
+<li class="function  "><a href="#function_wp_get_attachment_metadata" title="wp_get_attachment_metadata :: Retrieve attachment meta field for attachment ID."><span class="description">Retrieve attachment meta field for attachment ID.</span><pre>wp_get_attachment_metadata</pre></a></li>
+<li class="function  "><a href="#function_wp_get_attachment_thumb_file" title="wp_get_attachment_thumb_file :: Retrieve thumbnail for an attachment."><span class="description">Retrieve thumbnail for an attachment.</span><pre>wp_get_attachment_thumb_file</pre></a></li>
+<li class="function  "><a href="#function_wp_get_attachment_thumb_url" title="wp_get_attachment_thumb_url :: Retrieve URL for an attachment thumbnail."><span class="description">Retrieve URL for an attachment thumbnail.</span><pre>wp_get_attachment_thumb_url</pre></a></li>
+<li class="function  "><a href="#function_wp_get_attachment_url" title="wp_get_attachment_url :: Retrieve the URL for an attachment."><span class="description">Retrieve the URL for an attachment.</span><pre>wp_get_attachment_url</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_categories" title="wp_get_post_categories :: Retrieve the list of categories for a post."><span class="description">Retrieve the list of categories for a post.</span><pre>wp_get_post_categories</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_parent_id" title="wp_get_post_parent_id :: Returns the post's parent's post_ID"><span class="description">Returns the post's parent's post_ID</span><pre>wp_get_post_parent_id</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_tags" title="wp_get_post_tags :: Retrieve the tags for a post."><span class="description">Retrieve the tags for a post.</span><pre>wp_get_post_tags</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_terms" title="wp_get_post_terms :: Retrieve the terms for a post."><span class="description">Retrieve the terms for a post.</span><pre>wp_get_post_terms</pre></a></li>
+<li class="function  "><a href="#function_wp_get_recent_posts" title="wp_get_recent_posts :: Retrieve number of recent posts."><span class="description">Retrieve number of recent posts.</span><pre>wp_get_recent_posts</pre></a></li>
+<li class="function  "><a href="#function_wp_get_single_post" title="wp_get_single_post :: Retrieve a single post, based on post ID."><span class="description">Retrieve a single post, based on post ID.</span><pre>wp_get_single_post</pre></a></li>
+<li class="function  "><a href="#function_wp_insert_attachment" title="wp_insert_attachment :: Insert an attachment."><span class="description">Insert an attachment.</span><pre>wp_insert_attachment</pre></a></li>
+<li class="function  "><a href="#function_wp_insert_post" title="wp_insert_post :: Insert a post."><span class="description">Insert a post.</span><pre>wp_insert_post</pre></a></li>
+<li class="function  "><a href="#function_wp_match_mime_types" title="wp_match_mime_types :: Check a MIME-Type against a list."><span class="description">Check a MIME-Type against a list.</span><pre>wp_match_mime_types</pre></a></li>
+<li class="function  "><a href="#function_wp_mime_type_icon" title="wp_mime_type_icon :: Retrieve the icon for a MIME type."><span class="description">Retrieve the icon for a MIME type.</span><pre>wp_mime_type_icon</pre></a></li>
+<li class="function  "><a href="#function_wp_post_mime_type_where" title="wp_post_mime_type_where :: Convert MIME types into SQL."><span class="description">Convert MIME types into SQL.</span><pre>wp_post_mime_type_where</pre></a></li>
+<li class="function  "><a href="#function_wp_publish_post" title="wp_publish_post :: Publish a post by transitioning the post status."><span class="description">Publish a post by transitioning the post status.</span><pre>wp_publish_post</pre></a></li>
+<li class="function  "><a href="#function_wp_set_post_categories" title="wp_set_post_categories :: Set categories for a post."><span class="description">Set categories for a post.</span><pre>wp_set_post_categories</pre></a></li>
+<li class="function  "><a href="#function_wp_set_post_tags" title="wp_set_post_tags :: Set the tags for a post."><span class="description">Set the tags for a post.</span><pre>wp_set_post_tags</pre></a></li>
+<li class="function  "><a href="#function_wp_set_post_terms" title="wp_set_post_terms :: Set the terms for a post."><span class="description">Set the terms for a post.</span><pre>wp_set_post_terms</pre></a></li>
+<li class="function  "><a href="#function_wp_transition_post_status" title="wp_transition_post_status :: Transition the post status of a post."><span class="description">Transition the post status of a post.</span><pre>wp_transition_post_status</pre></a></li>
+<li class="function  "><a href="#function_wp_trash_post" title="wp_trash_post :: Moves a post or page to the Trash"><span class="description">Moves a post or page to the Trash</span><pre>wp_trash_post</pre></a></li>
+<li class="function  "><a href="#function_wp_trash_post_comments" title="wp_trash_post_comments :: Moves comments for a post to the trash"><span class="description">Moves comments for a post to the trash</span><pre>wp_trash_post_comments</pre></a></li>
+<li class="function  "><a href="#function_wp_unique_post_slug" title="wp_unique_post_slug :: Computes a unique slug for the post, when given the desired slug and some post details."><span class="description">Computes a unique slug for the post, when given the desired slug and some post details.</span><pre>wp_unique_post_slug</pre></a></li>
+<li class="function  "><a href="#function_wp_untrash_post" title="wp_untrash_post :: Restores a post or page from the Trash"><span class="description">Restores a post or page from the Trash</span><pre>wp_untrash_post</pre></a></li>
+<li class="function  "><a href="#function_wp_untrash_post_comments" title="wp_untrash_post_comments :: Restore comments for a post from the trash"><span class="description">Restore comments for a post from the trash</span><pre>wp_untrash_post_comments</pre></a></li>
+<li class="function  "><a href="#function_wp_update_attachment_metadata" title="wp_update_attachment_metadata :: Update metadata for an attachment."><span class="description">Update metadata for an attachment.</span><pre>wp_update_attachment_metadata</pre></a></li>
+<li class="function  "><a href="#function_wp_update_post" title="wp_update_post :: Update a post with new post data."><span class="description">Update a post with new post data.</span><pre>wp_update_post</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Post.html">Post</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__add_post_type_submenus"></a><div class="element clickable function  function__add_post_type_submenus" data-toggle="collapse" data-target=".function__add_post_type_submenus .collapse">
+<h2>Adds submenus for post types.</h2>
+<pre>_add_post_type_submenus() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function__future_post_hook"></a><div class="element clickable function  function__future_post_hook" data-toggle="collapse" data-target=".function__future_post_hook .collapse">
+<h2>Hook used to schedule publication for a post marked for the future.</h2>
+<pre>_future_post_hook(int $deprecated, object $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The $post properties used and must exist are 'ID' and 'post_date_gmt'.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$deprecated</h4>
+<code>int</code><p>Not used. Can be set to null. Never implemented. Not marked as deprecated with _deprecated_argument() as it conflicts with wp_transition_post_status() and the default filter for _future_post_hook().</p>
+</div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>Object type containing the post information</p></div>
+</div></div>
+</div>
+<a id="function__get_custom_object_labels"></a><div class="element clickable function  function__get_custom_object_labels" data-toggle="collapse" data-target=".function__get_custom_object_labels .collapse">
+<h2>Builds an object with custom-something object (post type, taxonomy) labels out of a custom-something object</h2>
+<pre>_get_custom_object_labels($object, $nohier_vs_hier_defaults) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$object</h4></div>
+<div class="subelement argument"><h4>$nohier_vs_hier_defaults</h4></div>
+</div></div>
+</div>
+<a id="function__get_last_post_time"></a><div class="element clickable function  function__get_last_post_time" data-toggle="collapse" data-target=".function__get_last_post_time .collapse">
+<h2>Retrieve latest post date data based on timezone.</h2>
+<pre>_get_last_post_time(string $timezone, string $field) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$timezone</h4>
+<code>string</code><p>The location to get the time. Can be 'gmt', 'blog', or 'server'.</p>
+</div>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code><p>Field to check. Can be 'date' or 'modified'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The date.</div>
+</div></div>
+</div>
+<a id="function__get_post_ancestors"></a><div class="element clickable function  function__get_post_ancestors" data-toggle="collapse" data-target=".function__get_post_ancestors .collapse">
+<h2>Retrieve post ancestors and append to post ancestors property.</h2>
+<pre>_get_post_ancestors(object $_post) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will only retrieve ancestors once, if property is already set, then nothing
+will be done. If there is not a parent post, or post ID and post parent ID
+are the same then nothing will be done.</p>
+
+<p>The parameter is passed by reference, so nothing needs to be returned. The
+property will be updated and can be referenced after the function is
+complete. The post parent will be an ancestor and the parent of the post
+parent will be an ancestor. There will only be two ancestors at the most.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$_post</h4>
+<code>object</code><p>Post data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code>When nothing needs to be done.</div>
+</div></div>
+</div>
+<a id="function__page_traverse_name"></a><div class="element clickable function  function__page_traverse_name" data-toggle="collapse" data-target=".function__page_traverse_name .collapse">
+<h2>function to traverse and return all the nested children post names of a root page.</h2>
+<pre>_page_traverse_name($page_id, $children, $result) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>$children contains parent-children relations</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$page_id</h4></div>
+<div class="subelement argument"><h4>$children</h4></div>
+<div class="subelement argument"><h4>$result</h4></div>
+</div></div>
+</div>
+<a id="function__post_format_get_term"></a><div class="element clickable function  function__post_format_get_term" data-toggle="collapse" data-target=".function__post_format_get_term .collapse">
+<h2>Remove the post format prefix from the name property of the term object created by get_term().</h2>
+<pre>_post_format_get_term($term) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$term</h4></div>
+</div></div>
+</div>
+<a id="function__post_format_get_terms"></a><div class="element clickable function  function__post_format_get_terms" data-toggle="collapse" data-target=".function__post_format_get_terms .collapse">
+<h2>Remove the post format prefix from the name property of the term objects created by get_terms().</h2>
+<pre>_post_format_get_terms($terms, $taxonomies, $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$terms</h4></div>
+<div class="subelement argument"><h4>$taxonomies</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="function__post_format_link"></a><div class="element clickable function  function__post_format_link" data-toggle="collapse" data-target=".function__post_format_link .collapse">
+<h2>Filters the post format term link to remove the format prefix.</h2>
+<pre>_post_format_link($link, $term, $taxonomy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$link</h4></div>
+<div class="subelement argument"><h4>$term</h4></div>
+<div class="subelement argument"><h4>$taxonomy</h4></div>
+</div></div>
+</div>
+<a id="function__post_format_request"></a><div class="element clickable function  function__post_format_request" data-toggle="collapse" data-target=".function__post_format_request .collapse">
+<h2>Filters the request to allow for the format prefix.</h2>
+<pre>_post_format_request($qvs) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$qvs</h4></div>
+</div></div>
+</div>
+<a id="function__post_format_wp_get_object_terms"></a><div class="element clickable function  function__post_format_wp_get_object_terms" data-toggle="collapse" data-target=".function__post_format_wp_get_object_terms .collapse">
+<h2>Remove the post format prefix from the name property of the term objects created by wp_get_object_terms().</h2>
+<pre>_post_format_wp_get_object_terms($terms) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$terms</h4></div>
+</div></div>
+</div>
+<a id="function__post_type_meta_capabilities"></a><div class="element clickable function  function__post_type_meta_capabilities" data-toggle="collapse" data-target=".function__post_type_meta_capabilities .collapse">
+<h2>Stores or returns a list of post type meta caps for map_meta_cap().</h2>
+<pre>_post_type_meta_capabilities($capabilities) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$capabilities</h4></div>
+</div></div>
+</div>
+<a id="function__prime_post_caches"></a><div class="element clickable function  function__prime_post_caches" data-toggle="collapse" data-target=".function__prime_post_caches .collapse">
+<h2>Adds any posts from the given ids to the cache that do not already exist in cache</h2>
+<pre>_prime_post_caches($ids, bool $update_term_cache, bool $update_meta_cache) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$ids</h4></div>
+<div class="subelement argument">
+<h4>$update_term_cache</h4>
+<code>bool</code><p>Whether to update the term cache. Default is true.</p></div>
+<div class="subelement argument">
+<h4>$update_meta_cache</h4>
+<code>bool</code><p>Whether to update the meta cache. Default is true.</p></div>
+</div></div>
+</div>
+<a id="function__publish_post_hook"></a><div class="element clickable function  function__publish_post_hook" data-toggle="collapse" data-target=".function__publish_post_hook .collapse">
+<h2>Hook to schedule pings and enclosures when a post is published.</h2>
+<pre>_publish_post_hook(int $post_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\XMLRPC_REQUEST</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>The ID in the database table of the post being published</p></div>
+</div></div>
+</div>
+<a id="function__save_post_hook"></a><div class="element clickable function  function__save_post_hook" data-toggle="collapse" data-target=".function__save_post_hook .collapse">
+<h2>Hook used to prevent page/post cache from staying dirty when a post is saved.</h2>
+<pre>_save_post_hook(int $post_id, object $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>The ID in the database table for the $post</p>
+</div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>Object type containing the post information</p></div>
+</div></div>
+</div>
+<a id="function__set_preview"></a><div class="element clickable function  function__set_preview" data-toggle="collapse" data-target=".function__set_preview .collapse">
+<h2>_set_preview()
+        </h2>
+<pre>_set_preview($post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post</h4></div>
+</div></div>
+</div>
+<a id="function__show_post_preview"></a><div class="element clickable function  function__show_post_preview" data-toggle="collapse" data-target=".function__show_post_preview .collapse">
+<h2>_show_post_preview()
+        </h2>
+<pre>_show_post_preview() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function__transition_post_status"></a><div class="element clickable function  function__transition_post_status" data-toggle="collapse" data-target=".function__transition_post_status .collapse">
+<h2>Hook for managing future post transitions to published.</h2>
+<pre>_transition_post_status(string $new_status, string $old_status, object $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_clear_scheduled_hook()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$new_status</h4>
+<code>string</code><p>New post status</p></div>
+<div class="subelement argument">
+<h4>$old_status</h4>
+<code>string</code><p>Previous post status</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>Object type containing the post information</p></div>
+</div></div>
+</div>
+<a id="function__update_term_count_on_transition_post_status"></a><div class="element clickable function  function__update_term_count_on_transition_post_status" data-toggle="collapse" data-target=".function__update_term_count_on_transition_post_status .collapse">
+<h2>Update the custom taxonomies' term counts when a post's status is changed.</h2>
+<pre>_update_term_count_on_transition_post_status(string $new_status, string $old_status, object $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>For example, default posts term counts (for custom taxonomies) don't include private / draft posts.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$new_status</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$old_status</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code>
+</div>
+</div></div>
+</div>
+<a id="function__wp_relative_upload_path"></a><div class="element clickable function  function__wp_relative_upload_path" data-toggle="collapse" data-target=".function__wp_relative_upload_path .collapse">
+<h2>Return relative path to an uploaded file.</h2>
+<pre>_wp_relative_upload_path(string $path) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The path is relative to the current upload dir.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>Full path to the file</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>relative path on success, unchanged path on failure.</div>
+</div></div>
+</div>
+<a id="function_add_ping"></a><div class="element clickable function  function_add_ping" data-toggle="collapse" data-target=".function_add_ping .collapse">
+<h2>Add a URL to those already pung.</h2>
+<pre>add_ping(int $post_id, string $uri) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$uri</h4>
+<code>string</code><p>Ping URI.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>How many rows were updated.</div>
+</div></div>
+</div>
+<a id="function_add_post_meta"></a><div class="element clickable function  function_add_post_meta" data-toggle="collapse" data-target=".function_add_post_meta .collapse">
+<h2>Add meta data field to a post.</h2>
+<pre>add_post_meta(int $post_id, string $meta_key, mixed $meta_value, bool $unique) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Post meta data is called "Custom Fields" on the Administration Screen.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/add_post_meta">http://codex.wordpress.org/Function_Reference/add_post_meta</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$meta_key</h4>
+<code>string</code><p>Metadata name.</p></div>
+<div class="subelement argument">
+<h4>$meta_value</h4>
+<code>mixed</code><p>Metadata value.</p></div>
+<div class="subelement argument">
+<h4>$unique</h4>
+<code>bool</code><p>Optional, default is false. Whether the same key should not be added.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False for failure. True for success.</div>
+</div></div>
+</div>
+<a id="function_add_post_type_support"></a><div class="element clickable function  function_add_post_type_support" data-toggle="collapse" data-target=".function_add_post_type_support .collapse">
+<h2>Register support of certain features for a post type.</h2>
+<pre>add_post_type_support(string $post_type, string | array $feature) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>All features are directly associated with a functional area of the edit screen, such as the
+editor or a meta box: 'title', 'editor', 'comments', 'revisions', 'trackbacks', 'author',
+'excerpt', 'page-attributes', 'thumbnail', and 'custom-fields'.</p>
+
+<p>Additionally, the 'revisions' feature dictates whether the post type will store revisions,
+and the 'comments' feature dictates whether the comments count will show on the edit screen.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>The post type for which to add the feature</p></div>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><code>array</code><p>the feature being added, can be an array of feature strings or a single string</p></div>
+</div></div>
+</div>
+<a id="function_check_and_publish_future_post"></a><div class="element clickable function  function_check_and_publish_future_post" data-toggle="collapse" data-target=".function_check_and_publish_future_post .collapse">
+<h2>Publish future post and make sure post ID has future post status.</h2>
+<pre>check_and_publish_future_post(int $post_id) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Invoked by cron 'publish_future_post' event. This safeguard prevents cron
+from publishing drafts, etc.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code>Nothing is returned. Which can mean that no action is required or post was published.</div>
+</div></div>
+</div>
+<a id="function_create_initial_post_types"></a><div class="element clickable function  function_create_initial_post_types" data-toggle="collapse" data-target=".function_create_initial_post_types .collapse">
+<h2>Creates the initial post types when 'init' action is fired.</h2>
+<pre>create_initial_post_types() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_delete_post_meta"></a><div class="element clickable function  function_delete_post_meta" data-toggle="collapse" data-target=".function_delete_post_meta .collapse">
+<h2>Remove metadata matching criteria from a post.</h2>
+<pre>delete_post_meta(int $post_id, string $meta_key, mixed $meta_value) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>You can match based on the key, or key and value. Removing based on key and
+value, will keep from removing duplicate metadata with the same key. It also
+allows removing all metadata matching key, if needed.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/delete_post_meta">http://codex.wordpress.org/Function_Reference/delete_post_meta</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>post ID</p></div>
+<div class="subelement argument">
+<h4>$meta_key</h4>
+<code>string</code><p>Metadata name.</p></div>
+<div class="subelement argument">
+<h4>$meta_value</h4>
+<code>mixed</code><p>Optional. Metadata value.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False for failure. True for success.</div>
+</div></div>
+</div>
+<a id="function_delete_post_meta_by_key"></a><div class="element clickable function  function_delete_post_meta_by_key" data-toggle="collapse" data-target=".function_delete_post_meta_by_key .collapse">
+<h2>Delete everything from post meta matching meta key.</h2>
+<pre>delete_post_meta_by_key(string $post_meta_key) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_meta_key</h4>
+<code>string</code><p>Key to search for when deleting.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether the post meta key was deleted from the database</div>
+</div></div>
+</div>
+<a id="function_delete_post_thumbnail"></a><div class="element clickable function  function_delete_post_thumbnail" data-toggle="collapse" data-target=".function_delete_post_thumbnail .collapse">
+<h2>Removes a post thumbnail.</h2>
+<pre>delete_post_thumbnail(int | object $post) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or object where thumbnail should be removed from.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_get_all_page_ids"></a><div class="element clickable function  function_get_all_page_ids" data-toggle="collapse" data-target=".function_get_all_page_ids .collapse">
+<h2>Get a list of page IDs.</h2>
+<pre>get_all_page_ids() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of page IDs.</div>
+</div></div>
+</div>
+<a id="function_get_all_post_type_supports"></a><div class="element clickable function  function_get_all_post_type_supports" data-toggle="collapse" data-target=".function_get_all_post_type_supports .collapse">
+<h2>Get all the post type features</h2>
+<pre>get_all_post_type_supports(string $post_type) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>The post type</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_get_attached_file"></a><div class="element clickable function  function_get_attached_file" data-toggle="collapse" data-target=".function_get_attached_file .collapse">
+<h2>Retrieve attached file path based on attachment ID.</h2>
+<pre>get_attached_file(int $attachment_id, bool $unfiltered) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>You can optionally send it through the 'get_attached_file' filter, but by
+default it will just return the file path unfiltered.</p>
+
+<p>The function works by getting the single post meta name, named
+'_wp_attached_file' and returning it. This is a convenience function to
+prevent looking up the meta name and provide a mechanism for sending the
+attached filename through a filter.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$attachment_id</h4>
+<code>int</code><p>Attachment ID.</p></div>
+<div class="subelement argument">
+<h4>$unfiltered</h4>
+<code>bool</code><p>Whether to apply filters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>The file path to the attached file, or false if the attachment does not exist.</div>
+</div></div>
+</div>
+<a id="function_get_comment_statuses"></a><div class="element clickable function  function_get_comment_statuses" data-toggle="collapse" data-target=".function_get_comment_statuses .collapse">
+<h2>Retrieve all of the WordPress supported comment statuses.</h2>
+<pre>get_comment_statuses() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Comments have a limited set of valid status values, this provides the comment
+status values and descriptions.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of comment statuses.</div>
+</div></div>
+</div>
+<a id="function_get_enclosed"></a><div class="element clickable function  function_get_enclosed" data-toggle="collapse" data-target=".function_get_enclosed .collapse">
+<h2>Retrieve enclosures already enclosed for a post.</h2>
+<pre>get_enclosed(int $post_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of enclosures</div>
+</div></div>
+</div>
+<a id="function_get_extended"></a><div class="element clickable function  function_get_extended" data-toggle="collapse" data-target=".function_get_extended .collapse">
+<h2>Get extended entry info (&lt;!--more--&gt;).</h2>
+<pre>get_extended(string $post) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>There should not be any space after the second dash and before the word
+'more'. There can be text or space(s) after the word 'more', but won't be
+referenced.</p>
+
+<p>The returned array has 'main', 'extended', and 'more_text' keys. Main has the text before
+the</p>
+
+<pre><code><!--more--></code></pre>
+
+<p>. The 'extended' key has the content after the</p>
+
+<pre><code><!--more--></code></pre>
+
+<p>comment. The 'more_text' key has the custom "Read More" text.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>string</code><p>Post content.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Post before ('main'), after ('extended'), and custom readmore ('more_text').</div>
+</div></div>
+</div>
+<a id="function_get_lastpostdate"></a><div class="element clickable function  function_get_lastpostdate" data-toggle="collapse" data-target=".function_get_lastpostdate .collapse">
+<h2>Retrieve the date that the last post was published.</h2>
+<pre>get_lastpostdate(string $timezone) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The server timezone is the default and is the difference between GMT and
+server time. The 'blog' value is the date when the last post was posted. The
+'gmt' is when the last post was posted in GMT formatted date.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>0.71</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$timezone</h4>
+<code>string</code><p>The location to get the time. Can be 'gmt', 'blog', or 'server'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The date of the last post.</div>
+</div></div>
+</div>
+<a id="function_get_lastpostmodified"></a><div class="element clickable function  function_get_lastpostmodified" data-toggle="collapse" data-target=".function_get_lastpostmodified .collapse">
+<h2>Retrieve last post modified date depending on timezone.</h2>
+<pre>get_lastpostmodified(string $timezone) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The server timezone is the default and is the difference between GMT and
+server time. The 'blog' value is just when the last post was modified. The
+'gmt' is when the last post was modified in GMT time.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$timezone</h4>
+<code>string</code><p>The location to get the time. Can be 'gmt', 'blog', or 'server'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The date the post was last modified.</div>
+</div></div>
+</div>
+<a id="function_get_page"></a><div class="element clickable function  function_get_page" data-toggle="collapse" data-target=".function_get_page .collapse">
+<h2>Retrieves page data given a page ID or page object.</h2>
+<pre>get_page(mixed $page, string $output, string $filter) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.1</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>mixed</code><p>Page object or page ID. Passed by reference.</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>What to output. OBJECT, ARRAY_A, or ARRAY_N.</p></div>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><p>How the return value should be filtered.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Page data.</div>
+</div></div>
+</div>
+<a id="function_get_page_by_path"></a><div class="element clickable function  function_get_page_by_path" data-toggle="collapse" data-target=".function_get_page_by_path .collapse">
+<h2>Retrieves a page given its path.</h2>
+<pre>get_page_by_path(string $page_path, string $output, string $post_type) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_path</h4>
+<code>string</code><p>Page path</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Optional. Output type. OBJECT, ARRAY_N, or ARRAY_A. Default OBJECT.</p></div>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Optional. Post type. Default page.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null when complete.</div>
+</div></div>
+</div>
+<a id="function_get_page_by_title"></a><div class="element clickable function  function_get_page_by_title" data-toggle="collapse" data-target=".function_get_page_by_title .collapse">
+<h2>Retrieve a page given its title.</h2>
+<pre>get_page_by_title(string $page_title, string $output, string $post_type) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_title</h4>
+<code>string</code><p>Page title</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Optional. Output type. OBJECT, ARRAY_N, or ARRAY_A. Default OBJECT.</p></div>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Optional. Post type. Default page.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="function_get_page_children"></a><div class="element clickable function  function_get_page_children" data-toggle="collapse" data-target=".function_get_page_children .collapse">
+<h2>Retrieve child pages from list of pages matching page ID.</h2>
+<pre>get_page_children(int $page_id, array $pages) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Matches against the pages parameter against the page ID. Also matches all
+children for the same to retrieve all children of a page. Does not make any
+SQL queries to get the children.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.1</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>Page ID.</p></div>
+<div class="subelement argument">
+<h4>$pages</h4>
+<code>array</code><p>List of pages' objects.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_get_page_hierarchy"></a><div class="element clickable function  function_get_page_hierarchy" data-toggle="collapse" data-target=".function_get_page_hierarchy .collapse">
+<h2>Order the pages with children under parents in a flat list.</h2>
+<pre>get_page_hierarchy(array $pages, int $page_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>It uses auxiliary structure to hold parent-children relationships and
+runs in O(N) complexity</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pages</h4>
+<code>array</code><p>Posts array.</p></div>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>Parent page ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list arranged by hierarchy. Children immediately follow their parents.</div>
+</div></div>
+</div>
+<a id="function_get_page_statuses"></a><div class="element clickable function  function_get_page_statuses" data-toggle="collapse" data-target=".function_get_page_statuses .collapse">
+<h2>Retrieve all of the WordPress support page statuses.</h2>
+<pre>get_page_statuses() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Pages have a limited set of valid status values, this provides the
+post_status values and descriptions.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of page statuses.</div>
+</div></div>
+</div>
+<a id="function_get_page_uri"></a><div class="element clickable function  function_get_page_uri" data-toggle="collapse" data-target=".function_get_page_uri .collapse">
+<h2>Builds URI for a page.</h2>
+<pre>get_page_uri(mixed $page) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Sub pages will be in the "directory" under the parent page post name.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>mixed</code><p>Page object or page ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Page URI.</div>
+</div></div>
+</div>
+<a id="function_get_pages"></a><div class="element clickable function  function_get_pages" data-toggle="collapse" data-target=".function_get_pages .collapse">
+<h2>Retrieve a list of pages.</h2>
+<pre>get_pages(mixed $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The defaults that can be overridden are the following: 'child_of',
+'sort_order', 'sort_column', 'post_title', 'hierarchical', 'exclude',
+'include', 'meta_key', 'meta_value','authors', 'number', and 'offset'.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>mixed</code><p>Optional. Array or string of options that overrides defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of pages matching defaults or $args</div>
+</div></div>
+</div>
+<a id="function_get_post"></a><div class="element clickable function  function_get_post" data-toggle="collapse" data-target=".function_get_post .collapse">
+<h2>Retrieves post data given a post ID or post object.</h2>
+<pre>get_post(int | object $post, string $output, string $filter) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>See <a href="sanitize_post()">sanitize_post()</a> for optional $filter values. Also, the parameter
+$post, must be given as a variable, since it is passed by reference.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.1</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/get_post">http://codex.wordpress.org/Function_Reference/get_post</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Optional, default is Object. Either OBJECT, ARRAY_A, or ARRAY_N.</p></div>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><p>Optional, default is raw.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Post data</div>
+</div></div>
+</div>
+<a id="function_get_post_ancestors"></a><div class="element clickable function  function_get_post_ancestors" data-toggle="collapse" data-target=".function_get_post_ancestors .collapse">
+<h2>Retrieve ancestors of a post.</h2>
+<pre>get_post_ancestors(int | object $post) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Ancestor IDs or empty array if none are found.</div>
+</div></div>
+</div>
+<a id="function_get_post_custom"></a><div class="element clickable function  function_get_post_custom" data-toggle="collapse" data-target=".function_get_post_custom .collapse">
+<h2>Retrieve post meta fields, based on post ID.</h2>
+<pre>get_post_custom(int $post_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The post meta fields are retrieved from the cache where possible,
+so the function is optimized to be called more than once.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/get_post_custom">http://codex.wordpress.org/Function_Reference/get_post_custom</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_get_post_custom_keys"></a><div class="element clickable function  function_get_post_custom_keys" data-toggle="collapse" data-target=".function_get_post_custom_keys .collapse">
+<h2>Retrieve meta field names for a post.</h2>
+<pre>get_post_custom_keys(int $post_id) : array | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If there are no meta fields, then nothing (null) will be returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/get_post_custom_keys">http://codex.wordpress.org/Function_Reference/get_post_custom_keys</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>post ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>Either array of the keys, or null if keys could not be retrieved.</div>
+</div></div>
+</div>
+<a id="function_get_post_custom_values"></a><div class="element clickable function  function_get_post_custom_values" data-toggle="collapse" data-target=".function_get_post_custom_values .collapse">
+<h2>Retrieve values for a custom post field.</h2>
+<pre>get_post_custom_values(string $key, int $post_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The parameters must not be considered optional. All of the post meta fields
+will be retrieved and only the meta field key values returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/get_post_custom_values">http://codex.wordpress.org/Function_Reference/get_post_custom_values</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>Meta field key.</p></div>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Meta field values.</div>
+</div></div>
+</div>
+<a id="function_get_post_field"></a><div class="element clickable function  function_get_post_field" data-toggle="collapse" data-target=".function_get_post_field .collapse">
+<h2>Retrieve data from a post field based on Post ID.</h2>
+<pre>get_post_field(string $field, \id $post, string $context) : <a href="../classes/WP_Error.html">\WP_Error</a> | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Examples of the post field will be, 'post_type', 'post_status', 'post_content',
+etc and based off of the post object property or key names.</p>
+
+<p>The context values are based off of the taxonomy filter functions and
+supported values are found within those functions.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\sanitize_post_field()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code><p>Post field name</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>\id</code><p>Post ID</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>string</code><p>Optional. How to filter the field. Default is display.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Error.html">\WP_Error</a></code><code>string</code>Value in post field or WP_Error on failure</div>
+</div></div>
+</div>
+<a id="function_get_post_format"></a><div class="element clickable function  function_get_post_format" data-toggle="collapse" data-target=".function_get_post_format .collapse">
+<h2>Retrieve the format slug for a post</h2>
+<pre>get_post_format(int | object $post) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>A post</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The format if successful. False if no format is set. WP_Error if errors.</div>
+</div></div>
+</div>
+<a id="function_get_post_format_link"></a><div class="element clickable function  function_get_post_format_link" data-toggle="collapse" data-target=".function_get_post_format_link .collapse">
+<h2>Returns a link to a post format index.</h2>
+<pre>get_post_format_link(string $format) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$format</h4>
+<code>string</code><p>Post format</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Link</div>
+</div></div>
+</div>
+<a id="function_get_post_format_slugs"></a><div class="element clickable function  function_get_post_format_slugs" data-toggle="collapse" data-target=".function_get_post_format_slugs .collapse">
+<h2>Retrieves an array of post format slugs.</h2>
+<pre>get_post_format_slugs() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The array of post format slugs.</div>
+</div></div>
+</div>
+<a id="function_get_post_format_string"></a><div class="element clickable function  function_get_post_format_string" data-toggle="collapse" data-target=".function_get_post_format_string .collapse">
+<h2>Returns a pretty, translated version of a post format slug</h2>
+<pre>get_post_format_string(string $slug) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$slug</h4>
+<code>string</code><p>A post format slug</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The translated post format name</div>
+</div></div>
+</div>
+<a id="function_get_post_format_strings"></a><div class="element clickable function  function_get_post_format_strings" data-toggle="collapse" data-target=".function_get_post_format_strings .collapse">
+<h2>Returns an array of post format slugs to their translated and pretty display versions</h2>
+<pre>get_post_format_strings() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The array of translations</div>
+</div></div>
+</div>
+<a id="function_get_post_meta"></a><div class="element clickable function  function_get_post_meta" data-toggle="collapse" data-target=".function_get_post_meta .collapse">
+<h2>Retrieve post meta field for a post.</h2>
+<pre>get_post_meta(int $post_id, string $key, bool $single) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/get_post_meta">http://codex.wordpress.org/Function_Reference/get_post_meta</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>Optional. The meta key to retrieve. By default, returns data for all keys.</p></div>
+<div class="subelement argument">
+<h4>$single</h4>
+<code>bool</code><p>Whether to return a single value.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Will be an array if $single is false. Will be value of meta data field if $single
+ is true.</div>
+</div></div>
+</div>
+<a id="function_get_post_mime_type"></a><div class="element clickable function  function_get_post_mime_type" data-toggle="collapse" data-target=".function_get_post_mime_type .collapse">
+<h2>Retrieve the mime type of an attachment based on the ID.</h2>
+<pre>get_post_mime_type(int $ID) : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function can be used with any post type, but it makes more sense with
+attachments.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$ID</h4>
+<code>int</code><p>Optional. Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on failure or returns the mime type</div>
+</div></div>
+</div>
+<a id="function_get_post_stati"></a><div class="element clickable function  function_get_post_stati" data-toggle="collapse" data-target=".function_get_post_stati .collapse">
+<h2>Get a list of all registered post status objects.</h2>
+<pre>get_post_stati(array | string $args, string $output, string $operator) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_post_statuses</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\register_post_status</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_post_status_object</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><code>string</code><p>An array of key => value arguments to match against the post status objects.</p>
+</div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>The type of output to return, either post status 'names' or 'objects'. 'names' is the default.</p>
+</div>
+<div class="subelement argument">
+<h4>$operator</h4>
+<code>string</code><p>The logical operation to perform. 'or' means only one element from the array needs to match; 'and' means all elements must match. The default is 'and'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list of post status names or objects</div>
+</div></div>
+</div>
+<a id="function_get_post_status"></a><div class="element clickable function  function_get_post_status" data-toggle="collapse" data-target=".function_get_post_status .collapse">
+<h2>Retrieve the post status based on the Post ID.</h2>
+<pre>get_post_status(int $ID) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the post ID is of an attachment, then the parent post status will be given
+instead.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$ID</h4>
+<code>int</code><p>Post ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>Post status or false on failure.</div>
+</div></div>
+</div>
+<a id="function_get_post_status_object"></a><div class="element clickable function  function_get_post_status_object" data-toggle="collapse" data-target=".function_get_post_status_object .collapse">
+<h2>Retrieve a post status object by name</h2>
+<pre>get_post_status_object(string $post_status) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_post_statuses</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\register_post_status</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_post_statuses</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_status</h4>
+<code>string</code><p>The name of a registered post status</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>A post status object</div>
+</div></div>
+</div>
+<a id="function_get_post_statuses"></a><div class="element clickable function  function_get_post_statuses" data-toggle="collapse" data-target=".function_get_post_statuses .collapse">
+<h2>Retrieve all of the WordPress supported post statuses.</h2>
+<pre>get_post_statuses() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Posts have a limited set of valid status values, this provides the
+post_status values and descriptions.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of post statuses.</div>
+</div></div>
+</div>
+<a id="function_get_post_type"></a><div class="element clickable function  function_get_post_type" data-toggle="collapse" data-target=".function_get_post_type .collapse">
+<h2>Retrieve the post type of the current post or of a given post.</h2>
+<pre>get_post_type(mixed $the_post) : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$post</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$the_post</h4>
+<code>mixed</code><p>Optional. Post object or post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>post type or false on failure.</div>
+</div></div>
+</div>
+<a id="function_get_post_type_capabilities"></a><div class="element clickable function  function_get_post_type_capabilities" data-toggle="collapse" data-target=".function_get_post_type_capabilities .collapse">
+<h2>Builds an object with all post type capabilities out of a post type object</h2>
+<pre>get_post_type_capabilities(object $args) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Post type capabilities use the 'capability_type' argument as a base, if the
+capability is not set in the 'capabilities' argument array or if the
+'capabilities' argument is not supplied.</p>
+
+<p>The capability_type argument can optionally be registered as an array, with
+the first value being singular and the second plural, e.g. array('story, 'stories')
+Otherwise, an 's' will be added to the value for the plural form. After
+registration, capability_type will always be a string of the singular value.</p>
+
+<p>By default, seven keys are accepted as part of the capabilities array:</p>
+
+<ul>
+<li><p>edit_post, read_post, and delete_post are meta capabilities, which are then
+generally mapped to corresponding primitive capabilities depending on the
+context, which would be the post being edited/read/deleted and the user or
+role being checked. Thus these capabilities would generally not be granted
+directly to users or roles.</p></li>
+<li><p>edit_posts - Controls whether objects of this post type can be edited.</p></li>
+<li>edit_others_posts - Controls whether objects of this type owned by other users
+can be edited. If the post type does not support an author, then this will
+behave like edit_posts.</li>
+<li>publish_posts - Controls publishing objects of this post type.</li>
+<li>read_private_posts - Controls whether private objects can be read.</li>
+</ul>
+
+<p>These four primitive capabilities are checked in core in various locations.
+There are also seven other primitive capabilities which are not referenced
+directly in core, except in map_meta_cap(), which takes the three aforementioned
+meta capabilities and translates them into one or more primitive capabilities
+that must then be checked against the user or role, depending on the context.</p>
+
+<ul>
+<li>read - Controls whether objects of this post type can be read.</li>
+<li>delete_posts - Controls whether objects of this post type can be deleted.</li>
+<li>delete_private_posts - Controls whether private objects can be deleted.</li>
+<li>delete_published_posts - Controls whether published objects can be deleted.</li>
+<li>delete_others_posts - Controls whether objects owned by other users can be
+can be deleted. If the post type does not support an author, then this will
+behave like delete_posts.</li>
+<li>edit_private_posts - Controls whether private objects can be edited.</li>
+<li>edit_published_posts - Controls whether published objects can be edited.</li>
+</ul>
+
+<p>These additional capabilities are only used in map_meta_cap(). Thus, they are
+only assigned by default if the post type is registered with the 'map_meta_cap'
+argument set to true (default is false).</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\map_meta_cap()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>object</code><p>Post type registration arguments</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>object with all the capabilities as member variables</div>
+</div></div>
+</div>
+<a id="function_get_post_type_labels"></a><div class="element clickable function  function_get_post_type_labels" data-toggle="collapse" data-target=".function_get_post_type_labels .collapse">
+<h2>Builds an object with all post type labels out of a post type object</h2>
+<pre>get_post_type_labels(object $post_type_object) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Accepted keys of the label array in the post type object:
+- name - general name for the post type, usually plural. The same and overridden by $post_type_object->label. Default is Posts/Pages
+- singular_name - name for one object of this post type. Default is Post/Page
+- add_new - Default is Add New for both hierarchical and non-hierarchical types. When internationalizing this string, please use a <a href="http://codex.wordpress.org/I18n_for_WordPress_Developers#Disambiguation_by_context">gettext context</a> matching your post type. Example:</p>
+
+<pre><code>_x('Add New', 'product');</code></pre>
+
+<ul>
+<li>add_new_item - Default is Add New Post/Add New Page</li>
+<li>edit_item - Default is Edit Post/Edit Page</li>
+<li>new_item - Default is New Post/New Page</li>
+<li>view_item - Default is View Post/View Page</li>
+<li>search_items - Default is Search Posts/Search Pages</li>
+<li>not_found - Default is No posts found/No pages found</li>
+<li>not_found_in_trash - Default is No posts found in Trash/No pages found in Trash</li>
+<li>parent_item_colon - This string isn't used on non-hierarchical types. In hierarchical ones the default is Parent Page:</li>
+<li>all_items - String for the submenu. Default is All Posts/All Pages</li>
+<li>menu_name - Default is the same as </li>
+</ul>
+
+<pre><code>name</code></pre>
+
+<p>Above, the first default value is for non-hierarchical post types (like posts) and the second one is for hierarchical post types (like pages).</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type_object</h4>
+<code>object</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>object with all the labels as member variables</div>
+</div></div>
+</div>
+<a id="function_get_post_type_object"></a><div class="element clickable function  function_get_post_type_object" data-toggle="collapse" data-target=".function_get_post_type_object .collapse">
+<h2>Retrieve a post type object by name</h2>
+<pre>get_post_type_object(string $post_type) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_post_types</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\register_post_type</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_post_types</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>The name of a registered post type</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>A post type object</div>
+</div></div>
+</div>
+<a id="function_get_post_types"></a><div class="element clickable function  function_get_post_types" data-toggle="collapse" data-target=".function_get_post_types .collapse">
+<h2>Get a list of all registered post type objects.</h2>
+<pre>get_post_types(array | string $args, string $output, string $operator) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_post_types</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\register_post_type</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><code>string</code><p>An array of key => value arguments to match against the post type objects.</p>
+</div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>The type of output to return, either post type 'names' or 'objects'. 'names' is the default.</p>
+</div>
+<div class="subelement argument">
+<h4>$operator</h4>
+<code>string</code><p>The logical operation to perform. 'or' means only one element from the array needs to match; 'and' means all elements must match. The default is 'and'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list of post type names or objects</div>
+</div></div>
+</div>
+<a id="function_get_posts"></a><div class="element clickable function  function_get_posts" data-toggle="collapse" data-target=".function_get_posts .collapse">
+<h2>Retrieve list of latest posts or posts matching criteria.</h2>
+<pre>get_posts(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The defaults are as follows:
+    'numberposts' - Default is 5. Total number of posts to retrieve.
+    'offset' - Default is 0. See <a href="WP_Query::query()">WP_Query::query()</a> for more.
+    'category' - What category to pull the posts from.
+    'orderby' - Default is 'post_date'. How to order the posts.
+    'order' - Default is 'DESC'. The order to retrieve the posts.
+    'include' - See <a href="WP_Query::query()">WP_Query::query()</a> for more.
+    'exclude' - See <a href="WP_Query::query()">WP_Query::query()</a> for more.
+    'meta_key' - See <a href="WP_Query::query()">WP_Query::query()</a> for more.
+    'meta_value' - See <a href="WP_Query::query()">WP_Query::query()</a> for more.
+    'post_type' - Default is 'post'. Can be 'page', or 'attachment' to name a few.
+    'post_parent' - The parent of the post or post type.
+    'post_status' - Default is 'publish'. Post status to retrieve.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\WP_Query::query()</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Template_Tags/get_posts">http://codex.wordpress.org/Template_Tags/get_posts</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Overrides defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of posts.</div>
+</div></div>
+</div>
+<a id="function_get_posts_by_author_sql"></a><div class="element clickable function  function_get_posts_by_author_sql" data-toggle="collapse" data-target=".function_get_posts_by_author_sql .collapse">
+<h2>Retrieve the post SQL based on capability, author, and type.</h2>
+<pre>get_posts_by_author_sql(string $post_type, bool $full, int $post_author) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\get_private_posts_cap_sql()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Post type.</p></div>
+<div class="subelement argument">
+<h4>$full</h4>
+<code>bool</code><p>Optional. Returns a full WHERE statement instead of just an 'andalso' term.</p>
+</div>
+<div class="subelement argument">
+<h4>$post_author</h4>
+<code>int</code><p>Optional. Query posts having a single author ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>SQL WHERE code that can be added to a query.</div>
+</div></div>
+</div>
+<a id="function_get_private_posts_cap_sql"></a><div class="element clickable function  function_get_private_posts_cap_sql" data-toggle="collapse" data-target=".function_get_private_posts_cap_sql .collapse">
+<h2>Retrieve the private post SQL based on capability.</h2>
+<pre>get_private_posts_cap_sql(string $post_type) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function provides a standardized way to appropriately select on the
+post_status of a post type. The function will return a piece of SQL code
+that can be added to a WHERE clause; this SQL is constructed to allow all
+published posts, and all private posts to which the user has access.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$user_ID</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>currently only supports 'post' or 'page'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>SQL code that can be added to a where clause.</div>
+</div></div>
+</div>
+<a id="function_get_pung"></a><div class="element clickable function  function_get_pung" data-toggle="collapse" data-target=".function_get_pung .collapse">
+<h2>Retrieve URLs already pinged for a post.</h2>
+<pre>get_pung(int $post_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_get_to_ping"></a><div class="element clickable function  function_get_to_ping" data-toggle="collapse" data-target=".function_get_to_ping .collapse">
+<h2>Retrieve URLs that need to be pinged.</h2>
+<pre>get_to_ping(int $post_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_has_post_format"></a><div class="element clickable function  function_has_post_format" data-toggle="collapse" data-target=".function_has_post_format .collapse">
+<h2>Check if a post has a particular format</h2>
+<pre>has_post_format(string $format, object | \id $post) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\has_term()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$format</h4>
+<code>string</code><p>The format to check for</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><code>\id</code><p>The post to check. If not supplied, defaults to the current post if used in the loop.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the post has the format, false otherwise.</div>
+</div></div>
+</div>
+<a id="function_is_local_attachment"></a><div class="element clickable function  function_is_local_attachment" data-toggle="collapse" data-target=".function_is_local_attachment .collapse">
+<h2>Check if the attachment URI is local one and is really an attachment.</h2>
+<pre>is_local_attachment(string $url) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>URL to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_is_post_type_hierarchical"></a><div class="element clickable function  function_is_post_type_hierarchical" data-toggle="collapse" data-target=".function_is_post_type_hierarchical .collapse">
+<h2>Whether the post type is hierarchical.</h2>
+<pre>is_post_type_hierarchical(string $post_type) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>A false return value might also mean that the post type does not exist.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_post_type_object</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Post type name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether post type is hierarchical.</div>
+</div></div>
+</div>
+<a id="function_is_sticky"></a><div class="element clickable function  function_is_sticky" data-toggle="collapse" data-target=".function_is_sticky .collapse">
+<h2>Check if post is sticky.</h2>
+<pre>is_sticky(int $post_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Sticky posts should remain at the top of The Loop. If the post ID is not
+given, then The Loop ID for the current post will be used.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Optional. Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether post is sticky.</div>
+</div></div>
+</div>
+<a id="function_post_type_exists"></a><div class="element clickable function  function_post_type_exists" data-toggle="collapse" data-target=".function_post_type_exists .collapse">
+<h2>Checks if a post type is registered.</h2>
+<pre>post_type_exists(string $post_type) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_post_type_object()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Post type name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether post type is registered.</div>
+</div></div>
+</div>
+<a id="function_post_type_supports"></a><div class="element clickable function  function_post_type_supports" data-toggle="collapse" data-target=".function_post_type_supports .collapse">
+<h2>Checks a post type's support for a given feature</h2>
+<pre>post_type_supports(string $post_type, string $feature) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>The post type being checked</p></div>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>the feature being checked</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="function_register_post_status"></a><div class="element clickable function  function_register_post_status" data-toggle="collapse" data-target=".function_register_post_status .collapse">
+<h2>Register a post status.</h2>
+<pre>register_post_status(string $post_status, array | string $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do not use before init.</p>
+
+<p>A simple function for creating or modifying a post status based on the
+parameters given. The function will accept an array (second optional
+parameter), along with a string for the post status name.</p>
+
+<p>Optional $args contents:</p>
+
+<p>label - A descriptive name for the post status marked for translation. Defaults to $post_status.
+public - Whether posts of this status should be shown in the front end of the site. Defaults to true.
+exclude_from_search - Whether to exclude posts with this post status from search results. Defaults to false.
+show_in_admin_all_list - Whether to include posts in the edit listing for their post type
+show_in_admin_status_list - Show in the list of statuses with post counts at the top of the edit
+                            listings, e.g. All (12) | Published (9) | My Custom Status (2) ...</p>
+
+<p>Arguments prefixed with an _underscore shouldn't be used by plugins and themes.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_post_statuses</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_status</h4>
+<code>string</code><p>Name of the post status.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><code>string</code><p>See above description.</p></div>
+</div></div>
+</div>
+<a id="function_register_post_type"></a><div class="element clickable function  function_register_post_type" data-toggle="collapse" data-target=".function_register_post_type .collapse">
+<h2>Register a post type.</h2>
+<pre>register_post_type(string $post_type, array | string $args) : object | <a href="../classes/WP_Error.html">\WP_Error</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do not use before init.</p>
+
+<p>A function for creating or modifying a post type based on the
+parameters given. The function will accept an array (second optional
+parameter), along with a string for the post type name.</p>
+
+<p>Optional $args contents:</p>
+
+<ul>
+<li>label - Name of the post type shown in the menu. Usually plural. If not set, labels['name'] will be used.</li>
+<li>labels - An array of labels for this post type.
+
+<ul>
+<li>If not set, post labels are inherited for non-hierarchical types and page labels for hierarchical ones.</li>
+<li>You can see accepted values in <a href="get_post_type_labels()">get_post_type_labels()</a>.</li>
+</ul></li>
+<li>description - A short descriptive summary of what the post type is. Defaults to blank.</li>
+<li>public - Whether a post type is intended for use publicly either via the admin interface or by front-end users.
+
+<ul>
+<li>Defaults to false.</li>
+<li>While the default settings of exclude_from_search, publicly_queryable, show_ui, and show_in_nav_menus are
+inherited from public, each does not rely on this relationship and controls a very specific intention.</li>
+</ul></li>
+<li>exclude_from_search - Whether to exclude posts with this post type from front end search results.
+
+<ul>
+<li>If not set, the the opposite of public's current value is used.</li>
+</ul></li>
+<li>publicly_queryable - Whether queries can be performed on the front end for the post type as part of parse_request().
+
+<ul>
+<li>?post_type={post_type_key}</li>
+<li>?{post_type_key}={single_post_slug}</li>
+<li>?{post_type_query_var}={single_post_slug}</li>
+<li>If not set, the default is inherited from public.</li>
+</ul></li>
+<li>show_ui - Whether to generate a default UI for managing this post type in the admin.
+
+<ul>
+<li>If not set, the default is inherited from public.</li>
+</ul></li>
+<li>show_in_nav_menus - Makes this post type available for selection in navigation menus.
+
+<ul>
+<li>If not set, the default is inherited from public.</li>
+</ul></li>
+<li>show_in_menu - Where to show the post type in the admin menu.
+
+<ul>
+<li>If true, the post type is shown in its own top level menu.</li>
+<li>If false, no menu is shown</li>
+<li>If a string of an existing top level menu (eg. 'tools.php' or 'edit.php?post_type=page'), the post type will
+be placed as a sub menu of that.</li>
+<li>show_ui must be true.</li>
+<li>If not set, the default is inherited from show_ui</li>
+</ul></li>
+<li>show_in_admin_bar - Makes this post type available via the admin bar.
+
+<ul>
+<li>If not set, the default is inherited from show_in_menu</li>
+</ul></li>
+<li>menu_position - The position in the menu order the post type should appear.
+
+<ul>
+<li>show_in_menu must be true</li>
+<li>Defaults to null, which places it at the bottom of its area.</li>
+</ul></li>
+<li>menu_icon - The url to the icon to be used for this menu. Defaults to use the posts icon.</li>
+<li>capability_type - The string to use to build the read, edit, and delete capabilities. Defaults to 'post'.
+
+<ul>
+<li>May be passed as an array to allow for alternative plurals when using this argument as a base to construct the
+capabilities, e.g. array('story', 'stories').</li>
+</ul></li>
+<li>capabilities - Array of capabilities for this post type.
+
+<ul>
+<li>By default the capability_type is used as a base to construct capabilities.</li>
+<li>You can see accepted values in <a href="get_post_type_capabilities()">get_post_type_capabilities()</a>.</li>
+</ul></li>
+<li>map_meta_cap - Whether to use the internal default meta capability handling. Defaults to false.</li>
+<li>hierarchical - Whether the post type is hierarchical (e.g. page). Defaults to false.</li>
+<li>supports - An alias for calling add_post_type_support() directly. Defaults to title and editor.
+
+<ul>
+<li>See <a href="add_post_type_support()">add_post_type_support()</a> for documentation.</li>
+</ul></li>
+<li>register_meta_box_cb - Provide a callback function that will be called when setting up the
+meta boxes for the edit form. Do remove_meta_box() and add_meta_box() calls in the callback.</li>
+<li>taxonomies - An array of taxonomy identifiers that will be registered for the post type.
+
+<ul>
+<li>Default is no taxonomies.</li>
+<li>Taxonomies can be registered later with register_taxonomy() or register_taxonomy_for_object_type().</li>
+</ul></li>
+<li>has_archive - True to enable post type archives. Default is false.
+
+<ul>
+<li>Will generate the proper rewrite rules if rewrite is enabled.</li>
+</ul></li>
+<li>rewrite - Triggers the handling of rewrites for this post type. Defaults to true, using $post_type as slug.
+
+<ul>
+<li>To prevent rewrite, set to false.</li>
+<li>To specify rewrite rules, an array can be passed with any of these keys
+
+<ul>
+<li>'slug' => string Customize the permastruct slug. Defaults to $post_type key</li>
+<li>'with_front' => bool Should the permastruct be prepended with WP_Rewrite::$front. Defaults to true.</li>
+<li>'feeds' => bool Should a feed permastruct be built for this post type. Inherits default from has_archive.</li>
+<li>'pages' => bool Should the permastruct provide for pagination. Defaults to true.</li>
+<li>'ep_mask' => const Assign an endpoint mask.
+
+<ul>
+<li>If not specified and permalink_epmask is set, inherits from permalink_epmask.</li>
+<li>If not specified and permalink_epmask is not set, defaults to EP_PERMALINK</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>query_var - Sets the query_var key for this post type. Defaults to $post_type key
+
+<ul>
+<li>If false, a post type cannot be loaded at ?{query_var}={post_slug}</li>
+<li>If specified as a string, the query ?{query_var_string}={post_slug} will be valid.</li>
+</ul></li>
+<li>can_export - Allows this post type to be exported. Defaults to true.</li>
+<li>delete_with_user - Whether to delete posts of this type when deleting a user.
+
+<ul>
+<li>If true, posts of this type belonging to the user will be moved to trash when then user is deleted.</li>
+<li>If false, posts of this type belonging to the user will <em>not</em> be trashed or deleted.</li>
+<li>If not set (the default), posts are trashed if post_type_supports('author'). Otherwise posts are not trashed or deleted.</li>
+</ul></li>
+<li>_builtin - true if this post type is a native or "built-in" post_type. THIS IS FOR INTERNAL USE ONLY!</li>
+<li>_edit_link - URL segement to use for edit link of this post type. THIS IS FOR INTERNAL USE ONLY!</li>
+</ul></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_post_types</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Post type key, must not exceed 20 characters</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><code>string</code><p>See optional args description above.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code><code><a href="../classes/WP_Error.html">\WP_Error</a></code>the registered post type object, or an error object</div>
+</div></div>
+</div>
+<a id="function_remove_post_type_support"></a><div class="element clickable function  function_remove_post_type_support" data-toggle="collapse" data-target=".function_remove_post_type_support .collapse">
+<h2>Remove support for a feature from a post type.</h2>
+<pre>remove_post_type_support(string $post_type, string $feature) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>The post type for which to remove the feature</p></div>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>The feature being removed</p></div>
+</div></div>
+</div>
+<a id="function_sanitize_post"></a><div class="element clickable function  function_sanitize_post" data-toggle="collapse" data-target=".function_sanitize_post .collapse">
+<h2>Sanitize every post field.</h2>
+<pre>sanitize_post(object | array $post, string $context) : object | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the context is 'raw', then the post object or array will get minimal santization of the int fields.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\sanitize_post_field()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><code>array</code><p>The Post Object or Array</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>string</code><p>Optional, default is 'display'. How to sanitize post fields.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code><code>array</code>The now sanitized Post Object or Array (will be the same type as $post)</div>
+</div></div>
+</div>
+<a id="function_sanitize_post_field"></a><div class="element clickable function  function_sanitize_post_field" data-toggle="collapse" data-target=".function_sanitize_post_field .collapse">
+<h2>Sanitize post field based on context.</h2>
+<pre>sanitize_post_field(string $field, mixed $value, int $post_id, string $context) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Possible context values are:  'raw', 'edit', 'db', 'display', 'attribute' and 'js'. The
+'display' context is used by default. 'attribute' and 'js' contexts are treated like 'display'
+when calling filters.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$field</h4>
+<code>string</code><p>The Post Object field name.</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The Post Object value.</p></div>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>string</code><p>How to sanitize post fields. Looks for 'raw', 'edit', 'db', 'display', 'attribute' and 'js'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Sanitized value.</div>
+</div></div>
+</div>
+<a id="function_set_post_format"></a><div class="element clickable function  function_set_post_format" data-toggle="collapse" data-target=".function_set_post_format .collapse">
+<h2>Assign a format to a post</h2>
+<pre>set_post_format(int | object $post, string $format) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>The post for which to assign a format</p></div>
+<div class="subelement argument">
+<h4>$format</h4>
+<code>string</code><p>A format to assign. Use an empty string or array to remove all formats from the post.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>WP_Error on error. Array of affected term IDs on success.</div>
+</div></div>
+</div>
+<a id="function_set_post_thumbnail"></a><div class="element clickable function  function_set_post_thumbnail" data-toggle="collapse" data-target=".function_set_post_thumbnail .collapse">
+<h2>Sets a post thumbnail.</h2>
+<pre>set_post_thumbnail(int | object $post, int $thumbnail_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or object where thumbnail should be attached.</p></div>
+<div class="subelement argument">
+<h4>$thumbnail_id</h4>
+<code>int</code><p>Thumbnail to attach.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_set_post_type"></a><div class="element clickable function  function_set_post_type" data-toggle="collapse" data-target=".function_set_post_type .collapse">
+<h2>Updates the post type for the post ID.</h2>
+<pre>set_post_type(int $post_id, string $post_type) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The page or post cache will be cleaned for the post ID.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID to change post type. Not actually optional.</p></div>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>Optional, default is post. Supported values are 'post' or 'page' to name a few.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Amount of rows changed. Should be 1 for success and 0 for failure.</div>
+</div></div>
+</div>
+<a id="function_stick_post"></a><div class="element clickable function  function_stick_post" data-toggle="collapse" data-target=".function_stick_post .collapse">
+<h2>Make a post sticky.</h2>
+<pre>stick_post(int $post_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Sticky posts should be displayed at the top of the front page.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+</div></div>
+</div>
+<a id="function_trackback_url_list"></a><div class="element clickable function  function_trackback_url_list" data-toggle="collapse" data-target=".function_trackback_url_list .collapse">
+<h2>Do trackbacks for a list of URLs.</h2>
+<pre>trackback_url_list(string $tb_list, int $post_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tb_list</h4>
+<code>string</code><p>Comma separated list of URLs</p></div>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID</p></div>
+</div></div>
+</div>
+<a id="function_unstick_post"></a><div class="element clickable function  function_unstick_post" data-toggle="collapse" data-target=".function_unstick_post .collapse">
+<h2>Unstick a post.</h2>
+<pre>unstick_post(int $post_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Sticky posts should be displayed at the top of the front page.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+</div></div>
+</div>
+<a id="function_update_attached_file"></a><div class="element clickable function  function_update_attached_file" data-toggle="collapse" data-target=".function_update_attached_file .collapse">
+<h2>Update attachment file path based on attachment ID.</h2>
+<pre>update_attached_file(int $attachment_id, string $file) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Used to update the file path of the attachment, which uses post meta name
+'_wp_attached_file' to store the path of the attachment.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$attachment_id</h4>
+<code>int</code><p>Attachment ID</p></div>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>File path for the attachment</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False on failure, true on success.</div>
+</div></div>
+</div>
+<a id="function_update_post_meta"></a><div class="element clickable function  function_update_post_meta" data-toggle="collapse" data-target=".function_update_post_meta .collapse">
+<h2>Update post meta field based on post ID.</h2>
+<pre>update_post_meta(int $post_id, string $meta_key, mixed $meta_value, mixed $prev_value) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Use the $prev_value parameter to differentiate between meta fields with the
+same key and post ID.</p>
+
+<p>If the meta field for the post does not exist, it will be added.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Function_Reference/update_post_meta">http://codex.wordpress.org/Function_Reference/update_post_meta</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$meta_key</h4>
+<code>string</code><p>Metadata key.</p></div>
+<div class="subelement argument">
+<h4>$meta_value</h4>
+<code>mixed</code><p>Metadata value.</p></div>
+<div class="subelement argument">
+<h4>$prev_value</h4>
+<code>mixed</code><p>Optional. Previous value to check before removing.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False on failure, true if success.</div>
+</div></div>
+</div>
+<a id="function_wp_add_post_tags"></a><div class="element clickable function  function_wp_add_post_tags" data-toggle="collapse" data-target=".function_wp_add_post_tags .collapse">
+<h2>Adds tags to a post.</h2>
+<pre>wp_add_post_tags(int $post_id, string $tags) : bool | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\global\wp_set_post_tags()</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID</p></div>
+<div class="subelement argument">
+<h4>$tags</h4>
+<code>string</code><p>The tags to set for the post, separated by commas.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>null</code>Will return false if $post_id is not an integer or is 0. Will return null otherwise</div>
+</div></div>
+</div>
+<a id="function_wp_attachment_is_image"></a><div class="element clickable function  function_wp_attachment_is_image" data-toggle="collapse" data-target=".function_wp_attachment_is_image .collapse">
+<h2>Check if the attachment is an image.</h2>
+<pre>wp_attachment_is_image(int $post_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_wp_check_for_changed_slugs"></a><div class="element clickable function  function_wp_check_for_changed_slugs" data-toggle="collapse" data-target=".function_wp_check_for_changed_slugs .collapse">
+<h2>Checked for changed slugs for published post objects and save the old slug.</h2>
+<pre>wp_check_for_changed_slugs(int $post_id, object $post, object $post_before) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The function is used when a post object of any type is updated,
+by comparing the current and previous post objects.</p>
+
+<p>If the slug was changed and not already part of the old slugs then it will be
+added to the post meta field ('_wp_old_slug') for storing old slugs for that
+post.</p>
+
+<p>The most logically usage of this function is redirecting changed post objects, so
+that those that linked to an changed post will be redirected to the new post.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>The Post Object</p></div>
+<div class="subelement argument">
+<h4>$post_before</h4>
+<code>object</code><p>The Previous Post Object</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Same as $post_id</div>
+</div></div>
+</div>
+<a id="function_wp_check_post_hierarchy_for_loops"></a><div class="element clickable function  function_wp_check_post_hierarchy_for_loops" data-toggle="collapse" data-target=".function_wp_check_post_hierarchy_for_loops .collapse">
+<h2>Checks the given subset of the post hierarchy for hierarchy loops.</h2>
+<pre>wp_check_post_hierarchy_for_loops(int $post_parent, int $post_ID) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Prevents loops from forming and breaks those that it finds.</p>
+
+<p>Attached to the wp_insert_post_parent filter.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_find_hierarchy_loop()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_parent</h4>
+<code>int</code><p>ID of the parent for the post we're checking.</p>
+</div>
+<div class="subelement argument">
+<h4>$post_ID</h4>
+<code>int</code><p>ID of the post we're checking.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The new post_parent for the post.</div>
+</div></div>
+</div>
+<a id="function_wp_count_attachments"></a><div class="element clickable function  function_wp_count_attachments" data-toggle="collapse" data-target=".function_wp_count_attachments .collapse">
+<h2>Count number of attachments for the mime type(s).</h2>
+<pre>wp_count_attachments(string | array $mime_type) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If you set the optional mime_type parameter, then an array will still be
+returned, but will only have the item you are looking for. It does not give
+you the number of attachments that are children of a post. You can get that
+by counting the number of children that post has.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mime_type</h4>
+<code>string</code><code>array</code><p>Optional. Array or comma-separated list of MIME patterns.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Number of posts for each mime type.</div>
+</div></div>
+</div>
+<a id="function_wp_count_posts"></a><div class="element clickable function  function_wp_count_posts" data-toggle="collapse" data-target=".function_wp_count_posts .collapse">
+<h2>Count number of posts of a post type and is user has permissions to view.</h2>
+<pre>wp_count_posts(string $type, string $perm) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function provides an efficient method of finding the amount of post's
+type a blog has. Another method is to count the amount of items in
+get_posts(), but that method has a lot of overhead with doing so. Therefore,
+when developing for 2.5+, use this function instead.</p>
+
+<p>The $perm parameter checks for 'readable' value and if the user can read
+private posts, it will display that for the user that is signed in.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Template_Tags/wp_count_posts">http://codex.wordpress.org/Template_Tags/wp_count_posts</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>Optional. Post type to retrieve count</p></div>
+<div class="subelement argument">
+<h4>$perm</h4>
+<code>string</code><p>Optional. 'readable' or empty.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>Number of posts for each status</div>
+</div></div>
+</div>
+<a id="function_wp_delete_attachment"></a><div class="element clickable function  function_wp_delete_attachment" data-toggle="collapse" data-target=".function_wp_delete_attachment .collapse">
+<h2>Trashes or deletes an attachment.</h2>
+<pre>wp_delete_attachment(int $post_id, bool $force_delete) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>When an attachment is permanently deleted, the file will also be removed.
+Deletion removes all post meta fields, taxonomy, comments, etc. associated
+with the attachment (except the main post).</p>
+
+<p>The attachment is moved to the trash instead of permanently deleted unless trash
+for media is disabled, item is already in the trash, or $force_delete is true.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID.</p></div>
+<div class="subelement argument">
+<h4>$force_delete</h4>
+<code>bool</code><p>Whether to bypass trash and force deletion. Defaults to false.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure. Post data on success.</div>
+</div></div>
+</div>
+<a id="function_wp_delete_auto_drafts"></a><div class="element clickable function  function_wp_delete_auto_drafts" data-toggle="collapse" data-target=".function_wp_delete_auto_drafts .collapse">
+<h2>Deletes auto-drafts for new posts that are &gt; 7 days old</h2>
+<pre>wp_delete_auto_drafts() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_wp_delete_post"></a><div class="element clickable function  function_wp_delete_post" data-toggle="collapse" data-target=".function_wp_delete_post .collapse">
+<h2>Trashes or deletes a post or page.</h2>
+<pre>wp_delete_post(int $postid, bool $force_delete) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>When the post and page is permanently deleted, everything that is tied to it is deleted also.
+This includes comments, post meta fields, and terms associated with the post.</p>
+
+<p>The post or page is moved to trash instead of permanently deleted unless trash is
+disabled, item is already in the trash, or $force_delete is true.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_delete_attachment()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_trash_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$postid</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$force_delete</h4>
+<code>bool</code><p>Whether to bypass trash and force deletion. Defaults to false.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure</div>
+</div></div>
+</div>
+<a id="function_wp_get_attachment_metadata"></a><div class="element clickable function  function_wp_get_attachment_metadata" data-toggle="collapse" data-target=".function_wp_get_attachment_metadata .collapse">
+<h2>Retrieve attachment meta field for attachment ID.</h2>
+<pre>wp_get_attachment_metadata(int $post_id, bool $unfiltered) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID</p></div>
+<div class="subelement argument">
+<h4>$unfiltered</h4>
+<code>bool</code><p>Optional, default is false. If true, filters are not run.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>Attachment meta field. False on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_get_attachment_thumb_file"></a><div class="element clickable function  function_wp_get_attachment_thumb_file" data-toggle="collapse" data-target=".function_wp_get_attachment_thumb_file .collapse">
+<h2>Retrieve thumbnail for an attachment.</h2>
+<pre>wp_get_attachment_thumb_file(int $post_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure. Thumbnail file path on success.</div>
+</div></div>
+</div>
+<a id="function_wp_get_attachment_thumb_url"></a><div class="element clickable function  function_wp_get_attachment_thumb_url" data-toggle="collapse" data-target=".function_wp_get_attachment_thumb_url .collapse">
+<h2>Retrieve URL for an attachment thumbnail.</h2>
+<pre>wp_get_attachment_thumb_url(int $post_id) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False on failure. Thumbnail URL on success.</div>
+</div></div>
+</div>
+<a id="function_wp_get_attachment_url"></a><div class="element clickable function  function_wp_get_attachment_url" data-toggle="collapse" data-target=".function_wp_get_attachment_url .collapse">
+<h2>Retrieve the URL for an attachment.</h2>
+<pre>wp_get_attachment_url(int $post_id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_wp_get_post_categories"></a><div class="element clickable function  function_wp_get_post_categories" data-toggle="collapse" data-target=".function_wp_get_post_categories .collapse">
+<h2>Retrieve the list of categories for a post.</h2>
+<pre>wp_get_post_categories(int $post_id, array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Compatibility layer for themes and plugins. Also an easy layer of abstraction
+away from the complexity of the taxonomy layer.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_object_terms()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Optional. The Post ID.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Overwrite the defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_wp_get_post_parent_id"></a><div class="element clickable function  function_wp_get_post_parent_id" data-toggle="collapse" data-target=".function_wp_get_post_parent_id .collapse">
+<h2>Returns the post's parent's post_ID</h2>
+<pre>wp_get_post_parent_id($post_ID) : int | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post_ID</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>bool</code>false on error</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_tags"></a><div class="element clickable function  function_wp_get_post_tags" data-toggle="collapse" data-target=".function_wp_get_post_tags .collapse">
+<h2>Retrieve the tags for a post.</h2>
+<pre>wp_get_post_tags(int $post_id, array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>There is only one default for this function, called 'fields' and by default
+is set to 'all'. There are other defaults that can be overridden in
+<a href="wp_get_object_terms()">wp_get_object_terms()</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_object_terms()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Optional. The Post ID</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Overwrite the defaults</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of post tags.</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_terms"></a><div class="element clickable function  function_wp_get_post_terms" data-toggle="collapse" data-target=".function_wp_get_post_terms .collapse">
+<h2>Retrieve the terms for a post.</h2>
+<pre>wp_get_post_terms(int $post_id, string $taxonomy, array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>There is only one default for this function, called 'fields' and by default
+is set to 'all'. There are other defaults that can be overridden in
+<a href="wp_get_object_terms()">wp_get_object_terms()</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_object_terms()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Optional. The Post ID</p></div>
+<div class="subelement argument">
+<h4>$taxonomy</h4>
+<code>string</code><p>The taxonomy for which to retrieve terms. Defaults to post_tag.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Overwrite the defaults</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of post tags.</div>
+</div></div>
+</div>
+<a id="function_wp_get_recent_posts"></a><div class="element clickable function  function_wp_get_recent_posts" data-toggle="collapse" data-target=".function_wp_get_recent_posts .collapse">
+<h2>Retrieve number of recent posts.</h2>
+<pre>wp_get_recent_posts(array $args, string $output) : \unknown.</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_parse_args()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_posts()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Overrides defaults.</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Optional.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown.</code></div>
+</div></div>
+</div>
+<a id="function_wp_get_single_post"></a><div class="element clickable function  function_wp_get_single_post" data-toggle="collapse" data-target=".function_wp_get_single_post .collapse">
+<h2>Retrieve a single post, based on post ID.</h2>
+<pre>wp_get_single_post(int $postid, string $mode) : object | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Has categories in 'post_category' property or key. Has tags in 'tags_input'
+property or key.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$postid</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>string</code><p>How to return result, either OBJECT, ARRAY_N, or ARRAY_A.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code><code>array</code>Post object or array holding post contents and information</div>
+</div></div>
+</div>
+<a id="function_wp_insert_attachment"></a><div class="element clickable function  function_wp_insert_attachment" data-toggle="collapse" data-target=".function_wp_insert_attachment .collapse">
+<h2>Insert an attachment.</h2>
+<pre>wp_insert_attachment(string | array $object, string $file, int $parent) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If you set the 'ID' in the $object parameter, it will mean that you are
+updating and attempt to update the attachment. You can also set the
+attachment name or title by setting the key 'post_name' or 'post_title'.</p>
+
+<p>You can set the dates for the attachment manually by setting the 'post_date'
+and 'post_date_gmt' keys' values.</p>
+
+<p>By default, the comments will use the default settings for whether the
+comments are allowed. You can close them manually or keep them open by
+setting the value for the 'comment_status' key.</p>
+
+<p>The $object parameter can have the following:
+    'post_status'   - Default is 'draft'. Can not be overridden, set the same as parent post.
+    'post_type'     - Default is 'post', will be set to attachment. Can not override.
+    'post_author'   - Default is current user ID. The ID of the user, who added the attachment.
+    'ping_status'   - Default is the value in default ping status option. Whether the attachment
+                      can accept pings.
+    'post_parent'   - Default is 0. Can use $parent parameter or set this for the post it belongs
+                      to, if any.
+    'menu_order'    - Default is 0. The order it is displayed.
+    'to_ping'       - Whether to ping.
+    'pinged'        - Default is empty string.
+    'post_password' - Default is empty string. The password to access the attachment.
+    'guid'          - Global Unique ID for referencing the attachment.
+    'post_content_filtered' - Attachment post content filtered.
+    'post_excerpt'  - Attachment excerpt.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$user_ID</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object</h4>
+<code>string</code><code>array</code><p>Arguments to override defaults.</p></div>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>Optional filename.</p></div>
+<div class="subelement argument">
+<h4>$parent</h4>
+<code>int</code><p>Parent post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Attachment ID.</div>
+</div></div>
+</div>
+<a id="function_wp_insert_post"></a><div class="element clickable function  function_wp_insert_post" data-toggle="collapse" data-target=".function_wp_insert_post .collapse">
+<h2>Insert a post.</h2>
+<pre>wp_insert_post(array $postarr, bool $wp_error) : int | <a href="../classes/WP_Error.html">\WP_Error</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the $postarr parameter has 'ID' set to a value, then post will be updated.</p>
+
+<p>You can set the post date manually, but setting the values for 'post_date'
+and 'post_date_gmt' keys. You can close the comments or open the comments by
+setting the value for 'comment_status' key.</p>
+
+<p>The defaults for the parameter $postarr are:
+    'post_status'   - Default is 'draft'.
+    'post_type'     - Default is 'post'.
+    'post_author'   - Default is current user ID ($user_ID). The ID of the user who added the post.
+    'ping_status'   - Default is the value in 'default_ping_status' option.
+                      Whether the attachment can accept pings.
+    'post_parent'   - Default is 0. Set this for the post it belongs to, if any.
+    'menu_order'    - Default is 0. The order it is displayed.
+    'to_ping'       - Whether to ping.
+    'pinged'        - Default is empty string.
+    'post_password' - Default is empty string. The password to access the attachment.
+    'guid'          - Global Unique ID for referencing the attachment.
+    'post_content_filtered' - Post content filtered.
+    'post_excerpt'  - Post excerpt.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$user_ID</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_transition_post_status()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$postarr</h4>
+<code>array</code><p>Elements that make up post to insert.</p></div>
+<div class="subelement argument">
+<h4>$wp_error</h4>
+<code>bool</code><p>Optional. Allow return of WP_Error on failure.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code><a href="../classes/WP_Error.html">\WP_Error</a></code>The value 0 or WP_Error on failure. The post ID on success.</div>
+</div></div>
+</div>
+<a id="function_wp_match_mime_types"></a><div class="element clickable function  function_wp_match_mime_types" data-toggle="collapse" data-target=".function_wp_match_mime_types .collapse">
+<h2>Check a MIME-Type against a list.</h2>
+<pre>wp_match_mime_types(string | array $wildcard_mime_types, string | array $real_mime_types) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the wildcard_mime_types parameter is a string, it must be comma separated
+list. If the real_mime_types is a string, it is also comma separated to
+create the list.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$wildcard_mime_types</h4>
+<code>string</code><code>array</code><p>e.g. audio/mpeg or image (same as image/<em>) or flash (same as *flash</em>).</p>
+</div>
+<div class="subelement argument">
+<h4>$real_mime_types</h4>
+<code>string</code><code>array</code><p>post_mime_type values</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>array(wildcard=>array(real types))</div>
+</div></div>
+</div>
+<a id="function_wp_mime_type_icon"></a><div class="element clickable function  function_wp_mime_type_icon" data-toggle="collapse" data-target=".function_wp_mime_type_icon .collapse">
+<h2>Retrieve the icon for a MIME type.</h2>
+<pre>wp_mime_type_icon(string | int $mime) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mime</h4>
+<code>string</code><code>int</code><p>MIME type or attachment ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>
+</div>
+</div></div>
+</div>
+<a id="function_wp_post_mime_type_where"></a><div class="element clickable function  function_wp_post_mime_type_where" data-toggle="collapse" data-target=".function_wp_post_mime_type_where .collapse">
+<h2>Convert MIME types into SQL.</h2>
+<pre>wp_post_mime_type_where(string | array $post_mime_types, string $table_alias) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_mime_types</h4>
+<code>string</code><code>array</code><p>List of mime types or comma separated string of mime types.</p></div>
+<div class="subelement argument">
+<h4>$table_alias</h4>
+<code>string</code><p>Optional. Specify a table alias, if needed.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The SQL AND clause for mime searching.</div>
+</div></div>
+</div>
+<a id="function_wp_publish_post"></a><div class="element clickable function  function_wp_publish_post" data-toggle="collapse" data-target=".function_wp_publish_post .collapse">
+<h2>Publish a post by transitioning the post status.</h2>
+<pre>wp_publish_post(int $post_id) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a id="function_wp_set_post_categories"></a><div class="element clickable function  function_wp_set_post_categories" data-toggle="collapse" data-target=".function_wp_set_post_categories .collapse">
+<h2>Set categories for a post.</h2>
+<pre>wp_set_post_categories(int $post_ID, array $post_categories) : bool | mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the post categories parameter is not set, then the default category is
+going used.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_ID</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$post_categories</h4>
+<code>array</code><p>Optional. List of categories.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="function_wp_set_post_tags"></a><div class="element clickable function  function_wp_set_post_tags" data-toggle="collapse" data-target=".function_wp_set_post_tags .collapse">
+<h2>Set the tags for a post.</h2>
+<pre>wp_set_post_tags(int $post_id, string $tags, bool $append) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_set_object_terms()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$tags</h4>
+<code>string</code><p>The tags to set for the post, separated by commas.</p></div>
+<div class="subelement argument">
+<h4>$append</h4>
+<code>bool</code><p>If true, don't delete existing tags, just add on. If false, replace the tags with the new tags.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Array of affected term IDs. WP_Error or false on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_set_post_terms"></a><div class="element clickable function  function_wp_set_post_terms" data-toggle="collapse" data-target=".function_wp_set_post_terms .collapse">
+<h2>Set the terms for a post.</h2>
+<pre>wp_set_post_terms(int $post_id, string $tags, string $taxonomy, bool $append) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_set_object_terms()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$tags</h4>
+<code>string</code><p>The tags to set for the post, separated by commas.</p></div>
+<div class="subelement argument">
+<h4>$taxonomy</h4>
+<code>string</code><p>Taxonomy name. Defaults to 'post_tag'.</p>
+</div>
+<div class="subelement argument">
+<h4>$append</h4>
+<code>bool</code><p>If true, don't delete existing tags, just add on. If false, replace the tags with the new tags.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Array of affected term IDs. WP_Error or false on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_transition_post_status"></a><div class="element clickable function  function_wp_transition_post_status" data-toggle="collapse" data-target=".function_wp_transition_post_status .collapse">
+<h2>Transition the post status of a post.</h2>
+<pre>wp_transition_post_status(string $new_status, string $old_status, object $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Calls hooks to transition post status.</p>
+
+<p>The first is 'transition_post_status' with new status, old status, and post data.</p>
+
+<p>The next action called is 'OLDSTATUS_to_NEWSTATUS' the 'NEWSTATUS' is the
+$new_status parameter and the 'OLDSTATUS' is $old_status parameter; it has the
+post data.</p>
+
+<p>The final action is named 'NEWSTATUS_POSTTYPE', 'NEWSTATUS' is from the $new_status
+parameter and POSTTYPE is post_type post data.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="http://codex.wordpress.org/Post_Status_Transitions">http://codex.wordpress.org/Post_Status_Transitions</a></td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$new_status</h4>
+<code>string</code><p>Transition to this post status.</p></div>
+<div class="subelement argument">
+<h4>$old_status</h4>
+<code>string</code><p>Previous post status.</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>Post data.</p></div>
+</div></div>
+</div>
+<a id="function_wp_trash_post"></a><div class="element clickable function  function_wp_trash_post" data-toggle="collapse" data-target=".function_wp_trash_post .collapse">
+<h2>Moves a post or page to the Trash</h2>
+<pre>wp_trash_post(int $post_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If trash is disabled, the post or page is permanently deleted.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_delete_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure</div>
+</div></div>
+</div>
+<a id="function_wp_trash_post_comments"></a><div class="element clickable function  function_wp_trash_post_comments" data-toggle="collapse" data-target=".function_wp_trash_post_comments .collapse">
+<h2>Moves comments for a post to the trash</h2>
+<pre>wp_trash_post_comments(int $post) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><p>Post ID or object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure</div>
+</div></div>
+</div>
+<a id="function_wp_unique_post_slug"></a><div class="element clickable function  function_wp_unique_post_slug" data-toggle="collapse" data-target=".function_wp_unique_post_slug .collapse">
+<h2>Computes a unique slug for the post, when given the desired slug and some post details.</h2>
+<pre>wp_unique_post_slug(string $slug, integer $post_ID, string $post_status, string $post_type, integer $post_parent) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+<tr>
+<th>global</th>
+<td>wpdb $wpdb</td>
+</tr>
+<tr>
+<th>global</th>
+<td>WP_Rewrite $wp_rewrite</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$slug</h4>
+<code>string</code><p>the desired slug (post_name)</p>
+</div>
+<div class="subelement argument">
+<h4>$post_ID</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$post_status</h4>
+<code>string</code><p>no uniqueness checks are made if the post is still draft or pending</p></div>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$post_parent</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>unique slug for the post, based on $post_name (with a -1, -2, etc. suffix)</div>
+</div></div>
+</div>
+<a id="function_wp_untrash_post"></a><div class="element clickable function  function_wp_untrash_post" data-toggle="collapse" data-target=".function_wp_untrash_post .collapse">
+<h2>Restores a post or page from the Trash</h2>
+<pre>wp_untrash_post(int $post_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure</div>
+</div></div>
+</div>
+<a id="function_wp_untrash_post_comments"></a><div class="element clickable function  function_wp_untrash_post_comments" data-toggle="collapse" data-target=".function_wp_untrash_post_comments .collapse">
+<h2>Restore comments for a post from the trash</h2>
+<pre>wp_untrash_post_comments(int $post) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><p>Post ID or object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>False on failure</div>
+</div></div>
+</div>
+<a id="function_wp_update_attachment_metadata"></a><div class="element clickable function  function_wp_update_attachment_metadata" data-toggle="collapse" data-target=".function_wp_update_attachment_metadata .collapse">
+<h2>Update metadata for an attachment.</h2>
+<pre>wp_update_attachment_metadata(int $post_id, array $data) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Attachment ID.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Attachment data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_wp_update_post"></a><div class="element clickable function  function_wp_update_post" data-toggle="collapse" data-target=".function_wp_update_post .collapse">
+<h2>Update a post with new post data.</h2>
+<pre>wp_update_post(array | object $postarr) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The date does not have to be set for drafts. You can set the date and it will
+not be overridden.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$postarr</h4>
+<code>array</code><code>object</code><p>Post data. Arrays are expected to be escaped, objects are not.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>0 on failure, Post ID on success.</div>
+</div></div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/WordPress.Post.html">Post</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Post.Revisions.html">Revisions</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__wp_get_post_autosave_hack"></a><div class="element clickable function  function__wp_get_post_autosave_hack" data-toggle="collapse" data-target=".function__wp_get_post_autosave_hack .collapse">
+<h2>Internally used to hack WP_Query into submission.</h2>
+<pre>_wp_get_post_autosave_hack(object $query) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>object</code><p>WP_Query object</p></div>
+</div></div>
+</div>
+<a id="function__wp_post_revision_fields"></a><div class="element clickable function  function__wp_post_revision_fields" data-toggle="collapse" data-target=".function__wp_post_revision_fields .collapse">
+<h2>Determines which fields of posts are to be saved in revisions.</h2>
+<pre>_wp_post_revision_fields(array $post, bool $autosave) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does two things. If passed a post <em>array</em>, it will return a post array ready
+to be inserted into the posts table as a post revision. Otherwise, returns
+an array whose keys are the post fields to be saved for post revisions.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>array</code><p>Optional a post array to be processed for insertion as a post revision.</p></div>
+<div class="subelement argument">
+<h4>$autosave</h4>
+<code>bool</code><p>optional Is the revision an autosave?</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Post array ready to be inserted as a post revision or array of fields that can be versioned.</div>
+</div></div>
+</div>
+<a id="function__wp_put_post_revision"></a><div class="element clickable function  function__wp_put_post_revision" data-toggle="collapse" data-target=".function__wp_put_post_revision .collapse">
+<h2>Inserts post data into the posts table as a post revision.</h2>
+<pre>_wp_put_post_revision(int | object | array $post, bool $autosave) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_insert_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><code>array</code><p>Post ID, post object OR post array.</p></div>
+<div class="subelement argument">
+<h4>$autosave</h4>
+<code>bool</code><p>Optional. Is the revision an autosave?</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null or 0 if error, new revision ID if success.</div>
+</div></div>
+</div>
+<a id="function_wp_create_post_autosave"></a><div class="element clickable function  function_wp_create_post_autosave" data-toggle="collapse" data-target=".function_wp_create_post_autosave .collapse">
+<h2>Creates autosave data for the specified post from $_POST data.</h2>
+<pre>wp_create_post_autosave($post_id) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\_wp_translate_postdata()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\_wp_post_revision_fields()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post_id</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="function_wp_delete_post_revision"></a><div class="element clickable function  function_wp_delete_post_revision" data-toggle="collapse" data-target=".function_wp_delete_post_revision .collapse">
+<h2>Deletes a revision.</h2>
+<pre>wp_delete_post_revision(int | object $revision_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Deletes the row from the posts table corresponding to the specified revision.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_post_revision()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_delete_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$revision_id</h4>
+<code>int</code><code>object</code><p>Revision ID or revision object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null or WP_Error if error, deleted post if success.</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_autosave"></a><div class="element clickable function  function_wp_get_post_autosave" data-toggle="collapse" data-target=".function_wp_get_post_autosave .collapse">
+<h2>Retrieve the autosaved data of the specified post.</h2>
+<pre>wp_get_post_autosave(int $post_id) : object | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns a post object containing the information that was autosaved for the
+specified post.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>The post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code><code>bool</code>The autosaved data or false on failure or when no autosave exists.</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_revision"></a><div class="element clickable function  function_wp_get_post_revision" data-toggle="collapse" data-target=".function_wp_get_post_revision .collapse">
+<h2>Gets a post revision.</h2>
+<pre>wp_get_post_revision(int | object $post, string $output, string $filter) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Optional. OBJECT, ARRAY_A, or ARRAY_N.</p></div>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><p>Optional sanitation filter. @see sanitize_post()</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null if error or post object if success</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_revisions"></a><div class="element clickable function  function_wp_get_post_revisions" data-toggle="collapse" data-target=".function_wp_get_post_revisions .collapse">
+<h2>Returns all revisions of specified post.</h2>
+<pre>wp_get_post_revisions(int | object $post_id, $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_children()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><code>object</code><p>Post ID or post object</p></div>
+<div class="subelement argument"><h4>$args</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>empty if no revisions</div>
+</div></div>
+</div>
+<a id="function_wp_is_post_autosave"></a><div class="element clickable function  function_wp_is_post_autosave" data-toggle="collapse" data-target=".function_wp_is_post_autosave .collapse">
+<h2>Determines if the specified post is an autosave.</h2>
+<pre>wp_is_post_autosave(int | object $post) : bool | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>int</code>False if not a revision, ID of autosave's parent otherwise</div>
+</div></div>
+</div>
+<a id="function_wp_is_post_revision"></a><div class="element clickable function  function_wp_is_post_revision" data-toggle="collapse" data-target=".function_wp_is_post_revision .collapse">
+<h2>Determines if the specified post is a revision.</h2>
+<pre>wp_is_post_revision(int | object $post) : bool | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>int</code>False if not a revision, ID of revision's parent otherwise.</div>
+</div></div>
+</div>
+<a id="function_wp_list_post_revisions"></a><div class="element clickable function  function_wp_list_post_revisions" data-toggle="collapse" data-target=".function_wp_list_post_revisions .collapse">
+<h2>Display list of a post's revisions.</h2>
+<pre>wp_list_post_revisions(int | object $post_id, string | array $args) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can output either a UL with edit links or a TABLE with diff interface, and
+restore action links.</p>
+
+<p>Second argument controls parameters:
+  (bool)   parent : include the parent (the "Current Revision") in the list.
+  (string) format : 'list' or 'form-table'. 'list' outputs UL, 'form-table'
+                    outputs TABLE with UI.
+  (int)    right  : what revision is currently being viewed - used in
+                    form-table format.
+  (int)    left   : what revision is currently being diffed against right -
+                    used in form-table format.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_post_revisions()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_post_revision_title()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_edit_post_link()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_the_author_meta()</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>split into two functions (list, form-table) ?</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>string</code><code>array</code><p>See description {@link wp_parse_args()}.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a id="function_wp_post_revision_title"></a><div class="element clickable function  function_wp_post_revision_title" data-toggle="collapse" data-target=".function_wp_post_revision_title .collapse">
+<h2>Retrieve formatted date timestamp of a revision (linked to that revisions's page).</h2>
+<pre>wp_post_revision_title(int | object $revision, bool $link) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\date_i18n()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$revision</h4>
+<code>int</code><code>object</code><p>Revision ID or revision object.</p></div>
+<div class="subelement argument">
+<h4>$link</h4>
+<code>bool</code><p>Optional, default is true. Link to revisions's page?</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>i18n formatted datetimestamp or localized 'Current Revision'.</div>
+</div></div>
+</div>
+<a id="function_wp_restore_post_revision"></a><div class="element clickable function  function_wp_restore_post_revision" data-toggle="collapse" data-target=".function_wp_restore_post_revision .collapse">
+<h2>Restores a post to the specified revision.</h2>
+<pre>wp_restore_post_revision(int | object $revision_id, array $fields) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can restore a past revision using all fields of the post revision, or only selected fields.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_post_revision()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_update_post()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$revision_id</h4>
+<code>int</code><code>object</code><p>Revision ID or revision object.</p></div>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>Optional. What fields to restore from. Defaults to all.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null if error, false if no fields to restore, (int) post ID if success.</div>
+</div></div>
+</div>
+<a id="function_wp_save_post_revision"></a><div class="element clickable function  function_wp_save_post_revision" data-toggle="collapse" data-target=".function_wp_save_post_revision .collapse">
+<h2>Saves an already existing post as a post revision.</h2>
+<pre>wp_save_post_revision(int $post_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Typically used immediately prior to post updates.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\_wp_put_post_revision()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>The ID of the post to save as a revision.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null or 0 if error, new revision ID, if success.</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:53-05:00.<br></footer></div>
+</div>
+</body>
+</html>

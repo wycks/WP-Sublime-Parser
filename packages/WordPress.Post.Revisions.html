@@ -1,0 +1,638 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Post\Revisions</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.Post.Revisions.html" title="Revisions"><i class="icon-folder-open"></i>Revisions</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function__wp_get_post_autosave_hack" title="_wp_get_post_autosave_hack :: Internally used to hack WP_Query into submission."><span class="description">Internally used to hack WP_Query into submission.</span><pre>_wp_get_post_autosave_hack</pre></a></li>
+<li class="function  "><a href="#function__wp_post_revision_fields" title="_wp_post_revision_fields :: Determines which fields of posts are to be saved in revisions."><span class="description">Determines which fields of posts are to be saved in revisions.</span><pre>_wp_post_revision_fields</pre></a></li>
+<li class="function  "><a href="#function__wp_put_post_revision" title="_wp_put_post_revision :: Inserts post data into the posts table as a post revision."><span class="description">Inserts post data into the posts table as a post revision.</span><pre>_wp_put_post_revision</pre></a></li>
+<li class="function  "><a href="#function_wp_create_post_autosave" title="wp_create_post_autosave :: Creates autosave data for the specified post from $_POST data."><span class="description">Creates autosave data for the specified post from $_POST data.</span><pre>wp_create_post_autosave</pre></a></li>
+<li class="function  "><a href="#function_wp_delete_post_revision" title="wp_delete_post_revision :: Deletes a revision."><span class="description">Deletes a revision.</span><pre>wp_delete_post_revision</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_autosave" title="wp_get_post_autosave :: Retrieve the autosaved data of the specified post."><span class="description">Retrieve the autosaved data of the specified post.</span><pre>wp_get_post_autosave</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_revision" title="wp_get_post_revision :: Gets a post revision."><span class="description">Gets a post revision.</span><pre>wp_get_post_revision</pre></a></li>
+<li class="function  "><a href="#function_wp_get_post_revisions" title="wp_get_post_revisions :: Returns all revisions of specified post."><span class="description">Returns all revisions of specified post.</span><pre>wp_get_post_revisions</pre></a></li>
+<li class="function  "><a href="#function_wp_is_post_autosave" title="wp_is_post_autosave :: Determines if the specified post is an autosave."><span class="description">Determines if the specified post is an autosave.</span><pre>wp_is_post_autosave</pre></a></li>
+<li class="function  "><a href="#function_wp_is_post_revision" title="wp_is_post_revision :: Determines if the specified post is a revision."><span class="description">Determines if the specified post is a revision.</span><pre>wp_is_post_revision</pre></a></li>
+<li class="function  "><a href="#function_wp_list_post_revisions" title="wp_list_post_revisions :: Display list of a post's revisions."><span class="description">Display list of a post's revisions.</span><pre>wp_list_post_revisions</pre></a></li>
+<li class="function  "><a href="#function_wp_post_revision_title" title="wp_post_revision_title :: Retrieve formatted date timestamp of a revision (linked to that revisions's page)."><span class="description">Retrieve formatted date timestamp of a revision (linked to that revisions's page).</span><pre>wp_post_revision_title</pre></a></li>
+<li class="function  "><a href="#function_wp_restore_post_revision" title="wp_restore_post_revision :: Restores a post to the specified revision."><span class="description">Restores a post to the specified revision.</span><pre>wp_restore_post_revision</pre></a></li>
+<li class="function  "><a href="#function_wp_save_post_revision" title="wp_save_post_revision :: Saves an already existing post as a post revision."><span class="description">Saves an already existing post as a post revision.</span><pre>wp_save_post_revision</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/WordPress.Post.html">Post</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Post.Revisions.html">Revisions</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__wp_get_post_autosave_hack"></a><div class="element clickable function  function__wp_get_post_autosave_hack" data-toggle="collapse" data-target=".function__wp_get_post_autosave_hack .collapse">
+<h2>Internally used to hack WP_Query into submission.</h2>
+<pre>_wp_get_post_autosave_hack(object $query) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>object</code><p>WP_Query object</p></div>
+</div></div>
+</div>
+<a id="function__wp_post_revision_fields"></a><div class="element clickable function  function__wp_post_revision_fields" data-toggle="collapse" data-target=".function__wp_post_revision_fields .collapse">
+<h2>Determines which fields of posts are to be saved in revisions.</h2>
+<pre>_wp_post_revision_fields(array $post, bool $autosave) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does two things. If passed a post <em>array</em>, it will return a post array ready
+to be inserted into the posts table as a post revision. Otherwise, returns
+an array whose keys are the post fields to be saved for post revisions.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>array</code><p>Optional a post array to be processed for insertion as a post revision.</p></div>
+<div class="subelement argument">
+<h4>$autosave</h4>
+<code>bool</code><p>optional Is the revision an autosave?</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Post array ready to be inserted as a post revision or array of fields that can be versioned.</div>
+</div></div>
+</div>
+<a id="function__wp_put_post_revision"></a><div class="element clickable function  function__wp_put_post_revision" data-toggle="collapse" data-target=".function__wp_put_post_revision .collapse">
+<h2>Inserts post data into the posts table as a post revision.</h2>
+<pre>_wp_put_post_revision(int | object | array $post, bool $autosave) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_insert_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><code>array</code><p>Post ID, post object OR post array.</p></div>
+<div class="subelement argument">
+<h4>$autosave</h4>
+<code>bool</code><p>Optional. Is the revision an autosave?</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null or 0 if error, new revision ID if success.</div>
+</div></div>
+</div>
+<a id="function_wp_create_post_autosave"></a><div class="element clickable function  function_wp_create_post_autosave" data-toggle="collapse" data-target=".function_wp_create_post_autosave .collapse">
+<h2>Creates autosave data for the specified post from $_POST data.</h2>
+<pre>wp_create_post_autosave($post_id) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\_wp_translate_postdata()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\_wp_post_revision_fields()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post_id</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="function_wp_delete_post_revision"></a><div class="element clickable function  function_wp_delete_post_revision" data-toggle="collapse" data-target=".function_wp_delete_post_revision .collapse">
+<h2>Deletes a revision.</h2>
+<pre>wp_delete_post_revision(int | object $revision_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Deletes the row from the posts table corresponding to the specified revision.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_post_revision()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_delete_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$revision_id</h4>
+<code>int</code><code>object</code><p>Revision ID or revision object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null or WP_Error if error, deleted post if success.</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_autosave"></a><div class="element clickable function  function_wp_get_post_autosave" data-toggle="collapse" data-target=".function_wp_get_post_autosave .collapse">
+<h2>Retrieve the autosaved data of the specified post.</h2>
+<pre>wp_get_post_autosave(int $post_id) : object | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns a post object containing the information that was autosaved for the
+specified post.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>The post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code><code>bool</code>The autosaved data or false on failure or when no autosave exists.</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_revision"></a><div class="element clickable function  function_wp_get_post_revision" data-toggle="collapse" data-target=".function_wp_get_post_revision .collapse">
+<h2>Gets a post revision.</h2>
+<pre>wp_get_post_revision(int | object $post, string $output, string $filter) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object</p></div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Optional. OBJECT, ARRAY_A, or ARRAY_N.</p></div>
+<div class="subelement argument">
+<h4>$filter</h4>
+<code>string</code><p>Optional sanitation filter. @see sanitize_post()</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null if error or post object if success</div>
+</div></div>
+</div>
+<a id="function_wp_get_post_revisions"></a><div class="element clickable function  function_wp_get_post_revisions" data-toggle="collapse" data-target=".function_wp_get_post_revisions .collapse">
+<h2>Returns all revisions of specified post.</h2>
+<pre>wp_get_post_revisions(int | object $post_id, $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_children()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><code>object</code><p>Post ID or post object</p></div>
+<div class="subelement argument"><h4>$args</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>empty if no revisions</div>
+</div></div>
+</div>
+<a id="function_wp_is_post_autosave"></a><div class="element clickable function  function_wp_is_post_autosave" data-toggle="collapse" data-target=".function_wp_is_post_autosave .collapse">
+<h2>Determines if the specified post is an autosave.</h2>
+<pre>wp_is_post_autosave(int | object $post) : bool | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>int</code>False if not a revision, ID of autosave's parent otherwise</div>
+</div></div>
+</div>
+<a id="function_wp_is_post_revision"></a><div class="element clickable function  function_wp_is_post_revision" data-toggle="collapse" data-target=".function_wp_is_post_revision .collapse">
+<h2>Determines if the specified post is a revision.</h2>
+<pre>wp_is_post_revision(int | object $post) : bool | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>int</code>False if not a revision, ID of revision's parent otherwise.</div>
+</div></div>
+</div>
+<a id="function_wp_list_post_revisions"></a><div class="element clickable function  function_wp_list_post_revisions" data-toggle="collapse" data-target=".function_wp_list_post_revisions .collapse">
+<h2>Display list of a post's revisions.</h2>
+<pre>wp_list_post_revisions(int | object $post_id, string | array $args) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can output either a UL with edit links or a TABLE with diff interface, and
+restore action links.</p>
+
+<p>Second argument controls parameters:
+  (bool)   parent : include the parent (the "Current Revision") in the list.
+  (string) format : 'list' or 'form-table'. 'list' outputs UL, 'form-table'
+                    outputs TABLE with UI.
+  (int)    right  : what revision is currently being viewed - used in
+                    form-table format.
+  (int)    left   : what revision is currently being diffed against right -
+                    used in form-table format.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_post_revisions()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_post_revision_title()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_edit_post_link()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_the_author_meta()</td>
+</tr>
+<tr>
+<th>todo</th>
+<td>split into two functions (list, form-table) ?</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><code>object</code><p>Post ID or post object.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>string</code><code>array</code><p>See description {@link wp_parse_args()}.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a id="function_wp_post_revision_title"></a><div class="element clickable function  function_wp_post_revision_title" data-toggle="collapse" data-target=".function_wp_post_revision_title .collapse">
+<h2>Retrieve formatted date timestamp of a revision (linked to that revisions's page).</h2>
+<pre>wp_post_revision_title(int | object $revision, bool $link) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\date_i18n()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$revision</h4>
+<code>int</code><code>object</code><p>Revision ID or revision object.</p></div>
+<div class="subelement argument">
+<h4>$link</h4>
+<code>bool</code><p>Optional, default is true. Link to revisions's page?</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>i18n formatted datetimestamp or localized 'Current Revision'.</div>
+</div></div>
+</div>
+<a id="function_wp_restore_post_revision"></a><div class="element clickable function  function_wp_restore_post_revision" data-toggle="collapse" data-target=".function_wp_restore_post_revision .collapse">
+<h2>Restores a post to the specified revision.</h2>
+<pre>wp_restore_post_revision(int | object $revision_id, array $fields) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can restore a past revision using all fields of the post revision, or only selected fields.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_post_revision()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_update_post()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$revision_id</h4>
+<code>int</code><code>object</code><p>Revision ID or revision object.</p></div>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>Optional. What fields to restore from. Defaults to all.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null if error, false if no fields to restore, (int) post ID if success.</div>
+</div></div>
+</div>
+<a id="function_wp_save_post_revision"></a><div class="element clickable function  function_wp_save_post_revision" data-toggle="collapse" data-target=".function_wp_save_post_revision .collapse">
+<h2>Saves an already existing post as a post revision.</h2>
+<pre>wp_save_post_revision(int $post_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Typically used immediately prior to post updates.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Post.Revisions.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Post_Revisions</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\_wp_put_post_revision()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>The ID of the post to save as a revision.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null or 0 if error, new revision ID, if success.</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:53-05:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,2414 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \wp_xmlrpc_server</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method_IXR_Server" title="IXR_Server :: "><span class="description">IXR_Server()
+        </span><pre>IXR_Server()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct :: Register all of the XMLRPC methods that XMLRPC server understands."><span class="description">Register all of the XMLRPC methods that XMLRPC server understands.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method__getOptions" title="_getOptions :: Retrieve blog options value from list."><span class="description">Retrieve blog options value from list.</span><pre>_getOptions()</pre></a></li>
+<li class="method public "><a href="#method__multisite_getUsersBlogs" title="_multisite_getUsersBlogs :: Private function for retrieving a users blogs for multisite setups"><span class="description">Private function for retrieving a users blogs for multisite setups</span><pre>_multisite_getUsersBlogs()</pre></a></li>
+<li class="method public "><a href="#method_addTwoNumbers" title="addTwoNumbers :: Test XMLRPC API by adding two numbers for client."><span class="description">Test XMLRPC API by adding two numbers for client.</span><pre>addTwoNumbers()</pre></a></li>
+<li class="method public "><a href="#method_add_enclosure_if_new" title="add_enclosure_if_new :: "><span class="description">add_enclosure_if_new()
+        </span><pre>add_enclosure_if_new()</pre></a></li>
+<li class="method public "><a href="#method_attach_uploads" title="attach_uploads :: Attach upload to a post."><span class="description">Attach upload to a post.</span><pre>attach_uploads()</pre></a></li>
+<li class="method public "><a href="#method_blogger_deletePost" title="blogger_deletePost :: Remove a post."><span class="description">Remove a post.</span><pre>blogger_deletePost()</pre></a></li>
+<li class="method public "><a href="#method_blogger_editPost" title="blogger_editPost :: Edit a post."><span class="description">Edit a post.</span><pre>blogger_editPost()</pre></a></li>
+<li class="method public "><a href="#method_blogger_getPost" title="blogger_getPost :: Retrieve post."><span class="description">Retrieve post.</span><pre>blogger_getPost()</pre></a></li>
+<li class="method public "><a href="#method_blogger_getRecentPosts" title="blogger_getRecentPosts :: Retrieve list of recent posts."><span class="description">Retrieve list of recent posts.</span><pre>blogger_getRecentPosts()</pre></a></li>
+<li class="method public "><a href="#method_blogger_getTemplate" title="blogger_getTemplate :: Retrieve blog_filename content."><span class="description">Retrieve blog_filename content.</span><pre>blogger_getTemplate()</pre></a></li>
+<li class="method public "><a href="#method_blogger_getUserInfo" title="blogger_getUserInfo :: Retrieve user's data."><span class="description">Retrieve user's data.</span><pre>blogger_getUserInfo()</pre></a></li>
+<li class="method public "><a href="#method_blogger_getUsersBlogs" title="blogger_getUsersBlogs :: Retrieve blogs that user owns."><span class="description">Retrieve blogs that user owns.</span><pre>blogger_getUsersBlogs()</pre></a></li>
+<li class="method public "><a href="#method_blogger_newPost" title="blogger_newPost :: Create new post."><span class="description">Create new post.</span><pre>blogger_newPost()</pre></a></li>
+<li class="method public "><a href="#method_blogger_setTemplate" title="blogger_setTemplate :: Updates the content of blog_filename."><span class="description">Updates the content of blog_filename.</span><pre>blogger_setTemplate()</pre></a></li>
+<li class="method public inherited"><a href="#method_call" title="call :: "><span class="description">call()
+        </span><pre>call()</pre></a></li>
+<li class="method public inherited"><a href="#method_error" title="error :: "><span class="description">error()
+        </span><pre>error()</pre></a></li>
+<li class="method public "><a href="#method_escape" title="escape :: Sanitize string or array of strings for database."><span class="description">Sanitize string or array of strings for database.</span><pre>escape()</pre></a></li>
+<li class="method public inherited"><a href="#method_getCapabilities" title="getCapabilities :: "><span class="description">getCapabilities()
+        </span><pre>getCapabilities()</pre></a></li>
+<li class="method public "><a href="#method_get_custom_fields" title="get_custom_fields :: Retrieve custom fields for post."><span class="description">Retrieve custom fields for post.</span><pre>get_custom_fields()</pre></a></li>
+<li class="method public inherited"><a href="#method_hasMethod" title="hasMethod :: "><span class="description">hasMethod()
+        </span><pre>hasMethod()</pre></a></li>
+<li class="method public "><a href="#method_initialise_blog_option_info" title="initialise_blog_option_info :: Set up blog options property."><span class="description">Set up blog options property.</span><pre>initialise_blog_option_info()</pre></a></li>
+<li class="method public inherited"><a href="#method_listMethods" title="listMethods :: "><span class="description">listMethods()
+        </span><pre>listMethods()</pre></a></li>
+<li class="method public "><a href="#method_login" title="login :: Log user in."><span class="description">Log user in.</span><pre>login()</pre></a></li>
+<li class="method public "><a href="#method_login_pass_ok" title="login_pass_ok :: Check user's credentials."><span class="description">Check user's credentials.</span><pre>login_pass_ok()</pre></a></li>
+<li class="method public "><a href="#method_mt_getCategoryList" title="mt_getCategoryList :: Retrieve list of all categories on blog."><span class="description">Retrieve list of all categories on blog.</span><pre>mt_getCategoryList()</pre></a></li>
+<li class="method public "><a href="#method_mt_getPostCategories" title="mt_getPostCategories :: Retrieve post categories."><span class="description">Retrieve post categories.</span><pre>mt_getPostCategories()</pre></a></li>
+<li class="method public "><a href="#method_mt_getRecentPostTitles" title="mt_getRecentPostTitles :: Retrieve the post titles of recent posts."><span class="description">Retrieve the post titles of recent posts.</span><pre>mt_getRecentPostTitles()</pre></a></li>
+<li class="method public "><a href="#method_mt_getTrackbackPings" title="mt_getTrackbackPings :: Retrieve trackbacks sent to a given post."><span class="description">Retrieve trackbacks sent to a given post.</span><pre>mt_getTrackbackPings()</pre></a></li>
+<li class="method public "><a href="#method_mt_publishPost" title="mt_publishPost :: Sets a post's publish status to 'publish'."><span class="description">Sets a post's publish status to 'publish'.</span><pre>mt_publishPost()</pre></a></li>
+<li class="method public "><a href="#method_mt_setPostCategories" title="mt_setPostCategories :: Sets categories for a post."><span class="description">Sets categories for a post.</span><pre>mt_setPostCategories()</pre></a></li>
+<li class="method public "><a href="#method_mt_supportedMethods" title="mt_supportedMethods :: Retrieve an array of methods supported by this server."><span class="description">Retrieve an array of methods supported by this server.</span><pre>mt_supportedMethods()</pre></a></li>
+<li class="method public "><a href="#method_mt_supportedTextFilters" title="mt_supportedTextFilters :: Retrieve an empty array because we don't support per-post text filters."><span class="description">Retrieve an empty array because we don't support per-post text filters.</span><pre>mt_supportedTextFilters()</pre></a></li>
+<li class="method public inherited"><a href="#method_multiCall" title="multiCall :: "><span class="description">multiCall()
+        </span><pre>multiCall()</pre></a></li>
+<li class="method public "><a href="#method_mw_editPost" title="mw_editPost :: Edit a post."><span class="description">Edit a post.</span><pre>mw_editPost()</pre></a></li>
+<li class="method public "><a href="#method_mw_getCategories" title="mw_getCategories :: Retrieve the list of categories on a given blog."><span class="description">Retrieve the list of categories on a given blog.</span><pre>mw_getCategories()</pre></a></li>
+<li class="method public "><a href="#method_mw_getPost" title="mw_getPost :: Retrieve post."><span class="description">Retrieve post.</span><pre>mw_getPost()</pre></a></li>
+<li class="method public "><a href="#method_mw_getRecentPosts" title="mw_getRecentPosts :: Retrieve list of recent posts."><span class="description">Retrieve list of recent posts.</span><pre>mw_getRecentPosts()</pre></a></li>
+<li class="method public "><a href="#method_mw_newMediaObject" title="mw_newMediaObject :: Uploads a file, following your settings."><span class="description">Uploads a file, following your settings.</span><pre>mw_newMediaObject()</pre></a></li>
+<li class="method public "><a href="#method_mw_newPost" title="mw_newPost :: Create a new post."><span class="description">Create a new post.</span><pre>mw_newPost()</pre></a></li>
+<li class="method public inherited"><a href="#method_output" title="output :: "><span class="description">output()
+        </span><pre>output()</pre></a></li>
+<li class="method public "><a href="#method_pingback_extensions_getPingbacks" title="pingback_extensions_getPingbacks :: Retrieve array of URLs that pingbacked the given URL."><span class="description">Retrieve array of URLs that pingbacked the given URL.</span><pre>pingback_extensions_getPingbacks()</pre></a></li>
+<li class="method public "><a href="#method_pingback_ping" title="pingback_ping :: Retrieves a pingback and registers it."><span class="description">Retrieves a pingback and registers it.</span><pre>pingback_ping()</pre></a></li>
+<li class="method public "><a href="#method_sayHello" title='sayHello :: Test XMLRPC API by saying, "Hello!" to client.'><span class="description">Test XMLRPC API by saying, "Hello!" to client.</span><pre>sayHello()</pre></a></li>
+<li class="method public inherited"><a href="#method_serve" title="serve :: "><span class="description">serve()
+        </span><pre>serve()</pre></a></li>
+<li class="method public "><a href="#method_serve_request" title="serve_request :: "><span class="description">serve_request()
+        </span><pre>serve_request()</pre></a></li>
+<li class="method public inherited"><a href="#method_setCallbacks" title="setCallbacks :: "><span class="description">setCallbacks()
+        </span><pre>setCallbacks()</pre></a></li>
+<li class="method public inherited"><a href="#method_setCapabilities" title="setCapabilities :: "><span class="description">setCapabilities()
+        </span><pre>setCapabilities()</pre></a></li>
+<li class="method public "><a href="#method_set_custom_fields" title="set_custom_fields :: Set custom fields for post."><span class="description">Set custom fields for post.</span><pre>set_custom_fields()</pre></a></li>
+<li class="method public "><a href="#method_wp_deleteCategory" title="wp_deleteCategory :: Remove category."><span class="description">Remove category.</span><pre>wp_deleteCategory()</pre></a></li>
+<li class="method public "><a href="#method_wp_deleteComment" title="wp_deleteComment :: Delete a comment."><span class="description">Delete a comment.</span><pre>wp_deleteComment()</pre></a></li>
+<li class="method public "><a href="#method_wp_deletePage" title="wp_deletePage :: Delete page."><span class="description">Delete page.</span><pre>wp_deletePage()</pre></a></li>
+<li class="method public "><a href="#method_wp_deletePost" title="wp_deletePost :: Delete a post for any registered post type."><span class="description">Delete a post for any registered post type.</span><pre>wp_deletePost()</pre></a></li>
+<li class="method public "><a href="#method_wp_deleteTerm" title="wp_deleteTerm :: Delete a term."><span class="description">Delete a term.</span><pre>wp_deleteTerm()</pre></a></li>
+<li class="method public "><a href="#method_wp_editComment" title="wp_editComment :: Edit comment."><span class="description">Edit comment.</span><pre>wp_editComment()</pre></a></li>
+<li class="method public "><a href="#method_wp_editPage" title="wp_editPage :: Edit page."><span class="description">Edit page.</span><pre>wp_editPage()</pre></a></li>
+<li class="method public "><a href="#method_wp_editPost" title="wp_editPost :: Edit a post for any registered post type."><span class="description">Edit a post for any registered post type.</span><pre>wp_editPost()</pre></a></li>
+<li class="method public "><a href="#method_wp_editTerm" title="wp_editTerm :: Edit a term."><span class="description">Edit a term.</span><pre>wp_editTerm()</pre></a></li>
+<li class="method public "><a href="#method_wp_getAuthors" title="wp_getAuthors :: Retrieve authors list."><span class="description">Retrieve authors list.</span><pre>wp_getAuthors()</pre></a></li>
+<li class="method public "><a href="#method_wp_getComment" title="wp_getComment :: Retrieve comment."><span class="description">Retrieve comment.</span><pre>wp_getComment()</pre></a></li>
+<li class="method public "><a href="#method_wp_getCommentCount" title="wp_getCommentCount :: Retrieve comment count."><span class="description">Retrieve comment count.</span><pre>wp_getCommentCount()</pre></a></li>
+<li class="method public "><a href="#method_wp_getCommentStatusList" title="wp_getCommentStatusList :: Retrieve all of the comment status."><span class="description">Retrieve all of the comment status.</span><pre>wp_getCommentStatusList()</pre></a></li>
+<li class="method public "><a href="#method_wp_getComments" title="wp_getComments :: Retrieve comments."><span class="description">Retrieve comments.</span><pre>wp_getComments()</pre></a></li>
+<li class="method public "><a href="#method_wp_getMediaItem" title="wp_getMediaItem :: Retrieve a media item by ID"><span class="description">Retrieve a media item by ID</span><pre>wp_getMediaItem()</pre></a></li>
+<li class="method public "><a href="#method_wp_getMediaLibrary" title="wp_getMediaLibrary :: Retrieves a collection of media library items (or attachments)"><span class="description">Retrieves a collection of media library items (or attachments)</span><pre>wp_getMediaLibrary()</pre></a></li>
+<li class="method public "><a href="#method_wp_getOptions" title="wp_getOptions :: Retrieve blog options."><span class="description">Retrieve blog options.</span><pre>wp_getOptions()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPage" title="wp_getPage :: Retrieve page."><span class="description">Retrieve page.</span><pre>wp_getPage()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPageList" title="wp_getPageList :: Retrieve page list."><span class="description">Retrieve page list.</span><pre>wp_getPageList()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPageStatusList" title="wp_getPageStatusList :: Retrieve page statuses."><span class="description">Retrieve page statuses.</span><pre>wp_getPageStatusList()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPageTemplates" title="wp_getPageTemplates :: Retrieve page templates."><span class="description">Retrieve page templates.</span><pre>wp_getPageTemplates()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPages" title="wp_getPages :: Retrieve Pages."><span class="description">Retrieve Pages.</span><pre>wp_getPages()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPost" title="wp_getPost :: Retrieve a post."><span class="description">Retrieve a post.</span><pre>wp_getPost()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPostFormats" title="wp_getPostFormats :: Retrieves a list of post formats used by the site"><span class="description">Retrieves a list of post formats used by the site</span><pre>wp_getPostFormats()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPostStatusList" title="wp_getPostStatusList :: Retrieve post statuses."><span class="description">Retrieve post statuses.</span><pre>wp_getPostStatusList()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPostType" title="wp_getPostType :: Retrieves a post type"><span class="description">Retrieves a post type</span><pre>wp_getPostType()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPostTypes" title="wp_getPostTypes :: Retrieves a post types"><span class="description">Retrieves a post types</span><pre>wp_getPostTypes()</pre></a></li>
+<li class="method public "><a href="#method_wp_getPosts" title="wp_getPosts :: Retrieve posts."><span class="description">Retrieve posts.</span><pre>wp_getPosts()</pre></a></li>
+<li class="method public "><a href="#method_wp_getTags" title="wp_getTags :: Get list of all tags"><span class="description">Get list of all tags</span><pre>wp_getTags()</pre></a></li>
+<li class="method public "><a href="#method_wp_getTaxonomies" title="wp_getTaxonomies :: Retrieve all taxonomies."><span class="description">Retrieve all taxonomies.</span><pre>wp_getTaxonomies()</pre></a></li>
+<li class="method public "><a href="#method_wp_getTaxonomy" title="wp_getTaxonomy :: Retrieve a taxonomy."><span class="description">Retrieve a taxonomy.</span><pre>wp_getTaxonomy()</pre></a></li>
+<li class="method public "><a href="#method_wp_getTerm" title="wp_getTerm :: Retrieve a term."><span class="description">Retrieve a term.</span><pre>wp_getTerm()</pre></a></li>
+<li class="method public "><a href="#method_wp_getTerms" title="wp_getTerms :: Retrieve all terms for a taxonomy."><span class="description">Retrieve all terms for a taxonomy.</span><pre>wp_getTerms()</pre></a></li>
+<li class="method public "><a href="#method_wp_getUsersBlogs" title="wp_getUsersBlogs :: Retrieve the blogs of the user."><span class="description">Retrieve the blogs of the user.</span><pre>wp_getUsersBlogs()</pre></a></li>
+<li class="method public "><a href="#method_wp_newCategory" title="wp_newCategory :: Create new category."><span class="description">Create new category.</span><pre>wp_newCategory()</pre></a></li>
+<li class="method public "><a href="#method_wp_newComment" title="wp_newComment :: Create new comment."><span class="description">Create new comment.</span><pre>wp_newComment()</pre></a></li>
+<li class="method public "><a href="#method_wp_newPage" title="wp_newPage :: Create new page."><span class="description">Create new page.</span><pre>wp_newPage()</pre></a></li>
+<li class="method public "><a href="#method_wp_newPost" title="wp_newPost :: Create a new post for any registered post type."><span class="description">Create a new post for any registered post type.</span><pre>wp_newPost()</pre></a></li>
+<li class="method public "><a href="#method_wp_newTerm" title="wp_newTerm :: Create a new term."><span class="description">Create a new term.</span><pre>wp_newTerm()</pre></a></li>
+<li class="method public "><a href="#method_wp_setOptions" title="wp_setOptions :: Update blog options."><span class="description">Update blog options.</span><pre>wp_setOptions()</pre></a></li>
+<li class="method public "><a href="#method_wp_suggestCategories" title="wp_suggestCategories :: Retrieve category list."><span class="description">Retrieve category list.</span><pre>wp_suggestCategories()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method__convert_date" title="_convert_date :: Convert a WordPress date string to an IXR_Date object."><span class="description">Convert a WordPress date string to an IXR_Date object.</span><pre>_convert_date()</pre></a></li>
+<li class="method protected "><a href="#method__convert_date_gmt" title="_convert_date_gmt :: Convert a WordPress GMT date string to an IXR_Date object."><span class="description">Convert a WordPress GMT date string to an IXR_Date object.</span><pre>_convert_date_gmt()</pre></a></li>
+<li class="method protected "><a href="#method__insert_post" title="_insert_post :: Helper method for wp_newPost and wp_editPost, containing shared logic."><span class="description">Helper method for wp_newPost and wp_editPost, containing shared logic.</span><pre>_insert_post()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_comment" title="_prepare_comment :: Prepares comment data for return in an XML-RPC object."><span class="description">Prepares comment data for return in an XML-RPC object.</span><pre>_prepare_comment()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_media_item" title="_prepare_media_item :: Prepares media item data for return in an XML-RPC object."><span class="description">Prepares media item data for return in an XML-RPC object.</span><pre>_prepare_media_item()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_page" title="_prepare_page :: Prepares page data for return in an XML-RPC object."><span class="description">Prepares page data for return in an XML-RPC object.</span><pre>_prepare_page()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_post" title="_prepare_post :: Prepares post data for return in an XML-RPC object."><span class="description">Prepares post data for return in an XML-RPC object.</span><pre>_prepare_post()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_post_type" title="_prepare_post_type :: Prepares post data for return in an XML-RPC object."><span class="description">Prepares post data for return in an XML-RPC object.</span><pre>_prepare_post_type()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_taxonomy" title="_prepare_taxonomy :: Prepares taxonomy data for return in an XML-RPC object."><span class="description">Prepares taxonomy data for return in an XML-RPC object.</span><pre>_prepare_taxonomy()</pre></a></li>
+<li class="method protected "><a href="#method__prepare_term" title="_prepare_term :: Prepares term data for return in an XML-RPC object."><span class="description">Prepares term data for return in an XML-RPC object.</span><pre>_prepare_term()</pre></a></li>
+<li class="method protected "><a href="#method_minimum_args" title="minimum_args :: Checks if the method received at least the minimum number of arguments."><span class="description">Checks if the method received at least the minimum number of arguments.</span><pre>minimum_args()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method__is_greater_than_one" title="_is_greater_than_one :: Helper method for filtering out elements from an array."><span class="description">Helper method for filtering out elements from an array.</span><pre>_is_greater_than_one()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property_callbacks" title="$callbacks :: "><span class="description">$callbacks</span><pre>$callbacks</pre></a></li>
+<li class="property public inherited"><a href="#property_capabilities" title="$capabilities :: "><span class="description">$capabilities</span><pre>$capabilities</pre></a></li>
+<li class="property public inherited"><a href="#property_data" title="$data :: "><span class="description">$data</span><pre>$data</pre></a></li>
+<li class="property public inherited"><a href="#property_message" title="$message :: "><span class="description">$message</span><pre>$message</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\wp_xmlrpc_server"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/wp_xmlrpc_server.html">wp_xmlrpc_server</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">WordPress XMLRPC server implementation.</p>
+<div class="details">
+<div class="long_description"><p>Implements compatibility for Blogger API, MetaWeblog API, MovableType, and
+pingback. Additional WordPress API for managing comments, pages, posts,
+options, etc.</p>
+
+<p>Since WordPress 2.6.0, WordPress XMLRPC server can be disabled in the
+administration panels.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Publishing.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Publishing</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_IXR_Server"></a><div class="element clickable method public method_IXR_Server" data-toggle="collapse" data-target=".method_IXR_Server .collapse">
+<h2>IXR_Server()
+        </h2>
+<pre>IXR_Server($callbacks, $data, $wait) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::IXR_Server()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$callbacks</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$wait</h4></div>
+</div></div>
+</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Register all of the XMLRPC methods that XMLRPC server understands.</h2>
+<pre>__construct() : <a href="../classes/wp_xmlrpc_server.html">\wp_xmlrpc_server</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Sets up server and method property. Passes XMLRPC
+methods through the 'xmlrpc_methods' filter to allow plugins to extend
+or replace XMLRPC methods.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/wp_xmlrpc_server.html">\wp_xmlrpc_server</a></code></div>
+</div></div>
+</div>
+<a id="method__getOptions"></a><div class="element clickable method public method__getOptions" data-toggle="collapse" data-target=".method__getOptions .collapse">
+<h2>Retrieve blog options value from list.</h2>
+<pre>_getOptions(array $options) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><p>Options to retrieve.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method__multisite_getUsersBlogs"></a><div class="element clickable method public method__multisite_getUsersBlogs" data-toggle="collapse" data-target=".method__multisite_getUsersBlogs .collapse">
+<h2>Private function for retrieving a users blogs for multisite setups</h2>
+<pre>_multisite_getUsersBlogs($args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_addTwoNumbers"></a><div class="element clickable method public method_addTwoNumbers" data-toggle="collapse" data-target=".method_addTwoNumbers .collapse">
+<h2>Test XMLRPC API by adding two numbers for client.</h2>
+<pre>addTwoNumbers(array $args) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method Parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_add_enclosure_if_new"></a><div class="element clickable method public method_add_enclosure_if_new" data-toggle="collapse" data-target=".method_add_enclosure_if_new .collapse">
+<h2>add_enclosure_if_new()
+        </h2>
+<pre>add_enclosure_if_new($post_ID, $enclosure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post_ID</h4></div>
+<div class="subelement argument"><h4>$enclosure</h4></div>
+</div></div>
+</div>
+<a id="method_attach_uploads"></a><div class="element clickable method public method_attach_uploads" data-toggle="collapse" data-target=".method_attach_uploads .collapse">
+<h2>Attach upload to a post.</h2>
+<pre>attach_uploads(int $post_ID, string $post_content) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_ID</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$post_content</h4>
+<code>string</code><p>Post Content for attachment.</p></div>
+</div></div>
+</div>
+<a id="method_blogger_deletePost"></a><div class="element clickable method public method_blogger_deletePost" data-toggle="collapse" data-target=".method_blogger_deletePost .collapse">
+<h2>Remove a post.</h2>
+<pre>blogger_deletePost(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True when post is deleted.</div>
+</div></div>
+</div>
+<a id="method_blogger_editPost"></a><div class="element clickable method public method_blogger_editPost" data-toggle="collapse" data-target=".method_blogger_editPost .collapse">
+<h2>Edit a post.</h2>
+<pre>blogger_editPost(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>true when done.</div>
+</div></div>
+</div>
+<a id="method_blogger_getPost"></a><div class="element clickable method public method_blogger_getPost" data-toggle="collapse" data-target=".method_blogger_getPost .collapse">
+<h2>Retrieve post.</h2>
+<pre>blogger_getPost(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_blogger_getRecentPosts"></a><div class="element clickable method public method_blogger_getRecentPosts" data-toggle="collapse" data-target=".method_blogger_getRecentPosts .collapse">
+<h2>Retrieve list of recent posts.</h2>
+<pre>blogger_getRecentPosts(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_blogger_getTemplate"></a><div class="element clickable method public method_blogger_getTemplate" data-toggle="collapse" data-target=".method_blogger_getTemplate .collapse">
+<h2>Retrieve blog_filename content.</h2>
+<pre>blogger_getTemplate(array $args) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_blogger_getUserInfo"></a><div class="element clickable method public method_blogger_getUserInfo" data-toggle="collapse" data-target=".method_blogger_getUserInfo .collapse">
+<h2>Retrieve user's data.</h2>
+<pre>blogger_getUserInfo(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Gives your client some info about you, so you don't have to.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_blogger_getUsersBlogs"></a><div class="element clickable method public method_blogger_getUsersBlogs" data-toggle="collapse" data-target=".method_blogger_getUsersBlogs .collapse">
+<h2>Retrieve blogs that user owns.</h2>
+<pre>blogger_getUsersBlogs(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will make more sense once we support multiple blogs.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_blogger_newPost"></a><div class="element clickable method public method_blogger_newPost" data-toggle="collapse" data-target=".method_blogger_newPost .collapse">
+<h2>Create new post.</h2>
+<pre>blogger_newPost(array $args) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_blogger_setTemplate"></a><div class="element clickable method public method_blogger_setTemplate" data-toggle="collapse" data-target=".method_blogger_setTemplate .collapse">
+<h2>Updates the content of blog_filename.</h2>
+<pre>blogger_setTemplate(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True when done.</div>
+</div></div>
+</div>
+<a id="method_call"></a><div class="element clickable method public method_call" data-toggle="collapse" data-target=".method_call .collapse">
+<h2>call()
+        </h2>
+<pre>call($methodname, $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::call()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$methodname</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_error"></a><div class="element clickable method public method_error" data-toggle="collapse" data-target=".method_error .collapse">
+<h2>error()
+        </h2>
+<pre>error($error, $message) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::error()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$error</h4></div>
+<div class="subelement argument"><h4>$message</h4></div>
+</div></div>
+</div>
+<a id="method_escape"></a><div class="element clickable method public method_escape" data-toggle="collapse" data-target=".method_escape .collapse">
+<h2>Sanitize string or array of strings for database.</h2>
+<pre>escape(string | array $array) : string | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.2</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>string</code><code>array</code><p>Sanitize single string or array of strings.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>array</code>Type matches $array and sanitized for the database.</div>
+</div></div>
+</div>
+<a id="method_getCapabilities"></a><div class="element clickable method public method_getCapabilities" data-toggle="collapse" data-target=".method_getCapabilities .collapse">
+<h2>getCapabilities()
+        </h2>
+<pre>getCapabilities($args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::getCapabilities()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_get_custom_fields"></a><div class="element clickable method public method_get_custom_fields" data-toggle="collapse" data-target=".method_get_custom_fields .collapse">
+<h2>Retrieve custom fields for post.</h2>
+<pre>get_custom_fields(int $post_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Custom fields, if exist.</div>
+</div></div>
+</div>
+<a id="method_hasMethod"></a><div class="element clickable method public method_hasMethod" data-toggle="collapse" data-target=".method_hasMethod .collapse">
+<h2>hasMethod()
+        </h2>
+<pre>hasMethod($method) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::hasMethod()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+</div></div>
+</div>
+<a id="method_initialise_blog_option_info"></a><div class="element clickable method public method_initialise_blog_option_info" data-toggle="collapse" data-target=".method_initialise_blog_option_info .collapse">
+<h2>Set up blog options property.</h2>
+<pre>initialise_blog_option_info() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Passes property through 'xmlrpc_blog_options' filter.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_listMethods"></a><div class="element clickable method public method_listMethods" data-toggle="collapse" data-target=".method_listMethods .collapse">
+<h2>listMethods()
+        </h2>
+<pre>listMethods($args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::listMethods()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_login"></a><div class="element clickable method public method_login" data-toggle="collapse" data-target=".method_login .collapse">
+<h2>Log user in.</h2>
+<pre>login(string $username, string $password) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.8</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$username</h4>
+<code>string</code><p>User's username.</p>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code><p>User's password.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>WP_User object if authentication passed, false otherwise</div>
+</div></div>
+</div>
+<a id="method_login_pass_ok"></a><div class="element clickable method public method_login_pass_ok" data-toggle="collapse" data-target=".method_login_pass_ok .collapse">
+<h2>Check user's credentials.</h2>
+<pre>login_pass_ok(string $user_login, string $user_pass) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>use wp_xmlrpc_server::login</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_xmlrpc_server::login</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_login</h4>
+<code>string</code><p>User's username.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_pass</h4>
+<code>string</code><p>User's password.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether authentication passed.</div>
+</div></div>
+</div>
+<a id="method_mt_getCategoryList"></a><div class="element clickable method public method_mt_getCategoryList" data-toggle="collapse" data-target=".method_mt_getCategoryList .collapse">
+<h2>Retrieve list of all categories on blog.</h2>
+<pre>mt_getCategoryList(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mt_getPostCategories"></a><div class="element clickable method public method_mt_getPostCategories" data-toggle="collapse" data-target=".method_mt_getPostCategories .collapse">
+<h2>Retrieve post categories.</h2>
+<pre>mt_getPostCategories(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mt_getRecentPostTitles"></a><div class="element clickable method public method_mt_getRecentPostTitles" data-toggle="collapse" data-target=".method_mt_getRecentPostTitles .collapse">
+<h2>Retrieve the post titles of recent posts.</h2>
+<pre>mt_getRecentPostTitles(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mt_getTrackbackPings"></a><div class="element clickable method public method_mt_getTrackbackPings" data-toggle="collapse" data-target=".method_mt_getTrackbackPings .collapse">
+<h2>Retrieve trackbacks sent to a given post.</h2>
+<pre>mt_getTrackbackPings(array $args) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_mt_publishPost"></a><div class="element clickable method public method_mt_publishPost" data-toggle="collapse" data-target=".method_mt_publishPost .collapse">
+<h2>Sets a post's publish status to 'publish'.</h2>
+<pre>mt_publishPost(array $args) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_mt_setPostCategories"></a><div class="element clickable method public method_mt_setPostCategories" data-toggle="collapse" data-target=".method_mt_setPostCategories .collapse">
+<h2>Sets categories for a post.</h2>
+<pre>mt_setPostCategories(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success.</div>
+</div></div>
+</div>
+<a id="method_mt_supportedMethods"></a><div class="element clickable method public method_mt_supportedMethods" data-toggle="collapse" data-target=".method_mt_supportedMethods .collapse">
+<h2>Retrieve an array of methods supported by this server.</h2>
+<pre>mt_supportedMethods(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mt_supportedTextFilters"></a><div class="element clickable method public method_mt_supportedTextFilters" data-toggle="collapse" data-target=".method_mt_supportedTextFilters .collapse">
+<h2>Retrieve an empty array because we don't support per-post text filters.</h2>
+<pre>mt_supportedTextFilters(array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+</div></div>
+</div>
+<a id="method_multiCall"></a><div class="element clickable method public method_multiCall" data-toggle="collapse" data-target=".method_multiCall .collapse">
+<h2>multiCall()
+        </h2>
+<pre>multiCall($methodcalls) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::multiCall()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$methodcalls</h4></div>
+</div></div>
+</div>
+<a id="method_mw_editPost"></a><div class="element clickable method public method_mw_editPost" data-toggle="collapse" data-target=".method_mw_editPost .collapse">
+<h2>Edit a post.</h2>
+<pre>mw_editPost(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success.</div>
+</div></div>
+</div>
+<a id="method_mw_getCategories"></a><div class="element clickable method public method_mw_getCategories" data-toggle="collapse" data-target=".method_mw_getCategories .collapse">
+<h2>Retrieve the list of categories on a given blog.</h2>
+<pre>mw_getCategories(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mw_getPost"></a><div class="element clickable method public method_mw_getPost" data-toggle="collapse" data-target=".method_mw_getPost .collapse">
+<h2>Retrieve post.</h2>
+<pre>mw_getPost(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mw_getRecentPosts"></a><div class="element clickable method public method_mw_getRecentPosts" data-toggle="collapse" data-target=".method_mw_getRecentPosts .collapse">
+<h2>Retrieve list of recent posts.</h2>
+<pre>mw_getRecentPosts(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mw_newMediaObject"></a><div class="element clickable method public method_mw_newMediaObject" data-toggle="collapse" data-target=".method_mw_newMediaObject .collapse">
+<h2>Uploads a file, following your settings.</h2>
+<pre>mw_newMediaObject(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Adapted from a patch by Johann Richard.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="http://mycvs.org/archives/2004/06/30/file-upload-to-wordpress-in-ecto/">http://mycvs.org/archives/2004/06/30/file-upload-to-wordpress-in-ecto/</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_mw_newPost"></a><div class="element clickable method public method_mw_newPost" data-toggle="collapse" data-target=".method_mw_newPost .collapse">
+<h2>Create a new post.</h2>
+<pre>mw_newPost(array $args) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The 'content_struct' argument must contain:
+ - title
+ - description
+ - mt_excerpt
+ - mt_text_more
+ - mt_keywords
+ - mt_tb_ping_urls
+ - categories</p>
+
+<p>Also, it can optionally contain:
+ - wp_slug
+ - wp_password
+ - wp_page_parent_id
+ - wp_page_order
+ - wp_author_id
+ - post_status | page_status - can be 'draft', 'private', 'publish', or 'pending'
+ - mt_allow_comments - can be 'open' or 'closed'
+ - mt_allow_pings - can be 'open' or 'closed'
+ - date_created_gmt
+ - dateCreated
+ - wp_post_thumbnail</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - username - password - content_struct - publish</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_output"></a><div class="element clickable method public method_output" data-toggle="collapse" data-target=".method_output .collapse">
+<h2>output()
+        </h2>
+<pre>output($xml) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::output()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$xml</h4></div>
+</div></div>
+</div>
+<a id="method_pingback_extensions_getPingbacks"></a><div class="element clickable method public method_pingback_extensions_getPingbacks" data-toggle="collapse" data-target=".method_pingback_extensions_getPingbacks .collapse">
+<h2>Retrieve array of URLs that pingbacked the given URL.</h2>
+<pre>pingback_extensions_getPingbacks(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Specs on http://www.aquarionics.com/misc/archives/blogite/0198.html</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_pingback_ping"></a><div class="element clickable method public method_pingback_ping" data-toggle="collapse" data-target=".method_pingback_ping .collapse">
+<h2>Retrieves a pingback and registers it.</h2>
+<pre>pingback_ping(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_sayHello"></a><div class="element clickable method public method_sayHello" data-toggle="collapse" data-target=".method_sayHello .collapse">
+<h2>Test XMLRPC API by saying, "Hello!" to client.</h2>
+<pre>sayHello(array $args) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method Parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_serve"></a><div class="element clickable method public method_serve" data-toggle="collapse" data-target=".method_serve .collapse">
+<h2>serve()
+        </h2>
+<pre>serve($data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::serve()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+</div></div>
+</div>
+<a id="method_serve_request"></a><div class="element clickable method public method_serve_request" data-toggle="collapse" data-target=".method_serve_request .collapse">
+<h2>serve_request()
+        </h2>
+<pre>serve_request() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_setCallbacks"></a><div class="element clickable method public method_setCallbacks" data-toggle="collapse" data-target=".method_setCallbacks .collapse">
+<h2>setCallbacks()
+        </h2>
+<pre>setCallbacks() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::setCallbacks()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_setCapabilities"></a><div class="element clickable method public method_setCapabilities" data-toggle="collapse" data-target=".method_setCapabilities .collapse">
+<h2>setCapabilities()
+        </h2>
+<pre>setCapabilities() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::setCapabilities()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_set_custom_fields"></a><div class="element clickable method public method_set_custom_fields" data-toggle="collapse" data-target=".method_set_custom_fields .collapse">
+<h2>Set custom fields for post.</h2>
+<pre>set_custom_fields(int $post_id, array $fields) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID.</p></div>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>Custom fields.</p></div>
+</div></div>
+</div>
+<a id="method_wp_deleteCategory"></a><div class="element clickable method public method_wp_deleteCategory" data-toggle="collapse" data-target=".method_wp_deleteCategory .collapse">
+<h2>Remove category.</h2>
+<pre>wp_deleteCategory(array $args) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>See {@link wp_delete_term()} for return info.</div>
+</div></div>
+</div>
+<a id="method_wp_deleteComment"></a><div class="element clickable method public method_wp_deleteComment" data-toggle="collapse" data-target=".method_wp_deleteComment .collapse">
+<h2>Delete a comment.</h2>
+<pre>wp_deleteComment(array $args) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>By default, the comment will be moved to the trash instead of deleted.
+See <a href="wp_delete_comment()">wp_delete_comment()</a> for more information on
+this behavior.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - username - password - comment_id</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>{@link wp_delete_comment()}</div>
+</div></div>
+</div>
+<a id="method_wp_deletePage"></a><div class="element clickable method public method_wp_deletePage" data-toggle="collapse" data-target=".method_wp_deletePage .collapse">
+<h2>Delete page.</h2>
+<pre>wp_deletePage(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True, if success.</div>
+</div></div>
+</div>
+<a id="method_wp_deletePost"></a><div class="element clickable method public method_wp_deletePost" data-toggle="collapse" data-target=".method_wp_deletePost .collapse">
+<h2>Delete a post for any registered post type.</h2>
+<pre>wp_deletePost(array $args) : true</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_delete_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - int $post_id</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>true</code>on success</div>
+</div></div>
+</div>
+<a id="method_wp_deleteTerm"></a><div class="element clickable method public method_wp_deleteTerm" data-toggle="collapse" data-target=".method_wp_deleteTerm .collapse">
+<h2>Delete a term.</h2>
+<pre>wp_deleteTerm(array $args) : boolean | <a href="../classes/IXR_Error.html">\IXR_Error</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_delete_term()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - string $taxnomy_name - string $term_id</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code><code><a href="../classes/IXR_Error.html">\IXR_Error</a></code>If it suceeded true else a reason why not</div>
+</div></div>
+</div>
+<a id="method_wp_editComment"></a><div class="element clickable method public method_wp_editComment" data-toggle="collapse" data-target=".method_wp_editComment .collapse">
+<h2>Edit comment.</h2>
+<pre>wp_editComment($args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Besides the common blog_id, username, and password arguments, it takes a
+comment_id integer and a content_struct array as last argument.</p>
+
+<p>The allowed keys in the content_struct array are:
+ - 'author'
+ - 'author_url'
+ - 'author_email'
+ - 'content'
+ - 'date_created_gmt'
+ - 'status'. Common statuses are 'approve', 'hold', 'spam'. See <a href="get_comment_statuses()">get_comment_statuses()</a> for more details</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$args</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True, on success.</div>
+</div></div>
+</div>
+<a id="method_wp_editPage"></a><div class="element clickable method public method_wp_editPage" data-toggle="collapse" data-target=".method_wp_editPage .collapse">
+<h2>Edit page.</h2>
+<pre>wp_editPage(array $args) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="method_wp_editPost"></a><div class="element clickable method public method_wp_editPost" data-toggle="collapse" data-target=".method_wp_editPost .collapse">
+<h2>Edit a post for any registered post type.</h2>
+<pre>wp_editPost(array $args) : true</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The $content_struct parameter only needs to contain fields that
+should be changed. All other fields will retain their existing values.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - int $post_id - array $content_struct</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>true</code>on success</div>
+</div></div>
+</div>
+<a id="method_wp_editTerm"></a><div class="element clickable method public method_wp_editTerm" data-toggle="collapse" data-target=".method_wp_editTerm .collapse">
+<h2>Edit a term.</h2>
+<pre>wp_editTerm(array $args) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_update_term()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - string $term_id - array $content_struct The $content_struct must contain: - 'taxonomy' Also, it can optionally contain: - 'name' - 'parent' - 'description' - 'slug'</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True, on success.</div>
+</div></div>
+</div>
+<a id="method_wp_getAuthors"></a><div class="element clickable method public method_wp_getAuthors" data-toggle="collapse" data-target=".method_wp_getAuthors .collapse">
+<h2>Retrieve authors list.</h2>
+<pre>wp_getAuthors(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getComment"></a><div class="element clickable method public method_wp_getComment" data-toggle="collapse" data-target=".method_wp_getComment .collapse">
+<h2>Retrieve comment.</h2>
+<pre>wp_getComment(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getCommentCount"></a><div class="element clickable method public method_wp_getCommentCount" data-toggle="collapse" data-target=".method_wp_getCommentCount .collapse">
+<h2>Retrieve comment count.</h2>
+<pre>wp_getCommentCount(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getCommentStatusList"></a><div class="element clickable method public method_wp_getCommentStatusList" data-toggle="collapse" data-target=".method_wp_getCommentStatusList .collapse">
+<h2>Retrieve all of the comment status.</h2>
+<pre>wp_getCommentStatusList(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getComments"></a><div class="element clickable method public method_wp_getComments" data-toggle="collapse" data-target=".method_wp_getComments .collapse">
+<h2>Retrieve comments.</h2>
+<pre>wp_getComments(array $args) : \array.</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Besides the common blog_id, username, and password arguments, it takes a filter
+array as last argument.</p>
+
+<p>Accepted 'filter' keys are 'status', 'post_id', 'offset', and 'number'.</p>
+
+<p>The defaults are as follows:
+- 'status' - Default is ''. Filter by status (e.g., 'approve', 'hold')
+- 'post_id' - Default is ''. The post where the comment is posted. Empty string shows all comments.
+- 'number' - Default is 10. Total number of media items to retrieve.
+- 'offset' - Default is 0. See <a href="WP_Query::query()">WP_Query::query()</a> for more.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\array.</code>Contains a collection of comments. See {@link wp_xmlrpc_server::wp_getComment()} for a description of each item contents</div>
+</div></div>
+</div>
+<a id="method_wp_getMediaItem"></a><div class="element clickable method public method_wp_getMediaItem" data-toggle="collapse" data-target=".method_wp_getMediaItem .collapse">
+<h2>Retrieve a media item by ID</h2>
+<pre>wp_getMediaItem(array $args) : \array.</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - username - password - attachment_id</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\array.</code>Associative array containing:
+ - 'date_created_gmt'
+ - 'parent'
+ - 'link'
+ - 'thumbnail'
+ - 'title'
+ - 'caption'
+ - 'description'
+ - 'metadata'</div>
+</div></div>
+</div>
+<a id="method_wp_getMediaLibrary"></a><div class="element clickable method public method_wp_getMediaLibrary" data-toggle="collapse" data-target=".method_wp_getMediaLibrary .collapse">
+<h2>Retrieves a collection of media library items (or attachments)</h2>
+<pre>wp_getMediaLibrary(array $args) : \array.</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Besides the common blog_id, username, and password arguments, it takes a filter
+array as last argument.</p>
+
+<p>Accepted 'filter' keys are 'parent_id', 'mime_type', 'offset', and 'number'.</p>
+
+<p>The defaults are as follows:
+- 'number' - Default is 5. Total number of media items to retrieve.
+- 'offset' - Default is 0. See <a href="WP_Query::query()">WP_Query::query()</a> for more.
+- 'parent_id' - Default is ''. The post where the media item is attached. Empty string shows all media items. 0 shows unattached media items.
+- 'mime_type' - Default is ''. Filter by mime type (e.g., 'image/jpeg', 'application/pdf')</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - username - password - filter</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\array.</code>Contains a collection of media items. See {@link wp_xmlrpc_server::wp_getMediaItem()} for a description of each item contents</div>
+</div></div>
+</div>
+<a id="method_wp_getOptions"></a><div class="element clickable method public method_wp_getOptions" data-toggle="collapse" data-target=".method_wp_getOptions .collapse">
+<h2>Retrieve blog options.</h2>
+<pre>wp_getOptions(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPage"></a><div class="element clickable method public method_wp_getPage" data-toggle="collapse" data-target=".method_wp_getPage .collapse">
+<h2>Retrieve page.</h2>
+<pre>wp_getPage(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - page_id - username - password</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPageList"></a><div class="element clickable method public method_wp_getPageList" data-toggle="collapse" data-target=".method_wp_getPageList .collapse">
+<h2>Retrieve page list.</h2>
+<pre>wp_getPageList(array $args) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPageStatusList"></a><div class="element clickable method public method_wp_getPageStatusList" data-toggle="collapse" data-target=".method_wp_getPageStatusList .collapse">
+<h2>Retrieve page statuses.</h2>
+<pre>wp_getPageStatusList(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPageTemplates"></a><div class="element clickable method public method_wp_getPageTemplates" data-toggle="collapse" data-target=".method_wp_getPageTemplates .collapse">
+<h2>Retrieve page templates.</h2>
+<pre>wp_getPageTemplates(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPages"></a><div class="element clickable method public method_wp_getPages" data-toggle="collapse" data-target=".method_wp_getPages .collapse">
+<h2>Retrieve Pages.</h2>
+<pre>wp_getPages(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - username - password - num_pages</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPost"></a><div class="element clickable method public method_wp_getPost" data-toggle="collapse" data-target=".method_wp_getPost .collapse">
+<h2>Retrieve a post.</h2>
+<pre>wp_getPost(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0
+The optional $fields parameter specifies what fields will be included
+in the response array. This should be a list of field names. 'post_id' will
+always be included in the response regardless of the value of $fields.
+Instead of, or in addition to, individual field names, conceptual group
+names can be used to specify multiple fields. The available conceptual
+groups are 'post' (all basic fields), 'taxonomies', 'custom_fields',
+and 'enclosure'.</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_single_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $post_id - string $username - string $password - array $fields optional</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>contains (based on $fields parameter):
+ - 'post_id'
+ - 'post_title'
+ - 'post_date'
+ - 'post_date_gmt'
+ - 'post_modified'
+ - 'post_modified_gmt'
+ - 'post_status'
+ - 'post_type'
+ - 'post_name'
+ - 'post_author'
+ - 'post_password'
+ - 'post_excerpt'
+ - 'post_content'
+ - 'link'
+ - 'comment_status'
+ - 'ping_status'
+ - 'sticky'
+ - 'custom_fields'
+ - 'terms'
+ - 'categories'
+ - 'tags'
+ - 'enclosure'</div>
+</div></div>
+</div>
+<a id="method_wp_getPostFormats"></a><div class="element clickable method public method_wp_getPostFormats" data-toggle="collapse" data-target=".method_wp_getPostFormats .collapse">
+<h2>Retrieves a list of post formats used by the site</h2>
+<pre>wp_getPostFormats(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - blog_id - username - password</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPostStatusList"></a><div class="element clickable method public method_wp_getPostStatusList" data-toggle="collapse" data-target=".method_wp_getPostStatusList .collapse">
+<h2>Retrieve post statuses.</h2>
+<pre>wp_getPostStatusList(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPostType"></a><div class="element clickable method public method_wp_getPostType" data-toggle="collapse" data-target=".method_wp_getPostType .collapse">
+<h2>Retrieves a post type</h2>
+<pre>wp_getPostType(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_post_type_object()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - string $post_type_name - array $fields</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>contains:
+ - 'labels'
+ - 'description'
+ - 'capability_type'
+ - 'cap'
+ - 'map_meta_cap'
+ - 'hierarchical'
+ - 'menu_position'
+ - 'taxonomies'
+ - 'supports'</div>
+</div></div>
+</div>
+<a id="method_wp_getPostTypes"></a><div class="element clickable method public method_wp_getPostTypes" data-toggle="collapse" data-target=".method_wp_getPostTypes .collapse">
+<h2>Retrieves a post types</h2>
+<pre>wp_getPostTypes(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_post_types()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - array $filter - array $fields</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getPosts"></a><div class="element clickable method public method_wp_getPosts" data-toggle="collapse" data-target=".method_wp_getPosts .collapse">
+<h2>Retrieve posts.</h2>
+<pre>wp_getPosts(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0
+The optional $filter parameter modifies the query used to retrieve posts.
+Accepted keys are 'post_type', 'post_status', 'number', 'offset',
+'orderby', and 'order'.
+The optional $fields parameter specifies what fields will be included
+in the response array.</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_recent_posts()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_getPost()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_posts()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - array $filter optional - array $fields optional</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>contains a collection of posts.</div>
+</div></div>
+</div>
+<a id="method_wp_getTags"></a><div class="element clickable method public method_wp_getTags" data-toggle="collapse" data-target=".method_wp_getTags .collapse">
+<h2>Get list of all tags</h2>
+<pre>wp_getTags(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_wp_getTaxonomies"></a><div class="element clickable method public method_wp_getTaxonomies" data-toggle="collapse" data-target=".method_wp_getTaxonomies .collapse">
+<h2>Retrieve all taxonomies.</h2>
+<pre>wp_getTaxonomies(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_taxonomies()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>taxonomies</div>
+</div></div>
+</div>
+<a id="method_wp_getTaxonomy"></a><div class="element clickable method public method_wp_getTaxonomy" data-toggle="collapse" data-target=".method_wp_getTaxonomy .collapse">
+<h2>Retrieve a taxonomy.</h2>
+<pre>wp_getTaxonomy(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_taxonomy()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - string $taxonomy</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>(@see get_taxonomy())</div>
+</div></div>
+</div>
+<a id="method_wp_getTerm"></a><div class="element clickable method public method_wp_getTerm" data-toggle="collapse" data-target=".method_wp_getTerm .collapse">
+<h2>Retrieve a term.</h2>
+<pre>wp_getTerm(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_term()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - string $taxonomy - string $term_id</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>contains:
+ - 'term_id'
+ - 'name'
+ - 'slug'
+ - 'term_group'
+ - 'term_taxonomy_id'
+ - 'taxonomy'
+ - 'description'
+ - 'parent'
+ - 'count'</div>
+</div></div>
+</div>
+<a id="method_wp_getTerms"></a><div class="element clickable method public method_wp_getTerms" data-toggle="collapse" data-target=".method_wp_getTerms .collapse">
+<h2>Retrieve all terms for a taxonomy.</h2>
+<pre>wp_getTerms(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0
+The optional $filter parameter modifies the query used to retrieve terms.
+Accepted keys are 'number', 'offset', 'orderby', 'order', 'hide_empty', and 'search'.</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_terms()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - string $taxonomy - array $filter optional</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>terms</div>
+</div></div>
+</div>
+<a id="method_wp_getUsersBlogs"></a><div class="element clickable method public method_wp_getUsersBlogs" data-toggle="collapse" data-target=".method_wp_getUsersBlogs .collapse">
+<h2>Retrieve the blogs of the user.</h2>
+<pre>wp_getUsersBlogs(array $args) : \array.</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - username - password</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\array.</code>Contains:
+ - 'isAdmin'
+ - 'url'
+ - 'blogid'
+ - 'blogName'
+ - 'xmlrpc' - url of xmlrpc endpoint</div>
+</div></div>
+</div>
+<a id="method_wp_newCategory"></a><div class="element clickable method public method_wp_newCategory" data-toggle="collapse" data-target=".method_wp_newCategory .collapse">
+<h2>Create new category.</h2>
+<pre>wp_newCategory(array $args) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Category ID.</div>
+</div></div>
+</div>
+<a id="method_wp_newComment"></a><div class="element clickable method public method_wp_newComment" data-toggle="collapse" data-target=".method_wp_newComment .collapse">
+<h2>Create new comment.</h2>
+<pre>wp_newComment(array $args) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>{@link wp_new_comment()}</div>
+</div></div>
+</div>
+<a id="method_wp_newPage"></a><div class="element clickable method public method_wp_newPage" data-toggle="collapse" data-target=".method_wp_newPage .collapse">
+<h2>Create new page.</h2>
+<pre>wp_newPage(array $args) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. See {@link wp_xmlrpc_server::mw_newPost()}</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="method_wp_newPost"></a><div class="element clickable method public method_wp_newPost" data-toggle="collapse" data-target=".method_wp_newPost .collapse">
+<h2>Create a new post for any registered post type.</h2>
+<pre>wp_newPost(array $args) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - array $content_struct $content_struct can contain: - post_type (default: 'post') - post_status (default: 'draft') - post_title - post_author - post_exerpt - post_content - post_date_gmt | post_date - post_format - post_password - comment_status - can be 'open' | 'closed' - ping_status - can be 'open' | 'closed' - sticky - post_thumbnail - ID of a media item to use as the post thumbnail/featured image - custom_fields - array, with each element containing 'key' and 'value' - terms - array, with taxonomy names as keys and arrays of term IDs as values - terms_names - array, with taxonomy names as keys and arrays of term names as values - enclosure - any other fields supported by wp_insert_post()</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>post_id</div>
+</div></div>
+</div>
+<a id="method_wp_newTerm"></a><div class="element clickable method public method_wp_newTerm" data-toggle="collapse" data-target=".method_wp_newTerm .collapse">
+<h2>Create a new term.</h2>
+<pre>wp_newTerm(array $args) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_insert_term()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters. Contains: - int $blog_id - string $username - string $password - array $content_struct The $content_struct must contain: - 'name' - 'taxonomy' Also, it can optionally contain: - 'parent' - 'description' - 'slug'</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>term_id</div>
+</div></div>
+</div>
+<a id="method_wp_setOptions"></a><div class="element clickable method public method_wp_setOptions" data-toggle="collapse" data-target=".method_wp_setOptions .collapse">
+<h2>Update blog options.</h2>
+<pre>wp_setOptions(array $args) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="method_wp_suggestCategories"></a><div class="element clickable method public method_wp_suggestCategories" data-toggle="collapse" data-target=".method_wp_suggestCategories .collapse">
+<h2>Retrieve category list.</h2>
+<pre>wp_suggestCategories(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Method parameters.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method__convert_date"></a><div class="element clickable method protected method__convert_date" data-toggle="collapse" data-target=".method__convert_date .collapse">
+<h2>Convert a WordPress date string to an IXR_Date object.</h2>
+<pre>_convert_date(string $date) : <a href="../classes/IXR_Date.html">\IXR_Date</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$date</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/IXR_Date.html">\IXR_Date</a></code></div>
+</div></div>
+</div>
+<a id="method__convert_date_gmt"></a><div class="element clickable method protected method__convert_date_gmt" data-toggle="collapse" data-target=".method__convert_date_gmt .collapse">
+<h2>Convert a WordPress GMT date string to an IXR_Date object.</h2>
+<pre>_convert_date_gmt(string $date_gmt, string $date) : <a href="../classes/IXR_Date.html">\IXR_Date</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$date_gmt</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$date</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/IXR_Date.html">\IXR_Date</a></code></div>
+</div></div>
+</div>
+<a id="method__insert_post"></a><div class="element clickable method protected method__insert_post" data-toggle="collapse" data-target=".method__insert_post .collapse">
+<h2>Helper method for wp_newPost and wp_editPost, containing shared logic.</h2>
+<pre>_insert_post(<a href="../classes/WP_User.html">\WP_User</a> $user, array $content_struct) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_insert_post()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user</h4>
+<code><a href="../classes/WP_User.html">\WP_User</a></code><p>The post author if post_author isn't set in $content_struct.</p>
+</div>
+<div class="subelement argument">
+<h4>$content_struct</h4>
+<code>array</code><p>Post data to insert.</p></div>
+</div></div>
+</div>
+<a id="method__prepare_comment"></a><div class="element clickable method protected method__prepare_comment" data-toggle="collapse" data-target=".method__prepare_comment .collapse">
+<h2>Prepares comment data for return in an XML-RPC object.</h2>
+<pre>_prepare_comment(object $comment) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$comment</h4>
+<code>object</code><p>The unprepared comment data</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared comment data</div>
+</div></div>
+</div>
+<a id="method__prepare_media_item"></a><div class="element clickable method protected method__prepare_media_item" data-toggle="collapse" data-target=".method__prepare_media_item .collapse">
+<h2>Prepares media item data for return in an XML-RPC object.</h2>
+<pre>_prepare_media_item(object $media_item, string $thumbnail_size) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$media_item</h4>
+<code>object</code><p>The unprepared media item data</p></div>
+<div class="subelement argument">
+<h4>$thumbnail_size</h4>
+<code>string</code><p>The image size to use for the thumbnail URL</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared media item data</div>
+</div></div>
+</div>
+<a id="method__prepare_page"></a><div class="element clickable method protected method__prepare_page" data-toggle="collapse" data-target=".method__prepare_page .collapse">
+<h2>Prepares page data for return in an XML-RPC object.</h2>
+<pre>_prepare_page(object $page) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>object</code><p>The unprepared page data</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared page data</div>
+</div></div>
+</div>
+<a id="method__prepare_post"></a><div class="element clickable method protected method__prepare_post" data-toggle="collapse" data-target=".method__prepare_post .collapse">
+<h2>Prepares post data for return in an XML-RPC object.</h2>
+<pre>_prepare_post(array $post, array $fields) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>array</code><p>The unprepared post data</p></div>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>The subset of post type fields to return</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared post data</div>
+</div></div>
+</div>
+<a id="method__prepare_post_type"></a><div class="element clickable method protected method__prepare_post_type" data-toggle="collapse" data-target=".method__prepare_post_type .collapse">
+<h2>Prepares post data for return in an XML-RPC object.</h2>
+<pre>_prepare_post_type(object $post_type, array $fields) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>object</code><p>Post type object</p></div>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>The subset of post fields to return</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared post type data</div>
+</div></div>
+</div>
+<a id="method__prepare_taxonomy"></a><div class="element clickable method protected method__prepare_taxonomy" data-toggle="collapse" data-target=".method__prepare_taxonomy .collapse">
+<h2>Prepares taxonomy data for return in an XML-RPC object.</h2>
+<pre>_prepare_taxonomy(object $taxonomy, array $fields) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$taxonomy</h4>
+<code>object</code><p>The unprepared taxonomy data</p></div>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>The subset of taxonomy fields to return</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared taxonomy data</div>
+</div></div>
+</div>
+<a id="method__prepare_term"></a><div class="element clickable method protected method__prepare_term" data-toggle="collapse" data-target=".method__prepare_term .collapse">
+<h2>Prepares term data for return in an XML-RPC object.</h2>
+<pre>_prepare_term(array | object $term) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>protected</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$term</h4>
+<code>array</code><code>object</code><p>The unprepared term data</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The prepared term data</div>
+</div></div>
+</div>
+<a id="method_minimum_args"></a><div class="element clickable method protected method_minimum_args" data-toggle="collapse" data-target=".method_minimum_args .collapse">
+<h2>Checks if the method received at least the minimum number of arguments.</h2>
+<pre>minimum_args(string | array $args, int $count) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>string</code><code>array</code><p>Sanitize single string or array of strings.</p></div>
+<div class="subelement argument">
+<h4>$count</h4>
+<code>int</code><p>Minimum number of arguments.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>if $args contains at least $count arguments.</div>
+</div></div>
+</div>
+<a id="method__is_greater_than_one"></a><div class="element clickable method private method__is_greater_than_one" data-toggle="collapse" data-target=".method__is_greater_than_one .collapse">
+<h2>Helper method for filtering out elements from an array.</h2>
+<pre>_is_greater_than_one(int $count) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$count</h4>
+<code>int</code><p>Number to compare to one.</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_callbacks"> </a><div class="element clickable property public property_callbacks" data-toggle="collapse" data-target=".property_callbacks .collapse">
+<h2>$callbacks</h2>
+<pre>$callbacks </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::$$callbacks</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_capabilities"> </a><div class="element clickable property public property_capabilities" data-toggle="collapse" data-target=".property_capabilities .collapse">
+<h2>$capabilities</h2>
+<pre>$capabilities </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::$$capabilities</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_data"> </a><div class="element clickable property public property_data" data-toggle="collapse" data-target=".property_data .collapse">
+<h2>$data</h2>
+<pre>$data </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::$$data</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_message"> </a><div class="element clickable property public property_message" data-toggle="collapse" data-target=".property_message .collapse">
+<h2>$message</h2>
+<pre>$message </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\IXR_Server::$$message</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:13-05:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \Walker_Category_Checklist</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method_display_element" title="display_element :: Traverse elements to create list from elements."><span class="description">Traverse elements to create list from elements.</span><pre>display_element()</pre></a></li>
+<li class="method public "><a href="#method_end_el" title="end_el :: Ends the element output, if needed."><span class="description">Ends the element output, if needed.</span><pre>end_el()</pre></a></li>
+<li class="method public "><a href="#method_end_lvl" title="end_lvl :: Ends the list of after the elements are added."><span class="description">Ends the list of after the elements are added.</span><pre>end_lvl()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_number_of_root_elements" title="get_number_of_root_elements :: "><span class="description">get_number_of_root_elements()
+        </span><pre>get_number_of_root_elements()</pre></a></li>
+<li class="method public inherited"><a href="#method_paged_walk" title="paged_walk :: paged_walk() - produce a page of nested elements"><span class="description">paged_walk() - produce a page of nested elements</span><pre>paged_walk()</pre></a></li>
+<li class="method public "><a href="#method_start_el" title="start_el :: Start the element output."><span class="description">Start the element output.</span><pre>start_el()</pre></a></li>
+<li class="method public "><a href="#method_start_lvl" title="start_lvl :: Starts the list before the elements are added."><span class="description">Starts the list before the elements are added.</span><pre>start_lvl()</pre></a></li>
+<li class="method public inherited"><a href="#method_unset_children" title="unset_children :: "><span class="description">unset_children()
+        </span><pre>unset_children()</pre></a></li>
+<li class="method public inherited"><a href="#method_walk" title="walk :: Display array of elements hierarchically."><span class="description">Display array of elements hierarchically.</span><pre>walk()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_db_fields" title="$db_fields :: DB fields to use."><span class="description">DB fields to use.</span><pre>$db_fields</pre></a></li>
+<li class="property public inherited"><a href="#property_max_pages" title="$max_pages :: Max number of pages walked by the paged walker"><span class="description">Max number of pages walked by the paged walker</span><pre>$max_pages</pre></a></li>
+<li class="property public "><a href="#property_tree_type" title="$tree_type :: What the class handles."><span class="description">What the class handles.</span><pre>$tree_type</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Walker_Category_Checklist"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Walker_Category_Checklist.html">Walker_Category_Checklist</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Walker to output an unordered list of category checkbox <input> elements.</p>
+<div class="details">
+<div class="long_description"><p>Extend the Walker class to use it, see examples at the below. Child classes
+do not need to implement all of the abstract methods in the class. The child
+only needs to implement the methods that are needed. Also, the methods are
+not strictly abstract in that the parameter definition needs to be followed.
+The child classes can have additional parameters.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\Walker</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_category_checklist()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_terms_checklist()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.1</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">WordPress</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_display_element"></a><div class="element clickable method public method_display_element" data-toggle="collapse" data-target=".method_display_element .collapse">
+<h2>Traverse elements to create list from elements.</h2>
+<pre>display_element(object $element, array $children_elements, int $max_depth, int $depth, array $args, string $output) : null</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Display one element if the element doesn't have any children otherwise,
+display the element and its children. Will only traverse up to the max
+depth and no ignore elements under that depth. It is possible to set the
+max depth to include all depths, see walk() method.</p>
+
+<p>This method shouldn't be called directly, use the walk() method instead.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Walker::display_element()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$element</h4>
+<code>object</code><p>Data object</p></div>
+<div class="subelement argument">
+<h4>$children_elements</h4>
+<code>array</code><p>List of elements to continue traversing.</p></div>
+<div class="subelement argument">
+<h4>$max_depth</h4>
+<code>int</code><p>Max depth to traverse.</p></div>
+<div class="subelement argument">
+<h4>$depth</h4>
+<code>int</code><p>Depth of current element.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Passed by reference. Used to append additional content.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code>Null on failure with no changes to parameters.</div>
+</div></div>
+</div>
+<a id="method_end_el"></a><div class="element clickable method public method_end_el" data-toggle="collapse" data-target=".method_end_el .collapse">
+<h2>Ends the element output, if needed.</h2>
+<pre>end_el(string $output, $category, $depth, $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Additional parameters are used in child classes. The args parameter holds
+additional values that may be used with the child class methods.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Passed by reference. Used to append additional content.</p></div>
+<div class="subelement argument"><h4>$category</h4></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_end_lvl"></a><div class="element clickable method public method_end_lvl" data-toggle="collapse" data-target=".method_end_lvl .collapse">
+<h2>Ends the list of after the elements are added.</h2>
+<pre>end_lvl(string $output, $depth, $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Additional parameters are used in child classes. The args parameter holds
+additional values that may be used with the child class methods. This
+method finishes the list at the end of output of the elements.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Passed by reference. Used to append additional content.</p></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_get_number_of_root_elements"></a><div class="element clickable method public method_get_number_of_root_elements" data-toggle="collapse" data-target=".method_get_number_of_root_elements .collapse">
+<h2>get_number_of_root_elements()
+        </h2>
+<pre>get_number_of_root_elements($elements) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Walker::get_number_of_root_elements()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$elements</h4></div>
+</div></div>
+</div>
+<a id="method_paged_walk"></a><div class="element clickable method public method_paged_walk" data-toggle="collapse" data-target=".method_paged_walk .collapse">
+<h2>paged_walk() - produce a page of nested elements</h2>
+<pre>paged_walk($elements, int $max_depth, int $page_num, $per_page) : \XHTML</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Given an array of hierarchical elements, the maximum depth, a specific page number,
+and number of elements per page, this function first determines all top level root elements
+belonging to that page, then lists them and all of their children in hierarchical order.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.html">WordPress</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Walker::paged_walk()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$elements</h4></div>
+<div class="subelement argument">
+<h4>$max_depth</h4>
+<code>int</code><p>= 0 means display all levels; $max_depth > 0 specifies the number of display levels.</p>
+</div>
+<div class="subelement argument">
+<h4>$page_num</h4>
+<code>int</code><p>the specific page number, beginning with 1.</p></div>
+<div class="subelement argument"><h4>$per_page</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\XHTML</code>of the specified page of elements</div>
+</div></div>
+</div>
+<a id="method_start_el"></a><div class="element clickable method public method_start_el" data-toggle="collapse" data-target=".method_start_el .collapse">
+<h2>Start the element output.</h2>
+<pre>start_el(string $output, $category, $depth, $args, $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Additional parameters are used in child classes. The args parameter holds
+additional values that may be used with the child class methods. Includes
+the element output also.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Passed by reference. Used to append additional content.</p></div>
+<div class="subelement argument"><h4>$category</h4></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="method_start_lvl"></a><div class="element clickable method public method_start_lvl" data-toggle="collapse" data-target=".method_start_lvl .collapse">
+<h2>Starts the list before the elements are added.</h2>
+<pre>start_lvl(string $output, $depth, $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Additional parameters are used in child classes. The args parameter holds
+additional values that may be used with the child class methods. This
+method is called at the start of the output list.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$output</h4>
+<code>string</code><p>Passed by reference. Used to append additional content.</p></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="method_unset_children"></a><div class="element clickable method public method_unset_children" data-toggle="collapse" data-target=".method_unset_children .collapse">
+<h2>unset_children()
+        </h2>
+<pre>unset_children($e, $children_elements) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Walker::unset_children()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$e</h4></div>
+<div class="subelement argument"><h4>$children_elements</h4></div>
+</div></div>
+</div>
+<a id="method_walk"></a><div class="element clickable method public method_walk" data-toggle="collapse" data-target=".method_walk .collapse">
+<h2>Display array of elements hierarchically.</h2>
+<pre>walk(array $elements, int $max_depth) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>It is a generic function which does not assume any existing order of
+elements. max_depth = -1 means flatly display every element. max_depth =
+0 means display all levels. max_depth > 0  specifies the number of
+display levels.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Walker::walk()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$elements</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$max_depth</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_db_fields"> </a><div class="element clickable property public property_db_fields" data-toggle="collapse" data-target=".property_db_fields .collapse">
+<h2>DB fields to use.</h2>
+<pre>$db_fields : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_max_pages"> </a><div class="element clickable property public property_max_pages" data-toggle="collapse" data-target=".property_max_pages .collapse">
+<h2>Max number of pages walked by the paged walker</h2>
+<pre>$max_pages : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Walker::$$max_pages</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_tree_type"> </a><div class="element clickable property public property_tree_type" data-toggle="collapse" data-target=".property_tree_type .collapse">
+<h2>What the class handles.</h2>
+<pre>$tree_type : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:03-05:00.<br></footer></div>
+</div>
+</body>
+</html>

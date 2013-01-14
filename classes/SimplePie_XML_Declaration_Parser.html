@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \SimplePie_XML_Declaration_Parser</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_SimplePie_XML_Declaration_Parser" title="SimplePie_XML_Declaration_Parser :: Create an instance of the class with the input data"><span class="description">Create an instance of the class with the input data</span><pre>SimplePie_XML_Declaration_Parser()</pre></a></li>
+<li class="method public "><a href="#method_before_version_name" title="before_version_name :: "><span class="description">before_version_name()
+        </span><pre>before_version_name()</pre></a></li>
+<li class="method public "><a href="#method_encoding_equals" title="encoding_equals :: "><span class="description">encoding_equals()
+        </span><pre>encoding_equals()</pre></a></li>
+<li class="method public "><a href="#method_encoding_name" title="encoding_name :: "><span class="description">encoding_name()
+        </span><pre>encoding_name()</pre></a></li>
+<li class="method public "><a href="#method_encoding_value" title="encoding_value :: "><span class="description">encoding_value()
+        </span><pre>encoding_value()</pre></a></li>
+<li class="method public "><a href="#method_get_value" title="get_value :: Read value"><span class="description">Read value</span><pre>get_value()</pre></a></li>
+<li class="method public "><a href="#method_has_data" title="has_data :: Check whether there is data beyond the pointer"><span class="description">Check whether there is data beyond the pointer</span><pre>has_data()</pre></a></li>
+<li class="method public "><a href="#method_parse" title="parse :: Parse the input data"><span class="description">Parse the input data</span><pre>parse()</pre></a></li>
+<li class="method public "><a href="#method_skip_whitespace" title="skip_whitespace :: Advance past any whitespace"><span class="description">Advance past any whitespace</span><pre>skip_whitespace()</pre></a></li>
+<li class="method public "><a href="#method_standalone_equals" title="standalone_equals :: "><span class="description">standalone_equals()
+        </span><pre>standalone_equals()</pre></a></li>
+<li class="method public "><a href="#method_standalone_name" title="standalone_name :: "><span class="description">standalone_name()
+        </span><pre>standalone_name()</pre></a></li>
+<li class="method public "><a href="#method_standalone_value" title="standalone_value :: "><span class="description">standalone_value()
+        </span><pre>standalone_value()</pre></a></li>
+<li class="method public "><a href="#method_version_equals" title="version_equals :: "><span class="description">version_equals()
+        </span><pre>version_equals()</pre></a></li>
+<li class="method public "><a href="#method_version_name" title="version_name :: "><span class="description">version_name()
+        </span><pre>version_name()</pre></a></li>
+<li class="method public "><a href="#method_version_value" title="version_value :: "><span class="description">version_value()
+        </span><pre>version_value()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_data" title="$data :: Input data"><span class="description">Input data</span><pre>$data</pre></a></li>
+<li class="property public "><a href="#property_data_length" title="$data_length :: Input data length (to avoid calling strlen() everytime this is needed)"><span class="description">Input data length (to avoid calling strlen() everytime this is needed)</span><pre>$data_length</pre></a></li>
+<li class="property public "><a href="#property_encoding" title="$encoding :: Encoding"><span class="description">Encoding</span><pre>$encoding</pre></a></li>
+<li class="property public "><a href="#property_position" title="$position :: Current position of the pointer"><span class="description">Current position of the pointer</span><pre>$position</pre></a></li>
+<li class="property public "><a href="#property_standalone" title="$standalone :: Standalone"><span class="description">Standalone</span><pre>$standalone</pre></a></li>
+<li class="property public "><a href="#property_state" title="$state :: Current state of the state machine"><span class="description">Current state of the state machine</span><pre>$state</pre></a></li>
+<li class="property public "><a href="#property_version" title="$version :: XML Version"><span class="description">XML Version</span><pre>$version</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\SimplePie_XML_Declaration_Parser"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/SimplePie_XML_Declaration_Parser.html">SimplePie_XML_Declaration_Parser</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Parses the XML Declaration</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/SimplePie.html">SimplePie</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_SimplePie_XML_Declaration_Parser"></a><div class="element clickable method public method_SimplePie_XML_Declaration_Parser" data-toggle="collapse" data-target=".method_SimplePie_XML_Declaration_Parser .collapse">
+<h2>Create an instance of the class with the input data</h2>
+<pre>SimplePie_XML_Declaration_Parser(string $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>public</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>string</code><p>Input data</p></div>
+</div></div>
+</div>
+<a id="method_before_version_name"></a><div class="element clickable method public method_before_version_name" data-toggle="collapse" data-target=".method_before_version_name .collapse">
+<h2>before_version_name()
+        </h2>
+<pre>before_version_name() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_encoding_equals"></a><div class="element clickable method public method_encoding_equals" data-toggle="collapse" data-target=".method_encoding_equals .collapse">
+<h2>encoding_equals()
+        </h2>
+<pre>encoding_equals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_encoding_name"></a><div class="element clickable method public method_encoding_name" data-toggle="collapse" data-target=".method_encoding_name .collapse">
+<h2>encoding_name()
+        </h2>
+<pre>encoding_name() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_encoding_value"></a><div class="element clickable method public method_encoding_value" data-toggle="collapse" data-target=".method_encoding_value .collapse">
+<h2>encoding_value()
+        </h2>
+<pre>encoding_value() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_value"></a><div class="element clickable method public method_get_value" data-toggle="collapse" data-target=".method_get_value .collapse">
+<h2>Read value</h2>
+<pre>get_value() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_has_data"></a><div class="element clickable method public method_has_data" data-toggle="collapse" data-target=".method_has_data .collapse">
+<h2>Check whether there is data beyond the pointer</h2>
+<pre>has_data() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>true if there is further data, false if not</div>
+</div></div>
+</div>
+<a id="method_parse"></a><div class="element clickable method public method_parse" data-toggle="collapse" data-target=".method_parse .collapse">
+<h2>Parse the input data</h2>
+<pre>parse() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>public</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>true on success, false on failure</div>
+</div></div>
+</div>
+<a id="method_skip_whitespace"></a><div class="element clickable method public method_skip_whitespace" data-toggle="collapse" data-target=".method_skip_whitespace .collapse">
+<h2>Advance past any whitespace</h2>
+<pre>skip_whitespace() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Number of whitespace characters passed</div>
+</div></div>
+</div>
+<a id="method_standalone_equals"></a><div class="element clickable method public method_standalone_equals" data-toggle="collapse" data-target=".method_standalone_equals .collapse">
+<h2>standalone_equals()
+        </h2>
+<pre>standalone_equals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_standalone_name"></a><div class="element clickable method public method_standalone_name" data-toggle="collapse" data-target=".method_standalone_name .collapse">
+<h2>standalone_name()
+        </h2>
+<pre>standalone_name() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_standalone_value"></a><div class="element clickable method public method_standalone_value" data-toggle="collapse" data-target=".method_standalone_value .collapse">
+<h2>standalone_value()
+        </h2>
+<pre>standalone_value() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_version_equals"></a><div class="element clickable method public method_version_equals" data-toggle="collapse" data-target=".method_version_equals .collapse">
+<h2>version_equals()
+        </h2>
+<pre>version_equals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_version_name"></a><div class="element clickable method public method_version_name" data-toggle="collapse" data-target=".method_version_name .collapse">
+<h2>version_name()
+        </h2>
+<pre>version_name() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_version_value"></a><div class="element clickable method public method_version_value" data-toggle="collapse" data-target=".method_version_value .collapse">
+<h2>version_value()
+        </h2>
+<pre>version_value() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_data"> </a><div class="element clickable property public property_data" data-toggle="collapse" data-target=".property_data .collapse">
+<h2>Input data</h2>
+<pre>$data : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_data_length"> </a><div class="element clickable property public property_data_length" data-toggle="collapse" data-target=".property_data_length .collapse">
+<h2>Input data length (to avoid calling strlen() everytime this is needed)</h2>
+<pre>$data_length : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_encoding"> </a><div class="element clickable property public property_encoding" data-toggle="collapse" data-target=".property_encoding .collapse">
+<h2>Encoding</h2>
+<pre>$encoding : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>public</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_position"> </a><div class="element clickable property public property_position" data-toggle="collapse" data-target=".property_position .collapse">
+<h2>Current position of the pointer</h2>
+<pre>$position : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_standalone"> </a><div class="element clickable property public property_standalone" data-toggle="collapse" data-target=".property_standalone .collapse">
+<h2>Standalone</h2>
+<pre>$standalone : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>public</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_state"> </a><div class="element clickable property public property_state" data-toggle="collapse" data-target=".property_state .collapse">
+<h2>Current state of the state machine</h2>
+<pre>$state : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>private</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_version"> </a><div class="element clickable property public property_version" data-toggle="collapse" data-target=".property_version .collapse">
+<h2>XML Version</h2>
+<pre>$version : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>access</th>
+<td>public</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:10-05:00.<br></footer></div>
+</div>
+</body>
+</html>

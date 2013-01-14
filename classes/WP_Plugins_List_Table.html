@@ -1,0 +1,989 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_Plugins_List_Table</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method__js_vars" title="_js_vars :: Send required variables to JavaScript land"><span class="description">Send required variables to JavaScript land</span><pre>_js_vars()</pre></a></li>
+<li class="method public "><a href="#method__order_callback" title="_order_callback :: "><span class="description">_order_callback()
+        </span><pre>_order_callback()</pre></a></li>
+<li class="method public "><a href="#method__search_callback" title="_search_callback :: "><span class="description">_search_callback()
+        </span><pre>_search_callback()</pre></a></li>
+<li class="method public inherited"><a href="#method_ajax_response" title="ajax_response :: Handle an incoming ajax request (called from admin-ajax.php)"><span class="description">Handle an incoming ajax request (called from admin-ajax.php)</span><pre>ajax_response()</pre></a></li>
+<li class="method public "><a href="#method_ajax_user_can" title="ajax_user_can :: Checks the current user's permissions"><span class="description">Checks the current user's permissions</span><pre>ajax_user_can()</pre></a></li>
+<li class="method public "><a href="#method_bulk_actions" title="bulk_actions :: Display the bulk actions dropdown."><span class="description">Display the bulk actions dropdown.</span><pre>bulk_actions()</pre></a></li>
+<li class="method public inherited"><a href="#method_comments_bubble" title="comments_bubble :: Display a comment count bubble"><span class="description">Display a comment count bubble</span><pre>comments_bubble()</pre></a></li>
+<li class="method public "><a href="#method_current_action" title="current_action :: Get the current action selected from the bulk actions dropdown."><span class="description">Get the current action selected from the bulk actions dropdown.</span><pre>current_action()</pre></a></li>
+<li class="method public inherited"><a href="#method_display" title="display :: Display the table"><span class="description">Display the table</span><pre>display()</pre></a></li>
+<li class="method public "><a href="#method_display_rows" title="display_rows :: Generate the table rows"><span class="description">Generate the table rows</span><pre>display_rows()</pre></a></li>
+<li class="method public inherited"><a href="#method_display_rows_or_placeholder" title="display_rows_or_placeholder :: Generate the &lt;tbody&gt; part of the table"><span class="description">Generate the &lt;tbody&gt; part of the table</span><pre>display_rows_or_placeholder()</pre></a></li>
+<li class="method public inherited"><a href="#method_display_tablenav" title="display_tablenav :: Generate the table navigation above or below the table"><span class="description">Generate the table navigation above or below the table</span><pre>display_tablenav()</pre></a></li>
+<li class="method public "><a href="#method_extra_tablenav" title="extra_tablenav :: Extra controls to be displayed between bulk actions and pagination"><span class="description">Extra controls to be displayed between bulk actions and pagination</span><pre>extra_tablenav()</pre></a></li>
+<li class="method public "><a href="#method_get_bulk_actions" title="get_bulk_actions :: Get an associative array ( option_name =&gt; option_title ) with the list
+of bulk actions available on this table."><span class="description">Get an associative array ( option_name =&gt; option_title ) with the list
+of bulk actions available on this table.</span><pre>get_bulk_actions()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_column_count" title="get_column_count :: Return number of visible columns"><span class="description">Return number of visible columns</span><pre>get_column_count()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_column_info" title="get_column_info :: Get a list of all, hidden and sortable columns, with filter applied"><span class="description">Get a list of all, hidden and sortable columns, with filter applied</span><pre>get_column_info()</pre></a></li>
+<li class="method public "><a href="#method_get_columns" title="get_columns :: Get a list of columns."><span class="description">Get a list of columns.</span><pre>get_columns()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_items_per_page" title="get_items_per_page :: Get number of items to display on a single page"><span class="description">Get number of items to display on a single page</span><pre>get_items_per_page()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_pagenum" title="get_pagenum :: Get the current page number"><span class="description">Get the current page number</span><pre>get_pagenum()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_pagination_arg" title="get_pagination_arg :: Access the pagination args"><span class="description">Access the pagination args</span><pre>get_pagination_arg()</pre></a></li>
+<li class="method public "><a href="#method_get_sortable_columns" title="get_sortable_columns :: Get a list of sortable columns."><span class="description">Get a list of sortable columns.</span><pre>get_sortable_columns()</pre></a></li>
+<li class="method public "><a href="#method_get_table_classes" title="get_table_classes :: Get a list of CSS classes for the &lt;table&gt; tag"><span class="description">Get a list of CSS classes for the &lt;table&gt; tag</span><pre>get_table_classes()</pre></a></li>
+<li class="method public "><a href="#method_get_views" title="get_views :: Get an associative array ( id =&gt; link ) with the list
+of views available on this table."><span class="description">Get an associative array ( id =&gt; link ) with the list
+of views available on this table.</span><pre>get_views()</pre></a></li>
+<li class="method public inherited"><a href="#method_has_items" title="has_items :: Whether the table has items to display or not"><span class="description">Whether the table has items to display or not</span><pre>has_items()</pre></a></li>
+<li class="method public inherited"><a href="#method_months_dropdown" title="months_dropdown :: Display a monthly dropdown for filtering items"><span class="description">Display a monthly dropdown for filtering items</span><pre>months_dropdown()</pre></a></li>
+<li class="method public "><a href="#method_no_items" title="no_items :: Message to be displayed when there are no items"><span class="description">Message to be displayed when there are no items</span><pre>no_items()</pre></a></li>
+<li class="method public inherited"><a href="#method_pagination" title="pagination :: Display the pagination."><span class="description">Display the pagination.</span><pre>pagination()</pre></a></li>
+<li class="method public "><a href="#method_prepare_items" title="prepare_items :: Prepares the list of items for displaying."><span class="description">Prepares the list of items for displaying.</span><pre>prepare_items()</pre></a></li>
+<li class="method public inherited"><a href="#method_print_column_headers" title="print_column_headers :: Print column headers, accounting for hidden and sortable columns."><span class="description">Print column headers, accounting for hidden and sortable columns.</span><pre>print_column_headers()</pre></a></li>
+<li class="method public inherited"><a href="#method_row_actions" title="row_actions :: Generate row actions div"><span class="description">Generate row actions div</span><pre>row_actions()</pre></a></li>
+<li class="method public inherited"><a href="#method_search_box" title="search_box :: Display the search box."><span class="description">Display the search box.</span><pre>search_box()</pre></a></li>
+<li class="method public inherited"><a href="#method_set_pagination_args" title="set_pagination_args :: An internal method that sets all the necessary pagination arguments"><span class="description">An internal method that sets all the necessary pagination arguments</span><pre>set_pagination_args()</pre></a></li>
+<li class="method public "><a href="#method_single_row" title="single_row :: Generates content for a single row of the table"><span class="description">Generates content for a single row of the table</span><pre>single_row()</pre></a></li>
+<li class="method public inherited"><a href="#method_single_row_columns" title="single_row_columns :: Generates the columns for a single row of the table"><span class="description">Generates the columns for a single row of the table</span><pre>single_row_columns()</pre></a></li>
+<li class="method public inherited"><a href="#method_view_switcher" title="view_switcher :: Display a view switcher"><span class="description">Display a view switcher</span><pre>view_switcher()</pre></a></li>
+<li class="method public inherited"><a href="#method_views" title="views :: Display the list of views available on this table."><span class="description">Display the list of views available on this table.</span><pre>views()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property__actions" title="$_actions :: Cached bulk actions"><span class="description">Cached bulk actions</span><pre>$_actions</pre></a></li>
+<li class="property public inherited"><a href="#property__args" title="$_args :: Various information about the current table"><span class="description">Various information about the current table</span><pre>$_args</pre></a></li>
+<li class="property public inherited"><a href="#property__pagination" title="$_pagination :: Cached pagination output"><span class="description">Cached pagination output</span><pre>$_pagination</pre></a></li>
+<li class="property public inherited"><a href="#property__pagination_args" title="$_pagination_args :: Various information needed for displaying the pagination"><span class="description">Various information needed for displaying the pagination</span><pre>$_pagination_args</pre></a></li>
+<li class="property public inherited"><a href="#property_items" title="$items :: The current list of items"><span class="description">The current list of items</span><pre>$items</pre></a></li>
+<li class="property public inherited"><a href="#property_screen" title="$screen :: The current screen"><span class="description">The current screen</span><pre>$screen</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_Plugins_List_Table"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_Plugins_List_Table.html">WP_Plugins_List_Table</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Plugins List Table class.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.List.Table.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>List_Table</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>The child class should call this constructor from it's own constructor</p></div></div></div>
+</div>
+<a id="method__js_vars"></a><div class="element clickable method public method__js_vars" data-toggle="collapse" data-target=".method__js_vars .collapse">
+<h2>Send required variables to JavaScript land</h2>
+<pre>_js_vars() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::_js_vars()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method__order_callback"></a><div class="element clickable method public method__order_callback" data-toggle="collapse" data-target=".method__order_callback .collapse">
+<h2>_order_callback()
+        </h2>
+<pre>_order_callback($plugin_a, $plugin_b) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$plugin_a</h4></div>
+<div class="subelement argument"><h4>$plugin_b</h4></div>
+</div></div>
+</div>
+<a id="method__search_callback"></a><div class="element clickable method public method__search_callback" data-toggle="collapse" data-target=".method__search_callback .collapse">
+<h2>_search_callback()
+        </h2>
+<pre>_search_callback($plugin) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$plugin</h4></div>
+</div></div>
+</div>
+<a id="method_ajax_response"></a><div class="element clickable method public method_ajax_response" data-toggle="collapse" data-target=".method_ajax_response .collapse">
+<h2>Handle an incoming ajax request (called from admin-ajax.php)</h2>
+<pre>ajax_response() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::ajax_response()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_ajax_user_can"></a><div class="element clickable method public method_ajax_user_can" data-toggle="collapse" data-target=".method_ajax_user_can .collapse">
+<h2>Checks the current user's permissions</h2>
+<pre>ajax_user_can() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_bulk_actions"></a><div class="element clickable method public method_bulk_actions" data-toggle="collapse" data-target=".method_bulk_actions .collapse">
+<h2>Display the bulk actions dropdown.</h2>
+<pre>bulk_actions($which) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$which</h4></div>
+</div></div>
+</div>
+<a id="method_comments_bubble"></a><div class="element clickable method public method_comments_bubble" data-toggle="collapse" data-target=".method_comments_bubble .collapse">
+<h2>Display a comment count bubble</h2>
+<pre>comments_bubble(int $post_id, int $pending_comments) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::comments_bubble()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$pending_comments</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="method_current_action"></a><div class="element clickable method public method_current_action" data-toggle="collapse" data-target=".method_current_action .collapse">
+<h2>Get the current action selected from the bulk actions dropdown.</h2>
+<pre>current_action() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>The action name or False if no action was selected</div>
+</div></div>
+</div>
+<a id="method_display"></a><div class="element clickable method public method_display" data-toggle="collapse" data-target=".method_display .collapse">
+<h2>Display the table</h2>
+<pre>display() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::display()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_display_rows"></a><div class="element clickable method public method_display_rows" data-toggle="collapse" data-target=".method_display_rows .collapse">
+<h2>Generate the table rows</h2>
+<pre>display_rows() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_display_rows_or_placeholder"></a><div class="element clickable method public method_display_rows_or_placeholder" data-toggle="collapse" data-target=".method_display_rows_or_placeholder .collapse">
+<h2>Generate the &lt;tbody&gt; part of the table</h2>
+<pre>display_rows_or_placeholder() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::display_rows_or_placeholder()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_display_tablenav"></a><div class="element clickable method public method_display_tablenav" data-toggle="collapse" data-target=".method_display_tablenav .collapse">
+<h2>Generate the table navigation above or below the table</h2>
+<pre>display_tablenav($which) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::display_tablenav()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$which</h4></div>
+</div></div>
+</div>
+<a id="method_extra_tablenav"></a><div class="element clickable method public method_extra_tablenav" data-toggle="collapse" data-target=".method_extra_tablenav .collapse">
+<h2>Extra controls to be displayed between bulk actions and pagination</h2>
+<pre>extra_tablenav($which) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$which</h4></div>
+</div></div>
+</div>
+<a id="method_get_bulk_actions"></a><div class="element clickable method public method_get_bulk_actions" data-toggle="collapse" data-target=".method_get_bulk_actions .collapse">
+<h2>Get an associative array ( option_name =&gt; option_title ) with the list
+of bulk actions available on this table.</h2>
+<pre>get_bulk_actions() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_get_column_count"></a><div class="element clickable method public method_get_column_count" data-toggle="collapse" data-target=".method_get_column_count .collapse">
+<h2>Return number of visible columns</h2>
+<pre>get_column_count() : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::get_column_count()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_get_column_info"></a><div class="element clickable method public method_get_column_info" data-toggle="collapse" data-target=".method_get_column_info .collapse">
+<h2>Get a list of all, hidden and sortable columns, with filter applied</h2>
+<pre>get_column_info() : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::get_column_info()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_get_columns"></a><div class="element clickable method public method_get_columns" data-toggle="collapse" data-target=".method_get_columns .collapse">
+<h2>Get a list of columns.</h2>
+<pre>get_columns() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The format is:
+'internal-name' => 'Title'</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_get_items_per_page"></a><div class="element clickable method public method_get_items_per_page" data-toggle="collapse" data-target=".method_get_items_per_page .collapse">
+<h2>Get number of items to display on a single page</h2>
+<pre>get_items_per_page($option, $default) : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::get_items_per_page()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$option</h4></div>
+<div class="subelement argument"><h4>$default</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_get_pagenum"></a><div class="element clickable method public method_get_pagenum" data-toggle="collapse" data-target=".method_get_pagenum .collapse">
+<h2>Get the current page number</h2>
+<pre>get_pagenum() : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::get_pagenum()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="method_get_pagination_arg"></a><div class="element clickable method public method_get_pagination_arg" data-toggle="collapse" data-target=".method_get_pagination_arg .collapse">
+<h2>Access the pagination args</h2>
+<pre>get_pagination_arg(string $key) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::get_pagination_arg()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_get_sortable_columns"></a><div class="element clickable method public method_get_sortable_columns" data-toggle="collapse" data-target=".method_get_sortable_columns .collapse">
+<h2>Get a list of sortable columns.</h2>
+<pre>get_sortable_columns() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The format is:
+'internal-name' => 'orderby'
+or
+'internal-name' => array( 'orderby', true )</p>
+
+<p>The second format will make the initial sorting order be descending</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_get_table_classes"></a><div class="element clickable method public method_get_table_classes" data-toggle="collapse" data-target=".method_get_table_classes .collapse">
+<h2>Get a list of CSS classes for the &lt;table&gt; tag</h2>
+<pre>get_table_classes() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_get_views"></a><div class="element clickable method public method_get_views" data-toggle="collapse" data-target=".method_get_views .collapse">
+<h2>Get an associative array ( id =&gt; link ) with the list
+of views available on this table.</h2>
+<pre>get_views() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_has_items"></a><div class="element clickable method public method_has_items" data-toggle="collapse" data-target=".method_has_items .collapse">
+<h2>Whether the table has items to display or not</h2>
+<pre>has_items() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::has_items()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_months_dropdown"></a><div class="element clickable method public method_months_dropdown" data-toggle="collapse" data-target=".method_months_dropdown .collapse">
+<h2>Display a monthly dropdown for filtering items</h2>
+<pre>months_dropdown($post_type) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::months_dropdown()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post_type</h4></div>
+</div></div>
+</div>
+<a id="method_no_items"></a><div class="element clickable method public method_no_items" data-toggle="collapse" data-target=".method_no_items .collapse">
+<h2>Message to be displayed when there are no items</h2>
+<pre>no_items() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_pagination"></a><div class="element clickable method public method_pagination" data-toggle="collapse" data-target=".method_pagination .collapse">
+<h2>Display the pagination.</h2>
+<pre>pagination($which) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::pagination()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$which</h4></div>
+</div></div>
+</div>
+<a id="method_prepare_items"></a><div class="element clickable method public method_prepare_items" data-toggle="collapse" data-target=".method_prepare_items .collapse">
+<h2>Prepares the list of items for displaying.</h2>
+<pre>prepare_items() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_print_column_headers"></a><div class="element clickable method public method_print_column_headers" data-toggle="collapse" data-target=".method_print_column_headers .collapse">
+<h2>Print column headers, accounting for hidden and sortable columns.</h2>
+<pre>print_column_headers(bool $with_id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::print_column_headers()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$with_id</h4>
+<code>bool</code><p>Whether to set the id attribute or not</p></div>
+</div></div>
+</div>
+<a id="method_row_actions"></a><div class="element clickable method public method_row_actions" data-toggle="collapse" data-target=".method_row_actions .collapse">
+<h2>Generate row actions div</h2>
+<pre>row_actions(array $actions, bool $always_visible) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::row_actions()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$actions</h4>
+<code>array</code><p>The list of actions</p></div>
+<div class="subelement argument">
+<h4>$always_visible</h4>
+<code>bool</code><p>Whether the actions should be always visible</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_search_box"></a><div class="element clickable method public method_search_box" data-toggle="collapse" data-target=".method_search_box .collapse">
+<h2>Display the search box.</h2>
+<pre>search_box(string $text, string $input_id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::search_box()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>The search button text</p></div>
+<div class="subelement argument">
+<h4>$input_id</h4>
+<code>string</code><p>The search input id</p></div>
+</div></div>
+</div>
+<a id="method_set_pagination_args"></a><div class="element clickable method public method_set_pagination_args" data-toggle="collapse" data-target=".method_set_pagination_args .collapse">
+<h2>An internal method that sets all the necessary pagination arguments</h2>
+<pre>set_pagination_args(array $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::set_pagination_args()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>An associative array with information about the pagination</p></div>
+</div></div>
+</div>
+<a id="method_single_row"></a><div class="element clickable method public method_single_row" data-toggle="collapse" data-target=".method_single_row .collapse">
+<h2>Generates content for a single row of the table</h2>
+<pre>single_row($plugin_file, $plugin_data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$plugin_file</h4></div>
+<div class="subelement argument"><h4>$plugin_data</h4></div>
+</div></div>
+</div>
+<a id="method_single_row_columns"></a><div class="element clickable method public method_single_row_columns" data-toggle="collapse" data-target=".method_single_row_columns .collapse">
+<h2>Generates the columns for a single row of the table</h2>
+<pre>single_row_columns(object $item) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::single_row_columns()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$item</h4>
+<code>object</code><p>The current item</p></div>
+</div></div>
+</div>
+<a id="method_view_switcher"></a><div class="element clickable method public method_view_switcher" data-toggle="collapse" data-target=".method_view_switcher .collapse">
+<h2>Display a view switcher</h2>
+<pre>view_switcher($current_mode) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::view_switcher()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$current_mode</h4></div>
+</div></div>
+</div>
+<a id="method_views"></a><div class="element clickable method public method_views" data-toggle="collapse" data-target=".method_views .collapse">
+<h2>Display the list of views available on this table.</h2>
+<pre>views() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::views()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__actions"> </a><div class="element clickable property public property__actions" data-toggle="collapse" data-target=".property__actions .collapse">
+<h2>Cached bulk actions</h2>
+<pre>$_actions : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::$$_actions</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__args"> </a><div class="element clickable property public property__args" data-toggle="collapse" data-target=".property__args .collapse">
+<h2>Various information about the current table</h2>
+<pre>$_args : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::$$_args</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__pagination"> </a><div class="element clickable property public property__pagination" data-toggle="collapse" data-target=".property__pagination .collapse">
+<h2>Cached pagination output</h2>
+<pre>$_pagination : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::$$_pagination</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property__pagination_args"> </a><div class="element clickable property public property__pagination_args" data-toggle="collapse" data-target=".property__pagination_args .collapse">
+<h2>Various information needed for displaying the pagination</h2>
+<pre>$_pagination_args : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::$$_pagination_args</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_items"> </a><div class="element clickable property public property_items" data-toggle="collapse" data-target=".property_items .collapse">
+<h2>The current list of items</h2>
+<pre>$items : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::$$items</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_screen"> </a><div class="element clickable property public property_screen" data-toggle="collapse" data-target=".property_screen .collapse">
+<h2>The current screen</h2>
+<pre>$screen : object</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_List_Table::$$screen</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:00-05:00.<br></footer></div>
+</div>
+</body>
+</html>

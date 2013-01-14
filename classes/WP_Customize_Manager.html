@@ -1,0 +1,869 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_Customize_Manager</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method__sanitize_header_textcolor" title="_sanitize_header_textcolor :: Callback for validating the header_textcolor value."><span class="description">Callback for validating the header_textcolor value.</span><pre>_sanitize_header_textcolor()</pre></a></li>
+<li class="method public "><a href="#method_add_control" title="add_control :: Add a customize control."><span class="description">Add a customize control.</span><pre>add_control()</pre></a></li>
+<li class="method public "><a href="#method_add_section" title="add_section :: Add a customize section."><span class="description">Add a customize section.</span><pre>add_section()</pre></a></li>
+<li class="method public "><a href="#method_add_setting" title="add_setting :: Add a customize setting."><span class="description">Add a customize setting.</span><pre>add_setting()</pre></a></li>
+<li class="method public "><a href="#method_after_setup_theme" title="after_setup_theme :: "><span class="description">after_setup_theme()
+        </span><pre>after_setup_theme()</pre></a></li>
+<li class="method public "><a href="#method_controls" title="controls :: Get the registered controls."><span class="description">Get the registered controls.</span><pre>controls()</pre></a></li>
+<li class="method public "><a href="#method_current_theme" title="current_theme :: Filter the current theme and return the name of the previewed theme."><span class="description">Filter the current theme and return the name of the previewed theme.</span><pre>current_theme()</pre></a></li>
+<li class="method public "><a href="#method_customize_preview_base" title="customize_preview_base :: Print base element for preview frame."><span class="description">Print base element for preview frame.</span><pre>customize_preview_base()</pre></a></li>
+<li class="method public "><a href="#method_customize_preview_html5" title="customize_preview_html5 :: Print a workaround to handle HTML5 tags in IE &lt; 9"><span class="description">Print a workaround to handle HTML5 tags in IE &lt; 9</span><pre>customize_preview_html5()</pre></a></li>
+<li class="method public "><a href="#method_customize_preview_init" title="customize_preview_init :: Print javascript settings."><span class="description">Print javascript settings.</span><pre>customize_preview_init()</pre></a></li>
+<li class="method public "><a href="#method_customize_preview_settings" title="customize_preview_settings :: Print javascript settings for preview frame."><span class="description">Print javascript settings for preview frame.</span><pre>customize_preview_settings()</pre></a></li>
+<li class="method public "><a href="#method_customize_preview_signature" title="customize_preview_signature :: Prints a signature so we can ensure the customizer was properly executed."><span class="description">Prints a signature so we can ensure the customizer was properly executed.</span><pre>customize_preview_signature()</pre></a></li>
+<li class="method public "><a href="#method_doing_ajax" title="doing_ajax :: Return true if it's an AJAX request."><span class="description">Return true if it's an AJAX request.</span><pre>doing_ajax()</pre></a></li>
+<li class="method public "><a href="#method_enqueue_control_scripts" title="enqueue_control_scripts :: Enqueue scripts for customize controls."><span class="description">Enqueue scripts for customize controls.</span><pre>enqueue_control_scripts()</pre></a></li>
+<li class="method public "><a href="#method_get_control" title="get_control :: Retrieve a customize control."><span class="description">Retrieve a customize control.</span><pre>get_control()</pre></a></li>
+<li class="method public "><a href="#method_get_section" title="get_section :: Retrieve a customize section."><span class="description">Retrieve a customize section.</span><pre>get_section()</pre></a></li>
+<li class="method public "><a href="#method_get_setting" title="get_setting :: Retrieve a customize setting."><span class="description">Retrieve a customize setting.</span><pre>get_setting()</pre></a></li>
+<li class="method public "><a href="#method_get_stylesheet" title="get_stylesheet :: Retrieve the stylesheet name of the previewed theme."><span class="description">Retrieve the stylesheet name of the previewed theme.</span><pre>get_stylesheet()</pre></a></li>
+<li class="method public "><a href="#method_get_stylesheet_root" title="get_stylesheet_root :: Retrieve the stylesheet root of the previewed theme."><span class="description">Retrieve the stylesheet root of the previewed theme.</span><pre>get_stylesheet_root()</pre></a></li>
+<li class="method public "><a href="#method_get_template" title="get_template :: Retrieve the template name of the previewed theme."><span class="description">Retrieve the template name of the previewed theme.</span><pre>get_template()</pre></a></li>
+<li class="method public "><a href="#method_get_template_root" title="get_template_root :: Retrieve the template root of the previewed theme."><span class="description">Retrieve the template root of the previewed theme.</span><pre>get_template_root()</pre></a></li>
+<li class="method public "><a href="#method_is_preview" title="is_preview :: Is it a theme preview?"><span class="description">Is it a theme preview?</span><pre>is_preview()</pre></a></li>
+<li class="method public "><a href="#method_is_theme_active" title="is_theme_active :: Checks if the current theme is active."><span class="description">Checks if the current theme is active.</span><pre>is_theme_active()</pre></a></li>
+<li class="method public "><a href="#method_post_value" title="post_value :: Decode the $_POST attribute used to override the WP_Customize_Setting values."><span class="description">Decode the $_POST attribute used to override the WP_Customize_Setting values.</span><pre>post_value()</pre></a></li>
+<li class="method public "><a href="#method_prepare_controls" title="prepare_controls :: Prepare settings and sections."><span class="description">Prepare settings and sections.</span><pre>prepare_controls()</pre></a></li>
+<li class="method public "><a href="#method_register_controls" title="register_controls :: Register some default controls."><span class="description">Register some default controls.</span><pre>register_controls()</pre></a></li>
+<li class="method public "><a href="#method_remove_control" title="remove_control :: Remove a customize setting."><span class="description">Remove a customize setting.</span><pre>remove_control()</pre></a></li>
+<li class="method public "><a href="#method_remove_preview_signature" title="remove_preview_signature :: Removes the signature in case we experience a case where the customizer was not properly executed."><span class="description">Removes the signature in case we experience a case where the customizer was not properly executed.</span><pre>remove_preview_signature()</pre></a></li>
+<li class="method public "><a href="#method_remove_section" title="remove_section :: Remove a customize section."><span class="description">Remove a customize section.</span><pre>remove_section()</pre></a></li>
+<li class="method public "><a href="#method_remove_setting" title="remove_setting :: Remove a customize setting."><span class="description">Remove a customize setting.</span><pre>remove_setting()</pre></a></li>
+<li class="method public "><a href="#method_save" title="save :: Switch the theme and trigger the save action of each setting."><span class="description">Switch the theme and trigger the save action of each setting.</span><pre>save()</pre></a></li>
+<li class="method public "><a href="#method_sections" title="sections :: Get the registered sections."><span class="description">Get the registered sections.</span><pre>sections()</pre></a></li>
+<li class="method public "><a href="#method_settings" title="settings :: Get the registered settings."><span class="description">Get the registered settings.</span><pre>settings()</pre></a></li>
+<li class="method public "><a href="#method_setup_theme" title="setup_theme :: Start preview and customize theme."><span class="description">Start preview and customize theme.</span><pre>setup_theme()</pre></a></li>
+<li class="method public "><a href="#method_start_previewing_theme" title="start_previewing_theme :: Start previewing the selected theme."><span class="description">Start previewing the selected theme.</span><pre>start_previewing_theme()</pre></a></li>
+<li class="method public "><a href="#method_stop_previewing_theme" title="stop_previewing_theme :: Stop previewing the selected theme."><span class="description">Stop previewing the selected theme.</span><pre>stop_previewing_theme()</pre></a></li>
+<li class="method public "><a href="#method_theme" title="theme :: Get the theme being customized."><span class="description">Get the theme being customized.</span><pre>theme()</pre></a></li>
+<li class="method public "><a href="#method_wp_die_handler" title="wp_die_handler :: Return the AJAX wp_die() handler if it's a customized request."><span class="description">Return the AJAX wp_die() handler if it's a customized request.</span><pre>wp_die_handler()</pre></a></li>
+<li class="method public "><a href="#method_wp_loaded" title="wp_loaded :: Register styles/scripts and initialize the preview of each setting"><span class="description">Register styles/scripts and initialize the preview of each setting</span><pre>wp_loaded()</pre></a></li>
+<li class="method public "><a href="#method_wp_redirect_status" title="wp_redirect_status :: Prevents AJAX requests from following redirects when previewing a theme
+by issuing a 200 response instead of a 30x."><span class="description">Prevents AJAX requests from following redirects when previewing a theme
+by issuing a 200 response instead of a 30x.</span><pre>wp_redirect_status()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected "><a href="#method__cmp_priority" title="_cmp_priority :: Helper function to compare two objects by priority."><span class="description">Helper function to compare two objects by priority.</span><pre>_cmp_priority()</pre></a></li>
+<li class="method protected "><a href="#method_wp_die" title="wp_die :: Custom wp_die wrapper."><span class="description">Custom wp_die wrapper.</span><pre>wp_die()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="property protected "><a href="#property_controls" title="$controls :: "><span class="description">$controls</span><pre>$controls</pre></a></li>
+<li class="property protected "><a href="#property_customized" title="$customized :: "><span class="description">$customized</span><pre>$customized</pre></a></li>
+<li class="property protected "><a href="#property_nonce_tick" title="$nonce_tick :: "><span class="description">$nonce_tick</span><pre>$nonce_tick</pre></a></li>
+<li class="property protected "><a href="#property_original_stylesheet" title="$original_stylesheet :: "><span class="description">$original_stylesheet</span><pre>$original_stylesheet</pre></a></li>
+<li class="property protected "><a href="#property_previewing" title="$previewing :: "><span class="description">$previewing</span><pre>$previewing</pre></a></li>
+<li class="property protected "><a href="#property_sections" title="$sections :: "><span class="description">$sections</span><pre>$sections</pre></a></li>
+<li class="property protected "><a href="#property_settings" title="$settings :: "><span class="description">$settings</span><pre>$settings</pre></a></li>
+<li class="property protected "><a href="#property_theme" title="$theme :: "><span class="description">$theme</span><pre>$theme</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property__post_values" title="$_post_values :: "><span class="description">$_post_values</span><pre>$_post_values</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_Customize_Manager"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_Customize_Manager.html">WP_Customize_Manager</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Customize</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Customize.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Customize</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method__sanitize_header_textcolor"></a><div class="element clickable method public method__sanitize_header_textcolor" data-toggle="collapse" data-target=".method__sanitize_header_textcolor .collapse">
+<h2>Callback for validating the header_textcolor value.</h2>
+<pre>_sanitize_header_textcolor($color) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Accepts 'blank', and otherwise uses sanitize_hex_color_no_hash().</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$color</h4></div>
+</div></div>
+</div>
+<a id="method_add_control"></a><div class="element clickable method public method_add_control" data-toggle="collapse" data-target=".method_add_control .collapse">
+<h2>Add a customize control.</h2>
+<pre>add_control(string $id, array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the control.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Setting arguments.</p></div>
+</div></div>
+</div>
+<a id="method_add_section"></a><div class="element clickable method public method_add_section" data-toggle="collapse" data-target=".method_add_section .collapse">
+<h2>Add a customize section.</h2>
+<pre>add_section(string $id, array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the section.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Section arguments.</p></div>
+</div></div>
+</div>
+<a id="method_add_setting"></a><div class="element clickable method public method_add_setting" data-toggle="collapse" data-target=".method_add_setting .collapse">
+<h2>Add a customize setting.</h2>
+<pre>add_setting(string $id, array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the setting. Can be a theme mod or option name.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Setting arguments.</p></div>
+</div></div>
+</div>
+<a id="method_after_setup_theme"></a><div class="element clickable method public method_after_setup_theme" data-toggle="collapse" data-target=".method_after_setup_theme .collapse">
+<h2>after_setup_theme()
+        </h2>
+<pre>after_setup_theme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_controls"></a><div class="element clickable method public method_controls" data-toggle="collapse" data-target=".method_controls .collapse">
+<h2>Get the registered controls.</h2>
+<pre>controls() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_current_theme"></a><div class="element clickable method public method_current_theme" data-toggle="collapse" data-target=".method_current_theme .collapse">
+<h2>Filter the current theme and return the name of the previewed theme.</h2>
+<pre>current_theme($current_theme) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$current_theme</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Theme name.</div>
+</div></div>
+</div>
+<a id="method_customize_preview_base"></a><div class="element clickable method public method_customize_preview_base" data-toggle="collapse" data-target=".method_customize_preview_base .collapse">
+<h2>Print base element for preview frame.</h2>
+<pre>customize_preview_base() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_customize_preview_html5"></a><div class="element clickable method public method_customize_preview_html5" data-toggle="collapse" data-target=".method_customize_preview_html5 .collapse">
+<h2>Print a workaround to handle HTML5 tags in IE &lt; 9</h2>
+<pre>customize_preview_html5() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_customize_preview_init"></a><div class="element clickable method public method_customize_preview_init" data-toggle="collapse" data-target=".method_customize_preview_init .collapse">
+<h2>Print javascript settings.</h2>
+<pre>customize_preview_init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_customize_preview_settings"></a><div class="element clickable method public method_customize_preview_settings" data-toggle="collapse" data-target=".method_customize_preview_settings .collapse">
+<h2>Print javascript settings for preview frame.</h2>
+<pre>customize_preview_settings() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_customize_preview_signature"></a><div class="element clickable method public method_customize_preview_signature" data-toggle="collapse" data-target=".method_customize_preview_signature .collapse">
+<h2>Prints a signature so we can ensure the customizer was properly executed.</h2>
+<pre>customize_preview_signature() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_doing_ajax"></a><div class="element clickable method public method_doing_ajax" data-toggle="collapse" data-target=".method_doing_ajax .collapse">
+<h2>Return true if it's an AJAX request.</h2>
+<pre>doing_ajax() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_enqueue_control_scripts"></a><div class="element clickable method public method_enqueue_control_scripts" data-toggle="collapse" data-target=".method_enqueue_control_scripts .collapse">
+<h2>Enqueue scripts for customize controls.</h2>
+<pre>enqueue_control_scripts() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_get_control"></a><div class="element clickable method public method_get_control" data-toggle="collapse" data-target=".method_get_control .collapse">
+<h2>Retrieve a customize control.</h2>
+<pre>get_control(string $id) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the control.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>The settings object.</div>
+</div></div>
+</div>
+<a id="method_get_section"></a><div class="element clickable method public method_get_section" data-toggle="collapse" data-target=".method_get_section .collapse">
+<h2>Retrieve a customize section.</h2>
+<pre>get_section(string $id) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the section.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>The section object.</div>
+</div></div>
+</div>
+<a id="method_get_setting"></a><div class="element clickable method public method_get_setting" data-toggle="collapse" data-target=".method_get_setting .collapse">
+<h2>Retrieve a customize setting.</h2>
+<pre>get_setting(string $id) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the setting.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>The settings object.</div>
+</div></div>
+</div>
+<a id="method_get_stylesheet"></a><div class="element clickable method public method_get_stylesheet" data-toggle="collapse" data-target=".method_get_stylesheet .collapse">
+<h2>Retrieve the stylesheet name of the previewed theme.</h2>
+<pre>get_stylesheet() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Stylesheet name.</div>
+</div></div>
+</div>
+<a id="method_get_stylesheet_root"></a><div class="element clickable method public method_get_stylesheet_root" data-toggle="collapse" data-target=".method_get_stylesheet_root .collapse">
+<h2>Retrieve the stylesheet root of the previewed theme.</h2>
+<pre>get_stylesheet_root() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Theme root.</div>
+</div></div>
+</div>
+<a id="method_get_template"></a><div class="element clickable method public method_get_template" data-toggle="collapse" data-target=".method_get_template .collapse">
+<h2>Retrieve the template name of the previewed theme.</h2>
+<pre>get_template() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Template name.</div>
+</div></div>
+</div>
+<a id="method_get_template_root"></a><div class="element clickable method public method_get_template_root" data-toggle="collapse" data-target=".method_get_template_root .collapse">
+<h2>Retrieve the template root of the previewed theme.</h2>
+<pre>get_template_root() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Theme root.</div>
+</div></div>
+</div>
+<a id="method_is_preview"></a><div class="element clickable method public method_is_preview" data-toggle="collapse" data-target=".method_is_preview .collapse">
+<h2>Is it a theme preview?</h2>
+<pre>is_preview() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if it's a preview, false if not.</div>
+</div></div>
+</div>
+<a id="method_is_theme_active"></a><div class="element clickable method public method_is_theme_active" data-toggle="collapse" data-target=".method_is_theme_active .collapse">
+<h2>Checks if the current theme is active.</h2>
+<pre>is_theme_active() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_post_value"></a><div class="element clickable method public method_post_value" data-toggle="collapse" data-target=".method_post_value .collapse">
+<h2>Decode the $_POST attribute used to override the WP_Customize_Setting values.</h2>
+<pre>post_value($setting) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$setting</h4></div>
+</div></div>
+</div>
+<a id="method_prepare_controls"></a><div class="element clickable method public method_prepare_controls" data-toggle="collapse" data-target=".method_prepare_controls .collapse">
+<h2>Prepare settings and sections.</h2>
+<pre>prepare_controls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_register_controls"></a><div class="element clickable method public method_register_controls" data-toggle="collapse" data-target=".method_register_controls .collapse">
+<h2>Register some default controls.</h2>
+<pre>register_controls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_remove_control"></a><div class="element clickable method public method_remove_control" data-toggle="collapse" data-target=".method_remove_control .collapse">
+<h2>Remove a customize setting.</h2>
+<pre>remove_control(string $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the control.</p></div>
+</div></div>
+</div>
+<a id="method_remove_preview_signature"></a><div class="element clickable method public method_remove_preview_signature" data-toggle="collapse" data-target=".method_remove_preview_signature .collapse">
+<h2>Removes the signature in case we experience a case where the customizer was not properly executed.</h2>
+<pre>remove_preview_signature($return) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$return</h4></div>
+</div></div>
+</div>
+<a id="method_remove_section"></a><div class="element clickable method public method_remove_section" data-toggle="collapse" data-target=".method_remove_section .collapse">
+<h2>Remove a customize section.</h2>
+<pre>remove_section(string $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the section.</p></div>
+</div></div>
+</div>
+<a id="method_remove_setting"></a><div class="element clickable method public method_remove_setting" data-toggle="collapse" data-target=".method_remove_setting .collapse">
+<h2>Remove a customize setting.</h2>
+<pre>remove_setting(string $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>A specific ID of the setting.</p></div>
+</div></div>
+</div>
+<a id="method_save"></a><div class="element clickable method public method_save" data-toggle="collapse" data-target=".method_save .collapse">
+<h2>Switch the theme and trigger the save action of each setting.</h2>
+<pre>save() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_sections"></a><div class="element clickable method public method_sections" data-toggle="collapse" data-target=".method_sections .collapse">
+<h2>Get the registered sections.</h2>
+<pre>sections() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_settings"></a><div class="element clickable method public method_settings" data-toggle="collapse" data-target=".method_settings .collapse">
+<h2>Get the registered settings.</h2>
+<pre>settings() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_setup_theme"></a><div class="element clickable method public method_setup_theme" data-toggle="collapse" data-target=".method_setup_theme .collapse">
+<h2>Start preview and customize theme.</h2>
+<pre>setup_theme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Check if customize query variable exist. Init filters to filter the current theme.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_start_previewing_theme"></a><div class="element clickable method public method_start_previewing_theme" data-toggle="collapse" data-target=".method_start_previewing_theme .collapse">
+<h2>Start previewing the selected theme.</h2>
+<pre>start_previewing_theme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Adds filters to change the current theme.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_stop_previewing_theme"></a><div class="element clickable method public method_stop_previewing_theme" data-toggle="collapse" data-target=".method_stop_previewing_theme .collapse">
+<h2>Stop previewing the selected theme.</h2>
+<pre>stop_previewing_theme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Removes filters to change the current theme.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_theme"></a><div class="element clickable method public method_theme" data-toggle="collapse" data-target=".method_theme .collapse">
+<h2>Get the theme being customized.</h2>
+<pre>theme() : <a href="../classes/WP_Theme.html">\WP_Theme</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/WP_Theme.html">\WP_Theme</a></code></div>
+</div></div>
+</div>
+<a id="method_wp_die_handler"></a><div class="element clickable method public method_wp_die_handler" data-toggle="collapse" data-target=".method_wp_die_handler .collapse">
+<h2>Return the AJAX wp_die() handler if it's a customized request.</h2>
+<pre>wp_die_handler() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_wp_loaded"></a><div class="element clickable method public method_wp_loaded" data-toggle="collapse" data-target=".method_wp_loaded .collapse">
+<h2>Register styles/scripts and initialize the preview of each setting</h2>
+<pre>wp_loaded() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_wp_redirect_status"></a><div class="element clickable method public method_wp_redirect_status" data-toggle="collapse" data-target=".method_wp_redirect_status .collapse">
+<h2>Prevents AJAX requests from following redirects when previewing a theme
+by issuing a 200 response instead of a 30x.</h2>
+<pre>wp_redirect_status($status) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Instead, the JS will sniff out the location header.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$status</h4></div>
+</div></div>
+</div>
+<a id="method__cmp_priority"></a><div class="element clickable method protected method__cmp_priority" data-toggle="collapse" data-target=".method__cmp_priority .collapse">
+<h2>Helper function to compare two objects by priority.</h2>
+<pre>_cmp_priority(object $a, object $b) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>object</code><p>Object A.</p></div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>object</code><p>Object B.</p></div>
+</div></div>
+</div>
+<a id="method_wp_die"></a><div class="element clickable method protected method_wp_die" data-toggle="collapse" data-target=".method_wp_die .collapse">
+<h2>Custom wp_die wrapper.</h2>
+<pre>wp_die(mixed $ajax_message, mixed $message) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns either the standard message for UI
+or the AJAX message.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$ajax_message</h4>
+<code>mixed</code><p>AJAX return</p></div>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>mixed</code><p>UI message</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_controls"> </a><div class="element clickable property protected property_controls" data-toggle="collapse" data-target=".property_controls .collapse">
+<h2>$controls</h2>
+<pre>$controls </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_customized"> </a><div class="element clickable property protected property_customized" data-toggle="collapse" data-target=".property_customized .collapse">
+<h2>$customized</h2>
+<pre>$customized </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_nonce_tick"> </a><div class="element clickable property protected property_nonce_tick" data-toggle="collapse" data-target=".property_nonce_tick .collapse">
+<h2>$nonce_tick</h2>
+<pre>$nonce_tick </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_original_stylesheet"> </a><div class="element clickable property protected property_original_stylesheet" data-toggle="collapse" data-target=".property_original_stylesheet .collapse">
+<h2>$original_stylesheet</h2>
+<pre>$original_stylesheet </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_previewing"> </a><div class="element clickable property protected property_previewing" data-toggle="collapse" data-target=".property_previewing .collapse">
+<h2>$previewing</h2>
+<pre>$previewing </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_sections"> </a><div class="element clickable property protected property_sections" data-toggle="collapse" data-target=".property_sections .collapse">
+<h2>$sections</h2>
+<pre>$sections </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_settings"> </a><div class="element clickable property protected property_settings" data-toggle="collapse" data-target=".property_settings .collapse">
+<h2>$settings</h2>
+<pre>$settings </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_theme"> </a><div class="element clickable property protected property_theme" data-toggle="collapse" data-target=".property_theme .collapse">
+<h2>$theme</h2>
+<pre>$theme </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__post_values"> </a><div class="element clickable property private property__post_values" data-toggle="collapse" data-target=".property__post_values .collapse">
+<h2>$_post_values</h2>
+<pre>$_post_values </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:11-05:00.<br></footer></div>
+</div>
+</body>
+</html>

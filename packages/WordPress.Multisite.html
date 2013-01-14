@@ -1,0 +1,2976 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Multisite</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.Multisite.html" title="Multisite"><i class="icon-folder-open"></i>Multisite</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function__access_denied_splash" title="_access_denied_splash :: "><span class="description">_access_denied_splash()
+        </span><pre>_access_denied_splash</pre></a></li>
+<li class="function  "><a href="#function__thickbox_path_admin_subfolder" title="_thickbox_path_admin_subfolder :: Thickbox image paths for Network Admin."><span class="description">Thickbox image paths for Network Admin.</span><pre>_thickbox_path_admin_subfolder</pre></a></li>
+<li class="function  "><a href="#function__update_blog_date_on_post_delete" title="_update_blog_date_on_post_delete :: Handler for updating the blog date when a published post is deleted."><span class="description">Handler for updating the blog date when a published post is deleted.</span><pre>_update_blog_date_on_post_delete</pre></a></li>
+<li class="function  "><a href="#function__update_blog_date_on_post_publish" title="_update_blog_date_on_post_publish :: Handler for updating the blog date when a post is published or an already published post is changed."><span class="description">Handler for updating the blog date when a post is published or an already published post is changed.</span><pre>_update_blog_date_on_post_publish</pre></a></li>
+<li class="function  "><a href="#function_add_blog_option" title="add_blog_option :: Add an option for a particular blog."><span class="description">Add an option for a particular blog.</span><pre>add_blog_option</pre></a></li>
+<li class="function  "><a href="#function_add_existing_user_to_blog" title="add_existing_user_to_blog :: Add a user to a blog based on details from maybe_add_existing_user_to_blog()."><span class="description">Add a user to a blog based on details from maybe_add_existing_user_to_blog().</span><pre>add_existing_user_to_blog</pre></a></li>
+<li class="function  "><a href="#function_add_new_user_to_blog" title="add_new_user_to_blog :: Add a newly created user to the appropriate blog"><span class="description">Add a newly created user to the appropriate blog</span><pre>add_new_user_to_blog</pre></a></li>
+<li class="function  "><a href="#function_add_user_to_blog" title="add_user_to_blog :: Add a user to a blog."><span class="description">Add a user to a blog.</span><pre>add_user_to_blog</pre></a></li>
+<li class="function  "><a href="#function_avoid_blog_page_permalink_collision" title="avoid_blog_page_permalink_collision :: "><span class="description">avoid_blog_page_permalink_collision()
+        </span><pre>avoid_blog_page_permalink_collision</pre></a></li>
+<li class="function  "><a href="#function_can_edit_network" title="can_edit_network :: Whether or not we can edit this network from this page"><span class="description">Whether or not we can edit this network from this page</span><pre>can_edit_network</pre></a></li>
+<li class="function  "><a href="#function_check_import_new_users" title="check_import_new_users :: "><span class="description">check_import_new_users()
+        </span><pre>check_import_new_users</pre></a></li>
+<li class="function  "><a href="#function_check_upload_mimes" title="check_upload_mimes :: Check an array of MIME types against a whitelist."><span class="description">Check an array of MIME types against a whitelist.</span><pre>check_upload_mimes</pre></a></li>
+<li class="function  "><a href="#function_check_upload_size" title="check_upload_size :: Determine if uploaded file exceeds space quota."><span class="description">Determine if uploaded file exceeds space quota.</span><pre>check_upload_size</pre></a></li>
+<li class="function  "><a href="#function_choose_primary_blog" title="choose_primary_blog :: "><span class="description">choose_primary_blog()
+        </span><pre>choose_primary_blog</pre></a></li>
+<li class="function  "><a href="#function_confirm_delete_users" title="confirm_delete_users :: "><span class="description">confirm_delete_users()
+        </span><pre>confirm_delete_users</pre></a></li>
+<li class="function  "><a href="#function_create_empty_blog" title="create_empty_blog :: Create an empty blog."><span class="description">Create an empty blog.</span><pre>create_empty_blog</pre></a></li>
+<li class="function  "><a href="#function_delete_blog_option" title="delete_blog_option :: Delete an option for a particular blog."><span class="description">Delete an option for a particular blog.</span><pre>delete_blog_option</pre></a></li>
+<li class="function  "><a href="#function_display_space_usage" title="display_space_usage :: "><span class="description">display_space_usage()
+        </span><pre>display_space_usage</pre></a></li>
+<li class="function  "><a href="#function_domain_exists" title="domain_exists :: Check whether a blogname is already taken."><span class="description">Check whether a blogname is already taken.</span><pre>domain_exists</pre></a></li>
+<li class="function  "><a href="#function_filter_SSL" title="filter_SSL :: Formats an String URL to use HTTPS if HTTP is found."><span class="description">Formats an String URL to use HTTPS if HTTP is found.</span><pre>filter_SSL</pre></a></li>
+<li class="function  "><a href="#function_fix_import_form_size" title="fix_import_form_size :: Get the remaining upload space for this blog."><span class="description">Get the remaining upload space for this blog.</span><pre>fix_import_form_size</pre></a></li>
+<li class="function  "><a href="#function_fix_phpmailer_messageid" title="fix_phpmailer_messageid :: Correct From host on outgoing mail to match the site domain"><span class="description">Correct From host on outgoing mail to match the site domain</span><pre>fix_phpmailer_messageid</pre></a></li>
+<li class="function  "><a href="#function_force_ssl_content" title="force_ssl_content :: Whether to force SSL on content."><span class="description">Whether to force SSL on content.</span><pre>force_ssl_content</pre></a></li>
+<li class="function  "><a href="#function_format_code_lang" title="format_code_lang :: "><span class="description">format_code_lang()
+        </span><pre>format_code_lang</pre></a></li>
+<li class="function  "><a href="#function_get_active_blog_for_user" title="get_active_blog_for_user :: Get one of a user's active blogs"><span class="description">Get one of a user's active blogs</span><pre>get_active_blog_for_user</pre></a></li>
+<li class="function  "><a href="#function_get_admin_users_for_domain" title="get_admin_users_for_domain :: Get the admin for a domain/path combination."><span class="description">Get the admin for a domain/path combination.</span><pre>get_admin_users_for_domain</pre></a></li>
+<li class="function  "><a href="#function_get_blog_count" title="get_blog_count :: The number of active sites on your installation."><span class="description">The number of active sites on your installation.</span><pre>get_blog_count</pre></a></li>
+<li class="function  "><a href="#function_get_blog_details" title="get_blog_details :: Retrieve the details for a blog from the blogs table and blog options."><span class="description">Retrieve the details for a blog from the blogs table and blog options.</span><pre>get_blog_details</pre></a></li>
+<li class="function  "><a href="#function_get_blog_id_from_url" title="get_blog_id_from_url :: Get a blog's numeric ID from its URL."><span class="description">Get a blog's numeric ID from its URL.</span><pre>get_blog_id_from_url</pre></a></li>
+<li class="function  "><a href="#function_get_blog_option" title="get_blog_option :: Retrieve option value based on setting name and blog_id."><span class="description">Retrieve option value based on setting name and blog_id.</span><pre>get_blog_option</pre></a></li>
+<li class="function  "><a href="#function_get_blog_permalink" title="get_blog_permalink :: Get the permalink for a post on another blog."><span class="description">Get the permalink for a post on another blog.</span><pre>get_blog_permalink</pre></a></li>
+<li class="function  "><a href="#function_get_blog_post" title="get_blog_post :: Get a blog post from any site on the network."><span class="description">Get a blog post from any site on the network.</span><pre>get_blog_post</pre></a></li>
+<li class="function  "><a href="#function_get_blog_status" title="get_blog_status :: Get a blog details field."><span class="description">Get a blog details field.</span><pre>get_blog_status</pre></a></li>
+<li class="function  "><a href="#function_get_blogaddress_by_domain" title="get_blogaddress_by_domain :: Get a full blog URL, given a domain and a path."><span class="description">Get a full blog URL, given a domain and a path.</span><pre>get_blogaddress_by_domain</pre></a></li>
+<li class="function  "><a href="#function_get_blogaddress_by_id" title="get_blogaddress_by_id :: Get a full blog URL, given a blog id."><span class="description">Get a full blog URL, given a blog id.</span><pre>get_blogaddress_by_id</pre></a></li>
+<li class="function  "><a href="#function_get_blogaddress_by_name" title="get_blogaddress_by_name :: Get a full blog URL, given a blog name."><span class="description">Get a full blog URL, given a blog name.</span><pre>get_blogaddress_by_name</pre></a></li>
+<li class="function  "><a href="#function_get_current_site" title="get_current_site :: Get the current site info."><span class="description">Get the current site info.</span><pre>get_current_site</pre></a></li>
+<li class="function  "><a href="#function_get_current_site_name" title="get_current_site_name :: Sets current site name."><span class="description">Sets current site name.</span><pre>get_current_site_name</pre></a></li>
+<li class="function  "><a href="#function_get_dashboard_blog" title='get_dashboard_blog :: Get the "dashboard blog", the blog where users without a blog edit their profile data.'><span class="description">Get the "dashboard blog", the blog where users without a blog edit their profile data.</span><pre>get_dashboard_blog</pre></a></li>
+<li class="function  "><a href="#function_get_dirsize" title="get_dirsize :: Get the size of a directory."><span class="description">Get the size of a directory.</span><pre>get_dirsize</pre></a></li>
+<li class="function  "><a href="#function_get_id_from_blogname" title="get_id_from_blogname :: Given a blog's (subdomain or directory) name, retrieve it's id."><span class="description">Given a blog's (subdomain or directory) name, retrieve it's id.</span><pre>get_id_from_blogname</pre></a></li>
+<li class="function  "><a href="#function_get_last_updated" title="get_last_updated :: Get a list of most recently updated blogs."><span class="description">Get a list of most recently updated blogs.</span><pre>get_last_updated</pre></a></li>
+<li class="function  "><a href="#function_get_most_recent_post_of_user" title="get_most_recent_post_of_user :: Get a user's most recent post."><span class="description">Get a user's most recent post.</span><pre>get_most_recent_post_of_user</pre></a></li>
+<li class="function  "><a href="#function_get_sitestats" title="get_sitestats :: Gets the network's site and user counts."><span class="description">Gets the network's site and user counts.</span><pre>get_sitestats</pre></a></li>
+<li class="function  "><a href="#function_get_space_allowed" title="get_space_allowed :: Returns the upload quota for the current blog."><span class="description">Returns the upload quota for the current blog.</span><pre>get_space_allowed</pre></a></li>
+<li class="function  "><a href="#function_get_upload_space_available" title="get_upload_space_available :: Determines if there is any upload space left in the current blog's quota."><span class="description">Determines if there is any upload space left in the current blog's quota.</span><pre>get_upload_space_available</pre></a></li>
+<li class="function  "><a href="#function_get_user_count" title="get_user_count :: The number of active users in your installation."><span class="description">The number of active users in your installation.</span><pre>get_user_count</pre></a></li>
+<li class="function  "><a href="#function_get_user_id_from_string" title="get_user_id_from_string :: Get a numeric user ID from either an email address or a login."><span class="description">Get a numeric user ID from either an email address or a login.</span><pre>get_user_id_from_string</pre></a></li>
+<li class="function  "><a href="#function_global_terms" title="global_terms :: Maintains a canonical list of terms by syncing terms created for each blog with the global terms table."><span class="description">Maintains a canonical list of terms by syncing terms created for each blog with the global terms table.</span><pre>global_terms</pre></a></li>
+<li class="function  "><a href="#function_grant_super_admin" title="grant_super_admin :: Grants super admin privileges."><span class="description">Grants super admin privileges.</span><pre>grant_super_admin</pre></a></li>
+<li class="function  "><a href="#function_insert_blog" title="insert_blog :: Store basic site info in the blogs table."><span class="description">Store basic site info in the blogs table.</span><pre>insert_blog</pre></a></li>
+<li class="function  "><a href="#function_install_blog" title="install_blog :: Install an empty blog."><span class="description">Install an empty blog.</span><pre>install_blog</pre></a></li>
+<li class="function  "><a href="#function_install_blog_defaults" title="install_blog_defaults :: Set blog defaults."><span class="description">Set blog defaults.</span><pre>install_blog_defaults</pre></a></li>
+<li class="function  "><a href="#function_is_archived" title="is_archived :: Check if a particular blog is archived."><span class="description">Check if a particular blog is archived.</span><pre>is_archived</pre></a></li>
+<li class="function  "><a href="#function_is_email_address_unsafe" title="is_email_address_unsafe :: Checks an email address against a list of banned domains."><span class="description">Checks an email address against a list of banned domains.</span><pre>is_email_address_unsafe</pre></a></li>
+<li class="function  "><a href="#function_is_subdomain_install" title="is_subdomain_install :: Whether a subdomain configuration is enabled."><span class="description">Whether a subdomain configuration is enabled.</span><pre>is_subdomain_install</pre></a></li>
+<li class="function  "><a href="#function_is_upload_space_available" title="is_upload_space_available :: Determines if there is any upload space left in the current blog's quota."><span class="description">Determines if there is any upload space left in the current blog's quota.</span><pre>is_upload_space_available</pre></a></li>
+<li class="function  "><a href="#function_is_user_option_local" title="is_user_option_local :: Check whether a usermeta key has to do with the current blog."><span class="description">Check whether a usermeta key has to do with the current blog.</span><pre>is_user_option_local</pre></a></li>
+<li class="function  "><a href="#function_is_user_spammy" title="is_user_spammy :: Check to see whether a user is marked as a spammer, based on username"><span class="description">Check to see whether a user is marked as a spammer, based on username</span><pre>is_user_spammy</pre></a></li>
+<li class="function  "><a href="#function_maybe_add_existing_user_to_blog" title="maybe_add_existing_user_to_blog :: Add a new user to a blog by visiting /newbloguser/username/."><span class="description">Add a new user to a blog by visiting /newbloguser/username/.</span><pre>maybe_add_existing_user_to_blog</pre></a></li>
+<li class="function  "><a href="#function_maybe_redirect_404" title="maybe_redirect_404 :: Correct 404 redirects when NOBLOGREDIRECT is defined."><span class="description">Correct 404 redirects when NOBLOGREDIRECT is defined.</span><pre>maybe_redirect_404</pre></a></li>
+<li class="function  "><a href="#function_ms_cookie_constants" title="ms_cookie_constants :: Defines Multisite cookie constants."><span class="description">Defines Multisite cookie constants.</span><pre>ms_cookie_constants</pre></a></li>
+<li class="function  "><a href="#function_ms_deprecated_blogs_file" title="ms_deprecated_blogs_file :: "><span class="description">ms_deprecated_blogs_file()
+        </span><pre>ms_deprecated_blogs_file</pre></a></li>
+<li class="function  "><a href="#function_ms_file_constants" title="ms_file_constants :: Defines Multisite file constants."><span class="description">Defines Multisite file constants.</span><pre>ms_file_constants</pre></a></li>
+<li class="function  "><a href="#function_ms_not_installed" title="ms_not_installed :: Displays a failure message."><span class="description">Displays a failure message.</span><pre>ms_not_installed</pre></a></li>
+<li class="function  "><a href="#function_ms_site_check" title="ms_site_check :: Checks status of current blog."><span class="description">Checks status of current blog.</span><pre>ms_site_check</pre></a></li>
+<li class="function  "><a href="#function_ms_subdomain_constants" title="ms_subdomain_constants :: Defines Multisite subdomain constants and handles warnings and notices."><span class="description">Defines Multisite subdomain constants and handles warnings and notices.</span><pre>ms_subdomain_constants</pre></a></li>
+<li class="function  "><a href="#function_ms_upload_constants" title="ms_upload_constants :: Defines Multisite upload constants."><span class="description">Defines Multisite upload constants.</span><pre>ms_upload_constants</pre></a></li>
+<li class="function  "><a href="#function_mu_dropdown_languages" title="mu_dropdown_languages :: "><span class="description">mu_dropdown_languages()
+        </span><pre>mu_dropdown_languages</pre></a></li>
+<li class="function  "><a href="#function_new_user_email_admin_notice" title="new_user_email_admin_notice :: "><span class="description">new_user_email_admin_notice()
+        </span><pre>new_user_email_admin_notice</pre></a></li>
+<li class="function  "><a href="#function_newblog_notify_siteadmin" title="newblog_notify_siteadmin :: Notifies the network admin that a new site has been activated."><span class="description">Notifies the network admin that a new site has been activated.</span><pre>newblog_notify_siteadmin</pre></a></li>
+<li class="function  "><a href="#function_newuser_notify_siteadmin" title="newuser_notify_siteadmin :: Notifies the network admin that a new user has been activated."><span class="description">Notifies the network admin that a new user has been activated.</span><pre>newuser_notify_siteadmin</pre></a></li>
+<li class="function  "><a href="#function_recurse_dirsize" title="recurse_dirsize :: Get the size of a directory recursively."><span class="description">Get the size of a directory recursively.</span><pre>recurse_dirsize</pre></a></li>
+<li class="function  "><a href="#function_redirect_this_site" title="redirect_this_site :: Ensure that the current site's domain is listed in the allowed redirect host list."><span class="description">Ensure that the current site's domain is listed in the allowed redirect host list.</span><pre>redirect_this_site</pre></a></li>
+<li class="function  "><a href="#function_refresh_blog_details" title="refresh_blog_details :: Clear the blog details cache."><span class="description">Clear the blog details cache.</span><pre>refresh_blog_details</pre></a></li>
+<li class="function  "><a href="#function_refresh_user_details" title="refresh_user_details :: "><span class="description">refresh_user_details()
+        </span><pre>refresh_user_details</pre></a></li>
+<li class="function  "><a href="#function_remove_user_from_blog" title="remove_user_from_blog :: Remove a user from a blog."><span class="description">Remove a user from a blog.</span><pre>remove_user_from_blog</pre></a></li>
+<li class="function  "><a href="#function_restore_current_blog" title="restore_current_blog :: Restore the current blog, after calling switch_to_blog()"><span class="description">Restore the current blog, after calling switch_to_blog()</span><pre>restore_current_blog</pre></a></li>
+<li class="function  "><a href="#function_revoke_super_admin" title="revoke_super_admin :: Revokes super admin privileges."><span class="description">Revokes super admin privileges.</span><pre>revoke_super_admin</pre></a></li>
+<li class="function  "><a href="#function_secret_salt_warning" title="secret_salt_warning :: "><span class="description">secret_salt_warning()
+        </span><pre>secret_salt_warning</pre></a></li>
+<li class="function  "><a href="#function_send_confirmation_on_profile_email" title="send_confirmation_on_profile_email :: "><span class="description">send_confirmation_on_profile_email()
+        </span><pre>send_confirmation_on_profile_email</pre></a></li>
+<li class="function  "><a href="#function_signup_nonce_check" title="signup_nonce_check :: Process the signup nonce created in signup_nonce_fields()."><span class="description">Process the signup nonce created in signup_nonce_fields().</span><pre>signup_nonce_check</pre></a></li>
+<li class="function  "><a href="#function_signup_nonce_fields" title="signup_nonce_fields :: Add a nonce field to the signup page."><span class="description">Add a nonce field to the signup page.</span><pre>signup_nonce_fields</pre></a></li>
+<li class="function  "><a href="#function_site_admin_notice" title="site_admin_notice :: "><span class="description">site_admin_notice()
+        </span><pre>site_admin_notice</pre></a></li>
+<li class="function  "><a href="#function_switch_to_blog" title="switch_to_blog :: Switch the current blog."><span class="description">Switch the current blog.</span><pre>switch_to_blog</pre></a></li>
+<li class="function  "><a href="#function_sync_category_tag_slugs" title="sync_category_tag_slugs :: "><span class="description">sync_category_tag_slugs()
+        </span><pre>sync_category_tag_slugs</pre></a></li>
+<li class="function  "><a href="#function_update_archived" title="update_archived :: Update the 'archived' status of a particular blog."><span class="description">Update the 'archived' status of a particular blog.</span><pre>update_archived</pre></a></li>
+<li class="function  "><a href="#function_update_blog_details" title="update_blog_details :: Update the details for a blog."><span class="description">Update the details for a blog.</span><pre>update_blog_details</pre></a></li>
+<li class="function  "><a href="#function_update_blog_option" title="update_blog_option :: Update an option for a particular blog."><span class="description">Update an option for a particular blog.</span><pre>update_blog_option</pre></a></li>
+<li class="function  "><a href="#function_update_blog_public" title="update_blog_public :: Update this blog's 'public' setting in the global blogs table."><span class="description">Update this blog's 'public' setting in the global blogs table.</span><pre>update_blog_public</pre></a></li>
+<li class="function  "><a href="#function_update_blog_status" title="update_blog_status :: Update a blog details field."><span class="description">Update a blog details field.</span><pre>update_blog_status</pre></a></li>
+<li class="function  "><a href="#function_update_option_new_admin_email" title="update_option_new_admin_email :: "><span class="description">update_option_new_admin_email()
+        </span><pre>update_option_new_admin_email</pre></a></li>
+<li class="function  "><a href="#function_update_posts_count" title="update_posts_count :: Update a blog's post count."><span class="description">Update a blog's post count.</span><pre>update_posts_count</pre></a></li>
+<li class="function  "><a href="#function_update_user_status" title="update_user_status :: "><span class="description">update_user_status()
+        </span><pre>update_user_status</pre></a></li>
+<li class="function  "><a href="#function_upload_is_file_too_big" title="upload_is_file_too_big :: Check whether an upload is too big."><span class="description">Check whether an upload is too big.</span><pre>upload_is_file_too_big</pre></a></li>
+<li class="function  "><a href="#function_upload_is_user_over_quota" title="upload_is_user_over_quota :: Check whether a blog has used its allotted upload space."><span class="description">Check whether a blog has used its allotted upload space.</span><pre>upload_is_user_over_quota</pre></a></li>
+<li class="function  "><a href="#function_upload_size_limit_filter" title="upload_size_limit_filter :: "><span class="description">upload_size_limit_filter()
+        </span><pre>upload_size_limit_filter</pre></a></li>
+<li class="function  "><a href="#function_upload_space_setting" title="upload_space_setting :: "><span class="description">upload_space_setting()
+        </span><pre>upload_space_setting</pre></a></li>
+<li class="function  "><a href="#function_users_can_register_signup_filter" title="users_can_register_signup_filter :: Check whether users can self-register, based on Network settings."><span class="description">Check whether users can self-register, based on Network settings.</span><pre>users_can_register_signup_filter</pre></a></li>
+<li class="function  "><a href="#function_welcome_user_msg_filter" title="welcome_user_msg_filter :: Ensure that the welcome message is not empty."><span class="description">Ensure that the welcome message is not empty.</span><pre>welcome_user_msg_filter</pre></a></li>
+<li class="function  "><a href="#function_wp_get_active_network_plugins" title="wp_get_active_network_plugins :: Returns array of network plugin files to be included in global scope."><span class="description">Returns array of network plugin files to be included in global scope.</span><pre>wp_get_active_network_plugins</pre></a></li>
+<li class="function  "><a href="#function_wp_is_large_network" title="wp_is_large_network :: Whether or not we have a large network."><span class="description">Whether or not we have a large network.</span><pre>wp_is_large_network</pre></a></li>
+<li class="function  "><a href="#function_wp_schedule_update_network_counts" title="wp_schedule_update_network_counts :: Schedule update of the network-wide counts for the current network."><span class="description">Schedule update of the network-wide counts for the current network.</span><pre>wp_schedule_update_network_counts</pre></a></li>
+<li class="function  "><a href="#function_wp_update_network_counts" title="wp_update_network_counts :: Update the network-wide counts for the current network."><span class="description">Update the network-wide counts for the current network.</span><pre>wp_update_network_counts</pre></a></li>
+<li class="function  "><a href="#function_wpmu_activate_signup" title="wpmu_activate_signup :: Activate a signup."><span class="description">Activate a signup.</span><pre>wpmu_activate_signup</pre></a></li>
+<li class="function  "><a href="#function_wpmu_create_blog" title="wpmu_create_blog :: Create a site."><span class="description">Create a site.</span><pre>wpmu_create_blog</pre></a></li>
+<li class="function  "><a href="#function_wpmu_create_user" title="wpmu_create_user :: Create a user."><span class="description">Create a user.</span><pre>wpmu_create_user</pre></a></li>
+<li class="function  "><a href="#function_wpmu_current_site" title="wpmu_current_site :: Sets current_site object."><span class="description">Sets current_site object.</span><pre>wpmu_current_site</pre></a></li>
+<li class="function  "><a href="#function_wpmu_delete_blog" title="wpmu_delete_blog :: Delete a blog"><span class="description">Delete a blog</span><pre>wpmu_delete_blog</pre></a></li>
+<li class="function  "><a href="#function_wpmu_delete_user" title="wpmu_delete_user :: "><span class="description">wpmu_delete_user()
+        </span><pre>wpmu_delete_user</pre></a></li>
+<li class="function  "><a href="#function_wpmu_log_new_registrations" title="wpmu_log_new_registrations :: Logs user registrations."><span class="description">Logs user registrations.</span><pre>wpmu_log_new_registrations</pre></a></li>
+<li class="function  "><a href="#function_wpmu_signup_blog" title="wpmu_signup_blog :: Record site signup information for future activation."><span class="description">Record site signup information for future activation.</span><pre>wpmu_signup_blog</pre></a></li>
+<li class="function  "><a href="#function_wpmu_signup_blog_notification" title="wpmu_signup_blog_notification :: Notify user of signup success."><span class="description">Notify user of signup success.</span><pre>wpmu_signup_blog_notification</pre></a></li>
+<li class="function  "><a href="#function_wpmu_signup_user" title="wpmu_signup_user :: Record user signup information for future activation."><span class="description">Record user signup information for future activation.</span><pre>wpmu_signup_user</pre></a></li>
+<li class="function  "><a href="#function_wpmu_signup_user_notification" title="wpmu_signup_user_notification :: Notify user of signup success."><span class="description">Notify user of signup success.</span><pre>wpmu_signup_user_notification</pre></a></li>
+<li class="function  "><a href="#function_wpmu_update_blogs_date" title="wpmu_update_blogs_date :: Update the last_updated field for the current blog."><span class="description">Update the last_updated field for the current blog.</span><pre>wpmu_update_blogs_date</pre></a></li>
+<li class="function  "><a href="#function_wpmu_validate_blog_signup" title="wpmu_validate_blog_signup :: Processes new site registrations."><span class="description">Processes new site registrations.</span><pre>wpmu_validate_blog_signup</pre></a></li>
+<li class="function  "><a href="#function_wpmu_validate_user_signup" title="wpmu_validate_user_signup :: Processes new user registrations."><span class="description">Processes new user registrations.</span><pre>wpmu_validate_user_signup</pre></a></li>
+<li class="function  "><a href="#function_wpmu_welcome_notification" title="wpmu_welcome_notification :: Notify a user that her blog activation has been successful."><span class="description">Notify a user that her blog activation has been successful.</span><pre>wpmu_welcome_notification</pre></a></li>
+<li class="function  "><a href="#function_wpmu_welcome_user_notification" title="wpmu_welcome_user_notification :: Notify a user that her account activation has been successful."><span class="description">Notify a user that her account activation has been successful.</span><pre>wpmu_welcome_user_notification</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_ADMIN_COOKIE_PATH" title="ADMIN_COOKIE_PATH :: "><span class="description">ADMIN_COOKIE_PATH</span><pre>ADMIN_COOKIE_PATH</pre></a></li>
+<li class="constant  "><a href="#constant_ADMIN_COOKIE_PATH" title="ADMIN_COOKIE_PATH :: "><span class="description">ADMIN_COOKIE_PATH</span><pre>ADMIN_COOKIE_PATH</pre></a></li>
+<li class="constant  "><a href="#constant_BLOGUPLOADDIR" title="BLOGUPLOADDIR :: "><span class="description">BLOGUPLOADDIR</span><pre>BLOGUPLOADDIR</pre></a></li>
+<li class="constant  "><a href="#constant_COOKIEPATH" title="COOKIEPATH :: "><span class="description">COOKIEPATH</span><pre>COOKIEPATH</pre></a></li>
+<li class="constant  "><a href="#constant_COOKIE_DOMAIN" title="COOKIE_DOMAIN :: "><span class="description">COOKIE_DOMAIN</span><pre>COOKIE_DOMAIN</pre></a></li>
+<li class="constant  "><a href="#constant_COOKIE_DOMAIN" title="COOKIE_DOMAIN :: "><span class="description">COOKIE_DOMAIN</span><pre>COOKIE_DOMAIN</pre></a></li>
+<li class="constant  "><a href="#constant_IFRAME_REQUEST" title="IFRAME_REQUEST :: "><span class="description">IFRAME_REQUEST</span><pre>IFRAME_REQUEST</pre></a></li>
+<li class="constant  "><a href="#constant_IFRAME_REQUEST" title="IFRAME_REQUEST :: "><span class="description">IFRAME_REQUEST</span><pre>IFRAME_REQUEST</pre></a></li>
+<li class="constant  "><a href="#constant_IFRAME_REQUEST" title="IFRAME_REQUEST :: "><span class="description">IFRAME_REQUEST</span><pre>IFRAME_REQUEST</pre></a></li>
+<li class="constant  "><a href="#constant_SHORTINIT" title="SHORTINIT :: "><span class="description">SHORTINIT</span><pre>SHORTINIT</pre></a></li>
+<li class="constant  "><a href="#constant_SITECOOKIEPATH" title="SITECOOKIEPATH :: "><span class="description">SITECOOKIEPATH</span><pre>SITECOOKIEPATH</pre></a></li>
+<li class="constant  "><a href="#constant_SUBDOMAIN_INSTALL" title="SUBDOMAIN_INSTALL :: "><span class="description">SUBDOMAIN_INSTALL</span><pre>SUBDOMAIN_INSTALL</pre></a></li>
+<li class="constant  "><a href="#constant_SUBDOMAIN_INSTALL" title="SUBDOMAIN_INSTALL :: "><span class="description">SUBDOMAIN_INSTALL</span><pre>SUBDOMAIN_INSTALL</pre></a></li>
+<li class="constant  "><a href="#constant_UPLOADBLOGSDIR" title="UPLOADBLOGSDIR :: "><span class="description">UPLOADBLOGSDIR</span><pre>UPLOADBLOGSDIR</pre></a></li>
+<li class="constant  "><a href="#constant_UPLOADS" title="UPLOADS :: "><span class="description">UPLOADS</span><pre>UPLOADS</pre></a></li>
+<li class="constant  "><a href="#constant_VHOST" title="VHOST :: "><span class="description">VHOST</span><pre>VHOST</pre></a></li>
+<li class="constant  "><a href="#constant_VHOST" title="VHOST :: "><span class="description">VHOST</span><pre>VHOST</pre></a></li>
+<li class="constant  "><a href="#constant_WPMU_ACCEL_REDIRECT" title="WPMU_ACCEL_REDIRECT :: "><span class="description">WPMU_ACCEL_REDIRECT</span><pre>WPMU_ACCEL_REDIRECT</pre></a></li>
+<li class="constant  "><a href="#constant_WPMU_SENDFILE" title="WPMU_SENDFILE :: "><span class="description">WPMU_SENDFILE</span><pre>WPMU_SENDFILE</pre></a></li>
+<li class="constant  "><a href="#constant_WP_INSTALLING" title="WP_INSTALLING :: "><span class="description">WP_INSTALLING</span><pre>WP_INSTALLING</pre></a></li>
+<li class="constant  "><a href="#constant_WP_NETWORK_ADMIN" title="WP_NETWORK_ADMIN :: "><span class="description">WP_NETWORK_ADMIN</span><pre>WP_NETWORK_ADMIN</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Multisite.html">Multisite</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__access_denied_splash"></a><div class="element clickable function  function__access_denied_splash" data-toggle="collapse" data-target=".function__access_denied_splash .collapse">
+<h2>_access_denied_splash()
+        </h2>
+<pre>_access_denied_splash() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function__thickbox_path_admin_subfolder"></a><div class="element clickable function  function__thickbox_path_admin_subfolder" data-toggle="collapse" data-target=".function__thickbox_path_admin_subfolder .collapse">
+<h2>Thickbox image paths for Network Admin.</h2>
+<pre>_thickbox_path_admin_subfolder() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function__update_blog_date_on_post_delete"></a><div class="element clickable function  function__update_blog_date_on_post_delete" data-toggle="collapse" data-target=".function__update_blog_date_on_post_delete .collapse">
+<h2>Handler for updating the blog date when a published post is deleted.</h2>
+<pre>_update_blog_date_on_post_delete(int $post_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Post ID</p></div>
+</div></div>
+</div>
+<a id="function__update_blog_date_on_post_publish"></a><div class="element clickable function  function__update_blog_date_on_post_publish" data-toggle="collapse" data-target=".function__update_blog_date_on_post_publish .collapse">
+<h2>Handler for updating the blog date when a post is published or an already published post is changed.</h2>
+<pre>_update_blog_date_on_post_publish(string $new_status, string $old_status, object $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$new_status</h4>
+<code>string</code><p>The new post status</p></div>
+<div class="subelement argument">
+<h4>$old_status</h4>
+<code>string</code><p>The old post status</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>Post object</p></div>
+</div></div>
+</div>
+<a id="function_add_blog_option"></a><div class="element clickable function  function_add_blog_option" data-toggle="collapse" data-target=".function_add_blog_option .collapse">
+<h2>Add an option for a particular blog.</h2>
+<pre>add_blog_option(int $id, string $key, mixed $value) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The blog id</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The option key</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The option value</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_add_existing_user_to_blog"></a><div class="element clickable function  function_add_existing_user_to_blog" data-toggle="collapse" data-target=".function_add_existing_user_to_blog .collapse">
+<h2>Add a user to a blog based on details from maybe_add_existing_user_to_blog().</h2>
+<pre>add_existing_user_to_blog(array $details) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_user_to_blog()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$details</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a id="function_add_new_user_to_blog"></a><div class="element clickable function  function_add_new_user_to_blog" data-toggle="collapse" data-target=".function_add_new_user_to_blog .collapse">
+<h2>Add a newly created user to the appropriate blog</h2>
+<pre>add_new_user_to_blog(int $user_id, string $email, array $meta) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$email</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a id="function_add_user_to_blog"></a><div class="element clickable function  function_add_user_to_blog" data-toggle="collapse" data-target=".function_add_user_to_blog .collapse">
+<h2>Add a user to a blog.</h2>
+<pre>add_user_to_blog(int $blog_id, int $user_id, string $role) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Use the 'add_user_to_blog' action to fire an event when
+users are added to a blog.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>ID of the blog you're adding the user to.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>ID of the user you're adding.</p>
+</div>
+<div class="subelement argument">
+<h4>$role</h4>
+<code>string</code><p>The role you want the user to have</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_avoid_blog_page_permalink_collision"></a><div class="element clickable function  function_avoid_blog_page_permalink_collision" data-toggle="collapse" data-target=".function_avoid_blog_page_permalink_collision .collapse">
+<h2>avoid_blog_page_permalink_collision()
+        </h2>
+<pre>avoid_blog_page_permalink_collision($data, $postarr) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<div class="subelement argument"><h4>$postarr</h4></div>
+</div></div>
+</div>
+<a id="function_can_edit_network"></a><div class="element clickable function  function_can_edit_network" data-toggle="collapse" data-target=".function_can_edit_network .collapse">
+<h2>Whether or not we can edit this network from this page</h2>
+<pre>can_edit_network(integer $site_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>By default editing of network is restricted to the Network Admin for that site_id this allows for this to be overridden</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$site_id</h4>
+<code>integer</code><p>The network/site id to check.</p>
+</div>
+</div></div>
+</div>
+<a id="function_check_import_new_users"></a><div class="element clickable function  function_check_import_new_users" data-toggle="collapse" data-target=".function_check_import_new_users .collapse">
+<h2>check_import_new_users()
+        </h2>
+<pre>check_import_new_users($permission) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$permission</h4></div>
+</div></div>
+</div>
+<a id="function_check_upload_mimes"></a><div class="element clickable function  function_check_upload_mimes" data-toggle="collapse" data-target=".function_check_upload_mimes .collapse">
+<h2>Check an array of MIME types against a whitelist.</h2>
+<pre>check_upload_mimes(array $mimes) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>WordPress ships with a set of allowed upload filetypes,
+which is defined in wp-includes/functions.php in
+get_allowed_mime_types(). This function is used to filter
+that list against the filetype whitelist provided by Multisite
+Super Admins at wp-admin/network/settings.php.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mimes</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_check_upload_size"></a><div class="element clickable function  function_check_upload_size" data-toggle="collapse" data-target=".function_check_upload_size .collapse">
+<h2>Determine if uploaded file exceeds space quota.</h2>
+<pre>check_upload_size(array $file) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>array</code><p>$_FILES array for a given file.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>$_FILES array with 'error' key set if file exceeds quota. 'error' is empty otherwise.</div>
+</div></div>
+</div>
+<a id="function_choose_primary_blog"></a><div class="element clickable function  function_choose_primary_blog" data-toggle="collapse" data-target=".function_choose_primary_blog .collapse">
+<h2>choose_primary_blog()
+        </h2>
+<pre>choose_primary_blog() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_confirm_delete_users"></a><div class="element clickable function  function_confirm_delete_users" data-toggle="collapse" data-target=".function_confirm_delete_users .collapse">
+<h2>confirm_delete_users()
+        </h2>
+<pre>confirm_delete_users($users) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$users</h4></div>
+</div></div>
+</div>
+<a id="function_create_empty_blog"></a><div class="element clickable function  function_create_empty_blog" data-toggle="collapse" data-target=".function_create_empty_blog .collapse">
+<h2>Create an empty blog.</h2>
+<pre>create_empty_blog(string $domain, string $path, string $weblog_title, int $site_id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\install_blog()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>The new blog's domain.</p>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The new blog's path.</p>
+</div>
+<div class="subelement argument">
+<h4>$weblog_title</h4>
+<code>string</code><p>The new blog's title.</p>
+</div>
+<div class="subelement argument">
+<h4>$site_id</h4>
+<code>int</code><p>Optional. Defaults to 1.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The ID of the newly created blog</div>
+</div></div>
+</div>
+<a id="function_delete_blog_option"></a><div class="element clickable function  function_delete_blog_option" data-toggle="collapse" data-target=".function_delete_blog_option .collapse">
+<h2>Delete an option for a particular blog.</h2>
+<pre>delete_blog_option(int $id, string $key) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The blog id</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The option key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_display_space_usage"></a><div class="element clickable function  function_display_space_usage" data-toggle="collapse" data-target=".function_display_space_usage .collapse">
+<h2>display_space_usage()
+        </h2>
+<pre>display_space_usage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_domain_exists"></a><div class="element clickable function  function_domain_exists" data-toggle="collapse" data-target=".function_domain_exists .collapse">
+<h2>Check whether a blogname is already taken.</h2>
+<pre>domain_exists(string $domain, string $path, int $site_id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Used during the new site registration process to ensure
+that each blogname is unique.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>The domain to be checked.</p></div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The path to be checked.</p></div>
+<div class="subelement argument">
+<h4>$site_id</h4>
+<code>int</code><p>Optional. Relevant only on multi-network installs.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_filter_SSL"></a><div class="element clickable function  function_filter_SSL" data-toggle="collapse" data-target=".function_filter_SSL .collapse">
+<h2>Formats an String URL to use HTTPS if HTTP is found.</h2>
+<pre>filter_SSL($url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Useful as a filter.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.8.5</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+</div></div>
+</div>
+<a id="function_fix_import_form_size"></a><div class="element clickable function  function_fix_import_form_size" data-toggle="collapse" data-target=".function_fix_import_form_size .collapse">
+<h2>Get the remaining upload space for this blog.</h2>
+<pre>fix_import_form_size(int $size) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\upload_is_user_over_quota()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_space_allowed()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_dirsize()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_fix_phpmailer_messageid"></a><div class="element clickable function  function_fix_phpmailer_messageid" data-toggle="collapse" data-target=".function_fix_phpmailer_messageid .collapse">
+<h2>Correct From host on outgoing mail to match the site domain</h2>
+<pre>fix_phpmailer_messageid($phpmailer) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$phpmailer</h4></div>
+</div></div>
+</div>
+<a id="function_force_ssl_content"></a><div class="element clickable function  function_force_ssl_content" data-toggle="collapse" data-target=".function_force_ssl_content .collapse">
+<h2>Whether to force SSL on content.</h2>
+<pre>force_ssl_content(string | bool $force) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.8.5</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$force</h4>
+<code>string</code><code>bool</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if forced, false if not forced.</div>
+</div></div>
+</div>
+<a id="function_format_code_lang"></a><div class="element clickable function  function_format_code_lang" data-toggle="collapse" data-target=".function_format_code_lang .collapse">
+<h2>format_code_lang()
+        </h2>
+<pre>format_code_lang($code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$code</h4></div>
+</div></div>
+</div>
+<a id="function_get_active_blog_for_user"></a><div class="element clickable function  function_get_active_blog_for_user" data-toggle="collapse" data-target=".function_get_active_blog_for_user .collapse">
+<h2>Get one of a user's active blogs</h2>
+<pre>get_active_blog_for_user(int $user_id) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns the user's primary blog, if she has one and
+it is active. If it's inactive, function returns another
+active blog of the user. If none are found, the user
+is added as a Subscriber to the Dashboard Blog and that blog
+is returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_blogs_of_user()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_user_to_blog()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_blog_details()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>The unique ID of the user</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>The blog object</div>
+</div></div>
+</div>
+<a id="function_get_admin_users_for_domain"></a><div class="element clickable function  function_get_admin_users_for_domain" data-toggle="collapse" data-target=".function_get_admin_users_for_domain .collapse">
+<h2>Get the admin for a domain/path combination.</h2>
+<pre>get_admin_users_for_domain(string $sitedomain, string $path) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sitedomain</h4>
+<code>string</code><p>Optional. Site domain.</p></div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>Optional. Site path.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The network admins</div>
+</div></div>
+</div>
+<a id="function_get_blog_count"></a><div class="element clickable function  function_get_blog_count" data-toggle="collapse" data-target=".function_get_blog_count .collapse">
+<h2>The number of active sites on your installation.</h2>
+<pre>get_blog_count(int $id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The count is cached and updated twice daily. This is not a live count.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>Optional. A site_id.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_get_blog_details"></a><div class="element clickable function  function_get_blog_details" data-toggle="collapse" data-target=".function_get_blog_details .collapse">
+<h2>Retrieve the details for a blog from the blogs table and blog options.</h2>
+<pre>get_blog_details(int | string | array $fields, bool $get_all) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>int</code><code>string</code><code>array</code><p>A blog ID, a blog name, or an array of fields to query against.</p></div>
+<div class="subelement argument">
+<h4>$get_all</h4>
+<code>bool</code><p>Whether to retrieve all details or only the details in the blogs table. Default is true.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>Blog details.</div>
+</div></div>
+</div>
+<a id="function_get_blog_id_from_url"></a><div class="element clickable function  function_get_blog_id_from_url" data-toggle="collapse" data-target=".function_get_blog_id_from_url .collapse">
+<h2>Get a blog's numeric ID from its URL.</h2>
+<pre>get_blog_id_from_url(string $domain, string $path) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>On a subdirectory installation like example.com/blog1/,
+$domain will be the root 'example.com' and $path the
+subdirectory '/blog1/'. With subdomains like blog1.example.com,
+$domain is 'blog1.example.com' and $path is '/'.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 2.6.5</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>Optional. Not required for subdomain installations.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_get_blog_option"></a><div class="element clickable function  function_get_blog_option" data-toggle="collapse" data-target=".function_get_blog_option .collapse">
+<h2>Retrieve option value based on setting name and blog_id.</h2>
+<pre>get_blog_option(int $blog_id, string $setting, string $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the option does not exist or does not have a value, then the return value
+will be false. This is useful to check whether you need to install an option
+and is commonly used during installation of plugin options and to test
+whether upgrading is required.</p>
+
+<p>There is a filter called 'blog_option_$option' with the $option being
+replaced with the option name. The filter takes two parameters. $value and
+$blog_id. It returns $value.
+The 'option_$option' filter in get_option() is not called.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Optional. Blog ID, can be null to refer to the current blog.</p></div>
+<div class="subelement argument">
+<h4>$setting</h4>
+<code>string</code><p>Name of option to retrieve. Should already be SQL-escaped.</p>
+</div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>string</code><p>(optional) Default value returned if option not found.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Value set for the option.</div>
+</div></div>
+</div>
+<a id="function_get_blog_permalink"></a><div class="element clickable function  function_get_blog_permalink" data-toggle="collapse" data-target=".function_get_blog_permalink .collapse">
+<h2>Get the permalink for a post on another blog.</h2>
+<pre>get_blog_permalink(int $_blog_id, int $post_id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$_blog_id</h4>
+<code>int</code><p>ID of the source blog.</p></div>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>ID of the desired post.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The post's permalink</div>
+</div></div>
+</div>
+<a id="function_get_blog_post"></a><div class="element clickable function  function_get_blog_post" data-toggle="collapse" data-target=".function_get_blog_post .collapse">
+<h2>Get a blog post from any site on the network.</h2>
+<pre>get_blog_post(int $blog_id, int $post_id) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>ID of the blog.</p></div>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>ID of the post you're looking for.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>The post.</div>
+</div></div>
+</div>
+<a id="function_get_blog_status"></a><div class="element clickable function  function_get_blog_status" data-toggle="collapse" data-target=".function_get_blog_status .collapse">
+<h2>Get a blog details field.</h2>
+<pre>get_blog_status(int $id, string $pref) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The blog id</p></div>
+<div class="subelement argument">
+<h4>$pref</h4>
+<code>string</code><p>A field name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>$value</div>
+</div></div>
+</div>
+<a id="function_get_blogaddress_by_domain"></a><div class="element clickable function  function_get_blogaddress_by_domain" data-toggle="collapse" data-target=".function_get_blogaddress_by_domain .collapse">
+<h2>Get a full blog URL, given a domain and a path.</h2>
+<pre>get_blogaddress_by_domain(string $domain, string $path) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_blogaddress_by_id"></a><div class="element clickable function  function_get_blogaddress_by_id" data-toggle="collapse" data-target=".function_get_blogaddress_by_id .collapse">
+<h2>Get a full blog URL, given a blog id.</h2>
+<pre>get_blogaddress_by_id(int $blog_id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Blog ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_blogaddress_by_name"></a><div class="element clickable function  function_get_blogaddress_by_name" data-toggle="collapse" data-target=".function_get_blogaddress_by_name .collapse">
+<h2>Get a full blog URL, given a blog name.</h2>
+<pre>get_blogaddress_by_name(string $blogname) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blogname</h4>
+<code>string</code><p>The (subdomain or directory) name</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_current_site"></a><div class="element clickable function  function_get_current_site" data-toggle="collapse" data-target=".function_get_current_site .collapse">
+<h2>Get the current site info.</h2>
+<pre>get_current_site() : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns an object containing the ID, domain, path, and site_name
+of the site being viewed.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>object</code></div>
+</div></div>
+</div>
+<a id="function_get_current_site_name"></a><div class="element clickable function  function_get_current_site_name" data-toggle="collapse" data-target=".function_get_current_site_name .collapse">
+<h2>Sets current site name.</h2>
+<pre>get_current_site_name($current_site) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$current_site</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>$current_site object with site_name</div>
+</div></div>
+</div>
+<a id="function_get_dashboard_blog"></a><div class="element clickable function  function_get_dashboard_blog" data-toggle="collapse" data-target=".function_get_dashboard_blog .collapse">
+<h2>Get the "dashboard blog", the blog where users without a blog edit their profile data.</h2>
+<pre>get_dashboard_blog() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_blog_details()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_get_dirsize"></a><div class="element clickable function  function_get_dirsize" data-toggle="collapse" data-target=".function_get_dirsize .collapse">
+<h2>Get the size of a directory.</h2>
+<pre>get_dirsize(string $directory) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>A helper function that is used primarily to check whether
+a blog has exceeded its allowed upload space.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\recurse_dirsize()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$directory</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_get_id_from_blogname"></a><div class="element clickable function  function_get_id_from_blogname" data-toggle="collapse" data-target=".function_get_id_from_blogname .collapse">
+<h2>Given a blog's (subdomain or directory) name, retrieve it's id.</h2>
+<pre>get_id_from_blogname(string $name) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>A blog id</div>
+</div></div>
+</div>
+<a id="function_get_last_updated"></a><div class="element clickable function  function_get_last_updated" data-toggle="collapse" data-target=".function_get_last_updated .collapse">
+<h2>Get a list of most recently updated blogs.</h2>
+<pre>get_last_updated(mixed $deprecated, int $start, int $quantity) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$deprecated</h4>
+<code>mixed</code><p>Not used</p></div>
+<div class="subelement argument">
+<h4>$start</h4>
+<code>int</code><p>The offset</p></div>
+<div class="subelement argument">
+<h4>$quantity</h4>
+<code>int</code><p>The maximum number of blogs to retrieve. Default is 40.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The list of blogs</div>
+</div></div>
+</div>
+<a id="function_get_most_recent_post_of_user"></a><div class="element clickable function  function_get_most_recent_post_of_user" data-toggle="collapse" data-target=".function_get_most_recent_post_of_user .collapse">
+<h2>Get a user's most recent post.</h2>
+<pre>get_most_recent_post_of_user(int $user_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Walks through each of a user's blogs to find the post with
+the most recent post_date_gmt.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_blogs_of_user()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Contains the blog_id, post_id, post_date_gmt, and post_gmt_ts</div>
+</div></div>
+</div>
+<a id="function_get_sitestats"></a><div class="element clickable function  function_get_sitestats" data-toggle="collapse" data-target=".function_get_sitestats .collapse">
+<h2>Gets the network's site and user counts.</h2>
+<pre>get_sitestats() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_blog_count()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_user_count()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Site and user count for the network.</div>
+</div></div>
+</div>
+<a id="function_get_space_allowed"></a><div class="element clickable function  function_get_space_allowed" data-toggle="collapse" data-target=".function_get_space_allowed .collapse">
+<h2>Returns the upload quota for the current blog.</h2>
+<pre>get_space_allowed() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>Quota</div>
+</div></div>
+</div>
+<a id="function_get_upload_space_available"></a><div class="element clickable function  function_get_upload_space_available" data-toggle="collapse" data-target=".function_get_upload_space_available .collapse">
+<h2>Determines if there is any upload space left in the current blog's quota.</h2>
+<pre>get_upload_space_available() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>of upload space available in bytes</div>
+</div></div>
+</div>
+<a id="function_get_user_count"></a><div class="element clickable function  function_get_user_count" data-toggle="collapse" data-target=".function_get_user_count .collapse">
+<h2>The number of active users in your installation.</h2>
+<pre>get_user_count() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The count is cached and updated twice daily. This is not a live count.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 2.7</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_get_user_id_from_string"></a><div class="element clickable function  function_get_user_id_from_string" data-toggle="collapse" data-target=".function_get_user_id_from_string .collapse">
+<h2>Get a numeric user ID from either an email address or a login.</h2>
+<pre>get_user_id_from_string(string $string) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\is_email()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_global_terms"></a><div class="element clickable function  function_global_terms" data-toggle="collapse" data-target=".function_global_terms .collapse">
+<h2>Maintains a canonical list of terms by syncing terms created for each blog with the global terms table.</h2>
+<pre>global_terms(int $term_id, $deprecated) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\term_id_filter</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$term_id</h4>
+<code>int</code><p>An ID for a term on the current blog.</p></div>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>An ID from the global terms table mapped from $term_id.</div>
+</div></div>
+</div>
+<a id="function_grant_super_admin"></a><div class="element clickable function  function_grant_super_admin" data-toggle="collapse" data-target=".function_grant_super_admin .collapse">
+<h2>Grants super admin privileges.</h2>
+<pre>grant_super_admin(int $user_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="function_insert_blog"></a><div class="element clickable function  function_insert_blog" data-toggle="collapse" data-target=".function_insert_blog .collapse">
+<h2>Store basic site info in the blogs table.</h2>
+<pre>insert_blog(string $domain, string $path, int $site_id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function creates a row in the wp_blogs table and returns
+the new blog's ID. It is the first step in creating a new blog.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>The domain of the new site.</p></div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The path of the new site.</p></div>
+<div class="subelement argument">
+<h4>$site_id</h4>
+<code>int</code><p>Unless you're running a multi-network install, be sure to set this value to 1.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The ID of the new row</div>
+</div></div>
+</div>
+<a id="function_install_blog"></a><div class="element clickable function  function_install_blog" data-toggle="collapse" data-target=".function_install_blog .collapse">
+<h2>Install an empty blog.</h2>
+<pre>install_blog(int $blog_id, string $blog_title) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Creates the new blog tables and options. If calling this function
+directly, be sure to use switch_to_blog() first, so that $wpdb
+points to the new blog.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\make_db_current_silent()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\populate_roles()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>The value returned by insert_blog().</p>
+</div>
+<div class="subelement argument">
+<h4>$blog_title</h4>
+<code>string</code><p>The title of the new site.</p></div>
+</div></div>
+</div>
+<a id="function_install_blog_defaults"></a><div class="element clickable function  function_install_blog_defaults" data-toggle="collapse" data-target=".function_install_blog_defaults .collapse">
+<h2>Set blog defaults.</h2>
+<pre>install_blog_defaults(int $blog_id, int $user_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function creates a row in the wp_blogs table.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>Use wp_install_defaults()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_install_defaults()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Ignored in this function.</p></div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="function_is_archived"></a><div class="element clickable function  function_is_archived" data-toggle="collapse" data-target=".function_is_archived .collapse">
+<h2>Check if a particular blog is archived.</h2>
+<pre>is_archived(int $id) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The blog id</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Whether the blog is archived or not</div>
+</div></div>
+</div>
+<a id="function_is_email_address_unsafe"></a><div class="element clickable function  function_is_email_address_unsafe" data-toggle="collapse" data-target=".function_is_email_address_unsafe .collapse">
+<h2>Checks an email address against a list of banned domains.</h2>
+<pre>is_email_address_unsafe(string $user_email) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function checks against the Banned Email Domains list
+at wp-admin/network/settings.php. The check is only run on
+self-registrations; user creation at wp-admin/network/users.php
+bypasses this check.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_email</h4>
+<code>string</code><p>The email provided by the user at registration.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Returns true when the email address is banned.</div>
+</div></div>
+</div>
+<a id="function_is_subdomain_install"></a><div class="element clickable function  function_is_subdomain_install" data-toggle="collapse" data-target=".function_is_subdomain_install .collapse">
+<h2>Whether a subdomain configuration is enabled.</h2>
+<pre>is_subdomain_install() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if subdomain configuration is enabled, false otherwise.</div>
+</div></div>
+</div>
+<a id="function_is_upload_space_available"></a><div class="element clickable function  function_is_upload_space_available" data-toggle="collapse" data-target=".function_is_upload_space_available .collapse">
+<h2>Determines if there is any upload space left in the current blog's quota.</h2>
+<pre>is_upload_space_available() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if space is available, false otherwise.</div>
+</div></div>
+</div>
+<a id="function_is_user_option_local"></a><div class="element clickable function  function_is_user_option_local" data-toggle="collapse" data-target=".function_is_user_option_local .collapse">
+<h2>Check whether a usermeta key has to do with the current blog.</h2>
+<pre>is_user_option_local(string $key, int $user_id, int $blog_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_get_current_user()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>Optional. Defaults to current user.</p></div>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Optional. Defaults to current blog.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_is_user_spammy"></a><div class="element clickable function  function_is_user_spammy" data-toggle="collapse" data-target=".function_is_user_spammy .collapse">
+<h2>Check to see whether a user is marked as a spammer, based on username</h2>
+<pre>is_user_spammy(string $username) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_current_user_id()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_user_id_from_string()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$username</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_maybe_add_existing_user_to_blog"></a><div class="element clickable function  function_maybe_add_existing_user_to_blog" data-toggle="collapse" data-target=".function_maybe_add_existing_user_to_blog .collapse">
+<h2>Add a new user to a blog by visiting /newbloguser/username/.</h2>
+<pre>maybe_add_existing_user_to_blog() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This will only work when the user's details are saved as an option
+keyed as 'new_user_x', where 'x' is the username of the user to be
+added, as when a user is invited through the regular WP Add User interface.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_existing_user_to_blog()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_maybe_redirect_404"></a><div class="element clickable function  function_maybe_redirect_404" data-toggle="collapse" data-target=".function_maybe_redirect_404 .collapse">
+<h2>Correct 404 redirects when NOBLOGREDIRECT is defined.</h2>
+<pre>maybe_redirect_404() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_ms_cookie_constants"></a><div class="element clickable function  function_ms_cookie_constants" data-toggle="collapse" data-target=".function_ms_cookie_constants .collapse">
+<h2>Defines Multisite cookie constants.</h2>
+<pre>ms_cookie_constants() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_ms_deprecated_blogs_file"></a><div class="element clickable function  function_ms_deprecated_blogs_file" data-toggle="collapse" data-target=".function_ms_deprecated_blogs_file .collapse">
+<h2>ms_deprecated_blogs_file()
+        </h2>
+<pre>ms_deprecated_blogs_file() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_ms_file_constants"></a><div class="element clickable function  function_ms_file_constants" data-toggle="collapse" data-target=".function_ms_file_constants .collapse">
+<h2>Defines Multisite file constants.</h2>
+<pre>ms_file_constants() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_ms_not_installed"></a><div class="element clickable function  function_ms_not_installed" data-toggle="collapse" data-target=".function_ms_not_installed .collapse">
+<h2>Displays a failure message.</h2>
+<pre>ms_not_installed() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Used when a blog's tables do not exist. Checks for a missing $wpdb->site table as well.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_ms_site_check"></a><div class="element clickable function  function_ms_site_check" data-toggle="collapse" data-target=".function_ms_site_check .collapse">
+<h2>Checks status of current blog.</h2>
+<pre>ms_site_check() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Checks if the blog is deleted, inactive, archived, or spammed.</p>
+
+<p>Dies with a default message if the blog does not pass the check.</p>
+
+<p>To change the default message when a blog does not pass the check,
+use the wp-content/blog-deleted.php, blog-inactive.php and
+blog-suspended.php drop-ins.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>Returns true on success, or drop-in file to include.</div>
+</div></div>
+</div>
+<a id="function_ms_subdomain_constants"></a><div class="element clickable function  function_ms_subdomain_constants" data-toggle="collapse" data-target=".function_ms_subdomain_constants .collapse">
+<h2>Defines Multisite subdomain constants and handles warnings and notices.</h2>
+<pre>ms_subdomain_constants() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>VHOST is deprecated in favor of SUBDOMAIN_INSTALL, which is a bool.</p>
+
+<p>On first call, the constants are checked and defined. On second call,
+we will have translations loaded and can trigger warnings easily.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_ms_upload_constants"></a><div class="element clickable function  function_ms_upload_constants" data-toggle="collapse" data-target=".function_ms_upload_constants .collapse">
+<h2>Defines Multisite upload constants.</h2>
+<pre>ms_upload_constants() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_mu_dropdown_languages"></a><div class="element clickable function  function_mu_dropdown_languages" data-toggle="collapse" data-target=".function_mu_dropdown_languages .collapse">
+<h2>mu_dropdown_languages()
+        </h2>
+<pre>mu_dropdown_languages($lang_files, $current) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$lang_files</h4></div>
+<div class="subelement argument"><h4>$current</h4></div>
+</div></div>
+</div>
+<a id="function_new_user_email_admin_notice"></a><div class="element clickable function  function_new_user_email_admin_notice" data-toggle="collapse" data-target=".function_new_user_email_admin_notice .collapse">
+<h2>new_user_email_admin_notice()
+        </h2>
+<pre>new_user_email_admin_notice() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_newblog_notify_siteadmin"></a><div class="element clickable function  function_newblog_notify_siteadmin" data-toggle="collapse" data-target=".function_newblog_notify_siteadmin .collapse">
+<h2>Notifies the network admin that a new site has been activated.</h2>
+<pre>newblog_notify_siteadmin(int $blog_id, $deprecated) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Filter 'newblog_notify_siteadmin' to change the content of
+the notification email.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>The new site's ID.</p>
+</div>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_newuser_notify_siteadmin"></a><div class="element clickable function  function_newuser_notify_siteadmin" data-toggle="collapse" data-target=".function_newuser_notify_siteadmin .collapse">
+<h2>Notifies the network admin that a new user has been activated.</h2>
+<pre>newuser_notify_siteadmin(int $user_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Filter 'newuser_notify_siteadmin' to change the content of
+the notification email.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>The new user's ID.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_recurse_dirsize"></a><div class="element clickable function  function_recurse_dirsize" data-toggle="collapse" data-target=".function_recurse_dirsize .collapse">
+<h2>Get the size of a directory recursively.</h2>
+<pre>recurse_dirsize(string $directory) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Used by get_dirsize() to get a directory's size when it contains
+other directories.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$directory</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_redirect_this_site"></a><div class="element clickable function  function_redirect_this_site" data-toggle="collapse" data-target=".function_redirect_this_site .collapse">
+<h2>Ensure that the current site's domain is listed in the allowed redirect host list.</h2>
+<pre>redirect_this_site($deprecated) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_validate_redirect()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The current site's domain</div>
+</div></div>
+</div>
+<a id="function_refresh_blog_details"></a><div class="element clickable function  function_refresh_blog_details" data-toggle="collapse" data-target=".function_refresh_blog_details .collapse">
+<h2>Clear the blog details cache.</h2>
+<pre>refresh_blog_details(int $blog_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Blog ID</p></div>
+</div></div>
+</div>
+<a id="function_refresh_user_details"></a><div class="element clickable function  function_refresh_user_details" data-toggle="collapse" data-target=".function_refresh_user_details .collapse">
+<h2>refresh_user_details()
+        </h2>
+<pre>refresh_user_details($id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="function_remove_user_from_blog"></a><div class="element clickable function  function_remove_user_from_blog" data-toggle="collapse" data-target=".function_remove_user_from_blog .collapse">
+<h2>Remove a user from a blog.</h2>
+<pre>remove_user_from_blog(int $user_id, int $blog_id, string $reassign) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Use the 'remove_user_from_blog' action to fire an event when
+users are removed from a blog.</p>
+
+<p>Accepts an optional $reassign parameter, if you want to
+reassign the user's blog posts to another user upon removal.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>ID of the user you're removing.</p>
+</div>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>ID of the blog you're removing the user from.</p>
+</div>
+<div class="subelement argument">
+<h4>$reassign</h4>
+<code>string</code><p>Optional. A user to whom to reassign posts.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_restore_current_blog"></a><div class="element clickable function  function_restore_current_blog" data-toggle="collapse" data-target=".function_restore_current_blog .collapse">
+<h2>Restore the current blog, after calling switch_to_blog()</h2>
+<pre>restore_current_blog() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\switch_to_blog()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, False if we're already on the current blog</div>
+</div></div>
+</div>
+<a id="function_revoke_super_admin"></a><div class="element clickable function  function_revoke_super_admin" data-toggle="collapse" data-target=".function_revoke_super_admin .collapse">
+<h2>Revokes super admin privileges.</h2>
+<pre>revoke_super_admin(int $user_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="function_secret_salt_warning"></a><div class="element clickable function  function_secret_salt_warning" data-toggle="collapse" data-target=".function_secret_salt_warning .collapse">
+<h2>secret_salt_warning()
+        </h2>
+<pre>secret_salt_warning() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_send_confirmation_on_profile_email"></a><div class="element clickable function  function_send_confirmation_on_profile_email" data-toggle="collapse" data-target=".function_send_confirmation_on_profile_email .collapse">
+<h2>send_confirmation_on_profile_email()
+        </h2>
+<pre>send_confirmation_on_profile_email() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_signup_nonce_check"></a><div class="element clickable function  function_signup_nonce_check" data-toggle="collapse" data-target=".function_signup_nonce_check .collapse">
+<h2>Process the signup nonce created in signup_nonce_fields().</h2>
+<pre>signup_nonce_check(array $result) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_create_nonce()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$result</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_signup_nonce_fields"></a><div class="element clickable function  function_signup_nonce_fields" data-toggle="collapse" data-target=".function_signup_nonce_fields .collapse">
+<h2>Add a nonce field to the signup page.</h2>
+<pre>signup_nonce_fields() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_nonce_field()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_site_admin_notice"></a><div class="element clickable function  function_site_admin_notice" data-toggle="collapse" data-target=".function_site_admin_notice .collapse">
+<h2>site_admin_notice()
+        </h2>
+<pre>site_admin_notice() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_switch_to_blog"></a><div class="element clickable function  function_switch_to_blog" data-toggle="collapse" data-target=".function_switch_to_blog .collapse">
+<h2>Switch the current blog.</h2>
+<pre>switch_to_blog(int $new_blog, bool $validate) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is useful if you need to pull posts, or other information,
+from other blogs. You can switch back afterwards using restore_current_blog().</p>
+
+<p>Things that aren't switched:
+ - autoloaded options. See #14992
+ - plugins. See #14941</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\restore_current_blog()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$new_blog</h4>
+<code>int</code><p>The id of the blog you want to switch to. Default: current blog</p></div>
+<div class="subelement argument">
+<h4>$validate</h4>
+<code>bool</code><p>Whether to check if $new_blog exists before proceeding</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, False if the validation failed</div>
+</div></div>
+</div>
+<a id="function_sync_category_tag_slugs"></a><div class="element clickable function  function_sync_category_tag_slugs" data-toggle="collapse" data-target=".function_sync_category_tag_slugs .collapse">
+<h2>sync_category_tag_slugs()
+        </h2>
+<pre>sync_category_tag_slugs($term, $taxonomy) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$term</h4></div>
+<div class="subelement argument"><h4>$taxonomy</h4></div>
+</div></div>
+</div>
+<a id="function_update_archived"></a><div class="element clickable function  function_update_archived" data-toggle="collapse" data-target=".function_update_archived .collapse">
+<h2>Update the 'archived' status of a particular blog.</h2>
+<pre>update_archived(int $id, string $archived) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The blog id</p></div>
+<div class="subelement argument">
+<h4>$archived</h4>
+<code>string</code><p>The new status</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$archived</div>
+</div></div>
+</div>
+<a id="function_update_blog_details"></a><div class="element clickable function  function_update_blog_details" data-toggle="collapse" data-target=".function_update_blog_details .collapse">
+<h2>Update the details for a blog.</h2>
+<pre>update_blog_details(int $blog_id, array $details) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Updates the blogs table for a given blog id.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Blog ID</p></div>
+<div class="subelement argument">
+<h4>$details</h4>
+<code>array</code><p>Array of details keyed by blogs table field names.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if update succeeds, false otherwise.</div>
+</div></div>
+</div>
+<a id="function_update_blog_option"></a><div class="element clickable function  function_update_blog_option" data-toggle="collapse" data-target=".function_update_blog_option .collapse">
+<h2>Update an option for a particular blog.</h2>
+<pre>update_blog_option(int $id, string $key, mixed $value, $deprecated) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The blog id</p></div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The option key</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The option value</p></div>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failrue.</div>
+</div></div>
+</div>
+<a id="function_update_blog_public"></a><div class="element clickable function  function_update_blog_public" data-toggle="collapse" data-target=".function_update_blog_public .collapse">
+<h2>Update this blog's 'public' setting in the global blogs table.</h2>
+<pre>update_blog_public(int $old_value, int $value) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Public blogs have a setting of 1, private blogs are 0.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\update_blog_status()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$old_value</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>int</code><p>The new public value</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_update_blog_status"></a><div class="element clickable function  function_update_blog_status" data-toggle="collapse" data-target=".function_update_blog_status .collapse">
+<h2>Update a blog details field.</h2>
+<pre>update_blog_status(int $blog_id, string $pref, string $value, $deprecated) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>BLog ID</p></div>
+<div class="subelement argument">
+<h4>$pref</h4>
+<code>string</code><p>A field name</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>Value for $pref</p>
+</div>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$value</div>
+</div></div>
+</div>
+<a id="function_update_option_new_admin_email"></a><div class="element clickable function  function_update_option_new_admin_email" data-toggle="collapse" data-target=".function_update_option_new_admin_email .collapse">
+<h2>update_option_new_admin_email()
+        </h2>
+<pre>update_option_new_admin_email($old_value, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$old_value</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a id="function_update_posts_count"></a><div class="element clickable function  function_update_posts_count" data-toggle="collapse" data-target=".function_update_posts_count .collapse">
+<h2>Update a blog's post count.</h2>
+<pre>update_posts_count($deprecated) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>WordPress MS stores a blog's post count as an option so as
+to avoid extraneous COUNTs when a blog's details are fetched
+with get_blog_details(). This function is called when posts
+are published to make sure the count stays current.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+</div></div>
+</div>
+<a id="function_update_user_status"></a><div class="element clickable function  function_update_user_status" data-toggle="collapse" data-target=".function_update_user_status .collapse">
+<h2>update_user_status()
+        </h2>
+<pre>update_user_status($id, $pref, $value, $deprecated) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$pref</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+<div class="subelement argument"><h4>$deprecated</h4></div>
+</div></div>
+</div>
+<a id="function_upload_is_file_too_big"></a><div class="element clickable function  function_upload_is_file_too_big" data-toggle="collapse" data-target=".function_upload_is_file_too_big .collapse">
+<h2>Check whether an upload is too big.</h2>
+<pre>upload_is_file_too_big(array $upload) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$upload</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If the upload is under the size limit, $upload is returned. Otherwise returns an error message.</div>
+</div></div>
+</div>
+<a id="function_upload_is_user_over_quota"></a><div class="element clickable function  function_upload_is_user_over_quota" data-toggle="collapse" data-target=".function_upload_is_user_over_quota .collapse">
+<h2>Check whether a blog has used its allotted upload space.</h2>
+<pre>upload_is_user_over_quota(bool $echo) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_dirsize()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$echo</h4>
+<code>bool</code><p>Optional. If $echo is set and the quota is exceeded, a warning message is echoed. Default is true.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_upload_size_limit_filter"></a><div class="element clickable function  function_upload_size_limit_filter" data-toggle="collapse" data-target=".function_upload_size_limit_filter .collapse">
+<h2>upload_size_limit_filter()
+        </h2>
+<pre>upload_size_limit_filter($size) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$size</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>of upload size limit in bytes</div>
+</div></div>
+</div>
+<a id="function_upload_space_setting"></a><div class="element clickable function  function_upload_space_setting" data-toggle="collapse" data-target=".function_upload_space_setting .collapse">
+<h2>upload_space_setting()
+        </h2>
+<pre>upload_space_setting($id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="function_users_can_register_signup_filter"></a><div class="element clickable function  function_users_can_register_signup_filter" data-toggle="collapse" data-target=".function_users_can_register_signup_filter .collapse">
+<h2>Check whether users can self-register, based on Network settings.</h2>
+<pre>users_can_register_signup_filter() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_welcome_user_msg_filter"></a><div class="element clickable function  function_welcome_user_msg_filter" data-toggle="collapse" data-target=".function_welcome_user_msg_filter .collapse">
+<h2>Ensure that the welcome message is not empty.</h2>
+<pre>welcome_user_msg_filter(string $text) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Currently unused.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_wp_get_active_network_plugins"></a><div class="element clickable function  function_wp_get_active_network_plugins" data-toggle="collapse" data-target=".function_wp_get_active_network_plugins .collapse">
+<h2>Returns array of network plugin files to be included in global scope.</h2>
+<pre>wp_get_active_network_plugins() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default directory is wp-content/plugins. To change the default directory
+manually, define</p>
+
+<pre><code>WP_PLUGIN_DIR</code></pre>
+
+<p>and</p>
+
+<pre><code>WP_PLUGIN_URL</code></pre>
+
+<p>in wp-config.php.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Files to include</div>
+</div></div>
+</div>
+<a id="function_wp_is_large_network"></a><div class="element clickable function  function_wp_is_large_network" data-toggle="collapse" data-target=".function_wp_is_large_network .collapse">
+<h2>Whether or not we have a large network.</h2>
+<pre>wp_is_large_network(string $using) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default criteria for a large network is either more than 10,000 users or more than 10,000 sites.
+Plugins can alter this criteria using the 'wp_is_large_network' filter.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$using</h4>
+<code>string</code><p>'sites or 'users'. Default is 'sites'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the network meets the criteria for large. False otherwise.</div>
+</div></div>
+</div>
+<a id="function_wp_schedule_update_network_counts"></a><div class="element clickable function  function_wp_schedule_update_network_counts" data-toggle="collapse" data-target=".function_wp_schedule_update_network_counts .collapse">
+<h2>Schedule update of the network-wide counts for the current network.</h2>
+<pre>wp_schedule_update_network_counts() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_wp_update_network_counts"></a><div class="element clickable function  function_wp_update_network_counts" data-toggle="collapse" data-target=".function_wp_update_network_counts .collapse">
+<h2>Update the network-wide counts for the current network.</h2>
+<pre>wp_update_network_counts() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>@since 3.1.0</p></div></div></div>
+</div>
+<a id="function_wpmu_activate_signup"></a><div class="element clickable function  function_wpmu_activate_signup" data-toggle="collapse" data-target=".function_wpmu_activate_signup .collapse">
+<h2>Activate a signup.</h2>
+<pre>wpmu_activate_signup(string $key) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Hook to 'wpmu_activate_user' or 'wpmu_activate_blog' for events
+that should happen only when users or sites are self-created (since
+those actions are not called when users and sites are created
+by a Super Admin).</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_generate_password()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wpmu_welcome_user_notification()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_user_to_blog()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_new_user_to_blog()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wpmu_create_user()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wpmu_create_blog()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wpmu_welcome_notification()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The activation key provided to the user.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array containing information about the activated user and/or blog</div>
+</div></div>
+</div>
+<a id="function_wpmu_create_blog"></a><div class="element clickable function  function_wpmu_create_blog" data-toggle="collapse" data-target=".function_wpmu_create_blog .collapse">
+<h2>Create a site.</h2>
+<pre>wpmu_create_blog(string $domain, string $path, string $title, int $user_id, array $meta, int $site_id) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function runs when a user self-registers a new site as well
+as when a Super Admin creates a new site. Hook to 'wpmu_new_blog'
+for events that should affect all new sites.</p>
+
+<p>On subdirectory installs, $domain is the same as the main site's
+domain, and the path is the subdirectory name (eg 'example.com'
+and '/blog1/'). On subdomain installs, $domain is the new subdomain +
+root domain (eg 'blog1.example.com'), and $path is '/'.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\domain_exists()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\insert_blog()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_install_defaults()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_user_to_blog()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>The new site's domain.</p>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The new site's path.</p>
+</div>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>The new site's title.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>The user ID of the new site's admin.</p>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>Optional. Used to set initial site options.</p></div>
+<div class="subelement argument">
+<h4>$site_id</h4>
+<code>int</code><p>Optional. Only relevant on multi-network installs.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Returns WP_Error object on failure, int $blog_id on success</div>
+</div></div>
+</div>
+<a id="function_wpmu_create_user"></a><div class="element clickable function  function_wpmu_create_user" data-toggle="collapse" data-target=".function_wpmu_create_user .collapse">
+<h2>Create a user.</h2>
+<pre>wpmu_create_user(string $user_name, string $password, string $email) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function runs when a user self-registers as well as when
+a Super Admin creates a new user. Hook to 'wpmu_new_user' for events
+that should affect all new users, but only on Multisite (otherwise
+use 'user_register').</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_create_user()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_name</h4>
+<code>string</code><p>The new user's login name.</p>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code><p>The new user's password.</p>
+</div>
+<div class="subelement argument">
+<h4>$email</h4>
+<code>string</code><p>The new user's email address.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Returns false on failure, or int $user_id on success</div>
+</div></div>
+</div>
+<a id="function_wpmu_current_site"></a><div class="element clickable function  function_wpmu_current_site" data-toggle="collapse" data-target=".function_wpmu_current_site .collapse">
+<h2>Sets current_site object.</h2>
+<pre>wpmu_current_site() : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>$current_site object</div>
+</div></div>
+</div>
+<a id="function_wpmu_delete_blog"></a><div class="element clickable function  function_wpmu_delete_blog" data-toggle="collapse" data-target=".function_wpmu_delete_blog .collapse">
+<h2>Delete a blog</h2>
+<pre>wpmu_delete_blog(int $blog_id, bool $drop) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code><p>Blog ID</p></div>
+<div class="subelement argument">
+<h4>$drop</h4>
+<code>bool</code><p>True if blog's table should be dropped. Default is false.</p>
+</div>
+</div></div>
+</div>
+<a id="function_wpmu_delete_user"></a><div class="element clickable function  function_wpmu_delete_user" data-toggle="collapse" data-target=".function_wpmu_delete_user .collapse">
+<h2>wpmu_delete_user()
+        </h2>
+<pre>wpmu_delete_user($id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="function_wpmu_log_new_registrations"></a><div class="element clickable function  function_wpmu_log_new_registrations" data-toggle="collapse" data-target=".function_wpmu_log_new_registrations .collapse">
+<h2>Logs user registrations.</h2>
+<pre>wpmu_log_new_registrations(int $blog_id, int $user_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="function_wpmu_signup_blog"></a><div class="element clickable function  function_wpmu_signup_blog" data-toggle="collapse" data-target=".function_wpmu_signup_blog .collapse">
+<h2>Record site signup information for future activation.</h2>
+<pre>wpmu_signup_blog(string $domain, string $path, string $title, string $user, string $user_email, array $meta) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wpmu_signup_blog_notification()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>The requested domain.</p></div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The requested path.</p></div>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>The requested site title.</p></div>
+<div class="subelement argument">
+<h4>$user</h4>
+<code>string</code><p>The user's requested login name.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_email</h4>
+<code>string</code><p>The user's email address.</p>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>By default, contains the requested privacy setting and lang_id.</p></div>
+</div></div>
+</div>
+<a id="function_wpmu_signup_blog_notification"></a><div class="element clickable function  function_wpmu_signup_blog_notification" data-toggle="collapse" data-target=".function_wpmu_signup_blog_notification .collapse">
+<h2>Notify user of signup success.</h2>
+<pre>wpmu_signup_blog_notification(string $domain, string $path, string $title, string $user, string $user_email, string $key, array $meta) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is the notification function used when site registration
+is enabled.</p>
+
+<p>Filter 'wpmu_signup_blog_notification' to bypass this function or
+replace it with your own notification behavior.</p>
+
+<p>Filter 'wpmu_signup_blog_notification_email' and
+'wpmu_signup_blog_notification_subject' to change the content
+and subject line of the email sent to newly registered users.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>The new blog domain.</p></div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The new blog path.</p></div>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>The site title.</p></div>
+<div class="subelement argument">
+<h4>$user</h4>
+<code>string</code><p>The user's login name.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_email</h4>
+<code>string</code><p>The user's email address.</p>
+</div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The activation key created in wpmu_signup_blog()</p>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>By default, contains the requested privacy setting and lang_id.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_wpmu_signup_user"></a><div class="element clickable function  function_wpmu_signup_user" data-toggle="collapse" data-target=".function_wpmu_signup_user .collapse">
+<h2>Record user signup information for future activation.</h2>
+<pre>wpmu_signup_user(string $user, string $user_email, array $meta) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is used when user registration is open but
+new site registration is not.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wpmu_signup_user_notification()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user</h4>
+<code>string</code><p>The user's requested login name.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_email</h4>
+<code>string</code><p>The user's email address.</p>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>By default, this is an empty array.</p></div>
+</div></div>
+</div>
+<a id="function_wpmu_signup_user_notification"></a><div class="element clickable function  function_wpmu_signup_user_notification" data-toggle="collapse" data-target=".function_wpmu_signup_user_notification .collapse">
+<h2>Notify user of signup success.</h2>
+<pre>wpmu_signup_user_notification(string $user, string $user_email, string $key, array $meta) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is the notification function used when no new site has
+been requested.</p>
+
+<p>Filter 'wpmu_signup_user_notification' to bypass this function or
+replace it with your own notification behavior.</p>
+
+<p>Filter 'wpmu_signup_user_notification_email' and
+'wpmu_signup_user_notification_subject' to change the content
+and subject line of the email sent to newly registered users.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user</h4>
+<code>string</code><p>The user's login name.</p>
+</div>
+<div class="subelement argument">
+<h4>$user_email</h4>
+<code>string</code><p>The user's email address.</p>
+</div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The activation key created in wpmu_signup_user()</p>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>By default, an empty array.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_wpmu_update_blogs_date"></a><div class="element clickable function  function_wpmu_update_blogs_date" data-toggle="collapse" data-target=".function_wpmu_update_blogs_date .collapse">
+<h2>Update the last_updated field for the current blog.</h2>
+<pre>wpmu_update_blogs_date() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_wpmu_validate_blog_signup"></a><div class="element clickable function  function_wpmu_validate_blog_signup" data-toggle="collapse" data-target=".function_wpmu_validate_blog_signup .collapse">
+<h2>Processes new site registrations.</h2>
+<pre>wpmu_validate_blog_signup(string $blogname, string $blog_title, $user) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Checks the data provided by the user during blog signup. Verifies
+the validity and uniqueness of blog paths and domains.</p>
+
+<p>This function prevents the current user from registering a new site
+with a blogname equivalent to another user's login name. Passing the
+$user parameter to the function, where $user is the other user, is
+effectively an override of this limitation.</p>
+
+<p>Filter 'wpmu_validate_blog_signup' if you want to modify
+the way that WordPress validates new site signups.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\domain_exists()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\username_exists()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blogname</h4>
+<code>string</code><p>The blog name provided by the user. Must be unique.</p></div>
+<div class="subelement argument">
+<h4>$blog_title</h4>
+<code>string</code><p>The blog title provided by the user.</p></div>
+<div class="subelement argument"><h4>$user</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Contains the new site data and error messages.</div>
+</div></div>
+</div>
+<a id="function_wpmu_validate_user_signup"></a><div class="element clickable function  function_wpmu_validate_user_signup" data-toggle="collapse" data-target=".function_wpmu_validate_user_signup .collapse">
+<h2>Processes new user registrations.</h2>
+<pre>wpmu_validate_user_signup(string $user_name, string $user_email) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Checks the data provided by the user during signup. Verifies
+the validity and uniqueness of user names and user email addresses,
+and checks email addresses against admin-provided domain
+whitelists and blacklists.</p>
+
+<p>The hook 'wpmu_validate_user_signup' provides an easy way
+to modify the signup process. The value $result, which is passed
+to the hook, contains both the user-provided info and the error
+messages created by the function. 'wpmu_validate_user_signup' allows
+you to process the data in any way you'd like, and unset the
+relevant errors if necessary.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>MU</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\is_email_address_unsafe()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\username_exists()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\email_exists()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_name</h4>
+<code>string</code><p>The login name provided by the user.</p></div>
+<div class="subelement argument">
+<h4>$user_email</h4>
+<code>string</code><p>The email provided by the user.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Contains username, email, and error messages.</div>
+</div></div>
+</div>
+<a id="function_wpmu_welcome_notification"></a><div class="element clickable function  function_wpmu_welcome_notification" data-toggle="collapse" data-target=".function_wpmu_welcome_notification .collapse">
+<h2>Notify a user that her blog activation has been successful.</h2>
+<pre>wpmu_welcome_notification(int $blog_id, int $user_id, string $password, string $title, array $meta) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Filter 'wpmu_welcome_notification' to disable or bypass.</p>
+
+<p>Filter 'update_welcome_email' and 'update_welcome_subject' to
+modify the content and subject line of the notification email.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$blog_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>The new blog's title</p>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>Optional. Not used in the default function, but is passed along to hooks for customization.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_wpmu_welcome_user_notification"></a><div class="element clickable function  function_wpmu_welcome_user_notification" data-toggle="collapse" data-target=".function_wpmu_welcome_user_notification .collapse">
+<h2>Notify a user that her account activation has been successful.</h2>
+<pre>wpmu_welcome_user_notification(int $user_id, string $password, array $meta) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Filter 'wpmu_welcome_user_notification' to disable or bypass.</p>
+
+<p>Filter 'update_welcome_user_email' and 'update_welcome_user_subject' to
+modify the content and subject line of the notification email.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>MU</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$password</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$meta</h4>
+<code>array</code><p>Optional. Not used in the default function, but is passed along to hooks for customization.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_ADMIN_COOKIE_PATH"> </a><div class="element clickable constant  constant_ADMIN_COOKIE_PATH" data-toggle="collapse" data-target=".constant_ADMIN_COOKIE_PATH .collapse">
+<h2>ADMIN_COOKIE_PATH</h2>
+<pre>ADMIN_COOKIE_PATH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_ADMIN_COOKIE_PATH"> </a><div class="element clickable constant  constant_ADMIN_COOKIE_PATH" data-toggle="collapse" data-target=".constant_ADMIN_COOKIE_PATH .collapse">
+<h2>ADMIN_COOKIE_PATH</h2>
+<pre>ADMIN_COOKIE_PATH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_BLOGUPLOADDIR"> </a><div class="element clickable constant  constant_BLOGUPLOADDIR" data-toggle="collapse" data-target=".constant_BLOGUPLOADDIR .collapse">
+<h2>BLOGUPLOADDIR</h2>
+<pre>BLOGUPLOADDIR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_COOKIEPATH"> </a><div class="element clickable constant  constant_COOKIEPATH" data-toggle="collapse" data-target=".constant_COOKIEPATH .collapse">
+<h2>COOKIEPATH</h2>
+<pre>COOKIEPATH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_COOKIE_DOMAIN"> </a><div class="element clickable constant  constant_COOKIE_DOMAIN" data-toggle="collapse" data-target=".constant_COOKIE_DOMAIN .collapse">
+<h2>COOKIE_DOMAIN</h2>
+<pre>COOKIE_DOMAIN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_COOKIE_DOMAIN"> </a><div class="element clickable constant  constant_COOKIE_DOMAIN" data-toggle="collapse" data-target=".constant_COOKIE_DOMAIN .collapse">
+<h2>COOKIE_DOMAIN</h2>
+<pre>COOKIE_DOMAIN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_IFRAME_REQUEST"> </a><div class="element clickable constant  constant_IFRAME_REQUEST" data-toggle="collapse" data-target=".constant_IFRAME_REQUEST .collapse">
+<h2>IFRAME_REQUEST</h2>
+<pre>IFRAME_REQUEST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_IFRAME_REQUEST"> </a><div class="element clickable constant  constant_IFRAME_REQUEST" data-toggle="collapse" data-target=".constant_IFRAME_REQUEST .collapse">
+<h2>IFRAME_REQUEST</h2>
+<pre>IFRAME_REQUEST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_IFRAME_REQUEST"> </a><div class="element clickable constant  constant_IFRAME_REQUEST" data-toggle="collapse" data-target=".constant_IFRAME_REQUEST .collapse">
+<h2>IFRAME_REQUEST</h2>
+<pre>IFRAME_REQUEST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SHORTINIT"> </a><div class="element clickable constant  constant_SHORTINIT" data-toggle="collapse" data-target=".constant_SHORTINIT .collapse">
+<h2>SHORTINIT</h2>
+<pre>SHORTINIT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SITECOOKIEPATH"> </a><div class="element clickable constant  constant_SITECOOKIEPATH" data-toggle="collapse" data-target=".constant_SITECOOKIEPATH .collapse">
+<h2>SITECOOKIEPATH</h2>
+<pre>SITECOOKIEPATH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SUBDOMAIN_INSTALL"> </a><div class="element clickable constant  constant_SUBDOMAIN_INSTALL" data-toggle="collapse" data-target=".constant_SUBDOMAIN_INSTALL .collapse">
+<h2>SUBDOMAIN_INSTALL</h2>
+<pre>SUBDOMAIN_INSTALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_SUBDOMAIN_INSTALL"> </a><div class="element clickable constant  constant_SUBDOMAIN_INSTALL" data-toggle="collapse" data-target=".constant_SUBDOMAIN_INSTALL .collapse">
+<h2>SUBDOMAIN_INSTALL</h2>
+<pre>SUBDOMAIN_INSTALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_UPLOADBLOGSDIR"> </a><div class="element clickable constant  constant_UPLOADBLOGSDIR" data-toggle="collapse" data-target=".constant_UPLOADBLOGSDIR .collapse">
+<h2>UPLOADBLOGSDIR</h2>
+<pre>UPLOADBLOGSDIR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_UPLOADS"> </a><div class="element clickable constant  constant_UPLOADS" data-toggle="collapse" data-target=".constant_UPLOADS .collapse">
+<h2>UPLOADS</h2>
+<pre>UPLOADS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_VHOST"> </a><div class="element clickable constant  constant_VHOST" data-toggle="collapse" data-target=".constant_VHOST .collapse">
+<h2>VHOST</h2>
+<pre>VHOST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_VHOST"> </a><div class="element clickable constant  constant_VHOST" data-toggle="collapse" data-target=".constant_VHOST .collapse">
+<h2>VHOST</h2>
+<pre>VHOST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_WPMU_ACCEL_REDIRECT"> </a><div class="element clickable constant  constant_WPMU_ACCEL_REDIRECT" data-toggle="collapse" data-target=".constant_WPMU_ACCEL_REDIRECT .collapse">
+<h2>WPMU_ACCEL_REDIRECT</h2>
+<pre>WPMU_ACCEL_REDIRECT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_WPMU_SENDFILE"> </a><div class="element clickable constant  constant_WPMU_SENDFILE" data-toggle="collapse" data-target=".constant_WPMU_SENDFILE .collapse">
+<h2>WPMU_SENDFILE</h2>
+<pre>WPMU_SENDFILE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_WP_INSTALLING"> </a><div class="element clickable constant  constant_WP_INSTALLING" data-toggle="collapse" data-target=".constant_WP_INSTALLING .collapse">
+<h2>WP_INSTALLING</h2>
+<pre>WP_INSTALLING </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_WP_NETWORK_ADMIN"> </a><div class="element clickable constant  constant_WP_NETWORK_ADMIN" data-toggle="collapse" data-target=".constant_WP_NETWORK_ADMIN .collapse">
+<h2>WP_NETWORK_ADMIN</h2>
+<pre>WP_NETWORK_ADMIN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:51-05:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1019 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Feed</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.Feed.html" title="Feed"><i class="icon-folder-open"></i>Feed</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_bloginfo_rss" title="bloginfo_rss :: Display RSS container for the bloginfo function."><span class="description">Display RSS container for the bloginfo function.</span><pre>bloginfo_rss</pre></a></li>
+<li class="function  "><a href="#function_comment_author_rss" title="comment_author_rss :: Display the current comment author in the feed."><span class="description">Display the current comment author in the feed.</span><pre>comment_author_rss</pre></a></li>
+<li class="function  "><a href="#function_comment_guid" title="comment_guid :: Display the feed GUID for the current comment."><span class="description">Display the feed GUID for the current comment.</span><pre>comment_guid</pre></a></li>
+<li class="function  "><a href="#function_comment_link" title="comment_link :: Display the link to the comments."><span class="description">Display the link to the comments.</span><pre>comment_link</pre></a></li>
+<li class="function  "><a href="#function_comment_text_rss" title="comment_text_rss :: Display the current comment content for use in the feeds."><span class="description">Display the current comment content for use in the feeds.</span><pre>comment_text_rss</pre></a></li>
+<li class="function  "><a href="#function_comments_link_feed" title="comments_link_feed :: Outputs the link to the comments for the current post in an xml safe way"><span class="description">Outputs the link to the comments for the current post in an xml safe way</span><pre>comments_link_feed</pre></a></li>
+<li class="function  "><a href="#function_feed_content_type" title="feed_content_type :: Return the content type for specified feed type."><span class="description">Return the content type for specified feed type.</span><pre>feed_content_type</pre></a></li>
+<li class="function  "><a href="#function_fetch_feed" title="fetch_feed :: Build SimplePie object based on RSS or Atom feed from URL."><span class="description">Build SimplePie object based on RSS or Atom feed from URL.</span><pre>fetch_feed</pre></a></li>
+<li class="function  "><a href="#function_get_author_feed_link" title="get_author_feed_link :: Retrieve the feed link for a given author."><span class="description">Retrieve the feed link for a given author.</span><pre>get_author_feed_link</pre></a></li>
+<li class="function  "><a href="#function_get_bloginfo_rss" title="get_bloginfo_rss :: RSS container for the bloginfo function."><span class="description">RSS container for the bloginfo function.</span><pre>get_bloginfo_rss</pre></a></li>
+<li class="function  "><a href="#function_get_category_feed_link" title="get_category_feed_link :: Retrieve the feed link for a category."><span class="description">Retrieve the feed link for a category.</span><pre>get_category_feed_link</pre></a></li>
+<li class="function  "><a href="#function_get_comment_author_rss" title="get_comment_author_rss :: Retrieve the current comment author for use in the feeds."><span class="description">Retrieve the current comment author for use in the feeds.</span><pre>get_comment_author_rss</pre></a></li>
+<li class="function  "><a href="#function_get_comment_guid" title="get_comment_guid :: Retrieve the feed GUID for the current comment."><span class="description">Retrieve the feed GUID for the current comment.</span><pre>get_comment_guid</pre></a></li>
+<li class="function  "><a href="#function_get_default_feed" title="get_default_feed :: Retrieve the default feed."><span class="description">Retrieve the default feed.</span><pre>get_default_feed</pre></a></li>
+<li class="function  "><a href="#function_get_the_category_rss" title="get_the_category_rss :: Retrieve all of the post categories, formatted for use in feeds."><span class="description">Retrieve all of the post categories, formatted for use in feeds.</span><pre>get_the_category_rss</pre></a></li>
+<li class="function  "><a href="#function_get_the_content_feed" title="get_the_content_feed :: Retrieve the post content for feeds."><span class="description">Retrieve the post content for feeds.</span><pre>get_the_content_feed</pre></a></li>
+<li class="function  "><a href="#function_get_the_title_rss" title="get_the_title_rss :: Retrieve the current post title for the feed."><span class="description">Retrieve the current post title for the feed.</span><pre>get_the_title_rss</pre></a></li>
+<li class="function  "><a href="#function_get_wp_title_rss" title="get_wp_title_rss :: Retrieve the blog title for the feed title."><span class="description">Retrieve the blog title for the feed title.</span><pre>get_wp_title_rss</pre></a></li>
+<li class="function  "><a href="#function_html_type_rss" title="html_type_rss :: Display the HTML type based on the blog setting."><span class="description">Display the HTML type based on the blog setting.</span><pre>html_type_rss</pre></a></li>
+<li class="function  "><a href="#function_post_comments_feed_link" title="post_comments_feed_link :: Display the comment feed link for a post."><span class="description">Display the comment feed link for a post.</span><pre>post_comments_feed_link</pre></a></li>
+<li class="function  "><a href="#function_prep_atom_text_construct" title="prep_atom_text_construct :: Determine the type of a string of data with the data formatted."><span class="description">Determine the type of a string of data with the data formatted.</span><pre>prep_atom_text_construct</pre></a></li>
+<li class="function  "><a href="#function_self_link" title="self_link :: Display the link for the currently displayed feed in a XSS safe way."><span class="description">Display the link for the currently displayed feed in a XSS safe way.</span><pre>self_link</pre></a></li>
+<li class="function  "><a href="#function_the_category_rss" title="the_category_rss :: Display the post categories in the feed."><span class="description">Display the post categories in the feed.</span><pre>the_category_rss</pre></a></li>
+<li class="function  "><a href="#function_the_content_feed" title="the_content_feed :: Display the post content for feeds."><span class="description">Display the post content for feeds.</span><pre>the_content_feed</pre></a></li>
+<li class="function  "><a href="#function_the_content_rss" title="the_content_rss :: Display the post content for the feed."><span class="description">Display the post content for the feed.</span><pre>the_content_rss</pre></a></li>
+<li class="function  "><a href="#function_the_excerpt_rss" title="the_excerpt_rss :: Display the post excerpt for the feed."><span class="description">Display the post excerpt for the feed.</span><pre>the_excerpt_rss</pre></a></li>
+<li class="function  "><a href="#function_the_permalink_rss" title="the_permalink_rss :: Display the permalink to the post for use in feeds."><span class="description">Display the permalink to the post for use in feeds.</span><pre>the_permalink_rss</pre></a></li>
+<li class="function  "><a href="#function_the_title_rss" title="the_title_rss :: Display the post title in the feed."><span class="description">Display the post title in the feed.</span><pre>the_title_rss</pre></a></li>
+<li class="function  "><a href="#function_wp_title_rss" title="wp_title_rss :: Display the blog title for display of the feed title."><span class="description">Display the blog title for display of the feed title.</span><pre>wp_title_rss</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Feed.html">Feed</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_bloginfo_rss"></a><div class="element clickable function  function_bloginfo_rss" data-toggle="collapse" data-target=".function_bloginfo_rss .collapse">
+<h2>Display RSS container for the bloginfo function.</h2>
+<pre>bloginfo_rss(string $show) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>You can retrieve anything that you can using the get_bloginfo() function.
+Everything will be stripped of tags and characters converted, when the values
+are retrieved for use in the feeds.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>0.71</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_bloginfo()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$show</h4>
+<code>string</code><p>See get_bloginfo() for possible values.</p>
+</div>
+</div></div>
+</div>
+<a id="function_comment_author_rss"></a><div class="element clickable function  function_comment_author_rss" data-toggle="collapse" data-target=".function_comment_author_rss .collapse">
+<h2>Display the current comment author in the feed.</h2>
+<pre>comment_author_rss() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_comment_guid"></a><div class="element clickable function  function_comment_guid" data-toggle="collapse" data-target=".function_comment_guid .collapse">
+<h2>Display the feed GUID for the current comment.</h2>
+<pre>comment_guid(int | object $comment_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$comment_id</h4>
+<code>int</code><code>object</code><p>Optional comment object or id. Defaults to global comment object.</p></div>
+</div></div>
+</div>
+<a id="function_comment_link"></a><div class="element clickable function  function_comment_link" data-toggle="collapse" data-target=".function_comment_link .collapse">
+<h2>Display the link to the comments.</h2>
+<pre>comment_link() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_comment_text_rss"></a><div class="element clickable function  function_comment_text_rss" data-toggle="collapse" data-target=".function_comment_text_rss .collapse">
+<h2>Display the current comment content for use in the feeds.</h2>
+<pre>comment_text_rss() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_comment_text()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_comments_link_feed"></a><div class="element clickable function  function_comments_link_feed" data-toggle="collapse" data-target=".function_comments_link_feed .collapse">
+<h2>Outputs the link to the comments for the current post in an xml safe way</h2>
+<pre>comments_link_feed() : \none</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\none</code></div>
+</div></div>
+</div>
+<a id="function_feed_content_type"></a><div class="element clickable function  function_feed_content_type" data-toggle="collapse" data-target=".function_feed_content_type .collapse">
+<h2>Return the content type for specified feed type.</h2>
+<pre>feed_content_type($type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$type</h4></div>
+</div></div>
+</div>
+<a id="function_fetch_feed"></a><div class="element clickable function  function_fetch_feed" data-toggle="collapse" data-target=".function_fetch_feed .collapse">
+<h2>Build SimplePie object based on RSS or Atom feed from URL.</h2>
+<pre>fetch_feed(string $url) : <a href="../classes/WP_Error.html">\WP_Error</a> | <a href="../classes/SimplePie.html">\SimplePie</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.8</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>URL to retrieve feed</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Error.html">\WP_Error</a></code><code><a href="../classes/SimplePie.html">\SimplePie</a></code>WP_Error object on failure or SimplePie object on success</div>
+</div></div>
+</div>
+<a id="function_get_author_feed_link"></a><div class="element clickable function  function_get_author_feed_link" data-toggle="collapse" data-target=".function_get_author_feed_link .collapse">
+<h2>Retrieve the feed link for a given author.</h2>
+<pre>get_author_feed_link(int $author_id, string $feed) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns a link to the feed for all posts by a given author. A specific feed
+can be requested or left blank to get the default feed.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$author_id</h4>
+<code>int</code><p>ID of an author.</p></div>
+<div class="subelement argument">
+<h4>$feed</h4>
+<code>string</code><p>Optional. Feed type.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Link to the feed for the author specified by $author_id.</div>
+</div></div>
+</div>
+<a id="function_get_bloginfo_rss"></a><div class="element clickable function  function_get_bloginfo_rss" data-toggle="collapse" data-target=".function_get_bloginfo_rss .collapse">
+<h2>RSS container for the bloginfo function.</h2>
+<pre>get_bloginfo_rss(string $show) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>You can retrieve anything that you can using the get_bloginfo() function.
+Everything will be stripped of tags and characters converted, when the values
+are retrieved for use in the feeds.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.1</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_bloginfo()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$show</h4>
+<code>string</code><p>See get_bloginfo() for possible values.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_category_feed_link"></a><div class="element clickable function  function_get_category_feed_link" data-toggle="collapse" data-target=".function_get_category_feed_link .collapse">
+<h2>Retrieve the feed link for a category.</h2>
+<pre>get_category_feed_link(int $cat_id, string $feed) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns a link to the feed for all posts in a given category. A specific feed
+can be requested or left blank to get the default feed.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$cat_id</h4>
+<code>int</code><p>ID of a category.</p></div>
+<div class="subelement argument">
+<h4>$feed</h4>
+<code>string</code><p>Optional. Feed type.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Link to the feed for the category specified by $cat_id.</div>
+</div></div>
+</div>
+<a id="function_get_comment_author_rss"></a><div class="element clickable function  function_get_comment_author_rss" data-toggle="collapse" data-target=".function_get_comment_author_rss .collapse">
+<h2>Retrieve the current comment author for use in the feeds.</h2>
+<pre>get_comment_author_rss() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_comment_author()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Comment Author</div>
+</div></div>
+</div>
+<a id="function_get_comment_guid"></a><div class="element clickable function  function_get_comment_guid" data-toggle="collapse" data-target=".function_get_comment_guid .collapse">
+<h2>Retrieve the feed GUID for the current comment.</h2>
+<pre>get_comment_guid(int | object $comment_id) : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$comment_id</h4>
+<code>int</code><code>object</code><p>Optional comment object or id. Defaults to global comment object.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>false on failure or guid for comment on success.</div>
+</div></div>
+</div>
+<a id="function_get_default_feed"></a><div class="element clickable function  function_get_default_feed" data-toggle="collapse" data-target=".function_get_default_feed .collapse">
+<h2>Retrieve the default feed.</h2>
+<pre>get_default_feed() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default feed is 'rss2', unless a plugin changes it through the
+'default_feed' filter.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Default feed, or for example 'rss2', 'atom', etc.</div>
+</div></div>
+</div>
+<a id="function_get_the_category_rss"></a><div class="element clickable function  function_get_the_category_rss" data-toggle="collapse" data-target=".function_get_the_category_rss .collapse">
+<h2>Retrieve all of the post categories, formatted for use in feeds.</h2>
+<pre>get_the_category_rss(string $type) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>All of the categories for the current post in the feed loop, will be
+retrieved and have feed markup added, so that they can easily be added to the
+RSS2, Atom, or RSS1 and RSS0.91 RDF feeds.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>Optional, default is the type returned by get_default_feed().</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>All of the post categories for displaying in the feed.</div>
+</div></div>
+</div>
+<a id="function_get_the_content_feed"></a><div class="element clickable function  function_get_the_content_feed" data-toggle="collapse" data-target=".function_get_the_content_feed .collapse">
+<h2>Retrieve the post content for feeds.</h2>
+<pre>get_the_content_feed(string $feed_type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_the_content()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feed_type</h4>
+<code>string</code><p>The type of feed. rss2 | atom | rss | rdf</p></div>
+</div></div>
+</div>
+<a id="function_get_the_title_rss"></a><div class="element clickable function  function_get_the_title_rss" data-toggle="collapse" data-target=".function_get_the_title_rss .collapse">
+<h2>Retrieve the current post title for the feed.</h2>
+<pre>get_the_title_rss() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Current post title.</div>
+</div></div>
+</div>
+<a id="function_get_wp_title_rss"></a><div class="element clickable function  function_get_wp_title_rss" data-toggle="collapse" data-target=".function_get_wp_title_rss .collapse">
+<h2>Retrieve the blog title for the feed title.</h2>
+<pre>get_wp_title_rss(string $sep) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\wp_title()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sep</h4>
+<code>string</code><p>Optional.How to separate the title. See wp_title() for more info.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Error message on failure or blog title on success.</div>
+</div></div>
+</div>
+<a id="function_html_type_rss"></a><div class="element clickable function  function_html_type_rss" data-toggle="collapse" data-target=".function_html_type_rss .collapse">
+<h2>Display the HTML type based on the blog setting.</h2>
+<pre>html_type_rss() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The two possible values are either 'xhtml' or 'html'.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_post_comments_feed_link"></a><div class="element clickable function  function_post_comments_feed_link" data-toggle="collapse" data-target=".function_post_comments_feed_link .collapse">
+<h2>Display the comment feed link for a post.</h2>
+<pre>post_comments_feed_link(string $link_text, int $post_id, string $feed) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Prints out the comment feed link for a post. Link text is placed in the
+anchor. If no link text is specified, default text is used. If no post ID is
+specified, the current post is used.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$link_text</h4>
+<code>string</code><p>Descriptive text.</p></div>
+<div class="subelement argument">
+<h4>$post_id</h4>
+<code>int</code><p>Optional post ID. Default to current post.</p></div>
+<div class="subelement argument">
+<h4>$feed</h4>
+<code>string</code><p>Optional. Feed format.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Link to the comment feed for the current post.</div>
+</div></div>
+</div>
+<a id="function_prep_atom_text_construct"></a><div class="element clickable function  function_prep_atom_text_construct" data-toggle="collapse" data-target=".function_prep_atom_text_construct .collapse">
+<h2>Determine the type of a string of data with the data formatted.</h2>
+<pre>prep_atom_text_construct(string $data) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Tell whether the type is text, html, or xhtml, per RFC 4287 section 3.1.</p>
+
+<p>In the case of WordPress, text is defined as containing no markup,
+xhtml is defined as "well formed", and html as tag soup (i.e., the rest).</p>
+
+<p>Container div tags are added to xhtml values, per section 3.1.1.3.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="http://www.atomenabled.org/developers/syndication/atom-format-spec.php#rfc.section.3.1">http://www.atomenabled.org/developers/syndication/atom-format-spec.php#rfc.section.3.1</a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>string</code><p>Input string</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>array(type, value)</div>
+</div></div>
+</div>
+<a id="function_self_link"></a><div class="element clickable function  function_self_link" data-toggle="collapse" data-target=".function_self_link .collapse">
+<h2>Display the link for the currently displayed feed in a XSS safe way.</h2>
+<pre>self_link() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Generate a correct link for the atom:self element.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_the_category_rss"></a><div class="element clickable function  function_the_category_rss" data-toggle="collapse" data-target=".function_the_category_rss .collapse">
+<h2>Display the post categories in the feed.</h2>
+<pre>the_category_rss(string $type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>0.71</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_the_category_rss()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>Optional, default is the type returned by get_default_feed().</p>
+</div>
+</div></div>
+</div>
+<a id="function_the_content_feed"></a><div class="element clickable function  function_the_content_feed" data-toggle="collapse" data-target=".function_the_content_feed .collapse">
+<h2>Display the post content for feeds.</h2>
+<pre>the_content_feed(string $feed_type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_the_content()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feed_type</h4>
+<code>string</code><p>The type of feed. rss2 | atom | rss | rdf</p></div>
+</div></div>
+</div>
+<a id="function_the_content_rss"></a><div class="element clickable function  function_the_content_rss" data-toggle="collapse" data-target=".function_the_content_rss .collapse">
+<h2>Display the post content for the feed.</h2>
+<pre>the_content_rss(string $more_link_text, int | bool $stripteaser, string $more_file, int $cut, int $encode_html) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>For encoding the html or the $encode_html parameter, there are three possible
+values. '0' will make urls footnotes and use make_url_footnote(). '1' will
+encode special characters and automatically display all of the content. The
+value of '2' will strip all HTML tags from the content.</p>
+
+<p>Also note that you cannot set the amount of words and not set the html
+encoding. If that is the case, then the html encoding will default to 2,
+which will strip all HTML tags.</p>
+
+<p>To restrict the amount of words of the content, you can use the cut
+parameter. If the content is less than the amount, then there won't be any
+dots added to the end. If there is content left over, then dots will be added
+and the rest of the content will be removed.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>0.71</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\get_the_content()</a></td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>Use the_content_feed()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\the_content_feed()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$more_link_text</h4>
+<code>string</code><p>Optional. Text to display when more content is available but not displayed.</p></div>
+<div class="subelement argument">
+<h4>$stripteaser</h4>
+<code>int</code><code>bool</code><p>Optional. Default is 0.</p></div>
+<div class="subelement argument">
+<h4>$more_file</h4>
+<code>string</code><p>Optional.</p></div>
+<div class="subelement argument">
+<h4>$cut</h4>
+<code>int</code><p>Optional. Amount of words to keep for the content.</p></div>
+<div class="subelement argument">
+<h4>$encode_html</h4>
+<code>int</code><p>Optional. How to encode the content.</p></div>
+</div></div>
+</div>
+<a id="function_the_excerpt_rss"></a><div class="element clickable function  function_the_excerpt_rss" data-toggle="collapse" data-target=".function_the_excerpt_rss .collapse">
+<h2>Display the post excerpt for the feed.</h2>
+<pre>the_excerpt_rss() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>0.71</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_the_permalink_rss"></a><div class="element clickable function  function_the_permalink_rss" data-toggle="collapse" data-target=".function_the_permalink_rss .collapse">
+<h2>Display the permalink to the post for use in feeds.</h2>
+<pre>the_permalink_rss() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_the_title_rss"></a><div class="element clickable function  function_the_title_rss" data-toggle="collapse" data-target=".function_the_title_rss .collapse">
+<h2>Display the post title in the feed.</h2>
+<pre>the_title_rss() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>0.71</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_the_title_rss()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_wp_title_rss"></a><div class="element clickable function  function_wp_title_rss" data-toggle="collapse" data-target=".function_wp_title_rss .collapse">
+<h2>Display the blog title for display of the feed title.</h2>
+<pre>wp_title_rss(string $sep) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Feed.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Feed</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_title()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sep</h4>
+<code>string</code><p>Optional.</p></div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:50-05:00.<br></footer></div>
+</div>
+</body>
+</html>

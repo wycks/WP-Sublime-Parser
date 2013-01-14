@@ -1,0 +1,752 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_Customize_Background_Image_Control</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method_add_tab" title="add_tab :: "><span class="description">add_tab()
+        </span><pre>add_tab()</pre></a></li>
+<li class="method public inherited"><a href="#method_check_capabilities" title="check_capabilities :: Check if the theme supports the control and check user capabilities."><span class="description">Check if the theme supports the control and check user capabilities.</span><pre>check_capabilities()</pre></a></li>
+<li class="method public inherited"><a href="#method_enqueue" title="enqueue :: Enqueue control related scripts/styles."><span class="description">Enqueue control related scripts/styles.</span><pre>enqueue()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_link" title="get_link :: "><span class="description">get_link()
+        </span><pre>get_link()</pre></a></li>
+<li class="method public inherited"><a href="#method_link" title="link :: "><span class="description">link()
+        </span><pre>link()</pre></a></li>
+<li class="method public inherited"><a href="#method_maybe_render" title="maybe_render :: Check capabilities and render the control."><span class="description">Check capabilities and render the control.</span><pre>maybe_render()</pre></a></li>
+<li class="method public inherited"><a href="#method_prepare_control" title="prepare_control :: Prepares the control."><span class="description">Prepares the control.</span><pre>prepare_control()</pre></a></li>
+<li class="method public inherited"><a href="#method_print_tab_image" title="print_tab_image :: "><span class="description">print_tab_image()
+        </span><pre>print_tab_image()</pre></a></li>
+<li class="method public inherited"><a href="#method_remove_tab" title="remove_tab :: "><span class="description">remove_tab()
+        </span><pre>remove_tab()</pre></a></li>
+<li class="method public inherited"><a href="#method_render_content" title="render_content :: Render the control's content."><span class="description">Render the control's content.</span><pre>render_content()</pre></a></li>
+<li class="method public "><a href="#method_tab_default_background" title="tab_default_background :: "><span class="description">tab_default_background()
+        </span><pre>tab_default_background()</pre></a></li>
+<li class="method public inherited"><a href="#method_tab_upload_new" title="tab_upload_new :: "><span class="description">tab_upload_new()
+        </span><pre>tab_upload_new()</pre></a></li>
+<li class="method public "><a href="#method_tab_uploaded" title="tab_uploaded :: "><span class="description">tab_uploaded()
+        </span><pre>tab_uploaded()</pre></a></li>
+<li class="method public inherited"><a href="#method_to_json" title="to_json :: Refresh the parameters passed to the JavaScript via JSON."><span class="description">Refresh the parameters passed to the JavaScript via JSON.</span><pre>to_json()</pre></a></li>
+<li class="method public inherited"><a href="#method_value" title="value :: Fetch a setting's value."><span class="description">Fetch a setting's value.</span><pre>value()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected inherited"><a href="#method_render" title="render :: Render the control."><span class="description">Render the control.</span><pre>render()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property_choices" title="$choices :: "><span class="description">$choices</span><pre>$choices</pre></a></li>
+<li class="property public inherited"><a href="#property_context" title="$context :: "><span class="description">$context</span><pre>$context</pre></a></li>
+<li class="property public inherited"><a href="#property_get_url" title="$get_url :: "><span class="description">$get_url</span><pre>$get_url</pre></a></li>
+<li class="property public inherited"><a href="#property_id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
+<li class="property public inherited"><a href="#property_json" title="$json :: "><span class="description">$json</span><pre>$json</pre></a></li>
+<li class="property public inherited"><a href="#property_label" title="$label :: "><span class="description">$label</span><pre>$label</pre></a></li>
+<li class="property public inherited"><a href="#property_manager" title="$manager :: "><span class="description">$manager</span><pre>$manager</pre></a></li>
+<li class="property public inherited"><a href="#property_priority" title="$priority :: "><span class="description">$priority</span><pre>$priority</pre></a></li>
+<li class="property public inherited"><a href="#property_removed" title="$removed :: "><span class="description">$removed</span><pre>$removed</pre></a></li>
+<li class="property public inherited"><a href="#property_section" title="$section :: "><span class="description">$section</span><pre>$section</pre></a></li>
+<li class="property public inherited"><a href="#property_setting" title="$setting :: "><span class="description">$setting</span><pre>$setting</pre></a></li>
+<li class="property public inherited"><a href="#property_settings" title="$settings :: "><span class="description">$settings</span><pre>$settings</pre></a></li>
+<li class="property public inherited"><a href="#property_statuses" title="$statuses :: "><span class="description">$statuses</span><pre>$statuses</pre></a></li>
+<li class="property public inherited"><a href="#property_type" title="$type :: "><span class="description">$type</span><pre>$type</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected inherited"><a href="#property_tabs" title="$tabs :: "><span class="description">$tabs</span><pre>$tabs</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_Customize_Background_Image_Control"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_Customize_Background_Image_Control.html">WP_Customize_Background_Image_Control</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">Customize Control Class</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">WordPress</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct($manager) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If $args['settings'] is not defined, use the $id as the setting ID.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$manager</h4></div>
+</div></div>
+</div>
+<a id="method_add_tab"></a><div class="element clickable method public method_add_tab" data-toggle="collapse" data-target=".method_add_tab .collapse">
+<h2>add_tab()
+        </h2>
+<pre>add_tab($id, $label, $callback) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::add_tab()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$label</h4></div>
+<div class="subelement argument"><h4>$callback</h4></div>
+</div></div>
+</div>
+<a id="method_check_capabilities"></a><div class="element clickable method public method_check_capabilities" data-toggle="collapse" data-target=".method_check_capabilities .collapse">
+<h2>Check if the theme supports the control and check user capabilities.</h2>
+<pre>check_capabilities() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::check_capabilities()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::check_capabilities()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::check_capabilities()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False if theme doesn't support the control or user doesn't have the required permissions, otherwise true.</div>
+</div></div>
+</div>
+<a id="method_enqueue"></a><div class="element clickable method public method_enqueue" data-toggle="collapse" data-target=".method_enqueue .collapse">
+<h2>Enqueue control related scripts/styles.</h2>
+<pre>enqueue() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::enqueue()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::enqueue()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_get_link"></a><div class="element clickable method public method_get_link" data-toggle="collapse" data-target=".method_get_link .collapse">
+<h2>get_link()
+        </h2>
+<pre>get_link($setting_key) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::get_link()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::get_link()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::get_link()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$setting_key</h4></div>
+</div></div>
+</div>
+<a id="method_link"></a><div class="element clickable method public method_link" data-toggle="collapse" data-target=".method_link .collapse">
+<h2>link()
+        </h2>
+<pre>link($setting_key) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::link()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::link()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::link()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$setting_key</h4></div>
+</div></div>
+</div>
+<a id="method_maybe_render"></a><div class="element clickable method public method_maybe_render" data-toggle="collapse" data-target=".method_maybe_render .collapse">
+<h2>Check capabilities and render the control.</h2>
+<pre>maybe_render() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::maybe_render()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::maybe_render()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::maybe_render()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_prepare_control"></a><div class="element clickable method public method_prepare_control" data-toggle="collapse" data-target=".method_prepare_control .collapse">
+<h2>Prepares the control.</h2>
+<pre>prepare_control() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If no tabs exist, removes the control from the manager.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.2</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::prepare_control()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_print_tab_image"></a><div class="element clickable method public method_print_tab_image" data-toggle="collapse" data-target=".method_print_tab_image .collapse">
+<h2>print_tab_image()
+        </h2>
+<pre>print_tab_image($url, $thumbnail_url) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::print_tab_image()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$thumbnail_url</h4></div>
+</div></div>
+</div>
+<a id="method_remove_tab"></a><div class="element clickable method public method_remove_tab" data-toggle="collapse" data-target=".method_remove_tab .collapse">
+<h2>remove_tab()
+        </h2>
+<pre>remove_tab($id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::remove_tab()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+</div></div>
+</div>
+<a id="method_render_content"></a><div class="element clickable method public method_render_content" data-toggle="collapse" data-target=".method_render_content .collapse">
+<h2>Render the control's content.</h2>
+<pre>render_content() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Allows the content to be overriden without having to rewrite the wrapper.</p></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::render_content()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_tab_default_background"></a><div class="element clickable method public method_tab_default_background" data-toggle="collapse" data-target=".method_tab_default_background .collapse">
+<h2>tab_default_background()
+        </h2>
+<pre>tab_default_background() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_tab_upload_new"></a><div class="element clickable method public method_tab_upload_new" data-toggle="collapse" data-target=".method_tab_upload_new .collapse">
+<h2>tab_upload_new()
+        </h2>
+<pre>tab_upload_new() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::tab_upload_new()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_tab_uploaded"></a><div class="element clickable method public method_tab_uploaded" data-toggle="collapse" data-target=".method_tab_uploaded .collapse">
+<h2>tab_uploaded()
+        </h2>
+<pre>tab_uploaded() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_to_json"></a><div class="element clickable method public method_to_json" data-toggle="collapse" data-target=".method_to_json .collapse">
+<h2>Refresh the parameters passed to the JavaScript via JSON.</h2>
+<pre>to_json() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::to_json()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_value"></a><div class="element clickable method public method_value" data-toggle="collapse" data-target=".method_value .collapse">
+<h2>Fetch a setting's value.</h2>
+<pre>value($setting_key) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Grabs the main setting by default.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::value()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::value()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::value()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$setting_key</h4></div>
+</div></div>
+</div>
+<a id="method_render"></a><div class="element clickable method protected method_render" data-toggle="collapse" data-target=".method_render .collapse">
+<h2>Render the control.</h2>
+<pre>render() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Renders the control wrapper, then calls $this->render_content().</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::render()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::render()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::render()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_choices"> </a><div class="element clickable property public property_choices" data-toggle="collapse" data-target=".property_choices .collapse">
+<h2>$choices</h2>
+<pre>$choices </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$choices</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$choices</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$choices</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_context"> </a><div class="element clickable property public property_context" data-toggle="collapse" data-target=".property_context .collapse">
+<h2>$context</h2>
+<pre>$context </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$context</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$context</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_get_url"> </a><div class="element clickable property public property_get_url" data-toggle="collapse" data-target=".property_get_url .collapse">
+<h2>$get_url</h2>
+<pre>$get_url </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$get_url</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_id"> </a><div class="element clickable property public property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2>$id</h2>
+<pre>$id </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$id</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$id</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$id</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_json"> </a><div class="element clickable property public property_json" data-toggle="collapse" data-target=".property_json .collapse">
+<h2>$json</h2>
+<pre>$json </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$json</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$json</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$json</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_label"> </a><div class="element clickable property public property_label" data-toggle="collapse" data-target=".property_label .collapse">
+<h2>$label</h2>
+<pre>$label </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$label</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$label</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$label</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_manager"> </a><div class="element clickable property public property_manager" data-toggle="collapse" data-target=".property_manager .collapse">
+<h2>$manager</h2>
+<pre>$manager </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$manager</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$manager</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$manager</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_priority"> </a><div class="element clickable property public property_priority" data-toggle="collapse" data-target=".property_priority .collapse">
+<h2>$priority</h2>
+<pre>$priority </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$priority</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$priority</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$priority</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_removed"> </a><div class="element clickable property public property_removed" data-toggle="collapse" data-target=".property_removed .collapse">
+<h2>$removed</h2>
+<pre>$removed </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$removed</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$removed</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_section"> </a><div class="element clickable property public property_section" data-toggle="collapse" data-target=".property_section .collapse">
+<h2>$section</h2>
+<pre>$section </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$section</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$section</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$section</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_setting"> </a><div class="element clickable property public property_setting" data-toggle="collapse" data-target=".property_setting .collapse">
+<h2>$setting</h2>
+<pre>$setting </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$setting</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$setting</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$setting</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_settings"> </a><div class="element clickable property public property_settings" data-toggle="collapse" data-target=".property_settings .collapse">
+<h2>$settings</h2>
+<pre>$settings </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Control::$$settings</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Upload_Control::$$settings</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$settings</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_statuses"> </a><div class="element clickable property public property_statuses" data-toggle="collapse" data-target=".property_statuses .collapse">
+<h2>$statuses</h2>
+<pre>$statuses </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$statuses</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_type"> </a><div class="element clickable property public property_type" data-toggle="collapse" data-target=".property_type .collapse">
+<h2>$type</h2>
+<pre>$type </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_tabs"> </a><div class="element clickable property protected property_tabs" data-toggle="collapse" data-target=".property_tabs .collapse">
+<h2>$tabs</h2>
+<pre>$tabs </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Image_Control::$$tabs</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:11-05:00.<br></footer></div>
+</div>
+</body>
+</html>

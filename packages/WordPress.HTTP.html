@@ -1,0 +1,504 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\HTTP</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.HTTP.html" title="HTTP"><i class="icon-folder-open"></i>HTTP</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function__wp_http_get_object" title="_wp_http_get_object :: Returns the initialized WP_Http Object"><span class="description">Returns the initialized WP_Http Object</span><pre>_wp_http_get_object</pre></a></li>
+<li class="function  "><a href="#function_get_allowed_http_origins" title="get_allowed_http_origins :: Retrieve list of allowed http origins."><span class="description">Retrieve list of allowed http origins.</span><pre>get_allowed_http_origins</pre></a></li>
+<li class="function  "><a href="#function_get_http_origin" title="get_http_origin :: Get the HTTP Origin of the current request."><span class="description">Get the HTTP Origin of the current request.</span><pre>get_http_origin</pre></a></li>
+<li class="function  "><a href="#function_is_allowed_http_origin" title="is_allowed_http_origin :: Determines if the http origin is an authorized one."><span class="description">Determines if the http origin is an authorized one.</span><pre>is_allowed_http_origin</pre></a></li>
+<li class="function  "><a href="#function_send_origin_headers" title="send_origin_headers :: Send Access-Control-Allow-Origin and related headers if the current request
+is from an allowed origin."><span class="description">Send Access-Control-Allow-Origin and related headers if the current request
+is from an allowed origin.</span><pre>send_origin_headers</pre></a></li>
+<li class="function  "><a href="#function_wp_http_supports" title="wp_http_supports :: Determines if there is an HTTP Transport that can process this request."><span class="description">Determines if there is an HTTP Transport that can process this request.</span><pre>wp_http_supports</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_get" title="wp_remote_get :: Retrieve the raw response from the HTTP request using the GET method."><span class="description">Retrieve the raw response from the HTTP request using the GET method.</span><pre>wp_remote_get</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_head" title="wp_remote_head :: Retrieve the raw response from the HTTP request using the HEAD method."><span class="description">Retrieve the raw response from the HTTP request using the HEAD method.</span><pre>wp_remote_head</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_post" title="wp_remote_post :: Retrieve the raw response from the HTTP request using the POST method."><span class="description">Retrieve the raw response from the HTTP request using the POST method.</span><pre>wp_remote_post</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_request" title="wp_remote_request :: Retrieve the raw response from the HTTP request."><span class="description">Retrieve the raw response from the HTTP request.</span><pre>wp_remote_request</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_retrieve_body" title="wp_remote_retrieve_body :: Retrieve only the body from the raw response."><span class="description">Retrieve only the body from the raw response.</span><pre>wp_remote_retrieve_body</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_retrieve_header" title="wp_remote_retrieve_header :: Retrieve a single header by name from the raw response."><span class="description">Retrieve a single header by name from the raw response.</span><pre>wp_remote_retrieve_header</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_retrieve_headers" title="wp_remote_retrieve_headers :: Retrieve only the headers from the raw response."><span class="description">Retrieve only the headers from the raw response.</span><pre>wp_remote_retrieve_headers</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_retrieve_response_code" title="wp_remote_retrieve_response_code :: Retrieve only the response code from the raw response."><span class="description">Retrieve only the response code from the raw response.</span><pre>wp_remote_retrieve_response_code</pre></a></li>
+<li class="function  "><a href="#function_wp_remote_retrieve_response_message" title="wp_remote_retrieve_response_message :: Retrieve only the response message from the raw response."><span class="description">Retrieve only the response message from the raw response.</span><pre>wp_remote_retrieve_response_message</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#WP_Http" title="WordPress HTTP Class for managing HTTP Transports and making HTTP requests.">WP_Http</a></li>
+<li><a href="#WP_Http_Fsockopen" title="HTTP request method uses fsockopen function to retrieve the url.">WP_Http_Fsockopen</a></li>
+<li><a href="#WP_Http_Streams" title="HTTP request method uses Streams to retrieve the url.">WP_Http_Streams</a></li>
+<li><a href="#WP_Http_Curl" title="HTTP request method uses Curl extension to retrieve the url.">WP_Http_Curl</a></li>
+<li><a href="#WP_Http_Cookie" title="Internal representation of a single cookie.">WP_Http_Cookie</a></li>
+<li><a href="#WP_Http_Encoding" title="Implementation for deflate and gzip transfer encodings.">WP_Http_Encoding</a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.HTTP.html">HTTP</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__wp_http_get_object"></a><div class="element clickable function  function__wp_http_get_object" data-toggle="collapse" data-target=".function__wp_http_get_object .collapse">
+<h2>Returns the initialized WP_Http Object</h2>
+<pre>_wp_http_get_object() : <a href="../classes/WP_Http.html">\WP_Http</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Http.html">\WP_Http</a></code>HTTP Transport object.</div>
+</div></div>
+</div>
+<a id="function_get_allowed_http_origins"></a><div class="element clickable function  function_get_allowed_http_origins" data-toggle="collapse" data-target=".function_get_allowed_http_origins .collapse">
+<h2>Retrieve list of allowed http origins.</h2>
+<pre>get_allowed_http_origins() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of origin URLs.</div>
+</div></div>
+</div>
+<a id="function_get_http_origin"></a><div class="element clickable function  function_get_http_origin" data-toggle="collapse" data-target=".function_get_http_origin .collapse">
+<h2>Get the HTTP Origin of the current request.</h2>
+<pre>get_http_origin() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>URL of the origin. Empty string if no origin.</div>
+</div></div>
+</div>
+<a id="function_is_allowed_http_origin"></a><div class="element clickable function  function_is_allowed_http_origin" data-toggle="collapse" data-target=".function_is_allowed_http_origin .collapse">
+<h2>Determines if the http origin is an authorized one.</h2>
+<pre>is_allowed_http_origin(string $origin) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$origin</h4>
+<code>string</code><p>Origin URL. If not provided, the value of get_http_origin() is used.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if the origin is allowed. False otherwise.</div>
+</div></div>
+</div>
+<a id="function_send_origin_headers"></a><div class="element clickable function  function_send_origin_headers" data-toggle="collapse" data-target=".function_send_origin_headers .collapse">
+<h2>Send Access-Control-Allow-Origin and related headers if the current request
+is from an allowed origin.</h2>
+<pre>send_origin_headers() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>Returns the origin URL if headers are sent. Returns false
+if headers are not sent.</div>
+</div></div>
+</div>
+<a id="function_wp_http_supports"></a><div class="element clickable function  function_wp_http_supports" data-toggle="collapse" data-target=".function_wp_http_supports .collapse">
+<h2>Determines if there is an HTTP Transport that can process this request.</h2>
+<pre>wp_http_supports(array $capabilities, string $url) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$capabilities</h4>
+<code>array</code><p>Array of capabilities to test or a wp_remote_request() $args array.</p>
+</div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>Optional. If given, will check if the URL requires SSL and adds that requirement to the capabilities array.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_wp_remote_get"></a><div class="element clickable function  function_wp_remote_get" data-toggle="collapse" data-target=".function_wp_remote_get .collapse">
+<h2>Retrieve the raw response from the HTTP request using the GET method.</h2>
+<pre>wp_remote_get(string $url, array $args) : <a href="../classes/WP_Error.html">\WP_Error</a> | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_remote_request()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>Site URL to retrieve.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Override the defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Error.html">\WP_Error</a></code><code>array</code>The response or WP_Error on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_head"></a><div class="element clickable function  function_wp_remote_head" data-toggle="collapse" data-target=".function_wp_remote_head .collapse">
+<h2>Retrieve the raw response from the HTTP request using the HEAD method.</h2>
+<pre>wp_remote_head(string $url, array $args) : <a href="../classes/WP_Error.html">\WP_Error</a> | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_remote_request()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>Site URL to retrieve.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Override the defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Error.html">\WP_Error</a></code><code>array</code>The response or WP_Error on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_post"></a><div class="element clickable function  function_wp_remote_post" data-toggle="collapse" data-target=".function_wp_remote_post .collapse">
+<h2>Retrieve the raw response from the HTTP request using the POST method.</h2>
+<pre>wp_remote_post(string $url, array $args) : <a href="../classes/WP_Error.html">\WP_Error</a> | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\wp_remote_request()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>Site URL to retrieve.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Override the defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Error.html">\WP_Error</a></code><code>array</code>The response or WP_Error on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_request"></a><div class="element clickable function  function_wp_remote_request" data-toggle="collapse" data-target=".function_wp_remote_request .collapse">
+<h2>Retrieve the raw response from the HTTP request.</h2>
+<pre>wp_remote_request(string $url, array $args) : <a href="../classes/WP_Error.html">\WP_Error</a> | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The array structure is a little complex.</p>
+
+<pre><code>$res = array( 'headers' => array(), 'response' => array('code' => int, 'message' => string) );
+</code></pre>
+
+<p>All of the headers in $res['headers'] are with the name as the key and the
+value as the value. So to get the User-Agent, you would do the following.</p>
+
+<pre><code>$user_agent = $res['headers']['user-agent'];
+</code></pre>
+
+<p>The body is the raw response content and can be retrieved from $res['body'].</p>
+
+<p>This function is called first to make the request and there are other API
+functions to abstract out the above convoluted setup.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>Site URL to retrieve.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional. Override the defaults.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Error.html">\WP_Error</a></code><code>array</code>The response or WP_Error on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_retrieve_body"></a><div class="element clickable function  function_wp_remote_retrieve_body" data-toggle="collapse" data-target=".function_wp_remote_retrieve_body .collapse">
+<h2>Retrieve only the body from the raw response.</h2>
+<pre>wp_remote_retrieve_body(array $response) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>array</code><p>HTTP response.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The body of the response. Empty string if no body or incorrect parameter given.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_retrieve_header"></a><div class="element clickable function  function_wp_remote_retrieve_header" data-toggle="collapse" data-target=".function_wp_remote_retrieve_header .collapse">
+<h2>Retrieve a single header by name from the raw response.</h2>
+<pre>wp_remote_retrieve_header(array $response, string $header) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$header</h4>
+<code>string</code><p>Header name to retrieve value from.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The header value. Empty string on if incorrect parameter given, or if the header doesn't exist.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_retrieve_headers"></a><div class="element clickable function  function_wp_remote_retrieve_headers" data-toggle="collapse" data-target=".function_wp_remote_retrieve_headers .collapse">
+<h2>Retrieve only the headers from the raw response.</h2>
+<pre>wp_remote_retrieve_headers(array $response) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>array</code><p>HTTP response.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The headers of the response. Empty array if incorrect parameter given.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_retrieve_response_code"></a><div class="element clickable function  function_wp_remote_retrieve_response_code" data-toggle="collapse" data-target=".function_wp_remote_retrieve_response_code .collapse">
+<h2>Retrieve only the response code from the raw response.</h2>
+<pre>wp_remote_retrieve_response_code(array $response) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will return an empty array if incorrect parameter value is given.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>array</code><p>HTTP response.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the response code. Empty string on incorrect parameter given.</div>
+</div></div>
+</div>
+<a id="function_wp_remote_retrieve_response_message"></a><div class="element clickable function  function_wp_remote_retrieve_response_message" data-toggle="collapse" data-target=".function_wp_remote_retrieve_response_message .collapse">
+<h2>Retrieve only the response message from the raw response.</h2>
+<pre>wp_remote_retrieve_response_message(array $response) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will return an empty array if incorrect parameter value is given.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.7.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>array</code><p>HTTP response.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The response message. Empty string on incorrect parameter given.</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="WP_Http" class="element ajax clickable class">
+<h1>WP_Http<a href="../classes/WP_Http.html">¶</a>
+</h1>
+<p class="short_description">WordPress HTTP Class for managing HTTP Transports and making HTTP requests.</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Http.html" class="more">« More »</a>
+</div>
+<div id="WP_Http_Cookie" class="element ajax clickable class">
+<h1>WP_Http_Cookie<a href="../classes/WP_Http_Cookie.html">¶</a>
+</h1>
+<p class="short_description">Internal representation of a single cookie.</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Http_Cookie.html" class="more">« More »</a>
+</div>
+<div id="WP_Http_Curl" class="element ajax clickable class">
+<h1>WP_Http_Curl<a href="../classes/WP_Http_Curl.html">¶</a>
+</h1>
+<p class="short_description">HTTP request method uses Curl extension to retrieve the url.</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Http_Curl.html" class="more">« More »</a>
+</div>
+<div id="WP_Http_Encoding" class="element ajax clickable class">
+<h1>WP_Http_Encoding<a href="../classes/WP_Http_Encoding.html">¶</a>
+</h1>
+<p class="short_description">Implementation for deflate and gzip transfer encodings.</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Http_Encoding.html" class="more">« More »</a>
+</div>
+<div id="WP_Http_Fsockopen" class="element ajax clickable class">
+<h1>WP_Http_Fsockopen<a href="../classes/WP_Http_Fsockopen.html">¶</a>
+</h1>
+<p class="short_description">HTTP request method uses fsockopen function to retrieve the url.</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Http_Fsockopen.html" class="more">« More »</a>
+</div>
+<div id="WP_Http_Streams" class="element ajax clickable class">
+<h1>WP_Http_Streams<a href="../classes/WP_Http_Streams.html">¶</a>
+</h1>
+<p class="short_description">HTTP request method uses Streams to retrieve the url.</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Http_Streams.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:50-05:00.<br></footer></div>
+</div>
+</body>
+</html>

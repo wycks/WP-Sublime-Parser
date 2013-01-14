@@ -1,0 +1,656 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_Customize_Header_Image_Setting</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public inherited"><a href="#method___construct" title="__construct :: Constructor."><span class="description">Constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method__preview_filter" title="_preview_filter :: Callback function to filter the theme mods and options."><span class="description">Callback function to filter the theme mods and options.</span><pre>_preview_filter()</pre></a></li>
+<li class="method public inherited"><a href="#method_check_capabilities" title="check_capabilities :: Check if the theme supports the setting and check user capabilities."><span class="description">Check if the theme supports the setting and check user capabilities.</span><pre>check_capabilities()</pre></a></li>
+<li class="method public inherited"><a href="#method_js_value" title="js_value :: Escape the parameter's value for use in JavaScript."><span class="description">Escape the parameter's value for use in JavaScript.</span><pre>js_value()</pre></a></li>
+<li class="method public inherited"><a href="#method_post_value" title="post_value :: Fetches, validates, and sanitizes the $_POST value."><span class="description">Fetches, validates, and sanitizes the $_POST value.</span><pre>post_value()</pre></a></li>
+<li class="method public inherited"><a href="#method_preview" title="preview :: Handle previewing the setting."><span class="description">Handle previewing the setting.</span><pre>preview()</pre></a></li>
+<li class="method public inherited"><a href="#method_sanitize" title="sanitize :: Sanitize an input."><span class="description">Sanitize an input.</span><pre>sanitize()</pre></a></li>
+<li class="method public inherited"><a href="#method_save" title="save :: Set the value of the parameter for a specific theme."><span class="description">Set the value of the parameter for a specific theme.</span><pre>save()</pre></a></li>
+<li class="method public "><a href="#method_update" title="update :: Set the value of the parameter for a specific theme."><span class="description">Set the value of the parameter for a specific theme.</span><pre>update()</pre></a></li>
+<li class="method public inherited"><a href="#method_value" title="value :: Fetch the value of the parameter for a specific theme."><span class="description">Fetch the value of the parameter for a specific theme.</span><pre>value()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul>
+<li class="method protected inherited"><a href="#method__update_option" title="_update_option :: Update the theme mod from the value of the parameter."><span class="description">Update the theme mod from the value of the parameter.</span><pre>_update_option()</pre></a></li>
+<li class="method protected inherited"><a href="#method__update_theme_mod" title="_update_theme_mod :: Update the theme mod from the value of the parameter."><span class="description">Update the theme mod from the value of the parameter.</span><pre>_update_theme_mod()</pre></a></li>
+<li class="method protected inherited"><a href="#method_multidimensional" title="multidimensional :: Multidimensional helper function."><span class="description">Multidimensional helper function.</span><pre>multidimensional()</pre></a></li>
+<li class="method protected inherited"><a href="#method_multidimensional_get" title="multidimensional_get :: Will attempt to fetch a specific value from a multidimensional array."><span class="description">Will attempt to fetch a specific value from a multidimensional array.</span><pre>multidimensional_get()</pre></a></li>
+<li class="method protected inherited"><a href="#method_multidimensional_isset" title="multidimensional_isset :: Will attempt to check if a specific value in a multidimensional array is set."><span class="description">Will attempt to check if a specific value in a multidimensional array is set.</span><pre>multidimensional_isset()</pre></a></li>
+<li class="method protected inherited"><a href="#method_multidimensional_replace" title="multidimensional_replace :: Will attempt to replace a specific value in a multidimensional array."><span class="description">Will attempt to replace a specific value in a multidimensional array.</span><pre>multidimensional_replace()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property_capability" title="$capability :: "><span class="description">$capability</span><pre>$capability</pre></a></li>
+<li class="property public inherited"><a href="#property_default" title="$default :: "><span class="description">$default</span><pre>$default</pre></a></li>
+<li class="property public "><a href="#property_id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
+<li class="property public inherited"><a href="#property_manager" title="$manager :: "><span class="description">$manager</span><pre>$manager</pre></a></li>
+<li class="property public inherited"><a href="#property_sanitize_callback" title="$sanitize_callback :: "><span class="description">$sanitize_callback</span><pre>$sanitize_callback</pre></a></li>
+<li class="property public inherited"><a href="#property_sanitize_js_callback" title="$sanitize_js_callback :: "><span class="description">$sanitize_js_callback</span><pre>$sanitize_js_callback</pre></a></li>
+<li class="property public inherited"><a href="#property_theme_supports" title="$theme_supports :: "><span class="description">$theme_supports</span><pre>$theme_supports</pre></a></li>
+<li class="property public inherited"><a href="#property_transport" title="$transport :: "><span class="description">$transport</span><pre>$transport</pre></a></li>
+<li class="property public inherited"><a href="#property_type" title="$type :: "><span class="description">$type</span><pre>$type</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected inherited"><a href="#property_id_data" title="$id_data :: "><span class="description">$id_data</span><pre>$id_data</pre></a></li></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private inherited"><a href="#property__post_value" title="$_post_value :: "><span class="description">$_post_value</span><pre>$_post_value</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_Customize_Header_Image_Setting"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_Customize_Header_Image_Setting.html">WP_Customize_Header_Image_Setting</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">A setting that is used to filter a value, but will not save the results.</p>
+<div class="details">
+<div class="long_description"><p>Results should be properly handled using another setting or callback.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">WordPress</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor.</h2>
+<pre>__construct($manager, string $id, array $args) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::__construct()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$manager</h4></div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>string</code><p>An specific ID of the setting. Can be a theme mod or option name.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Setting arguments.</p></div>
+</div></div>
+</div>
+<a id="method__preview_filter"></a><div class="element clickable method public method__preview_filter" data-toggle="collapse" data-target=".method__preview_filter .collapse">
+<h2>Callback function to filter the theme mods and options.</h2>
+<pre>_preview_filter(mixed $original) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::_preview_filter()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$original</h4>
+<code>mixed</code><p>Old value.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>New or old value.</div>
+</div></div>
+</div>
+<a id="method_check_capabilities"></a><div class="element clickable method public method_check_capabilities" data-toggle="collapse" data-target=".method_check_capabilities .collapse">
+<h2>Check if the theme supports the setting and check user capabilities.</h2>
+<pre>check_capabilities() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::check_capabilities()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False if theme doesn't support the setting or user can't change setting, otherwise true.</div>
+</div></div>
+</div>
+<a id="method_js_value"></a><div class="element clickable method public method_js_value" data-toggle="collapse" data-target=".method_js_value .collapse">
+<h2>Escape the parameter's value for use in JavaScript.</h2>
+<pre>js_value() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::js_value()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The requested escaped value.</div>
+</div></div>
+</div>
+<a id="method_post_value"></a><div class="element clickable method public method_post_value" data-toggle="collapse" data-target=".method_post_value .collapse">
+<h2>Fetches, validates, and sanitizes the $_POST value.</h2>
+<pre>post_value(\$default $default) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::post_value()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>\$default</code><p>mixed A default value which is used as a fallback. Default is null.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Either the default value on failure or sanitized value.</div>
+</div></div>
+</div>
+<a id="method_preview"></a><div class="element clickable method public method_preview" data-toggle="collapse" data-target=".method_preview .collapse">
+<h2>Handle previewing the setting.</h2>
+<pre>preview() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::preview()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_sanitize"></a><div class="element clickable method public method_sanitize" data-toggle="collapse" data-target=".method_sanitize .collapse">
+<h2>Sanitize an input.</h2>
+<pre>sanitize(\$value $value) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::sanitize()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>\$value</code><p>mixed The value to sanitize.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Null if an input isn't valid, otherwise the sanitized value.</div>
+</div></div>
+</div>
+<a id="method_save"></a><div class="element clickable method public method_save" data-toggle="collapse" data-target=".method_save .collapse">
+<h2>Set the value of the parameter for a specific theme.</h2>
+<pre>save() : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::save()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False if cap check fails or value isn't set.</div>
+</div></div>
+</div>
+<a id="method_update"></a><div class="element clickable method public method_update" data-toggle="collapse" data-target=".method_update .collapse">
+<h2>Set the value of the parameter for a specific theme.</h2>
+<pre>update(\$value $value) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>\$value</code><p>mixed The value to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The result of saving the value.</div>
+</div></div>
+</div>
+<a id="method_value"></a><div class="element clickable method public method_value" data-toggle="collapse" data-target=".method_value .collapse">
+<h2>Fetch the value of the parameter for a specific theme.</h2>
+<pre>value() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::value()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The requested value.</div>
+</div></div>
+</div>
+<a id="method__update_option"></a><div class="element clickable method protected method__update_option" data-toggle="collapse" data-target=".method__update_option .collapse">
+<h2>Update the theme mod from the value of the parameter.</h2>
+<pre>_update_option(\$value $value) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::_update_option()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>\$value</code><p>mixed The value to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The result of saving the value.</div>
+</div></div>
+</div>
+<a id="method__update_theme_mod"></a><div class="element clickable method protected method__update_theme_mod" data-toggle="collapse" data-target=".method__update_theme_mod .collapse">
+<h2>Update the theme mod from the value of the parameter.</h2>
+<pre>_update_theme_mod(\$value $value) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::_update_theme_mod()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>\$value</code><p>mixed The value to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The result of saving the value.</div>
+</div></div>
+</div>
+<a id="method_multidimensional"></a><div class="element clickable method protected method_multidimensional" data-toggle="collapse" data-target=".method_multidimensional .collapse">
+<h2>Multidimensional helper function.</h2>
+<pre>multidimensional($root, $keys, bool $create) : null | array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::multidimensional()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$root</h4></div>
+<div class="subelement argument"><h4>$keys</h4></div>
+<div class="subelement argument">
+<h4>$create</h4>
+<code>bool</code><p>Default is false.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>array</code>
+</div>
+</div></div>
+</div>
+<a id="method_multidimensional_get"></a><div class="element clickable method protected method_multidimensional_get" data-toggle="collapse" data-target=".method_multidimensional_get .collapse">
+<h2>Will attempt to fetch a specific value from a multidimensional array.</h2>
+<pre>multidimensional_get($root, $keys, \$default $default) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::multidimensional_get()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$root</h4></div>
+<div class="subelement argument"><h4>$keys</h4></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>\$default</code><p>A default value which is used as a fallback. Default is null.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The requested value or the default value.</div>
+</div></div>
+</div>
+<a id="method_multidimensional_isset"></a><div class="element clickable method protected method_multidimensional_isset" data-toggle="collapse" data-target=".method_multidimensional_isset .collapse">
+<h2>Will attempt to check if a specific value in a multidimensional array is set.</h2>
+<pre>multidimensional_isset($root, $keys) : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::multidimensional_isset()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$root</h4></div>
+<div class="subelement argument"><h4>$keys</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True if value is set, false if not.</div>
+</div></div>
+</div>
+<a id="method_multidimensional_replace"></a><div class="element clickable method protected method_multidimensional_replace" data-toggle="collapse" data-target=".method_multidimensional_replace .collapse">
+<h2>Will attempt to replace a specific value in a multidimensional array.</h2>
+<pre>multidimensional_replace($root, $keys, mixed $value) : </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::multidimensional_replace()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$root</h4></div>
+<div class="subelement argument"><h4>$keys</h4></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The value to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_capability"> </a><div class="element clickable property public property_capability" data-toggle="collapse" data-target=".property_capability .collapse">
+<h2>$capability</h2>
+<pre>$capability </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$capability</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_default"> </a><div class="element clickable property public property_default" data-toggle="collapse" data-target=".property_default .collapse">
+<h2>$default</h2>
+<pre>$default </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$default</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_id"> </a><div class="element clickable property public property_id" data-toggle="collapse" data-target=".property_id .collapse">
+<h2>$id</h2>
+<pre>$id </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_manager"> </a><div class="element clickable property public property_manager" data-toggle="collapse" data-target=".property_manager .collapse">
+<h2>$manager</h2>
+<pre>$manager </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$manager</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_sanitize_callback"> </a><div class="element clickable property public property_sanitize_callback" data-toggle="collapse" data-target=".property_sanitize_callback .collapse">
+<h2>$sanitize_callback</h2>
+<pre>$sanitize_callback </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$sanitize_callback</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_sanitize_js_callback"> </a><div class="element clickable property public property_sanitize_js_callback" data-toggle="collapse" data-target=".property_sanitize_js_callback .collapse">
+<h2>$sanitize_js_callback</h2>
+<pre>$sanitize_js_callback </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$sanitize_js_callback</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_theme_supports"> </a><div class="element clickable property public property_theme_supports" data-toggle="collapse" data-target=".property_theme_supports .collapse">
+<h2>$theme_supports</h2>
+<pre>$theme_supports </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$theme_supports</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_transport"> </a><div class="element clickable property public property_transport" data-toggle="collapse" data-target=".property_transport .collapse">
+<h2>$transport</h2>
+<pre>$transport </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$transport</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_type"> </a><div class="element clickable property public property_type" data-toggle="collapse" data-target=".property_type .collapse">
+<h2>$type</h2>
+<pre>$type </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_id_data"> </a><div class="element clickable property protected property_id_data" data-toggle="collapse" data-target=".property_id_data .collapse">
+<h2>$id_data</h2>
+<pre>$id_data </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$id_data</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property__post_value"> </a><div class="element clickable property private property__post_value" data-toggle="collapse" data-target=".property__post_value .collapse">
+<h2>$_post_value</h2>
+<pre>$_post_value </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\WP_Customize_Setting::$$_post_value</td>
+</tr></table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:12-05:00.<br></footer></div>
+</div>
+</body>
+</html>

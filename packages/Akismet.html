@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » Akismet</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/Akismet.html" title="Akismet"><i class="icon-folder-open"></i>Akismet</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_akismet_add_comment_nonce" title="akismet_add_comment_nonce :: "><span class="description">akismet_add_comment_nonce()
+        </span><pre>akismet_add_comment_nonce</pre></a></li>
+<li class="function  "><a href="#function_akismet_auto_check_comment" title="akismet_auto_check_comment :: "><span class="description">akismet_auto_check_comment()
+        </span><pre>akismet_auto_check_comment</pre></a></li>
+<li class="function  "><a href="#function_akismet_auto_check_update_meta" title="akismet_auto_check_update_meta :: "><span class="description">akismet_auto_check_update_meta()
+        </span><pre>akismet_auto_check_update_meta</pre></a></li>
+<li class="function  "><a href="#function_akismet_check_db_comment" title="akismet_check_db_comment :: "><span class="description">akismet_check_db_comment()
+        </span><pre>akismet_check_db_comment</pre></a></li>
+<li class="function  "><a href="#function_akismet_check_key_status" title="akismet_check_key_status :: "><span class="description">akismet_check_key_status()
+        </span><pre>akismet_check_key_status</pre></a></li>
+<li class="function  "><a href="#function_akismet_cmp_time" title="akismet_cmp_time :: "><span class="description">akismet_cmp_time()
+        </span><pre>akismet_cmp_time</pre></a></li>
+<li class="function  "><a href="#function_akismet_cron_recheck" title="akismet_cron_recheck :: "><span class="description">akismet_cron_recheck()
+        </span><pre>akismet_cron_recheck</pre></a></li>
+<li class="function  "><a href="#function_akismet_delete_old" title="akismet_delete_old :: "><span class="description">akismet_delete_old()
+        </span><pre>akismet_delete_old</pre></a></li>
+<li class="function  "><a href="#function_akismet_delete_old_metadata" title="akismet_delete_old_metadata :: "><span class="description">akismet_delete_old_metadata()
+        </span><pre>akismet_delete_old_metadata</pre></a></li>
+<li class="function  "><a href="#function_akismet_fix_scheduled_recheck" title="akismet_fix_scheduled_recheck :: "><span class="description">akismet_fix_scheduled_recheck()
+        </span><pre>akismet_fix_scheduled_recheck</pre></a></li>
+<li class="function  "><a href="#function_akismet_get_comment_history" title="akismet_get_comment_history :: "><span class="description">akismet_get_comment_history()
+        </span><pre>akismet_get_comment_history</pre></a></li>
+<li class="function  "><a href="#function_akismet_get_key" title="akismet_get_key :: "><span class="description">akismet_get_key()
+        </span><pre>akismet_get_key</pre></a></li>
+<li class="function  "><a href="#function_akismet_get_user_comments_approved" title="akismet_get_user_comments_approved :: "><span class="description">akismet_get_user_comments_approved()
+        </span><pre>akismet_get_user_comments_approved</pre></a></li>
+<li class="function  "><a href="#function_akismet_get_user_roles" title="akismet_get_user_roles :: "><span class="description">akismet_get_user_roles()
+        </span><pre>akismet_get_user_roles</pre></a></li>
+<li class="function  "><a href="#function_akismet_http_post" title="akismet_http_post :: "><span class="description">akismet_http_post()
+        </span><pre>akismet_http_post</pre></a></li>
+<li class="function  "><a href="#function_akismet_init" title="akismet_init :: "><span class="description">akismet_init()
+        </span><pre>akismet_init</pre></a></li>
+<li class="function  "><a href="#function_akismet_microtime" title="akismet_microtime :: "><span class="description">akismet_microtime()
+        </span><pre>akismet_microtime</pre></a></li>
+<li class="function  "><a href="#function_akismet_result_hold" title="akismet_result_hold :: "><span class="description">akismet_result_hold()
+        </span><pre>akismet_result_hold</pre></a></li>
+<li class="function  "><a href="#function_akismet_result_spam" title="akismet_result_spam :: "><span class="description">akismet_result_spam()
+        </span><pre>akismet_result_spam</pre></a></li>
+<li class="function  "><a href="#function_akismet_test_mode" title="akismet_test_mode :: "><span class="description">akismet_test_mode()
+        </span><pre>akismet_test_mode</pre></a></li>
+<li class="function  "><a href="#function_akismet_update_alert" title="akismet_update_alert :: "><span class="description">akismet_update_alert()
+        </span><pre>akismet_update_alert</pre></a></li>
+<li class="function  "><a href="#function_akismet_update_comment_history" title="akismet_update_comment_history :: "><span class="description">akismet_update_comment_history()
+        </span><pre>akismet_update_comment_history</pre></a></li>
+<li class="function  "><a href="#function_akismet_verify_key" title="akismet_verify_key :: "><span class="description">akismet_verify_key()
+        </span><pre>akismet_verify_key</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#Akismet_Widget" title="This class must be extended for each widget and WP_Widget::widget(), WP_Widget::update()
+and WP_Widget::form() need to be over-ridden.">Akismet_Widget</a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_AKISMET_PLUGIN_URL" title="AKISMET_PLUGIN_URL :: "><span class="description">AKISMET_PLUGIN_URL</span><pre>AKISMET_PLUGIN_URL</pre></a></li>
+<li class="constant  "><a href="#constant_AKISMET_VERSION" title="AKISMET_VERSION :: "><span class="description">AKISMET_VERSION</span><pre>AKISMET_VERSION</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/Akismet.html">Akismet</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_akismet_add_comment_nonce"></a><div class="element clickable function  function_akismet_add_comment_nonce" data-toggle="collapse" data-target=".function_akismet_add_comment_nonce .collapse">
+<h2>akismet_add_comment_nonce()
+        </h2>
+<pre>akismet_add_comment_nonce($post_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$post_id</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_auto_check_comment"></a><div class="element clickable function  function_akismet_auto_check_comment" data-toggle="collapse" data-target=".function_akismet_auto_check_comment .collapse">
+<h2>akismet_auto_check_comment()
+        </h2>
+<pre>akismet_auto_check_comment($commentdata) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$commentdata</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_auto_check_update_meta"></a><div class="element clickable function  function_akismet_auto_check_update_meta" data-toggle="collapse" data-target=".function_akismet_auto_check_update_meta .collapse">
+<h2>akismet_auto_check_update_meta()
+        </h2>
+<pre>akismet_auto_check_update_meta($id, $comment) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$comment</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_check_db_comment"></a><div class="element clickable function  function_akismet_check_db_comment" data-toggle="collapse" data-target=".function_akismet_check_db_comment .collapse">
+<h2>akismet_check_db_comment()
+        </h2>
+<pre>akismet_check_db_comment($id, $recheck_reason) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$recheck_reason</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_check_key_status"></a><div class="element clickable function  function_akismet_check_key_status" data-toggle="collapse" data-target=".function_akismet_check_key_status .collapse">
+<h2>akismet_check_key_status()
+        </h2>
+<pre>akismet_check_key_status($key, $ip) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+<div class="subelement argument"><h4>$ip</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_cmp_time"></a><div class="element clickable function  function_akismet_cmp_time" data-toggle="collapse" data-target=".function_akismet_cmp_time .collapse">
+<h2>akismet_cmp_time()
+        </h2>
+<pre>akismet_cmp_time($a, $b) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$a</h4></div>
+<div class="subelement argument"><h4>$b</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_cron_recheck"></a><div class="element clickable function  function_akismet_cron_recheck" data-toggle="collapse" data-target=".function_akismet_cron_recheck .collapse">
+<h2>akismet_cron_recheck()
+        </h2>
+<pre>akismet_cron_recheck() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_delete_old"></a><div class="element clickable function  function_akismet_delete_old" data-toggle="collapse" data-target=".function_akismet_delete_old .collapse">
+<h2>akismet_delete_old()
+        </h2>
+<pre>akismet_delete_old() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_delete_old_metadata"></a><div class="element clickable function  function_akismet_delete_old_metadata" data-toggle="collapse" data-target=".function_akismet_delete_old_metadata .collapse">
+<h2>akismet_delete_old_metadata()
+        </h2>
+<pre>akismet_delete_old_metadata() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_fix_scheduled_recheck"></a><div class="element clickable function  function_akismet_fix_scheduled_recheck" data-toggle="collapse" data-target=".function_akismet_fix_scheduled_recheck .collapse">
+<h2>akismet_fix_scheduled_recheck()
+        </h2>
+<pre>akismet_fix_scheduled_recheck() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_get_comment_history"></a><div class="element clickable function  function_akismet_get_comment_history" data-toggle="collapse" data-target=".function_akismet_get_comment_history .collapse">
+<h2>akismet_get_comment_history()
+        </h2>
+<pre>akismet_get_comment_history($comment_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$comment_id</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_get_key"></a><div class="element clickable function  function_akismet_get_key" data-toggle="collapse" data-target=".function_akismet_get_key .collapse">
+<h2>akismet_get_key()
+        </h2>
+<pre>akismet_get_key() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_get_user_comments_approved"></a><div class="element clickable function  function_akismet_get_user_comments_approved" data-toggle="collapse" data-target=".function_akismet_get_user_comments_approved .collapse">
+<h2>akismet_get_user_comments_approved()
+        </h2>
+<pre>akismet_get_user_comments_approved($user_id, $comment_author_email, $comment_author, $comment_author_url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$user_id</h4></div>
+<div class="subelement argument"><h4>$comment_author_email</h4></div>
+<div class="subelement argument"><h4>$comment_author</h4></div>
+<div class="subelement argument"><h4>$comment_author_url</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_get_user_roles"></a><div class="element clickable function  function_akismet_get_user_roles" data-toggle="collapse" data-target=".function_akismet_get_user_roles .collapse">
+<h2>akismet_get_user_roles()
+        </h2>
+<pre>akismet_get_user_roles($user_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$user_id</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_http_post"></a><div class="element clickable function  function_akismet_http_post" data-toggle="collapse" data-target=".function_akismet_http_post .collapse">
+<h2>akismet_http_post()
+        </h2>
+<pre>akismet_http_post($request, $host, $path, $port, $ip) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$request</h4></div>
+<div class="subelement argument"><h4>$host</h4></div>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$port</h4></div>
+<div class="subelement argument"><h4>$ip</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_init"></a><div class="element clickable function  function_akismet_init" data-toggle="collapse" data-target=".function_akismet_init .collapse">
+<h2>akismet_init()
+        </h2>
+<pre>akismet_init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_microtime"></a><div class="element clickable function  function_akismet_microtime" data-toggle="collapse" data-target=".function_akismet_microtime .collapse">
+<h2>akismet_microtime()
+        </h2>
+<pre>akismet_microtime() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_result_hold"></a><div class="element clickable function  function_akismet_result_hold" data-toggle="collapse" data-target=".function_akismet_result_hold .collapse">
+<h2>akismet_result_hold()
+        </h2>
+<pre>akismet_result_hold($approved) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$approved</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_result_spam"></a><div class="element clickable function  function_akismet_result_spam" data-toggle="collapse" data-target=".function_akismet_result_spam .collapse">
+<h2>akismet_result_spam()
+        </h2>
+<pre>akismet_result_spam($approved) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$approved</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_test_mode"></a><div class="element clickable function  function_akismet_test_mode" data-toggle="collapse" data-target=".function_akismet_test_mode .collapse">
+<h2>akismet_test_mode()
+        </h2>
+<pre>akismet_test_mode() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_akismet_update_alert"></a><div class="element clickable function  function_akismet_update_alert" data-toggle="collapse" data-target=".function_akismet_update_alert .collapse">
+<h2>akismet_update_alert()
+        </h2>
+<pre>akismet_update_alert($response) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$response</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_update_comment_history"></a><div class="element clickable function  function_akismet_update_comment_history" data-toggle="collapse" data-target=".function_akismet_update_comment_history .collapse">
+<h2>akismet_update_comment_history()
+        </h2>
+<pre>akismet_update_comment_history($comment_id, $message, $event) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$comment_id</h4></div>
+<div class="subelement argument"><h4>$message</h4></div>
+<div class="subelement argument"><h4>$event</h4></div>
+</div></div>
+</div>
+<a id="function_akismet_verify_key"></a><div class="element clickable function  function_akismet_verify_key" data-toggle="collapse" data-target=".function_akismet_verify_key .collapse">
+<h2>akismet_verify_key()
+        </h2>
+<pre>akismet_verify_key($key, $ip) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+<div class="subelement argument"><h4>$ip</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Akismet_Widget" class="element ajax clickable class">
+<h1>Akismet_Widget<a href="../classes/Akismet_Widget.html">¶</a>
+</h1>
+<p class="short_description">This class must be extended for each widget and WP_Widget::widget(), WP_Widget::update()
+and WP_Widget::form() need to be over-ridden.</p>
+<div class="details collapse"></div>
+<a href="../classes/Akismet_Widget.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_AKISMET_PLUGIN_URL"> </a><div class="element clickable constant  constant_AKISMET_PLUGIN_URL" data-toggle="collapse" data-target=".constant_AKISMET_PLUGIN_URL .collapse">
+<h2>AKISMET_PLUGIN_URL</h2>
+<pre>AKISMET_PLUGIN_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_AKISMET_VERSION"> </a><div class="element clickable constant  constant_AKISMET_VERSION" data-toggle="collapse" data-target=".constant_AKISMET_VERSION .collapse">
+<h2>AKISMET_VERSION</h2>
+<pre>AKISMET_VERSION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:44-05:00.<br></footer></div>
+</div>
+</body>
+</html>

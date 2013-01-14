@@ -1,0 +1,992 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_Filesystem_FTPext</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public inherited"><a href="#method_abspath" title="abspath :: Returns the path on the remote filesystem of ABSPATH"><span class="description">Returns the path on the remote filesystem of ABSPATH</span><pre>abspath()</pre></a></li>
+<li class="method public "><a href="#method_atime" title="atime :: "><span class="description">atime()
+        </span><pre>atime()</pre></a></li>
+<li class="method public "><a href="#method_chdir" title="chdir :: "><span class="description">chdir()
+        </span><pre>chdir()</pre></a></li>
+<li class="method public "><a href="#method_chgrp" title="chgrp :: "><span class="description">chgrp()
+        </span><pre>chgrp()</pre></a></li>
+<li class="method public "><a href="#method_chmod" title="chmod :: "><span class="description">chmod()
+        </span><pre>chmod()</pre></a></li>
+<li class="method public "><a href="#method_chown" title="chown :: "><span class="description">chown()
+        </span><pre>chown()</pre></a></li>
+<li class="method public "><a href="#method_connect" title="connect :: "><span class="description">connect()
+        </span><pre>connect()</pre></a></li>
+<li class="method public "><a href="#method_copy" title="copy :: "><span class="description">copy()
+        </span><pre>copy()</pre></a></li>
+<li class="method public "><a href="#method_cwd" title="cwd :: "><span class="description">cwd()
+        </span><pre>cwd()</pre></a></li>
+<li class="method public "><a href="#method_delete" title="delete :: "><span class="description">delete()
+        </span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#method_dirlist" title="dirlist :: "><span class="description">dirlist()
+        </span><pre>dirlist()</pre></a></li>
+<li class="method public "><a href="#method_exists" title="exists :: "><span class="description">exists()
+        </span><pre>exists()</pre></a></li>
+<li class="method public inherited"><a href="#method_find_base_dir" title="find_base_dir :: Locates a folder on the remote filesystem."><span class="description">Locates a folder on the remote filesystem.</span><pre>find_base_dir()</pre></a></li>
+<li class="method public inherited"><a href="#method_find_folder" title="find_folder :: Locates a folder on the remote filesystem."><span class="description">Locates a folder on the remote filesystem.</span><pre>find_folder()</pre></a></li>
+<li class="method public inherited"><a href="#method_get_base_dir" title="get_base_dir :: Locates a folder on the remote filesystem."><span class="description">Locates a folder on the remote filesystem.</span><pre>get_base_dir()</pre></a></li>
+<li class="method public "><a href="#method_get_contents" title="get_contents :: "><span class="description">get_contents()
+        </span><pre>get_contents()</pre></a></li>
+<li class="method public "><a href="#method_get_contents_array" title="get_contents_array :: "><span class="description">get_contents_array()
+        </span><pre>get_contents_array()</pre></a></li>
+<li class="method public "><a href="#method_getchmod" title="getchmod :: "><span class="description">getchmod()
+        </span><pre>getchmod()</pre></a></li>
+<li class="method public inherited"><a href="#method_gethchmod" title="gethchmod :: Returns the *nix style file permissions for a file"><span class="description">Returns the *nix style file permissions for a file</span><pre>gethchmod()</pre></a></li>
+<li class="method public inherited"><a href="#method_getnumchmodfromh" title="getnumchmodfromh :: Converts *nix style file permissions to a octal number."><span class="description">Converts *nix style file permissions to a octal number.</span><pre>getnumchmodfromh()</pre></a></li>
+<li class="method public "><a href="#method_group" title="group :: "><span class="description">group()
+        </span><pre>group()</pre></a></li>
+<li class="method public inherited"><a href="#method_is_binary" title="is_binary :: Determines if the string provided contains binary characters."><span class="description">Determines if the string provided contains binary characters.</span><pre>is_binary()</pre></a></li>
+<li class="method public "><a href="#method_is_dir" title="is_dir :: "><span class="description">is_dir()
+        </span><pre>is_dir()</pre></a></li>
+<li class="method public "><a href="#method_is_file" title="is_file :: "><span class="description">is_file()
+        </span><pre>is_file()</pre></a></li>
+<li class="method public "><a href="#method_is_readable" title="is_readable :: "><span class="description">is_readable()
+        </span><pre>is_readable()</pre></a></li>
+<li class="method public "><a href="#method_is_writable" title="is_writable :: "><span class="description">is_writable()
+        </span><pre>is_writable()</pre></a></li>
+<li class="method public "><a href="#method_mkdir" title="mkdir :: "><span class="description">mkdir()
+        </span><pre>mkdir()</pre></a></li>
+<li class="method public "><a href="#method_move" title="move :: "><span class="description">move()
+        </span><pre>move()</pre></a></li>
+<li class="method public "><a href="#method_mtime" title="mtime :: "><span class="description">mtime()
+        </span><pre>mtime()</pre></a></li>
+<li class="method public "><a href="#method_owner" title="owner :: "><span class="description">owner()
+        </span><pre>owner()</pre></a></li>
+<li class="method public "><a href="#method_parselisting" title="parselisting :: "><span class="description">parselisting()
+        </span><pre>parselisting()</pre></a></li>
+<li class="method public "><a href="#method_put_contents" title="put_contents :: "><span class="description">put_contents()
+        </span><pre>put_contents()</pre></a></li>
+<li class="method public "><a href="#method_rmdir" title="rmdir :: "><span class="description">rmdir()
+        </span><pre>rmdir()</pre></a></li>
+<li class="method public inherited"><a href="#method_search_for_folder" title="search_for_folder :: Locates a folder on the remote filesystem."><span class="description">Locates a folder on the remote filesystem.</span><pre>search_for_folder()</pre></a></li>
+<li class="method public "><a href="#method_size" title="size :: "><span class="description">size()
+        </span><pre>size()</pre></a></li>
+<li class="method public "><a href="#method_touch" title="touch :: "><span class="description">touch()
+        </span><pre>touch()</pre></a></li>
+<li class="method public inherited"><a href="#method_wp_content_dir" title="wp_content_dir :: Returns the path on the remote filesystem of WP_CONTENT_DIR"><span class="description">Returns the path on the remote filesystem of WP_CONTENT_DIR</span><pre>wp_content_dir()</pre></a></li>
+<li class="method public inherited"><a href="#method_wp_lang_dir" title="wp_lang_dir :: Returns the path on the remote filesystem of WP_LANG_DIR"><span class="description">Returns the path on the remote filesystem of WP_LANG_DIR</span><pre>wp_lang_dir()</pre></a></li>
+<li class="method public inherited"><a href="#method_wp_plugins_dir" title="wp_plugins_dir :: Returns the path on the remote filesystem of WP_PLUGIN_DIR"><span class="description">Returns the path on the remote filesystem of WP_PLUGIN_DIR</span><pre>wp_plugins_dir()</pre></a></li>
+<li class="method public inherited"><a href="#method_wp_themes_dir" title="wp_themes_dir :: Returns the path on the remote filesystem of the Themes Directory"><span class="description">Returns the path on the remote filesystem of the Themes Directory</span><pre>wp_themes_dir()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public inherited"><a href="#property_cache" title="$cache :: Cached list of local filepaths to mapped remote filepaths."><span class="description">Cached list of local filepaths to mapped remote filepaths.</span><pre>$cache</pre></a></li>
+<li class="property public "><a href="#property_errors" title="$errors :: "><span class="description">$errors</span><pre>$errors</pre></a></li>
+<li class="property public "><a href="#property_link" title="$link :: "><span class="description">$link</span><pre>$link</pre></a></li>
+<li class="property public inherited"><a href="#property_method" title="$method :: The Access method of the current connection, Set automatically."><span class="description">The Access method of the current connection, Set automatically.</span><pre>$method</pre></a></li>
+<li class="property public "><a href="#property_options" title="$options :: "><span class="description">$options</span><pre>$options</pre></a></li>
+<li class="property public inherited"><a href="#property_verbose" title="$verbose :: Whether to display debug data for the connection."><span class="description">Whether to display debug data for the connection.</span><pre>$verbose</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_Filesystem_FTPext"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_Filesystem_FTPext.html">WP_Filesystem_FTPext</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">WordPress Filesystem Class for implementing FTP.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Filesystem.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Filesystem</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\WP_Filesystem_Base</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($opt) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$opt</h4></div>
+</div></div>
+</div>
+<a id="method___destruct"></a><div class="element clickable method public method___destruct" data-toggle="collapse" data-target=".method___destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_abspath"></a><div class="element clickable method public method_abspath" data-toggle="collapse" data-target=".method_abspath .collapse">
+<h2>Returns the path on the remote filesystem of ABSPATH</h2>
+<pre>abspath() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::abspath()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_atime"></a><div class="element clickable method public method_atime" data-toggle="collapse" data-target=".method_atime .collapse">
+<h2>atime()
+        </h2>
+<pre>atime($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_chdir"></a><div class="element clickable method public method_chdir" data-toggle="collapse" data-target=".method_chdir .collapse">
+<h2>chdir()
+        </h2>
+<pre>chdir($dir) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$dir</h4></div>
+</div></div>
+</div>
+<a id="method_chgrp"></a><div class="element clickable method public method_chgrp" data-toggle="collapse" data-target=".method_chgrp .collapse">
+<h2>chgrp()
+        </h2>
+<pre>chgrp($file, $group, $recursive) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$group</h4></div>
+<div class="subelement argument"><h4>$recursive</h4></div>
+</div></div>
+</div>
+<a id="method_chmod"></a><div class="element clickable method public method_chmod" data-toggle="collapse" data-target=".method_chmod .collapse">
+<h2>chmod()
+        </h2>
+<pre>chmod($file, $mode, $recursive) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$mode</h4></div>
+<div class="subelement argument"><h4>$recursive</h4></div>
+</div></div>
+</div>
+<a id="method_chown"></a><div class="element clickable method public method_chown" data-toggle="collapse" data-target=".method_chown .collapse">
+<h2>chown()
+        </h2>
+<pre>chown($file, $owner, $recursive) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$owner</h4></div>
+<div class="subelement argument"><h4>$recursive</h4></div>
+</div></div>
+</div>
+<a id="method_connect"></a><div class="element clickable method public method_connect" data-toggle="collapse" data-target=".method_connect .collapse">
+<h2>connect()
+        </h2>
+<pre>connect() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_copy"></a><div class="element clickable method public method_copy" data-toggle="collapse" data-target=".method_copy .collapse">
+<h2>copy()
+        </h2>
+<pre>copy($source, $destination, $overwrite, $mode) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$source</h4></div>
+<div class="subelement argument"><h4>$destination</h4></div>
+<div class="subelement argument"><h4>$overwrite</h4></div>
+<div class="subelement argument"><h4>$mode</h4></div>
+</div></div>
+</div>
+<a id="method_cwd"></a><div class="element clickable method public method_cwd" data-toggle="collapse" data-target=".method_cwd .collapse">
+<h2>cwd()
+        </h2>
+<pre>cwd() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_delete"></a><div class="element clickable method public method_delete" data-toggle="collapse" data-target=".method_delete .collapse">
+<h2>delete()
+        </h2>
+<pre>delete($file, $recursive, $type) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$recursive</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+</div></div>
+</div>
+<a id="method_dirlist"></a><div class="element clickable method public method_dirlist" data-toggle="collapse" data-target=".method_dirlist .collapse">
+<h2>dirlist()
+        </h2>
+<pre>dirlist($path, $include_hidden, $recursive) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$include_hidden</h4></div>
+<div class="subelement argument"><h4>$recursive</h4></div>
+</div></div>
+</div>
+<a id="method_exists"></a><div class="element clickable method public method_exists" data-toggle="collapse" data-target=".method_exists .collapse">
+<h2>exists()
+        </h2>
+<pre>exists($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_find_base_dir"></a><div class="element clickable method public method_find_base_dir" data-toggle="collapse" data-target=".method_find_base_dir .collapse">
+<h2>Locates a folder on the remote filesystem.</h2>
+<pre>find_base_dir(string $base, bool $echo) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Deprecated; use WP_Filesystem::abspath() or WP_Filesystem::wp_*_dir() methods instead.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::find_base_dir()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$base</h4>
+<code>string</code><p>The folder to start searching from</p></div>
+<div class="subelement argument">
+<h4>$echo</h4>
+<code>bool</code><p>True to display debug information</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_find_folder"></a><div class="element clickable method public method_find_folder" data-toggle="collapse" data-target=".method_find_folder .collapse">
+<h2>Locates a folder on the remote filesystem.</h2>
+<pre>find_folder(string $folder) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Assumes that on Windows systems, Stripping off the Drive letter is OK
+Sanitizes &#92; to / in windows filepaths.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::find_folder()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$folder</h4>
+<code>string</code><p>the folder to locate</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_get_base_dir"></a><div class="element clickable method public method_get_base_dir" data-toggle="collapse" data-target=".method_get_base_dir .collapse">
+<h2>Locates a folder on the remote filesystem.</h2>
+<pre>get_base_dir(string $base, bool $echo) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Deprecated; use WP_Filesystem::abspath() or WP_Filesystem::wp_*_dir() methods instead.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::get_base_dir()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$base</h4>
+<code>string</code><p>The folder to start searching from</p></div>
+<div class="subelement argument">
+<h4>$echo</h4>
+<code>bool</code><p>True to display debug information</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_get_contents"></a><div class="element clickable method public method_get_contents" data-toggle="collapse" data-target=".method_get_contents .collapse">
+<h2>get_contents()
+        </h2>
+<pre>get_contents($file, $type, $resumepos) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$resumepos</h4></div>
+</div></div>
+</div>
+<a id="method_get_contents_array"></a><div class="element clickable method public method_get_contents_array" data-toggle="collapse" data-target=".method_get_contents_array .collapse">
+<h2>get_contents_array()
+        </h2>
+<pre>get_contents_array($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_getchmod"></a><div class="element clickable method public method_getchmod" data-toggle="collapse" data-target=".method_getchmod .collapse">
+<h2>getchmod()
+        </h2>
+<pre>getchmod($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_gethchmod"></a><div class="element clickable method public method_gethchmod" data-toggle="collapse" data-target=".method_gethchmod .collapse">
+<h2>Returns the *nix style file permissions for a file</h2>
+<pre>gethchmod(string $file) : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>From the PHP documentation page for fileperms()</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="http://docs.php.net/fileperms">http://docs.php.net/fileperms</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::gethchmod()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>string filename</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>octal representation of permissions</div>
+</div></div>
+</div>
+<a id="method_getnumchmodfromh"></a><div class="element clickable method public method_getnumchmodfromh" data-toggle="collapse" data-target=".method_getnumchmodfromh .collapse">
+<h2>Converts *nix style file permissions to a octal number.</h2>
+<pre>getnumchmodfromh(string $mode) : int</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Converts '-rw-r--r--' to 0644
+From "info at rvgate dot nl"'s comment on the PHP documentation for chmod()</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="http://docs.php.net/manual/en/function.chmod.php#49614">http://docs.php.net/manual/en/function.chmod.php#49614</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::getnumchmodfromh()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>string</code><p>string *nix style file permission</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>octal representation</div>
+</div></div>
+</div>
+<a id="method_group"></a><div class="element clickable method public method_group" data-toggle="collapse" data-target=".method_group .collapse">
+<h2>group()
+        </h2>
+<pre>group($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_is_binary"></a><div class="element clickable method public method_is_binary" data-toggle="collapse" data-target=".method_is_binary .collapse">
+<h2>Determines if the string provided contains binary characters.</h2>
+<pre>is_binary(string $text) : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::is_binary()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>String to test against</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>true if string is binary, false otherwise</div>
+</div></div>
+</div>
+<a id="method_is_dir"></a><div class="element clickable method public method_is_dir" data-toggle="collapse" data-target=".method_is_dir .collapse">
+<h2>is_dir()
+        </h2>
+<pre>is_dir($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+</div></div>
+</div>
+<a id="method_is_file"></a><div class="element clickable method public method_is_file" data-toggle="collapse" data-target=".method_is_file .collapse">
+<h2>is_file()
+        </h2>
+<pre>is_file($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_is_readable"></a><div class="element clickable method public method_is_readable" data-toggle="collapse" data-target=".method_is_readable .collapse">
+<h2>is_readable()
+        </h2>
+<pre>is_readable($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_is_writable"></a><div class="element clickable method public method_is_writable" data-toggle="collapse" data-target=".method_is_writable .collapse">
+<h2>is_writable()
+        </h2>
+<pre>is_writable($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_mkdir"></a><div class="element clickable method public method_mkdir" data-toggle="collapse" data-target=".method_mkdir .collapse">
+<h2>mkdir()
+        </h2>
+<pre>mkdir($path, $chmod, $chown, $chgrp) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$chmod</h4></div>
+<div class="subelement argument"><h4>$chown</h4></div>
+<div class="subelement argument"><h4>$chgrp</h4></div>
+</div></div>
+</div>
+<a id="method_move"></a><div class="element clickable method public method_move" data-toggle="collapse" data-target=".method_move .collapse">
+<h2>move()
+        </h2>
+<pre>move($source, $destination, $overwrite) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$source</h4></div>
+<div class="subelement argument"><h4>$destination</h4></div>
+<div class="subelement argument"><h4>$overwrite</h4></div>
+</div></div>
+</div>
+<a id="method_mtime"></a><div class="element clickable method public method_mtime" data-toggle="collapse" data-target=".method_mtime .collapse">
+<h2>mtime()
+        </h2>
+<pre>mtime($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_owner"></a><div class="element clickable method public method_owner" data-toggle="collapse" data-target=".method_owner .collapse">
+<h2>owner()
+        </h2>
+<pre>owner($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_parselisting"></a><div class="element clickable method public method_parselisting" data-toggle="collapse" data-target=".method_parselisting .collapse">
+<h2>parselisting()
+        </h2>
+<pre>parselisting($line) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$line</h4></div>
+</div></div>
+</div>
+<a id="method_put_contents"></a><div class="element clickable method public method_put_contents" data-toggle="collapse" data-target=".method_put_contents .collapse">
+<h2>put_contents()
+        </h2>
+<pre>put_contents($file, $contents, $mode) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$contents</h4></div>
+<div class="subelement argument"><h4>$mode</h4></div>
+</div></div>
+</div>
+<a id="method_rmdir"></a><div class="element clickable method public method_rmdir" data-toggle="collapse" data-target=".method_rmdir .collapse">
+<h2>rmdir()
+        </h2>
+<pre>rmdir($path, $recursive) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$recursive</h4></div>
+</div></div>
+</div>
+<a id="method_search_for_folder"></a><div class="element clickable method public method_search_for_folder" data-toggle="collapse" data-target=".method_search_for_folder .collapse">
+<h2>Locates a folder on the remote filesystem.</h2>
+<pre>search_for_folder(string $folder, string $base, bool $loop) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Expects Windows sanitized path</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::search_for_folder()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$folder</h4>
+<code>string</code><p>the folder to locate</p></div>
+<div class="subelement argument">
+<h4>$base</h4>
+<code>string</code><p>the folder to start searching from</p></div>
+<div class="subelement argument">
+<h4>$loop</h4>
+<code>bool</code><p>if the function has recursed, Internal use only</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_size"></a><div class="element clickable method public method_size" data-toggle="collapse" data-target=".method_size .collapse">
+<h2>size()
+        </h2>
+<pre>size($file) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+</div></div>
+</div>
+<a id="method_touch"></a><div class="element clickable method public method_touch" data-toggle="collapse" data-target=".method_touch .collapse">
+<h2>touch()
+        </h2>
+<pre>touch($file, $time, $atime) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$file</h4></div>
+<div class="subelement argument"><h4>$time</h4></div>
+<div class="subelement argument"><h4>$atime</h4></div>
+</div></div>
+</div>
+<a id="method_wp_content_dir"></a><div class="element clickable method public method_wp_content_dir" data-toggle="collapse" data-target=".method_wp_content_dir .collapse">
+<h2>Returns the path on the remote filesystem of WP_CONTENT_DIR</h2>
+<pre>wp_content_dir() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::wp_content_dir()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_wp_lang_dir"></a><div class="element clickable method public method_wp_lang_dir" data-toggle="collapse" data-target=".method_wp_lang_dir .collapse">
+<h2>Returns the path on the remote filesystem of WP_LANG_DIR</h2>
+<pre>wp_lang_dir() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.2.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::wp_lang_dir()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_wp_plugins_dir"></a><div class="element clickable method public method_wp_plugins_dir" data-toggle="collapse" data-target=".method_wp_plugins_dir .collapse">
+<h2>Returns the path on the remote filesystem of WP_PLUGIN_DIR</h2>
+<pre>wp_plugins_dir() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::wp_plugins_dir()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<a id="method_wp_themes_dir"></a><div class="element clickable method public method_wp_themes_dir" data-toggle="collapse" data-target=".method_wp_themes_dir .collapse">
+<h2>Returns the path on the remote filesystem of the Themes Directory</h2>
+<pre>wp_themes_dir() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::wp_themes_dir()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The location of the remote path.</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_cache"> </a><div class="element clickable property public property_cache" data-toggle="collapse" data-target=".property_cache .collapse">
+<h2>Cached list of local filepaths to mapped remote filepaths.</h2>
+<pre>$cache : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.7</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::$$cache</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_errors"> </a><div class="element clickable property public property_errors" data-toggle="collapse" data-target=".property_errors .collapse">
+<h2>$errors</h2>
+<pre>$errors </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_link"> </a><div class="element clickable property public property_link" data-toggle="collapse" data-target=".property_link .collapse">
+<h2>$link</h2>
+<pre>$link </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_method"> </a><div class="element clickable property public property_method" data-toggle="collapse" data-target=".property_method .collapse">
+<h2>The Access method of the current connection, Set automatically.</h2>
+<pre>$method : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::$$method</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_options"> </a><div class="element clickable property public property_options" data-toggle="collapse" data-target=".property_options .collapse">
+<h2>$options</h2>
+<pre>$options </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_verbose"> </a><div class="element clickable property public property_verbose" data-toggle="collapse" data-target=".property_verbose .collapse">
+<h2>Whether to display debug data for the connection.</h2>
+<pre>$verbose : bool</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\WP_Filesystem_Base::$$verbose</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:59-05:00.<br></footer></div>
+</div>
+</body>
+</html>

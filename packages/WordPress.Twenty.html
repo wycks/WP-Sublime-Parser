@@ -1,0 +1,943 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Twenty</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<span class="empty-package"><i class="icon-folder-close"></i>Twenty</span><ul class="nav nav-list nav-packages">
+<li>
+<a href="../packages/WordPress.Twenty.Eleven.html" title="Eleven"><i class="icon-folder-open"></i>Eleven</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li>
+<a href="../packages/WordPress.Twenty.Ten.html" title="Ten"><i class="icon-folder-open"></i>Ten</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Twenty.html">Twenty</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/WordPress.Twenty.html">Twenty</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Twenty.Eleven.html">Eleven</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_twentyeleven_admin_enqueue_scripts"></a><div class="element clickable function  function_twentyeleven_admin_enqueue_scripts" data-toggle="collapse" data-target=".function_twentyeleven_admin_enqueue_scripts .collapse">
+<h2>Properly enqueue styles and scripts for our theme options page.</h2>
+<pre>twentyeleven_admin_enqueue_scripts($hook_suffix) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is attached to the admin_enqueue_scripts action hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$hook_suffix</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_admin_header_image"></a><div class="element clickable function  function_twentyeleven_admin_header_image" data-toggle="collapse" data-target=".function_twentyeleven_admin_header_image .collapse">
+<h2>Custom header image markup displayed on the Appearance &gt; Header admin panel.</h2>
+<pre>twentyeleven_admin_header_image() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Referenced via add_theme_support('custom-header') in twentyeleven_setup().</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_admin_header_style"></a><div class="element clickable function  function_twentyeleven_admin_header_style" data-toggle="collapse" data-target=".function_twentyeleven_admin_header_style .collapse">
+<h2>Styles the header image displayed on the Appearance &gt; Header admin panel.</h2>
+<pre>twentyeleven_admin_header_style() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Referenced via add_theme_support('custom-header') in twentyeleven_setup().</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_auto_excerpt_more"></a><div class="element clickable function  function_twentyeleven_auto_excerpt_more" data-toggle="collapse" data-target=".function_twentyeleven_auto_excerpt_more .collapse">
+<h2>Replaces "[.</h2>
+<pre>twentyeleven_auto_excerpt_more($more) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>..]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link().</p>
+
+<p>To override this in a child theme, remove the filter and add your own
+function tied to the excerpt_more filter hook.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$more</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_body_classes"></a><div class="element clickable function  function_twentyeleven_body_classes" data-toggle="collapse" data-target=".function_twentyeleven_body_classes .collapse">
+<h2>Adds two classes to the array of body classes.</h2>
+<pre>twentyeleven_body_classes($classes) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The first is if the site has only had one author with published posts.
+The second is if a singular post being displayed</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$classes</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_color_schemes"></a><div class="element clickable function  function_twentyeleven_color_schemes" data-toggle="collapse" data-target=".function_twentyeleven_color_schemes .collapse">
+<h2>Returns an array of color schemes registered for Twenty Eleven.</h2>
+<pre>twentyeleven_color_schemes() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_comment"></a><div class="element clickable function  function_twentyeleven_comment" data-toggle="collapse" data-target=".function_twentyeleven_comment .collapse">
+<h2>Template for comments and pingbacks.</h2>
+<pre>twentyeleven_comment($comment, $args, $depth) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this walker in a child theme without modifying the comments template
+simply create your own twentyeleven_comment(), and that function will be used instead.</p>
+
+<p>Used as a callback by wp_list_comments() for displaying the comments.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$comment</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_content_nav"></a><div class="element clickable function  function_twentyeleven_content_nav" data-toggle="collapse" data-target=".function_twentyeleven_content_nav .collapse">
+<h2>Display navigation to next/previous pages when applicable</h2>
+<pre>twentyeleven_content_nav($nav_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$nav_id</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_continue_reading_link"></a><div class="element clickable function  function_twentyeleven_continue_reading_link" data-toggle="collapse" data-target=".function_twentyeleven_continue_reading_link .collapse">
+<h2>Returns a "Continue Reading" link for excerpts</h2>
+<pre>twentyeleven_continue_reading_link() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_twentyeleven_custom_excerpt_more"></a><div class="element clickable function  function_twentyeleven_custom_excerpt_more" data-toggle="collapse" data-target=".function_twentyeleven_custom_excerpt_more .collapse">
+<h2>Adds a pretty "Continue Reading" link to custom post excerpts.</h2>
+<pre>twentyeleven_custom_excerpt_more($output) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this link in a child theme, remove the filter and add your own
+function tied to the get_the_excerpt filter hook.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$output</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_customize_preview_js"></a><div class="element clickable function  function_twentyeleven_customize_preview_js" data-toggle="collapse" data-target=".function_twentyeleven_customize_preview_js .collapse">
+<h2>Bind JS handlers to make Theme Customizer preview reload changes asynchronously.</h2>
+<pre>twentyeleven_customize_preview_js() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Used with blogname and blogdescription.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.3</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_customize_register"></a><div class="element clickable function  function_twentyeleven_customize_register" data-toggle="collapse" data-target=".function_twentyeleven_customize_register .collapse">
+<h2>Implements Twenty Eleven theme options into Theme Customizer</h2>
+<pre>twentyeleven_customize_register(\$wp_customize $wp_customize) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.3</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$wp_customize</h4>
+<code>\$wp_customize</code><p>Theme Customizer object</p></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_enqueue_color_scheme"></a><div class="element clickable function  function_twentyeleven_enqueue_color_scheme" data-toggle="collapse" data-target=".function_twentyeleven_enqueue_color_scheme .collapse">
+<h2>Enqueue the styles for the current color scheme.</h2>
+<pre>twentyeleven_enqueue_color_scheme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_excerpt_length"></a><div class="element clickable function  function_twentyeleven_excerpt_length" data-toggle="collapse" data-target=".function_twentyeleven_excerpt_length .collapse">
+<h2>Sets the post excerpt length to 40 words.</h2>
+<pre>twentyeleven_excerpt_length($length) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this length in a child theme, remove the filter and add your own
+function tied to the excerpt_length filter hook.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$length</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_footer_sidebar_class"></a><div class="element clickable function  function_twentyeleven_footer_sidebar_class" data-toggle="collapse" data-target=".function_twentyeleven_footer_sidebar_class .collapse">
+<h2>Count the number of footer sidebars to enable dynamic classes for the footer</h2>
+<pre>twentyeleven_footer_sidebar_class() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_twentyeleven_get_default_link_color"></a><div class="element clickable function  function_twentyeleven_get_default_link_color" data-toggle="collapse" data-target=".function_twentyeleven_get_default_link_color .collapse">
+<h2>Returns the default link color for Twenty Eleven, based on color scheme.</h2>
+<pre>twentyeleven_get_default_link_color(\$string $color_scheme) : \$string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$color_scheme</h4>
+<code>\$string</code><p>Color scheme. Defaults to the active color scheme.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\$string</code>Color.</div>
+</div></div>
+</div>
+<a id="function_twentyeleven_get_default_theme_options"></a><div class="element clickable function  function_twentyeleven_get_default_theme_options" data-toggle="collapse" data-target=".function_twentyeleven_get_default_theme_options .collapse">
+<h2>Returns the default options for Twenty Eleven.</h2>
+<pre>twentyeleven_get_default_theme_options() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_get_theme_options"></a><div class="element clickable function  function_twentyeleven_get_theme_options" data-toggle="collapse" data-target=".function_twentyeleven_get_theme_options .collapse">
+<h2>Returns the options array for Twenty Eleven.</h2>
+<pre>twentyeleven_get_theme_options() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_header_style"></a><div class="element clickable function  function_twentyeleven_header_style" data-toggle="collapse" data-target=".function_twentyeleven_header_style .collapse">
+<h2>Styles the header image and text displayed on the blog</h2>
+<pre>twentyeleven_header_style() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_layout_classes"></a><div class="element clickable function  function_twentyeleven_layout_classes" data-toggle="collapse" data-target=".function_twentyeleven_layout_classes .collapse">
+<h2>Adds Twenty Eleven layout classes to the array of body classes.</h2>
+<pre>twentyeleven_layout_classes($existing_classes) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$existing_classes</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_layouts"></a><div class="element clickable function  function_twentyeleven_layouts" data-toggle="collapse" data-target=".function_twentyeleven_layouts .collapse">
+<h2>Returns an array of layout options registered for Twenty Eleven.</h2>
+<pre>twentyeleven_layouts() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_option_page_capability"></a><div class="element clickable function  function_twentyeleven_option_page_capability" data-toggle="collapse" data-target=".function_twentyeleven_option_page_capability .collapse">
+<h2>Change the capability required to save the 'twentyeleven_options' options group.</h2>
+<pre>twentyeleven_option_page_capability(string $capability) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\twentyeleven_theme_options_init()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\twentyeleven_theme_options_add_page()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$capability</h4>
+<code>string</code><p>The capability used for the page, which is manage_options by default.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The capability to actually use.</div>
+</div></div>
+</div>
+<a id="function_twentyeleven_page_menu_args"></a><div class="element clickable function  function_twentyeleven_page_menu_args" data-toggle="collapse" data-target=".function_twentyeleven_page_menu_args .collapse">
+<h2>Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.</h2>
+<pre>twentyeleven_page_menu_args($args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_posted_on"></a><div class="element clickable function  function_twentyeleven_posted_on" data-toggle="collapse" data-target=".function_twentyeleven_posted_on .collapse">
+<h2>Prints HTML with meta information for the current post-date/time and author.</h2>
+<pre>twentyeleven_posted_on() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Create your own twentyeleven_posted_on to override in a child theme</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_print_link_color_style"></a><div class="element clickable function  function_twentyeleven_print_link_color_style" data-toggle="collapse" data-target=".function_twentyeleven_print_link_color_style .collapse">
+<h2>Add a style block to the theme for the current link color.</h2>
+<pre>twentyeleven_print_link_color_style() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is attached to the wp_head action hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_settings_field_color_scheme"></a><div class="element clickable function  function_twentyeleven_settings_field_color_scheme" data-toggle="collapse" data-target=".function_twentyeleven_settings_field_color_scheme .collapse">
+<h2>Renders the Color Scheme setting field.</h2>
+<pre>twentyeleven_settings_field_color_scheme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.3</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_settings_field_layout"></a><div class="element clickable function  function_twentyeleven_settings_field_layout" data-toggle="collapse" data-target=".function_twentyeleven_settings_field_layout .collapse">
+<h2>Renders the Layout setting field.</h2>
+<pre>twentyeleven_settings_field_layout() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.3</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_settings_field_link_color"></a><div class="element clickable function  function_twentyeleven_settings_field_link_color" data-toggle="collapse" data-target=".function_twentyeleven_settings_field_link_color .collapse">
+<h2>Renders the Link Color setting field.</h2>
+<pre>twentyeleven_settings_field_link_color() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.3</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_setup"></a><div class="element clickable function  function_twentyeleven_setup" data-toggle="collapse" data-target=".function_twentyeleven_setup .collapse">
+<h2>Sets up theme defaults and registers support for various WordPress features.</h2>
+<pre>twentyeleven_setup() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note that this function is hooked into the after_setup_theme hook, which runs
+before the init hook. The init hook is too late for some features, such as indicating
+support post thumbnails.</p>
+
+<p>To override twentyeleven_setup() in a child theme, add your own twentyeleven_setup to your child theme's
+functions.php file.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\global\load_theme_textdomain()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_editor_style()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_theme_support()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\register_nav_menus()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\register_default_headers()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\set_post_thumbnail_size()</td>
+</tr>
+<tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_twentyeleven_theme_options_add_page"></a><div class="element clickable function  function_twentyeleven_theme_options_add_page" data-toggle="collapse" data-target=".function_twentyeleven_theme_options_add_page .collapse">
+<h2>Add our theme options page to the admin menu, including some help documentation.</h2>
+<pre>twentyeleven_theme_options_add_page() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is attached to the admin_menu action hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_theme_options_help"></a><div class="element clickable function  function_twentyeleven_theme_options_help" data-toggle="collapse" data-target=".function_twentyeleven_theme_options_help .collapse">
+<h2>twentyeleven_theme_options_help()
+        </h2>
+<pre>twentyeleven_theme_options_help() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="function_twentyeleven_theme_options_init"></a><div class="element clickable function  function_twentyeleven_theme_options_init" data-toggle="collapse" data-target=".function_twentyeleven_theme_options_init .collapse">
+<h2>Register the form setting for our twentyeleven_options array.</h2>
+<pre>twentyeleven_theme_options_init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is attached to the admin_init action hook.</p>
+
+<p>This call to register_setting() registers a validation callback, twentyeleven_theme_options_validate(),
+which is used when the option is saved, to ensure that our option values are complete, properly
+formatted, and safe.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_theme_options_render_page"></a><div class="element clickable function  function_twentyeleven_theme_options_render_page" data-toggle="collapse" data-target=".function_twentyeleven_theme_options_render_page .collapse">
+<h2>Returns the options array for Twenty Eleven.</h2>
+<pre>twentyeleven_theme_options_render_page() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.2</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyeleven_theme_options_validate"></a><div class="element clickable function  function_twentyeleven_theme_options_validate" data-toggle="collapse" data-target=".function_twentyeleven_theme_options_validate .collapse">
+<h2>Sanitize and validate form input.</h2>
+<pre>twentyeleven_theme_options_validate($input) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Accepts an array, return a sanitized array.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\twentyeleven_theme_options_init()</a></td>
+</tr>
+<tr>
+<th>todo</th>
+<td>set up Reset Options action</td>
+</tr>
+<tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$input</h4></div>
+</div></div>
+</div>
+<a id="function_twentyeleven_url_grabber"></a><div class="element clickable function  function_twentyeleven_url_grabber" data-toggle="collapse" data-target=".function_twentyeleven_url_grabber .collapse">
+<h2>Return the URL for the first link found in the post content.</h2>
+<pre>twentyeleven_url_grabber() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>URL or false when no link is present.</div>
+</div></div>
+</div>
+<a id="function_twentyeleven_widgets_init"></a><div class="element clickable function  function_twentyeleven_widgets_init" data-toggle="collapse" data-target=".function_twentyeleven_widgets_init .collapse">
+<h2>Register our sidebars and widgetized areas.</h2>
+<pre>twentyeleven_widgets_init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Also register the default Epherma widget.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Eleven 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="Twenty_Eleven_Ephemera_Widget" class="element ajax clickable class">
+<h1>Twenty_Eleven_Ephemera_Widget<a href="../classes/Twenty_Eleven_Ephemera_Widget.html">¶</a>
+</h1>
+<p class="short_description">Makes a custom Widget for displaying Aside, Link, Status, and Quote Posts available with Twenty Eleven</p>
+<div class="details collapse"></div>
+<a href="../classes/Twenty_Eleven_Ephemera_Widget.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_HEADER_IMAGE"> </a><div class="element clickable constant  constant_HEADER_IMAGE" data-toggle="collapse" data-target=".constant_HEADER_IMAGE .collapse">
+<h2>HEADER_IMAGE</h2>
+<pre>HEADER_IMAGE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE_HEIGHT"> </a><div class="element clickable constant  constant_HEADER_IMAGE_HEIGHT" data-toggle="collapse" data-target=".constant_HEADER_IMAGE_HEIGHT .collapse">
+<h2>HEADER_IMAGE_HEIGHT</h2>
+<pre>HEADER_IMAGE_HEIGHT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE_WIDTH"> </a><div class="element clickable constant  constant_HEADER_IMAGE_WIDTH" data-toggle="collapse" data-target=".constant_HEADER_IMAGE_WIDTH .collapse">
+<h2>HEADER_IMAGE_WIDTH</h2>
+<pre>HEADER_IMAGE_WIDTH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_TEXTCOLOR"> </a><div class="element clickable constant  constant_HEADER_TEXTCOLOR" data-toggle="collapse" data-target=".constant_HEADER_TEXTCOLOR .collapse">
+<h2>HEADER_TEXTCOLOR</h2>
+<pre>HEADER_TEXTCOLOR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/WordPress.Twenty.html">Twenty</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Twenty.Ten.html">Ten</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_twentyten_admin_header_style"></a><div class="element clickable function  function_twentyten_admin_header_style" data-toggle="collapse" data-target=".function_twentyten_admin_header_style .collapse">
+<h2>Styles the header image displayed on the Appearance &gt; Header admin panel.</h2>
+<pre>twentyten_admin_header_style() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Referenced via add_custom_image_header() in twentyten_setup().</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyten_auto_excerpt_more"></a><div class="element clickable function  function_twentyten_auto_excerpt_more" data-toggle="collapse" data-target=".function_twentyten_auto_excerpt_more .collapse">
+<h2>Replaces "[.</h2>
+<pre>twentyten_auto_excerpt_more($more) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>..]" (appended to automatically generated excerpts) with an ellipsis and twentyten_continue_reading_link().</p>
+
+<p>To override this in a child theme, remove the filter and add your own
+function tied to the excerpt_more filter hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$more</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>An ellipsis</div>
+</div></div>
+</div>
+<a id="function_twentyten_comment"></a><div class="element clickable function  function_twentyten_comment" data-toggle="collapse" data-target=".function_twentyten_comment .collapse">
+<h2>Template for comments and pingbacks.</h2>
+<pre>twentyten_comment($comment, $args, $depth) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this walker in a child theme without modifying the comments template
+simply create your own twentyten_comment(), and that function will be used instead.</p>
+
+<p>Used as a callback by wp_list_comments() for displaying the comments.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$comment</h4></div>
+<div class="subelement argument"><h4>$args</h4></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+</div></div>
+</div>
+<a id="function_twentyten_continue_reading_link"></a><div class="element clickable function  function_twentyten_continue_reading_link" data-toggle="collapse" data-target=".function_twentyten_continue_reading_link .collapse">
+<h2>Returns a "Continue Reading" link for excerpts</h2>
+<pre>twentyten_continue_reading_link() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>"Continue Reading" link</div>
+</div></div>
+</div>
+<a id="function_twentyten_custom_excerpt_more"></a><div class="element clickable function  function_twentyten_custom_excerpt_more" data-toggle="collapse" data-target=".function_twentyten_custom_excerpt_more .collapse">
+<h2>Adds a pretty "Continue Reading" link to custom post excerpts.</h2>
+<pre>twentyten_custom_excerpt_more($output) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this link in a child theme, remove the filter and add your own
+function tied to the get_the_excerpt filter hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$output</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Excerpt with a pretty "Continue Reading" link</div>
+</div></div>
+</div>
+<a id="function_twentyten_excerpt_length"></a><div class="element clickable function  function_twentyten_excerpt_length" data-toggle="collapse" data-target=".function_twentyten_excerpt_length .collapse">
+<h2>Sets the post excerpt length to 40 characters.</h2>
+<pre>twentyten_excerpt_length($length) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this length in a child theme, remove the filter and add your own
+function tied to the excerpt_length filter hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$length</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a id="function_twentyten_page_menu_args"></a><div class="element clickable function  function_twentyten_page_menu_args" data-toggle="collapse" data-target=".function_twentyten_page_menu_args .collapse">
+<h2>Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.</h2>
+<pre>twentyten_page_menu_args($args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this in a child theme, remove the filter and optionally add
+your own function tied to the wp_page_menu_args filter hook.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$args</h4></div>
+</div></div>
+</div>
+<a id="function_twentyten_posted_in"></a><div class="element clickable function  function_twentyten_posted_in" data-toggle="collapse" data-target=".function_twentyten_posted_in .collapse">
+<h2>Prints HTML with meta information for the current post (category, tags and permalink).</h2>
+<pre>twentyten_posted_in() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyten_posted_on"></a><div class="element clickable function  function_twentyten_posted_on" data-toggle="collapse" data-target=".function_twentyten_posted_on .collapse">
+<h2>Prints HTML with meta information for the current post-date/time and author.</h2>
+<pre>twentyten_posted_on() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyten_remove_gallery_css"></a><div class="element clickable function  function_twentyten_remove_gallery_css" data-toggle="collapse" data-target=".function_twentyten_remove_gallery_css .collapse">
+<h2>Deprecated way to remove inline styles printed when the gallery shortcode is used.</h2>
+<pre>twentyten_remove_gallery_css($css) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function is no longer needed or used. Use the use_default_gallery_style
+filter instead, as seen above.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr>
+<tr>
+<th>deprecated</th>
+<td>Deprecated in Twenty Ten 1.2 for WordPress 3.1</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$css</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The gallery style filter, with the styles themselves removed.</div>
+</div></div>
+</div>
+<a id="function_twentyten_remove_recent_comments_style"></a><div class="element clickable function  function_twentyten_remove_recent_comments_style" data-toggle="collapse" data-target=".function_twentyten_remove_recent_comments_style .collapse">
+<h2>Removes the default styles that are packaged with the Recent Comments widget.</h2>
+<pre>twentyten_remove_recent_comments_style() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override this in a child theme, remove the filter and optionally add your own
+function tied to the widgets_init action hook.</p>
+
+<p>This function uses a filter (show_recent_comments_widget_style) new in WordPress 3.1
+to remove the default style. Using Twenty Ten 1.2 in WordPress 3.0 will show the styles,
+but they won't have any effect on the widget in default Twenty Ten styling.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_twentyten_setup"></a><div class="element clickable function  function_twentyten_setup" data-toggle="collapse" data-target=".function_twentyten_setup .collapse">
+<h2>Sets up theme defaults and registers support for various WordPress features.</h2>
+<pre>twentyten_setup() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note that this function is hooked into the after_setup_theme hook, which runs
+before the init hook. The init hook is too late for some features, such as indicating
+support post thumbnails.</p>
+
+<p>To override twentyten_setup() in a child theme, add your own twentyten_setup to your child theme's
+functions.php file.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\global\add_theme_support()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\register_nav_menus()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\add_editor_style()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\load_theme_textdomain()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\register_default_headers()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\set_post_thumbnail_size()</td>
+</tr>
+<tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_twentyten_widgets_init"></a><div class="element clickable function  function_twentyten_widgets_init" data-toggle="collapse" data-target=".function_twentyten_widgets_init .collapse">
+<h2>Register widgetized areas, including two sidebars and four widget-ready columns in the footer.</h2>
+<pre>twentyten_widgets_init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>To override twentyten_widgets_init() in a child theme, remove the action hook and add your own
+function tied to the init hook.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>Twenty Ten 1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\register_sidebar</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_HEADER_IMAGE"> </a><div class="element clickable constant  constant_HEADER_IMAGE" data-toggle="collapse" data-target=".constant_HEADER_IMAGE .collapse">
+<h2>HEADER_IMAGE</h2>
+<pre>HEADER_IMAGE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE_HEIGHT"> </a><div class="element clickable constant  constant_HEADER_IMAGE_HEIGHT" data-toggle="collapse" data-target=".constant_HEADER_IMAGE_HEIGHT .collapse">
+<h2>HEADER_IMAGE_HEIGHT</h2>
+<pre>HEADER_IMAGE_HEIGHT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE_WIDTH"> </a><div class="element clickable constant  constant_HEADER_IMAGE_WIDTH" data-toggle="collapse" data-target=".constant_HEADER_IMAGE_WIDTH .collapse">
+<h2>HEADER_IMAGE_WIDTH</h2>
+<pre>HEADER_IMAGE_WIDTH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_TEXTCOLOR"> </a><div class="element clickable constant  constant_HEADER_TEXTCOLOR" data-toggle="collapse" data-target=".constant_HEADER_TEXTCOLOR .collapse">
+<h2>HEADER_TEXTCOLOR</h2>
+<pre>HEADER_TEXTCOLOR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_NO_HEADER_TEXT"> </a><div class="element clickable constant  constant_NO_HEADER_TEXT" data-toggle="collapse" data-target=".constant_NO_HEADER_TEXT .collapse">
+<h2>NO_HEADER_TEXT</h2>
+<pre>NO_HEADER_TEXT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:55-05:00.<br></footer></div>
+</div>
+</body>
+</html>

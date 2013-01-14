@@ -1,0 +1,1667 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \WP_Rewrite</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor - Calls init(), which runs setup."><span class="description">Constructor - Calls init(), which runs setup.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_add_endpoint" title="add_endpoint :: Add an endpoint, like /trackback/."><span class="description">Add an endpoint, like /trackback/.</span><pre>add_endpoint()</pre></a></li>
+<li class="method public "><a href="#method_add_external_rule" title="add_external_rule :: Add a rule that doesn't redirect to index.php."><span class="description">Add a rule that doesn't redirect to index.php.</span><pre>add_external_rule()</pre></a></li>
+<li class="method public "><a href="#method_add_permastruct" title="add_permastruct :: Add a new permalink structure."><span class="description">Add a new permalink structure.</span><pre>add_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_add_rewrite_tag" title="add_rewrite_tag :: Add or update existing rewrite tags (e.g."><span class="description">Add or update existing rewrite tags (e.g.</span><pre>add_rewrite_tag()</pre></a></li>
+<li class="method public "><a href="#method_add_rule" title="add_rule :: Add a straight rewrite rule."><span class="description">Add a straight rewrite rule.</span><pre>add_rule()</pre></a></li>
+<li class="method public "><a href="#method_flush_rules" title="flush_rules :: Remove rewrite rules and then recreate rewrite rules."><span class="description">Remove rewrite rules and then recreate rewrite rules.</span><pre>flush_rules()</pre></a></li>
+<li class="method public "><a href="#method_generate_rewrite_rule" title="generate_rewrite_rule :: Generate Rewrite rules with permalink structure and walking directory only."><span class="description">Generate Rewrite rules with permalink structure and walking directory only.</span><pre>generate_rewrite_rule()</pre></a></li>
+<li class="method public "><a href="#method_generate_rewrite_rules" title="generate_rewrite_rules :: Generate rewrite rules from a permalink structure."><span class="description">Generate rewrite rules from a permalink structure.</span><pre>generate_rewrite_rules()</pre></a></li>
+<li class="method public "><a href="#method_get_author_permastruct" title="get_author_permastruct :: Retrieve the author permalink structure."><span class="description">Retrieve the author permalink structure.</span><pre>get_author_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_category_permastruct" title="get_category_permastruct :: Retrieve the permalink structure for categories."><span class="description">Retrieve the permalink structure for categories.</span><pre>get_category_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_comment_feed_permastruct" title="get_comment_feed_permastruct :: Retrieve the comment feed permalink structure."><span class="description">Retrieve the comment feed permalink structure.</span><pre>get_comment_feed_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_date_permastruct" title="get_date_permastruct :: Retrieve date permalink structure, with year, month, and day."><span class="description">Retrieve date permalink structure, with year, month, and day.</span><pre>get_date_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_day_permastruct" title="get_day_permastruct :: Retrieve the day permalink structure with month and year."><span class="description">Retrieve the day permalink structure with month and year.</span><pre>get_day_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_extra_permastruct" title="get_extra_permastruct :: Retrieve extra permalink structure by name."><span class="description">Retrieve extra permalink structure by name.</span><pre>get_extra_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_feed_permastruct" title="get_feed_permastruct :: Retrieve the feed permalink structure."><span class="description">Retrieve the feed permalink structure.</span><pre>get_feed_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_month_permastruct" title="get_month_permastruct :: Retrieve the month permalink structure without day and with year."><span class="description">Retrieve the month permalink structure without day and with year.</span><pre>get_month_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_page_permastruct" title="get_page_permastruct :: Retrieve the page permalink structure."><span class="description">Retrieve the page permalink structure.</span><pre>get_page_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_search_permastruct" title="get_search_permastruct :: Retrieve the search permalink structure."><span class="description">Retrieve the search permalink structure.</span><pre>get_search_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_tag_permastruct" title="get_tag_permastruct :: Retrieve the permalink structure for tags."><span class="description">Retrieve the permalink structure for tags.</span><pre>get_tag_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_get_year_permastruct" title="get_year_permastruct :: Retrieve the year permalink structure without month and day."><span class="description">Retrieve the year permalink structure without month and day.</span><pre>get_year_permastruct()</pre></a></li>
+<li class="method public "><a href="#method_iis7_url_rewrite_rules" title="iis7_url_rewrite_rules :: Retrieve IIS7 URL Rewrite formatted rewrite rules to write to web.config file."><span class="description">Retrieve IIS7 URL Rewrite formatted rewrite rules to write to web.config file.</span><pre>iis7_url_rewrite_rules()</pre></a></li>
+<li class="method public "><a href="#method_init" title="init :: Sets up the object's properties."><span class="description">Sets up the object's properties.</span><pre>init()</pre></a></li>
+<li class="method public "><a href="#method_mod_rewrite_rules" title="mod_rewrite_rules :: Retrieve mod_rewrite formatted rewrite rules to write to .htaccess."><span class="description">Retrieve mod_rewrite formatted rewrite rules to write to .htaccess.</span><pre>mod_rewrite_rules()</pre></a></li>
+<li class="method public "><a href="#method_page_rewrite_rules" title="page_rewrite_rules :: Retrieve all of the rewrite rules for pages."><span class="description">Retrieve all of the rewrite rules for pages.</span><pre>page_rewrite_rules()</pre></a></li>
+<li class="method public "><a href="#method_page_uri_index" title="page_uri_index :: Retrieve all page and attachments for pages URIs."><span class="description">Retrieve all page and attachments for pages URIs.</span><pre>page_uri_index()</pre></a></li>
+<li class="method public "><a href="#method_preg_index" title="preg_index :: Index for matches for usage in preg_*() functions."><span class="description">Index for matches for usage in preg_*() functions.</span><pre>preg_index()</pre></a></li>
+<li class="method public "><a href="#method_rewrite_rules" title="rewrite_rules :: Construct rewrite matches and queries from permalink structure."><span class="description">Construct rewrite matches and queries from permalink structure.</span><pre>rewrite_rules()</pre></a></li>
+<li class="method public "><a href="#method_set_category_base" title="set_category_base :: Set the category base for the category permalink."><span class="description">Set the category base for the category permalink.</span><pre>set_category_base()</pre></a></li>
+<li class="method public "><a href="#method_set_permalink_structure" title="set_permalink_structure :: Set the main permalink structure for the blog."><span class="description">Set the main permalink structure for the blog.</span><pre>set_permalink_structure()</pre></a></li>
+<li class="method public "><a href="#method_set_tag_base" title="set_tag_base :: Set the tag base for the tag permalink."><span class="description">Set the tag base for the tag permalink.</span><pre>set_tag_base()</pre></a></li>
+<li class="method public "><a href="#method_using_index_permalinks" title="using_index_permalinks :: Whether permalinks are being used and rewrite module is not enabled."><span class="description">Whether permalinks are being used and rewrite module is not enabled.</span><pre>using_index_permalinks()</pre></a></li>
+<li class="method public "><a href="#method_using_mod_rewrite_permalinks" title="using_mod_rewrite_permalinks :: Whether permalinks are being used and rewrite module is enabled."><span class="description">Whether permalinks are being used and rewrite module is enabled.</span><pre>using_mod_rewrite_permalinks()</pre></a></li>
+<li class="method public "><a href="#method_using_permalinks" title="using_permalinks :: Whether permalinks are being used."><span class="description">Whether permalinks are being used.</span><pre>using_permalinks()</pre></a></li>
+<li class="method public "><a href="#method_wp_rewrite_rules" title="wp_rewrite_rules :: Retrieve the rewrite rules."><span class="description">Retrieve the rewrite rules.</span><pre>wp_rewrite_rules()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_author_base" title="$author_base :: Base for the author permalink structure (example.com/$author_base/authorname)."><span class="description">Base for the author permalink structure (example.com/$author_base/authorname).</span><pre>$author_base</pre></a></li>
+<li class="property public "><a href="#property_author_structure" title="$author_structure :: Permalink structure for author archives."><span class="description">Permalink structure for author archives.</span><pre>$author_structure</pre></a></li>
+<li class="property public "><a href="#property_comments_base" title="$comments_base :: Comments permalink base."><span class="description">Comments permalink base.</span><pre>$comments_base</pre></a></li>
+<li class="property public "><a href="#property_comments_feed_structure" title="$comments_feed_structure :: Comments feed permalink structure."><span class="description">Comments feed permalink structure.</span><pre>$comments_feed_structure</pre></a></li>
+<li class="property public "><a href="#property_date_structure" title="$date_structure :: Permalink structure for date archives."><span class="description">Permalink structure for date archives.</span><pre>$date_structure</pre></a></li>
+<li class="property public "><a href="#property_endpoints" title="$endpoints :: Endpoints (like /trackback/) added by {@link add_rewrite_endpoint()}."><span class="description">Endpoints (like /trackback/) added by {@link add_rewrite_endpoint()}.</span><pre>$endpoints</pre></a></li>
+<li class="property public "><a href="#property_extra_permastructs" title="$extra_permastructs :: Extra permalink structures, e.g."><span class="description">Extra permalink structures, e.g.</span><pre>$extra_permastructs</pre></a></li>
+<li class="property public "><a href="#property_extra_rules" title="$extra_rules :: Additional rules added external to the rewrite class."><span class="description">Additional rules added external to the rewrite class.</span><pre>$extra_rules</pre></a></li>
+<li class="property public "><a href="#property_extra_rules_top" title="$extra_rules_top :: Additional rules that belong at the beginning to match first."><span class="description">Additional rules that belong at the beginning to match first.</span><pre>$extra_rules_top</pre></a></li>
+<li class="property public "><a href="#property_feed_base" title="$feed_base :: Feed permalink base."><span class="description">Feed permalink base.</span><pre>$feed_base</pre></a></li>
+<li class="property public "><a href="#property_feed_structure" title="$feed_structure :: Feed request permalink structure."><span class="description">Feed request permalink structure.</span><pre>$feed_structure</pre></a></li>
+<li class="property public "><a href="#property_feeds" title="$feeds :: Supported default feeds."><span class="description">Supported default feeds.</span><pre>$feeds</pre></a></li>
+<li class="property public "><a href="#property_front" title="$front :: The static portion of the post permalink structure."><span class="description">The static portion of the post permalink structure.</span><pre>$front</pre></a></li>
+<li class="property public "><a href="#property_index" title="$index :: The name of the index file which is the entry point to all requests."><span class="description">The name of the index file which is the entry point to all requests.</span><pre>$index</pre></a></li>
+<li class="property public "><a href="#property_matches" title="$matches :: Variable name to use for regex matches in the rewritten query."><span class="description">Variable name to use for regex matches in the rewritten query.</span><pre>$matches</pre></a></li>
+<li class="property public "><a href="#property_non_wp_rules" title="$non_wp_rules :: Rules that don't redirect to WordPress' index.php."><span class="description">Rules that don't redirect to WordPress' index.php.</span><pre>$non_wp_rules</pre></a></li>
+<li class="property public "><a href="#property_page_structure" title="$page_structure :: Permalink structure for pages."><span class="description">Permalink structure for pages.</span><pre>$page_structure</pre></a></li>
+<li class="property public "><a href="#property_pagination_base" title="$pagination_base :: Pagination permalink base."><span class="description">Pagination permalink base.</span><pre>$pagination_base</pre></a></li>
+<li class="property public "><a href="#property_permalink_structure" title="$permalink_structure :: Permalink structure for posts."><span class="description">Permalink structure for posts.</span><pre>$permalink_structure</pre></a></li>
+<li class="property public "><a href="#property_queryreplace" title="$queryreplace :: Query variables that rewrite tags map to, see {@link WP_Rewrite::$rewritecode}."><span class="description">Query variables that rewrite tags map to, see {@link WP_Rewrite::$rewritecode}.</span><pre>$queryreplace</pre></a></li>
+<li class="property public "><a href="#property_rewritecode" title="$rewritecode :: Rewrite tags that can be used in permalink structures."><span class="description">Rewrite tags that can be used in permalink structures.</span><pre>$rewritecode</pre></a></li>
+<li class="property public "><a href="#property_rewritereplace" title="$rewritereplace :: Regular expressions to be substituted into rewrite rules in place
+of rewrite tags, see {@link WP_Rewrite::$rewritecode}."><span class="description">Regular expressions to be substituted into rewrite rules in place
+of rewrite tags, see {@link WP_Rewrite::$rewritecode}.</span><pre>$rewritereplace</pre></a></li>
+<li class="property public "><a href="#property_root" title="$root :: The prefix for all permalink structures."><span class="description">The prefix for all permalink structures.</span><pre>$root</pre></a></li>
+<li class="property public "><a href="#property_rules" title="$rules :: Rewrite rules to match against the request to find the redirect or query."><span class="description">Rewrite rules to match against the request to find the redirect or query.</span><pre>$rules</pre></a></li>
+<li class="property public "><a href="#property_search_base" title="$search_base :: Base of the search permalink structure (example.com/$search_base/query)."><span class="description">Base of the search permalink structure (example.com/$search_base/query).</span><pre>$search_base</pre></a></li>
+<li class="property public "><a href="#property_search_structure" title="$search_structure :: Permalink structure for searches."><span class="description">Permalink structure for searches.</span><pre>$search_structure</pre></a></li>
+<li class="property public "><a href="#property_use_trailing_slashes" title="$use_trailing_slashes :: Whether to add trailing slashes."><span class="description">Whether to add trailing slashes.</span><pre>$use_trailing_slashes</pre></a></li>
+<li class="property public "><a href="#property_use_verbose_page_rules" title="$use_verbose_page_rules :: Could post permalinks be confused with those of pages?"><span class="description">Could post permalinks be confused with those of pages?</span><pre>$use_verbose_page_rules</pre></a></li>
+<li class="property public "><a href="#property_use_verbose_rules" title="$use_verbose_rules :: Whether to write every mod_rewrite rule for WordPress into the .htaccess file."><span class="description">Whether to write every mod_rewrite rule for WordPress into the .htaccess file.</span><pre>$use_verbose_rules</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\WP_Rewrite"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/WP_Rewrite.html">WP_Rewrite</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">WordPress Rewrite Component.</p>
+<div class="details">
+<div class="long_description"><p>The WordPress Rewrite class writes the rewrite module rules to the .htaccess
+file. It also handles parsing the request to get the correct setup for the
+WordPress Query class.</p>
+
+<p>The Rewrite along with WP class function as a front controller for WordPress.
+You can add rules to trigger your page view and processing using this
+component. The full functionality of a front controller does not exist,
+meaning you can't define how the template files load based on the rewrite
+rules.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor - Calls init(), which runs setup.</h2>
+<pre>__construct() : <a href="../classes/WP_Rewrite.html">\WP_Rewrite</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/WP_Rewrite.html">\WP_Rewrite</a></code></div>
+</div></div>
+</div>
+<a id="method_add_endpoint"></a><div class="element clickable method public method_add_endpoint" data-toggle="collapse" data-target=".method_add_endpoint .collapse">
+<h2>Add an endpoint, like /trackback/.</h2>
+<pre>add_endpoint(string $name, int $places) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>See <a href="add_rewrite_endpoint()">add_rewrite_endpoint()</a> for full documentation.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\add_rewrite_endpoint()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\WP::add_query_var()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name of the endpoint.</p></div>
+<div class="subelement argument">
+<h4>$places</h4>
+<code>int</code><p>Endpoint mask describing the places the endpoint should be added.</p></div>
+</div></div>
+</div>
+<a id="method_add_external_rule"></a><div class="element clickable method public method_add_external_rule" data-toggle="collapse" data-target=".method_add_external_rule .collapse">
+<h2>Add a rule that doesn't redirect to index.php.</h2>
+<pre>add_external_rule(string $regex, string $redirect) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Can redirect to any place.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$regex</h4>
+<code>string</code><p>Regular expression to match against request.</p></div>
+<div class="subelement argument">
+<h4>$redirect</h4>
+<code>string</code><p>URL regex redirects to when regex matches request.</p></div>
+</div></div>
+</div>
+<a id="method_add_permastruct"></a><div class="element clickable method public method_add_permastruct" data-toggle="collapse" data-target=".method_add_permastruct .collapse">
+<h2>Add a new permalink structure.</h2>
+<pre>add_permastruct(string $name, string $struct, array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>A permalink structure (permastruct) is an abstract definition of a set of rewrite rules; it
+is an easy way of expressing a set of regular expressions that rewrite to a set of query strings.
+The new permastruct is added to the <a href="WP_Rewrite::$extra_permastructs">WP_Rewrite::$extra_permastructs</a> array. When the
+rewrite rules are built by <a href="WP_Rewrite::rewrite_rules()">WP_Rewrite::rewrite_rules()</a> all of these extra permastructs
+are passed to <a href="WP_Rewrite::generate_rewrite_rules()">WP_Rewrite::generate_rewrite_rules()</a> which transforms them into the
+regular expressions that many love to hate.</p>
+
+<p>The $args parameter gives you control over how <a href="WP_Rewrite::generate_rewrite_rules()">WP_Rewrite::generate_rewrite_rules()</a>
+works on the new permastruct.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name for permalink structure.</p></div>
+<div class="subelement argument">
+<h4>$struct</h4>
+<code>string</code><p>Permalink structure (e.g. category/%category%)</p>
+</div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Optional configuration for building the rules from the permalink structure: - with_front (bool) - Should the structure be prepended with WP_Rewrite::$front? Default is true. - ep_mask (int) - Endpoint mask defining what endpoints are added to the structure. Default is EP_NONE. - paged (bool) - Should archive pagination rules be added for the structure? Default is true. - feed (bool) - Should feed rewrite rules be added for the structure? Default is true. - forcomments (bool) - Should the feed rules be a query for a comments feed? Default is false. - walk_dirs (bool) - Should the 'directories' making up the structure be walked over and rewrite rules built for each in turn? Default is true. - endpoints (bool) - Should endpoints be applied to the generated rewrite rules? Default is true.</p>
+</div>
+</div></div>
+</div>
+<a id="method_add_rewrite_tag"></a><div class="element clickable method public method_add_rewrite_tag" data-toggle="collapse" data-target=".method_add_rewrite_tag .collapse">
+<h2>Add or update existing rewrite tags (e.g.</h2>
+<pre>add_rewrite_tag(string $tag, string $regex, string $query) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>%postname%).</p>
+
+<p>If the tag already exists, replace the existing pattern and query for
+that tag, otherwise add the new tag.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::$rewritecode</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::$rewritereplace</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::$queryreplace</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tag</h4>
+<code>string</code><p>Name of the rewrite tag to add or update.</p></div>
+<div class="subelement argument">
+<h4>$regex</h4>
+<code>string</code><p>Regular expression to substitute the tag for in rewrite rules.</p></div>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>String to append to the rewritten query. Must end in '='.</p>
+</div>
+</div></div>
+</div>
+<a id="method_add_rule"></a><div class="element clickable method public method_add_rule" data-toggle="collapse" data-target=".method_add_rule .collapse">
+<h2>Add a straight rewrite rule.</h2>
+<pre>add_rule(string $regex, string $redirect, string $after) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any value in the $after parameter that isn't 'bottom' will be placed at
+the top of the rules.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$regex</h4>
+<code>string</code><p>Regular expression to match against request.</p></div>
+<div class="subelement argument">
+<h4>$redirect</h4>
+<code>string</code><p>URL regex redirects to when regex matches request.</p></div>
+<div class="subelement argument">
+<h4>$after</h4>
+<code>string</code><p>Optional, default is bottom. Location to place rule.</p></div>
+</div></div>
+</div>
+<a id="method_flush_rules"></a><div class="element clickable method public method_flush_rules" data-toggle="collapse" data-target=".method_flush_rules .collapse">
+<h2>Remove rewrite rules and then recreate rewrite rules.</h2>
+<pre>flush_rules(bool $hard) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Calls <a href="WP_Rewrite::wp_rewrite_rules()">WP_Rewrite::wp_rewrite_rules()</a> after removing the
+'rewrite_rules' option. If the function named 'save_mod_rewrite_rules'
+exists, it will be called.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.1</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$hard</h4>
+<code>bool</code><p>Whether to update .htaccess (hard flush) or just update rewrite_rules option (soft flush). Default is true (hard).</p>
+</div>
+</div></div>
+</div>
+<a id="method_generate_rewrite_rule"></a><div class="element clickable method public method_generate_rewrite_rule" data-toggle="collapse" data-target=".method_generate_rewrite_rule .collapse">
+<h2>Generate Rewrite rules with permalink structure and walking directory only.</h2>
+<pre>generate_rewrite_rule(string $permalink_structure, bool $walk_dirs) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Shorten version of <a href="WP_Rewrite::generate_rewrite_rules()">WP_Rewrite::generate_rewrite_rules()</a> that
+allows for shorter list of parameters. See the method for longer
+description of what generating rewrite rules does.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\global\WP_Rewrite::generate_rewrite_rules()</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$permalink_structure</h4>
+<code>string</code><p>The permalink structure to generate rules.</p></div>
+<div class="subelement argument">
+<h4>$walk_dirs</h4>
+<code>bool</code><p>Optional, default is false. Whether to create list of directories to walk over.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_generate_rewrite_rules"></a><div class="element clickable method public method_generate_rewrite_rules" data-toggle="collapse" data-target=".method_generate_rewrite_rules .collapse">
+<h2>Generate rewrite rules from a permalink structure.</h2>
+<pre>generate_rewrite_rules(string $permalink_structure, int $ep_mask, bool $paged, bool $feed, bool $forcomments, bool $walk_dirs, bool $endpoints) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The main WP_Rewrite function for building the rewrite rule list. The
+contents of the function is a mix of black magic and regular expressions,
+so best just ignore the contents and move to the parameters.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$permalink_structure</h4>
+<code>string</code><p>The permalink structure.</p></div>
+<div class="subelement argument">
+<h4>$ep_mask</h4>
+<code>int</code><p>Endpoint mask defining what endpoints are added to the structure. Default is EP_NONE.</p></div>
+<div class="subelement argument">
+<h4>$paged</h4>
+<code>bool</code><p>Should archive pagination rules be added for the structure? Default is true.</p>
+</div>
+<div class="subelement argument">
+<h4>$feed</h4>
+<code>bool</code><p>Should feed rewrite rules be added for the structure? Default is true.</p>
+</div>
+<div class="subelement argument">
+<h4>$forcomments</h4>
+<code>bool</code><p>Should the feed rules be a query for a comments feed? Default is false.</p>
+</div>
+<div class="subelement argument">
+<h4>$walk_dirs</h4>
+<code>bool</code><p>Should the 'directories' making up the structure be walked over and rewrite rules built for each in turn? Default is true.</p>
+</div>
+<div class="subelement argument">
+<h4>$endpoints</h4>
+<code>bool</code><p>Should endpoints be applied to the generated rewrite rules? Default is true.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Rewrite rule list.</div>
+</div></div>
+</div>
+<a id="method_get_author_permastruct"></a><div class="element clickable method public method_get_author_permastruct" data-toggle="collapse" data-target=".method_get_author_permastruct .collapse">
+<h2>Retrieve the author permalink structure.</h2>
+<pre>get_author_permastruct() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The permalink structure is front property, author base, and finally
+'/%author%'. Will set the author_structure property and then return it
+without attempting to set the value again.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False if not found. Permalink structure string.</div>
+</div></div>
+</div>
+<a id="method_get_category_permastruct"></a><div class="element clickable method public method_get_category_permastruct" data-toggle="collapse" data-target=".method_get_category_permastruct .collapse">
+<h2>Retrieve the permalink structure for categories.</h2>
+<pre>get_category_permastruct() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the category_base property has no value, then the category structure
+will have the front property value, followed by 'category', and finally
+'%category%'. If it does, then the root property will be used, along with
+the category_base property value.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on failure. Category permalink structure.</div>
+</div></div>
+</div>
+<a id="method_get_comment_feed_permastruct"></a><div class="element clickable method public method_get_comment_feed_permastruct" data-toggle="collapse" data-target=".method_get_comment_feed_permastruct .collapse">
+<h2>Retrieve the comment feed permalink structure.</h2>
+<pre>get_comment_feed_permastruct() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The permalink structure is root property, comment base property, feed
+base and finally '/%feed%'. Will set the comment_feed_structure property
+and then return it without attempting to set the value again.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False if not found. Permalink structure string.</div>
+</div></div>
+</div>
+<a id="method_get_date_permastruct"></a><div class="element clickable method public method_get_date_permastruct" data-toggle="collapse" data-target=".method_get_date_permastruct .collapse">
+<h2>Retrieve date permalink structure, with year, month, and day.</h2>
+<pre>get_date_permastruct() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The permalink structure for the date, if not set already depends on the
+permalink structure. It can be one of three formats. The first is year,
+month, day; the second is day, month, year; and the last format is month,
+day, year. These are matched against the permalink structure for which
+one is used. If none matches, then the default will be used, which is
+year, month, day.</p>
+
+<p>Prevents post ID and date permalinks from overlapping. In the case of
+post_id, the date permalink will be prepended with front permalink with
+'date/' before the actual permalink to form the complete date permalink
+structure.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on no permalink structure. Date permalink structure.</div>
+</div></div>
+</div>
+<a id="method_get_day_permastruct"></a><div class="element clickable method public method_get_day_permastruct" data-toggle="collapse" data-target=".method_get_day_permastruct .collapse">
+<h2>Retrieve the day permalink structure with month and year.</h2>
+<pre>get_day_permastruct() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Keeps date permalink structure with all year, month, and day.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on failure. Year/Month/Day structure on success.</div>
+</div></div>
+</div>
+<a id="method_get_extra_permastruct"></a><div class="element clickable method public method_get_extra_permastruct" data-toggle="collapse" data-target=".method_get_extra_permastruct .collapse">
+<h2>Retrieve extra permalink structure by name.</h2>
+<pre>get_extra_permastruct(string $name) : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Permalink structure name.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False if not found. Permalink structure string.</div>
+</div></div>
+</div>
+<a id="method_get_feed_permastruct"></a><div class="element clickable method public method_get_feed_permastruct" data-toggle="collapse" data-target=".method_get_feed_permastruct .collapse">
+<h2>Retrieve the feed permalink structure.</h2>
+<pre>get_feed_permastruct() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The permalink structure is root property, feed base, and finally
+'/%feed%'. Will set the feed_structure property and then return it
+without attempting to set the value again.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False if not found. Permalink structure string.</div>
+</div></div>
+</div>
+<a id="method_get_month_permastruct"></a><div class="element clickable method public method_get_month_permastruct" data-toggle="collapse" data-target=".method_get_month_permastruct .collapse">
+<h2>Retrieve the month permalink structure without day and with year.</h2>
+<pre>get_month_permastruct() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Gets the date permalink structure and strips out the day permalink
+structures. Keeps the year permalink structure.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on failure. Year/Month structure on success.</div>
+</div></div>
+</div>
+<a id="method_get_page_permastruct"></a><div class="element clickable method public method_get_page_permastruct" data-toggle="collapse" data-target=".method_get_page_permastruct .collapse">
+<h2>Retrieve the page permalink structure.</h2>
+<pre>get_page_permastruct() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The permalink structure is root property, and '%pagename%'. Will set the
+page_structure property and then return it without attempting to set the
+value again.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False if not found. Permalink structure string.</div>
+</div></div>
+</div>
+<a id="method_get_search_permastruct"></a><div class="element clickable method public method_get_search_permastruct" data-toggle="collapse" data-target=".method_get_search_permastruct .collapse">
+<h2>Retrieve the search permalink structure.</h2>
+<pre>get_search_permastruct() : string | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The permalink structure is root property, search base, and finally
+'/%search%'. Will set the search_structure property and then return it
+without attempting to set the value again.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>bool</code>False if not found. Permalink structure string.</div>
+</div></div>
+</div>
+<a id="method_get_tag_permastruct"></a><div class="element clickable method public method_get_tag_permastruct" data-toggle="collapse" data-target=".method_get_tag_permastruct .collapse">
+<h2>Retrieve the permalink structure for tags.</h2>
+<pre>get_tag_permastruct() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the tag_base property has no value, then the tag structure will have
+the front property value, followed by 'tag', and finally '%tag%'. If it
+does, then the root property will be used, along with the tag_base
+property value.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on failure. Tag permalink structure.</div>
+</div></div>
+</div>
+<a id="method_get_year_permastruct"></a><div class="element clickable method public method_get_year_permastruct" data-toggle="collapse" data-target=".method_get_year_permastruct .collapse">
+<h2>Retrieve the year permalink structure without month and day.</h2>
+<pre>get_year_permastruct() : bool | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Gets the date permalink structure and strips out the month and day
+permalink structures.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>string</code>False on failure. Year structure on success.</div>
+</div></div>
+</div>
+<a id="method_iis7_url_rewrite_rules"></a><div class="element clickable method public method_iis7_url_rewrite_rules" data-toggle="collapse" data-target=".method_iis7_url_rewrite_rules .collapse">
+<h2>Retrieve IIS7 URL Rewrite formatted rewrite rules to write to web.config file.</h2>
+<pre>iis7_url_rewrite_rules($add_parent_tags) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does not actually write to the web.config file, but creates the rules for
+the process that will.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$add_parent_tags</h4></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_init"></a><div class="element clickable method public method_init" data-toggle="collapse" data-target=".method_init .collapse">
+<h2>Sets up the object's properties.</h2>
+<pre>init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The 'use_verbose_page_rules' object property will be set to true if the
+permalink structure begins with one of the following: '%postname%', '%category%',
+'%tag%', or '%author%'.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_mod_rewrite_rules"></a><div class="element clickable method public method_mod_rewrite_rules" data-toggle="collapse" data-target=".method_mod_rewrite_rules .collapse">
+<h2>Retrieve mod_rewrite formatted rewrite rules to write to .htaccess.</h2>
+<pre>mod_rewrite_rules() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does not actually write to the .htaccess file, but creates the rules for
+the process that will.</p>
+
+<p>Will add the non_wp_rules property rules to the .htaccess file before
+the WordPress rewrite rules one.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_page_rewrite_rules"></a><div class="element clickable method public method_page_rewrite_rules" data-toggle="collapse" data-target=".method_page_rewrite_rules .collapse">
+<h2>Retrieve all of the rewrite rules for pages.</h2>
+<pre>page_rewrite_rules() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_page_uri_index"></a><div class="element clickable method public method_page_uri_index" data-toggle="collapse" data-target=".method_page_uri_index .collapse">
+<h2>Retrieve all page and attachments for pages URIs.</h2>
+<pre>page_uri_index() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The attachments are for those that have pages as parents and will be
+retrieved.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of page URIs as first element and attachment URIs as second element.</div>
+</div></div>
+</div>
+<a id="method_preg_index"></a><div class="element clickable method public method_preg_index" data-toggle="collapse" data-target=".method_preg_index .collapse">
+<h2>Index for matches for usage in preg_*() functions.</h2>
+<pre>preg_index(int $number) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The format of the string is, with empty matches property value, '$NUM'.
+The 'NUM' will be replaced with the value in the $number parameter. With
+the matches property not empty, the value of the returned string will
+contain that value of the matches property. The format then will be
+'$MATCHES[NUM]', with MATCHES as the value in the property and NUM the
+value of the $number parameter.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$number</h4>
+<code>int</code><p>Index number.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_rewrite_rules"></a><div class="element clickable method public method_rewrite_rules" data-toggle="collapse" data-target=".method_rewrite_rules .collapse">
+<h2>Construct rewrite matches and queries from permalink structure.</h2>
+<pre>rewrite_rules() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Runs the action 'generate_rewrite_rules' with the parameter that is an
+reference to the current WP_Rewrite instance to further manipulate the
+permalink structures and rewrite rules. Runs the 'rewrite_rules_array'
+filter on the full rewrite rule array.</p>
+
+<p>There are two ways to manipulate the rewrite rules, one by hooking into
+the 'generate_rewrite_rules' action and gaining full control of the
+object or just manipulating the rewrite rule array before it is passed
+from the function.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An associate array of matches and queries.</div>
+</div></div>
+</div>
+<a id="method_set_category_base"></a><div class="element clickable method public method_set_category_base" data-toggle="collapse" data-target=".method_set_category_base .collapse">
+<h2>Set the category base for the category permalink.</h2>
+<pre>set_category_base(string $category_base) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will update the 'category_base' option, if there is a difference between
+the current category base and the parameter value. Calls
+<a href="WP_Rewrite::init()">WP_Rewrite::init()</a> after the option is updated.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$category_base</h4>
+<code>string</code><p>Category permalink structure base.</p></div>
+</div></div>
+</div>
+<a id="method_set_permalink_structure"></a><div class="element clickable method public method_set_permalink_structure" data-toggle="collapse" data-target=".method_set_permalink_structure .collapse">
+<h2>Set the main permalink structure for the blog.</h2>
+<pre>set_permalink_structure(string $permalink_structure) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will update the 'permalink_structure' option, if there is a difference
+between the current permalink structure and the parameter value. Calls
+<a href="WP_Rewrite::init()">WP_Rewrite::init()</a> after the option is updated.</p>
+
+<p>Fires the 'permalink_structure_changed' action once the init call has
+processed passing the old and new values</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$permalink_structure</h4>
+<code>string</code><p>Permalink structure.</p></div>
+</div></div>
+</div>
+<a id="method_set_tag_base"></a><div class="element clickable method public method_set_tag_base" data-toggle="collapse" data-target=".method_set_tag_base .collapse">
+<h2>Set the tag base for the tag permalink.</h2>
+<pre>set_tag_base(string $tag_base) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will update the 'tag_base' option, if there is a difference between the
+current tag base and the parameter value. Calls
+<a href="WP_Rewrite::init()">WP_Rewrite::init()</a> after the option is updated.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tag_base</h4>
+<code>string</code><p>Tag permalink structure base.</p></div>
+</div></div>
+</div>
+<a id="method_using_index_permalinks"></a><div class="element clickable method public method_using_index_permalinks" data-toggle="collapse" data-target=".method_using_index_permalinks .collapse">
+<h2>Whether permalinks are being used and rewrite module is not enabled.</h2>
+<pre>using_index_permalinks() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Means that permalink links are enabled and index.php is in the URL.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_using_mod_rewrite_permalinks"></a><div class="element clickable method public method_using_mod_rewrite_permalinks" data-toggle="collapse" data-target=".method_using_mod_rewrite_permalinks .collapse">
+<h2>Whether permalinks are being used and rewrite module is enabled.</h2>
+<pre>using_mod_rewrite_permalinks() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Using permalinks and index.php is not in the URL.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="method_using_permalinks"></a><div class="element clickable method public method_using_permalinks" data-toggle="collapse" data-target=".method_using_permalinks .collapse">
+<h2>Whether permalinks are being used.</h2>
+<pre>using_permalinks() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This can be either rewrite module or permalink in the HTTP query string.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True, if permalinks are enabled.</div>
+</div></div>
+</div>
+<a id="method_wp_rewrite_rules"></a><div class="element clickable method public method_wp_rewrite_rules" data-toggle="collapse" data-target=".method_wp_rewrite_rules .collapse">
+<h2>Retrieve the rewrite rules.</h2>
+<pre>wp_rewrite_rules() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The difference between this method and {@link
+WP_Rewrite::rewrite_rules()} is that this method stores the rewrite rules
+in the 'rewrite_rules' option and retrieves it. This prevents having to
+process all of the permalinks to get the rewrite rules in the form of
+caching.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Rewrite rules.</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_author_base"> </a><div class="element clickable property public property_author_base" data-toggle="collapse" data-target=".property_author_base .collapse">
+<h2>Base for the author permalink structure (example.com/$author_base/authorname).</h2>
+<pre>$author_base : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_author_structure"> </a><div class="element clickable property public property_author_structure" data-toggle="collapse" data-target=".property_author_structure .collapse">
+<h2>Permalink structure for author archives.</h2>
+<pre>$author_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_comments_base"> </a><div class="element clickable property public property_comments_base" data-toggle="collapse" data-target=".property_comments_base .collapse">
+<h2>Comments permalink base.</h2>
+<pre>$comments_base : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_comments_feed_structure"> </a><div class="element clickable property public property_comments_feed_structure" data-toggle="collapse" data-target=".property_comments_feed_structure .collapse">
+<h2>Comments feed permalink structure.</h2>
+<pre>$comments_feed_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_date_structure"> </a><div class="element clickable property public property_date_structure" data-toggle="collapse" data-target=".property_date_structure .collapse">
+<h2>Permalink structure for date archives.</h2>
+<pre>$date_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_endpoints"> </a><div class="element clickable property public property_endpoints" data-toggle="collapse" data-target=".property_endpoints .collapse">
+<h2>Endpoints (like /trackback/) added by {@link add_rewrite_endpoint()}.</h2>
+<pre>$endpoints : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_extra_permastructs"> </a><div class="element clickable property public property_extra_permastructs" data-toggle="collapse" data-target=".property_extra_permastructs .collapse">
+<h2>Extra permalink structures, e.g.</h2>
+<pre>$extra_permastructs : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>categories, added by <a href="add_permastruct()">add_permastruct()</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_extra_rules"> </a><div class="element clickable property public property_extra_rules" data-toggle="collapse" data-target=".property_extra_rules .collapse">
+<h2>Additional rules added external to the rewrite class.</h2>
+<pre>$extra_rules : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Those not generated by the class, see add_rewrite_rule().</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_extra_rules_top"> </a><div class="element clickable property public property_extra_rules_top" data-toggle="collapse" data-target=".property_extra_rules_top .collapse">
+<h2>Additional rules that belong at the beginning to match first.</h2>
+<pre>$extra_rules_top : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Those not generated by the class, see add_rewrite_rule().</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_feed_base"> </a><div class="element clickable property public property_feed_base" data-toggle="collapse" data-target=".property_feed_base .collapse">
+<h2>Feed permalink base.</h2>
+<pre>$feed_base : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_feed_structure"> </a><div class="element clickable property public property_feed_structure" data-toggle="collapse" data-target=".property_feed_structure .collapse">
+<h2>Feed request permalink structure.</h2>
+<pre>$feed_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_feeds"> </a><div class="element clickable property public property_feeds" data-toggle="collapse" data-target=".property_feeds .collapse">
+<h2>Supported default feeds.</h2>
+<pre>$feeds : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_front"> </a><div class="element clickable property public property_front" data-toggle="collapse" data-target=".property_front .collapse">
+<h2>The static portion of the post permalink structure.</h2>
+<pre>$front : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the permalink structure is "/archive/%post_id%" then the front
+is "/archive/". If the permalink structure is "/%year%/%postname%/"
+then the front is "/".</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::init()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_index"> </a><div class="element clickable property public property_index" data-toggle="collapse" data-target=".property_index .collapse">
+<h2>The name of the index file which is the entry point to all requests.</h2>
+<pre>$index : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_matches"> </a><div class="element clickable property public property_matches" data-toggle="collapse" data-target=".property_matches .collapse">
+<h2>Variable name to use for regex matches in the rewritten query.</h2>
+<pre>$matches : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_non_wp_rules"> </a><div class="element clickable property public property_non_wp_rules" data-toggle="collapse" data-target=".property_non_wp_rules .collapse">
+<h2>Rules that don't redirect to WordPress' index.php.</h2>
+<pre>$non_wp_rules : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>These rules are written to the mod_rewrite portion of the .htaccess,
+and are added by <a href="add_external_rule()">add_external_rule()</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_page_structure"> </a><div class="element clickable property public property_page_structure" data-toggle="collapse" data-target=".property_page_structure .collapse">
+<h2>Permalink structure for pages.</h2>
+<pre>$page_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_pagination_base"> </a><div class="element clickable property public property_pagination_base" data-toggle="collapse" data-target=".property_pagination_base .collapse">
+<h2>Pagination permalink base.</h2>
+<pre>$pagination_base : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_permalink_structure"> </a><div class="element clickable property public property_permalink_structure" data-toggle="collapse" data-target=".property_permalink_structure .collapse">
+<h2>Permalink structure for posts.</h2>
+<pre>$permalink_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_queryreplace"> </a><div class="element clickable property public property_queryreplace" data-toggle="collapse" data-target=".property_queryreplace .collapse">
+<h2>Query variables that rewrite tags map to, see {@link WP_Rewrite::$rewritecode}.</h2>
+<pre>$queryreplace : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_rewritecode"> </a><div class="element clickable property public property_rewritecode" data-toggle="collapse" data-target=".property_rewritecode .collapse">
+<h2>Rewrite tags that can be used in permalink structures.</h2>
+<pre>$rewritecode : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>These are translated into the regular expressions stored in
+<a href="WP_Rewrite::$rewritereplace">WP_Rewrite::$rewritereplace</a> and are rewritten to the
+query variables listed in <a href="WP_Rewrite::$queryreplace">WP_Rewrite::$queryreplace</a>.</p>
+
+<p>Additional tags can be added with <a href="add_rewrite_tag()">add_rewrite_tag()</a>.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_rewritereplace"> </a><div class="element clickable property public property_rewritereplace" data-toggle="collapse" data-target=".property_rewritereplace .collapse">
+<h2>Regular expressions to be substituted into rewrite rules in place
+of rewrite tags, see {@link WP_Rewrite::$rewritecode}.</h2>
+<pre>$rewritereplace : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_root"> </a><div class="element clickable property public property_root" data-toggle="collapse" data-target=".property_root .collapse">
+<h2>The prefix for all permalink structures.</h2>
+<pre>$root : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If PATHINFO/index permalinks are in use then the root is the value of
+<a href="WP_Rewrite::$index">WP_Rewrite::$index</a> with a trailing slash appended. Otherwise
+the root will be empty.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::init()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::using_index_permalinks()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_rules"> </a><div class="element clickable property public property_rules" data-toggle="collapse" data-target=".property_rules .collapse">
+<h2>Rewrite rules to match against the request to find the redirect or query.</h2>
+<pre>$rules : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_search_base"> </a><div class="element clickable property public property_search_base" data-toggle="collapse" data-target=".property_search_base .collapse">
+<h2>Base of the search permalink structure (example.com/$search_base/query).</h2>
+<pre>$search_base : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_search_structure"> </a><div class="element clickable property public property_search_structure" data-toggle="collapse" data-target=".property_search_structure .collapse">
+<h2>Permalink structure for searches.</h2>
+<pre>$search_structure : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_use_trailing_slashes"> </a><div class="element clickable property public property_use_trailing_slashes" data-toggle="collapse" data-target=".property_use_trailing_slashes .collapse">
+<h2>Whether to add trailing slashes.</h2>
+<pre>$use_trailing_slashes : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_use_verbose_page_rules"> </a><div class="element clickable property public property_use_verbose_page_rules" data-toggle="collapse" data-target=".property_use_verbose_page_rules .collapse">
+<h2>Could post permalinks be confused with those of pages?</h2>
+<pre>$use_verbose_page_rules : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the first rewrite tag in the post permalink structure is one that could
+also match a page name (e.g. %postname% or %author%) then this flag is
+set to true. Prior to WordPress 3.3 this flag indicated that every page
+would have a set of rules added to the top of the rewrite rules array.
+Now it tells <a href="WP::parse_request()">WP::parse_request()</a> to check if a URL matching the
+page permastruct is actually a page before accepting it.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>link</th>
+<td><a href="http://core.trac.wordpress.org/ticket/16687">http://core.trac.wordpress.org/ticket/16687</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::init()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="property_use_verbose_rules"> </a><div class="element clickable property public property_use_verbose_rules" data-toggle="collapse" data-target=".property_use_verbose_rules .collapse">
+<h2>Whether to write every mod_rewrite rule for WordPress into the .htaccess file.</h2>
+<pre>$use_verbose_rules : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is off by default, turning it on might print a lot of rewrite rules
+to the .htaccess file.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Rewrite::mod_rewrite_rules()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>public</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

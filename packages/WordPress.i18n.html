@@ -1,0 +1,875 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\i18n</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.i18n.html" title="i18n"><i class="icon-folder-open"></i>i18n</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function___" title="__ :: Retrieves the translation of $text."><span class="description">Retrieves the translation of $text.</span><pre>__</pre></a></li>
+<li class="function  "><a href="#function__e" title="_e :: Displays the returned translated text from translate()."><span class="description">Displays the returned translated text from translate().</span><pre>_e</pre></a></li>
+<li class="function  "><a href="#function__ex" title="_ex :: Displays translated string with gettext context"><span class="description">Displays translated string with gettext context</span><pre>_ex</pre></a></li>
+<li class="function  "><a href="#function__n" title="_n :: Retrieve the plural or single form based on the amount."><span class="description">Retrieve the plural or single form based on the amount.</span><pre>_n</pre></a></li>
+<li class="function  "><a href="#function__n_noop" title="_n_noop :: Register plural strings in POT file, but don't translate them."><span class="description">Register plural strings in POT file, but don't translate them.</span><pre>_n_noop</pre></a></li>
+<li class="function  "><a href="#function__nx" title="_nx :: A hybrid of _n() and _x()."><span class="description">A hybrid of _n() and _x().</span><pre>_nx</pre></a></li>
+<li class="function  "><a href="#function__nx_noop" title="_nx_noop :: Register plural strings with context in POT file, but don't translate them."><span class="description">Register plural strings with context in POT file, but don't translate them.</span><pre>_nx_noop</pre></a></li>
+<li class="function  "><a href="#function__x" title="_x :: Retrieve translated string with gettext context"><span class="description">Retrieve translated string with gettext context</span><pre>_x</pre></a></li>
+<li class="function  "><a href="#function_before_last_bar" title="before_last_bar :: "><span class="description">before_last_bar()
+        </span><pre>before_last_bar</pre></a></li>
+<li class="function  "><a href="#function_esc_attr__" title="esc_attr__ :: Retrieves the translation of $text and escapes it for safe use in an attribute."><span class="description">Retrieves the translation of $text and escapes it for safe use in an attribute.</span><pre>esc_attr__</pre></a></li>
+<li class="function  "><a href="#function_esc_attr_e" title="esc_attr_e :: Displays translated text that has been escaped for safe use in an attribute."><span class="description">Displays translated text that has been escaped for safe use in an attribute.</span><pre>esc_attr_e</pre></a></li>
+<li class="function  "><a href="#function_esc_attr_x" title="esc_attr_x :: "><span class="description">esc_attr_x()
+        </span><pre>esc_attr_x</pre></a></li>
+<li class="function  "><a href="#function_esc_html__" title="esc_html__ :: Retrieves the translation of $text and escapes it for safe use in HTML output."><span class="description">Retrieves the translation of $text and escapes it for safe use in HTML output.</span><pre>esc_html__</pre></a></li>
+<li class="function  "><a href="#function_esc_html_e" title="esc_html_e :: Displays translated text that has been escaped for safe use in HTML output."><span class="description">Displays translated text that has been escaped for safe use in HTML output.</span><pre>esc_html_e</pre></a></li>
+<li class="function  "><a href="#function_esc_html_x" title="esc_html_x :: "><span class="description">esc_html_x()
+        </span><pre>esc_html_x</pre></a></li>
+<li class="function  "><a href="#function_get_available_languages" title="get_available_languages :: Get all available languages based on the presence of *.mo files in a given directory."><span class="description">Get all available languages based on the presence of *.mo files in a given directory.</span><pre>get_available_languages</pre></a></li>
+<li class="function  "><a href="#function_get_locale" title="get_locale :: Gets the current locale."><span class="description">Gets the current locale.</span><pre>get_locale</pre></a></li>
+<li class="function  "><a href="#function_get_translations_for_domain" title="get_translations_for_domain :: Returns the Translations instance for a domain."><span class="description">Returns the Translations instance for a domain.</span><pre>get_translations_for_domain</pre></a></li>
+<li class="function  "><a href="#function_is_rtl" title="is_rtl :: Checks if current locale is RTL."><span class="description">Checks if current locale is RTL.</span><pre>is_rtl</pre></a></li>
+<li class="function  "><a href="#function_is_textdomain_loaded" title="is_textdomain_loaded :: Whether there are translations for the domain"><span class="description">Whether there are translations for the domain</span><pre>is_textdomain_loaded</pre></a></li>
+<li class="function  "><a href="#function_load_child_theme_textdomain" title="load_child_theme_textdomain :: Loads the child themes translated strings."><span class="description">Loads the child themes translated strings.</span><pre>load_child_theme_textdomain</pre></a></li>
+<li class="function  "><a href="#function_load_default_textdomain" title="load_default_textdomain :: Loads default translated strings based on locale."><span class="description">Loads default translated strings based on locale.</span><pre>load_default_textdomain</pre></a></li>
+<li class="function  "><a href="#function_load_muplugin_textdomain" title="load_muplugin_textdomain :: Load the translated strings for a plugin residing in the mu-plugins dir."><span class="description">Load the translated strings for a plugin residing in the mu-plugins dir.</span><pre>load_muplugin_textdomain</pre></a></li>
+<li class="function  "><a href="#function_load_plugin_textdomain" title="load_plugin_textdomain :: Loads the plugin's translated strings."><span class="description">Loads the plugin's translated strings.</span><pre>load_plugin_textdomain</pre></a></li>
+<li class="function  "><a href="#function_load_textdomain" title="load_textdomain :: Loads a MO file into the domain $domain."><span class="description">Loads a MO file into the domain $domain.</span><pre>load_textdomain</pre></a></li>
+<li class="function  "><a href="#function_load_theme_textdomain" title="load_theme_textdomain :: Loads the theme's translated strings."><span class="description">Loads the theme's translated strings.</span><pre>load_theme_textdomain</pre></a></li>
+<li class="function  "><a href="#function_translate" title="translate :: Retrieves the translation of $text."><span class="description">Retrieves the translation of $text.</span><pre>translate</pre></a></li>
+<li class="function  "><a href="#function_translate_nooped_plural" title="translate_nooped_plural :: Translate the result of _n_noop() or _nx_noop()"><span class="description">Translate the result of _n_noop() or _nx_noop()</span><pre>translate_nooped_plural</pre></a></li>
+<li class="function  "><a href="#function_translate_user_role" title="translate_user_role :: Translates role name."><span class="description">Translates role name.</span><pre>translate_user_role</pre></a></li>
+<li class="function  "><a href="#function_translate_with_gettext_context" title="translate_with_gettext_context :: "><span class="description">translate_with_gettext_context()
+        </span><pre>translate_with_gettext_context</pre></a></li>
+<li class="function  "><a href="#function_unload_textdomain" title="unload_textdomain :: Unloads translations for a domain"><span class="description">Unloads translations for a domain</span><pre>unload_textdomain</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.i18n.html">i18n</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function___"></a><div class="element clickable function  function___" data-toggle="collapse" data-target=".function___ .collapse">
+<h2>Retrieves the translation of $text.</h2>
+<pre>__(string $text, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If there is no translation, or
+the domain isn't loaded, the original text is returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\translate()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Translated text</div>
+</div></div>
+</div>
+<a id="function__e"></a><div class="element clickable function  function__e" data-toggle="collapse" data-target=".function__e .collapse">
+<h2>Displays the returned translated text from translate().</h2>
+<pre>_e(string $text, string $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\translate()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.2.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+</div></div>
+</div>
+<a id="function__ex"></a><div class="element clickable function  function__ex" data-toggle="collapse" data-target=".function__ex .collapse">
+<h2>Displays translated string with gettext context</h2>
+<pre>_ex(string $text, string $context, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\_x</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>string</code><p>Context information for the translators</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Translated context string without pipe</div>
+</div></div>
+</div>
+<a id="function__n"></a><div class="element clickable function  function__n" data-toggle="collapse" data-target=".function__n .collapse">
+<h2>Retrieve the plural or single form based on the amount.</h2>
+<pre>_n(string $single, string $plural, int $number, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the domain is not set in the $l10n list, then a comparison will be made
+and either $plural or $single parameters returned.</p>
+
+<p>If the domain does exist, then the parameters $single, $plural, and $number
+will first be passed to the domain's ngettext method. Then it will be passed
+to the 'ngettext' filter hook along with the same parameters. The expected
+type will be a string.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$l10n</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$single</h4>
+<code>string</code><p>The text that will be used if $number is 1</p>
+</div>
+<div class="subelement argument">
+<h4>$plural</h4>
+<code>string</code><p>The text that will be used if $number is not 1</p>
+</div>
+<div class="subelement argument">
+<h4>$number</h4>
+<code>int</code><p>The number to compare against to use either $single or $plural</p>
+</div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. The domain identifier the text should be retrieved in</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Either $single or $plural translated text</div>
+</div></div>
+</div>
+<a id="function__n_noop"></a><div class="element clickable function  function__n_noop" data-toggle="collapse" data-target=".function__n_noop .collapse">
+<h2>Register plural strings in POT file, but don't translate them.</h2>
+<pre>_n_noop(string $singular, string $plural, string $domain) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Used when you want to keep structures with translatable plural strings and
+use them later.</p>
+
+<p>Example:
+ $messages = array(
+    'post' => _n_noop('%s post', '%s posts'),
+    'page' => _n_noop('%s pages', '%s pages')
+ );
+ ...
+ $message = $messages[$type];
+ $usable_text = sprintf( translate_nooped_plural( $message, $count ), $count );</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.5</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$singular</h4>
+<code>string</code><p>Single form to be i18ned</p></div>
+<div class="subelement argument">
+<h4>$plural</h4>
+<code>string</code><p>Plural form to be i18ned</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. The domain identifier the text will be retrieved in</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>array($singular, $plural)</div>
+</div></div>
+</div>
+<a id="function__nx"></a><div class="element clickable function  function__nx" data-toggle="collapse" data-target=".function__nx .collapse">
+<h2>A hybrid of _n() and _x().</h2>
+<pre>_nx($single, $plural, $number, $context, $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>It supports contexts and plurals.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\_n()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\_x()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$single</h4></div>
+<div class="subelement argument"><h4>$plural</h4></div>
+<div class="subelement argument"><h4>$number</h4></div>
+<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument"><h4>$domain</h4></div>
+</div></div>
+</div>
+<a id="function__nx_noop"></a><div class="element clickable function  function__nx_noop" data-toggle="collapse" data-target=".function__nx_noop .collapse">
+<h2>Register plural strings with context in POT file, but don't translate them.</h2>
+<pre>_nx_noop($singular, $plural, $context, $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="">\global\_n_noop()</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$singular</h4></div>
+<div class="subelement argument"><h4>$plural</h4></div>
+<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument"><h4>$domain</h4></div>
+</div></div>
+</div>
+<a id="function__x"></a><div class="element clickable function  function__x" data-toggle="collapse" data-target=".function__x .collapse">
+<h2>Retrieve translated string with gettext context</h2>
+<pre>_x(string $text, string $context, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Quite a few times, there will be collisions with similar translatable text
+found in more than two places but with different translated context.</p>
+
+<p>By including the context in the pot file translators can translate the two
+strings differently.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>string</code><p>Context information for the translators</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Translated context string without pipe</div>
+</div></div>
+</div>
+<a id="function_before_last_bar"></a><div class="element clickable function  function_before_last_bar" data-toggle="collapse" data-target=".function_before_last_bar .collapse">
+<h2>before_last_bar()
+        </h2>
+<pre>before_last_bar($string) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+</div></div>
+</div>
+<a id="function_esc_attr__"></a><div class="element clickable function  function_esc_attr__" data-toggle="collapse" data-target=".function_esc_attr__ .collapse">
+<h2>Retrieves the translation of $text and escapes it for safe use in an attribute.</h2>
+<pre>esc_attr__(string $text, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If there is no translation, or the domain isn't loaded, the original text is returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\translate()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\esc_attr()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Translated text</div>
+</div></div>
+</div>
+<a id="function_esc_attr_e"></a><div class="element clickable function  function_esc_attr_e" data-toggle="collapse" data-target=".function_esc_attr_e .collapse">
+<h2>Displays translated text that has been escaped for safe use in an attribute.</h2>
+<pre>esc_attr_e(string $text, string $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\translate()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\esc_attr()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+</div></div>
+</div>
+<a id="function_esc_attr_x"></a><div class="element clickable function  function_esc_attr_x" data-toggle="collapse" data-target=".function_esc_attr_x .collapse">
+<h2>esc_attr_x()
+        </h2>
+<pre>esc_attr_x($single, $context, $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$single</h4></div>
+<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument"><h4>$domain</h4></div>
+</div></div>
+</div>
+<a id="function_esc_html__"></a><div class="element clickable function  function_esc_html__" data-toggle="collapse" data-target=".function_esc_html__ .collapse">
+<h2>Retrieves the translation of $text and escapes it for safe use in HTML output.</h2>
+<pre>esc_html__(string $text, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If there is no translation, or the domain isn't loaded, the original text is returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\translate()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\esc_html()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Translated text</div>
+</div></div>
+</div>
+<a id="function_esc_html_e"></a><div class="element clickable function  function_esc_html_e" data-toggle="collapse" data-target=".function_esc_html_e .collapse">
+<h2>Displays translated text that has been escaped for safe use in HTML output.</h2>
+<pre>esc_html_e(string $text, string $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\translate()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\esc_html()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.8.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. Domain to retrieve the translated text</p></div>
+</div></div>
+</div>
+<a id="function_esc_html_x"></a><div class="element clickable function  function_esc_html_x" data-toggle="collapse" data-target=".function_esc_html_x .collapse">
+<h2>esc_html_x()
+        </h2>
+<pre>esc_html_x($single, $context, $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$single</h4></div>
+<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument"><h4>$domain</h4></div>
+</div></div>
+</div>
+<a id="function_get_available_languages"></a><div class="element clickable function  function_get_available_languages" data-toggle="collapse" data-target=".function_get_available_languages .collapse">
+<h2>Get all available languages based on the presence of *.mo files in a given directory.</h2>
+<pre>get_available_languages(string $dir) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default directory is WP_LANG_DIR.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dir</h4>
+<code>string</code><p>A directory in which to search for language files. The default directory is WP_LANG_DIR.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array of language codes or an empty array if no languages are present. Language codes are formed by stripping the .mo extension from the language file names.</div>
+</div></div>
+</div>
+<a id="function_get_locale"></a><div class="element clickable function  function_get_locale" data-toggle="collapse" data-target=".function_get_locale .collapse">
+<h2>Gets the current locale.</h2>
+<pre>get_locale() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the locale is set, then it will filter the locale in the 'locale' filter
+hook and return the value.</p>
+
+<p>If the locale is not set already, then the WPLANG constant is used if it is
+defined. Then it is filtered through the 'locale' filter hook and the value
+for the locale global set and the locale is returned.</p>
+
+<p>The process to get the locale should only be done once, but the locale will
+always be filtered using the 'locale' hook.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$locale</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The locale of the blog or from the 'locale' hook.</div>
+</div></div>
+</div>
+<a id="function_get_translations_for_domain"></a><div class="element clickable function  function_get_translations_for_domain" data-toggle="collapse" data-target=".function_get_translations_for_domain .collapse">
+<h2>Returns the Translations instance for a domain.</h2>
+<pre>get_translations_for_domain(string $domain) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If there isn't one,
+returns empty Translations instance.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>A Translation instance</div>
+</div></div>
+</div>
+<a id="function_is_rtl"></a><div class="element clickable function  function_is_rtl" data-toggle="collapse" data-target=".function_is_rtl .collapse">
+<h2>Checks if current locale is RTL.</h2>
+<pre>is_rtl() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether locale is RTL.</div>
+</div></div>
+</div>
+<a id="function_is_textdomain_loaded"></a><div class="element clickable function  function_is_textdomain_loaded" data-toggle="collapse" data-target=".function_is_textdomain_loaded .collapse">
+<h2>Whether there are translations for the domain</h2>
+<pre>is_textdomain_loaded(string $domain) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether there are translations</div>
+</div></div>
+</div>
+<a id="function_load_child_theme_textdomain"></a><div class="element clickable function  function_load_child_theme_textdomain" data-toggle="collapse" data-target=".function_load_child_theme_textdomain .collapse">
+<h2>Loads the child themes translated strings.</h2>
+<pre>load_child_theme_textdomain(string $domain, $path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the current locale exists as a .mo file in the child themes root directory, it
+will be included in the translated strings by the $domain.</p>
+
+<p>The .mo files must be named based on the locale exactly.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Unique identifier for retrieving translated strings</p></div>
+<div class="subelement argument"><h4>$path</h4></div>
+</div></div>
+</div>
+<a id="function_load_default_textdomain"></a><div class="element clickable function  function_load_default_textdomain" data-toggle="collapse" data-target=".function_load_default_textdomain .collapse">
+<h2>Loads default translated strings based on locale.</h2>
+<pre>load_default_textdomain() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Loads the .mo file in WP_LANG_DIR constant path from WordPress root. The
+translated (.mo) file is named based on the locale.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_load_muplugin_textdomain"></a><div class="element clickable function  function_load_muplugin_textdomain" data-toggle="collapse" data-target=".function_load_muplugin_textdomain .collapse">
+<h2>Load the translated strings for a plugin residing in the mu-plugins dir.</h2>
+<pre>load_muplugin_textdomain(string $domain, string $mu_plugin_rel_path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Unique identifier for retrieving translated strings</p></div>
+<div class="subelement argument">
+<h4>$mu_plugin_rel_path</h4>
+<code>string</code><p>Relative to WPMU_PLUGIN_DIR directory in which the MO file resides. Defaults to empty string.</p></div>
+</div></div>
+</div>
+<a id="function_load_plugin_textdomain"></a><div class="element clickable function  function_load_plugin_textdomain" data-toggle="collapse" data-target=".function_load_plugin_textdomain .collapse">
+<h2>Loads the plugin's translated strings.</h2>
+<pre>load_plugin_textdomain(string $domain, string $abs_rel_path, string $plugin_rel_path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the path is not given then it will be the root of the plugin directory.
+The .mo file should be named based on the domain with a dash, and then the locale exactly.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Unique identifier for retrieving translated strings</p></div>
+<div class="subelement argument">
+<h4>$abs_rel_path</h4>
+<code>string</code><p>Optional. Relative path to ABSPATH of a folder, where the .mo file resides. Deprecated, but still functional until 2.7</p></div>
+<div class="subelement argument">
+<h4>$plugin_rel_path</h4>
+<code>string</code><p>Optional. Relative path to WP_PLUGIN_DIR. This is the preferred argument to use. It takes precedence over $abs_rel_path</p>
+</div>
+</div></div>
+</div>
+<a id="function_load_textdomain"></a><div class="element clickable function  function_load_textdomain" data-toggle="collapse" data-target=".function_load_textdomain .collapse">
+<h2>Loads a MO file into the domain $domain.</h2>
+<pre>load_textdomain(string $domain, string $mofile) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the domain already exists, the translations will be merged. If both
+sets have the same string, the translation from the original value will be taken.</p>
+
+<p>On success, the .mo file will be placed in the $l10n global by $domain
+and will be a MO object.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$l10n</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Unique identifier for retrieving translated strings</p></div>
+<div class="subelement argument">
+<h4>$mofile</h4>
+<code>string</code><p>Path to the .mo file</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure</div>
+</div></div>
+</div>
+<a id="function_load_theme_textdomain"></a><div class="element clickable function  function_load_theme_textdomain" data-toggle="collapse" data-target=".function_load_theme_textdomain .collapse">
+<h2>Loads the theme's translated strings.</h2>
+<pre>load_theme_textdomain(string $domain, $path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the current locale exists as a .mo file in the theme's root directory, it
+will be included in the translated strings by the $domain.</p>
+
+<p>The .mo files must be named based on the locale exactly.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Unique identifier for retrieving translated strings</p></div>
+<div class="subelement argument"><h4>$path</h4></div>
+</div></div>
+</div>
+<a id="function_translate"></a><div class="element clickable function  function_translate" data-toggle="collapse" data-target=".function_translate .collapse">
+<h2>Retrieves the translation of $text.</h2>
+<pre>translate(string $text, string $domain) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If there is no translation, or
+the domain isn't loaded, the original text is returned.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\__()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$text</h4>
+<code>string</code><p>Text to translate.</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Domain to retrieve the translated text.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Translated text</div>
+</div></div>
+</div>
+<a id="function_translate_nooped_plural"></a><div class="element clickable function  function_translate_nooped_plural" data-toggle="collapse" data-target=".function_translate_nooped_plural .collapse">
+<h2>Translate the result of _n_noop() or _nx_noop()</h2>
+<pre>translate_nooped_plural(array $nooped_plural, int $count, string $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$nooped_plural</h4>
+<code>array</code><p>Array with singular, plural and context keys, usually the result of _n_noop() or _nx_noop()</p>
+</div>
+<div class="subelement argument">
+<h4>$count</h4>
+<code>int</code><p>Number of objects</p></div>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Optional. The domain identifier the text should be retrieved in. If $nooped_plural contains a domain passed to _n_noop() or _nx_noop(), it will override this value.</p>
+</div>
+</div></div>
+</div>
+<a id="function_translate_user_role"></a><div class="element clickable function  function_translate_user_role" data-toggle="collapse" data-target=".function_translate_user_role .collapse">
+<h2>Translates role name.</h2>
+<pre>translate_user_role($name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Since the role names are in the database and
+not in the source there are dummy gettext calls to get them into the POT
+file and this function properly translates them back.</p>
+
+<p>The before_last_bar() call is needed, because older installs keep the roles
+using the old context format: 'Role name|User role' and just skipping the
+content after the last bar is easier than fixing them in the DB. New installs
+won't suffer from that problem.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a id="function_translate_with_gettext_context"></a><div class="element clickable function  function_translate_with_gettext_context" data-toggle="collapse" data-target=".function_translate_with_gettext_context .collapse">
+<h2>translate_with_gettext_context()
+        </h2>
+<pre>translate_with_gettext_context($text, $context, $domain) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument"><h4>$domain</h4></div>
+</div></div>
+</div>
+<a id="function_unload_textdomain"></a><div class="element clickable function  function_unload_textdomain" data-toggle="collapse" data-target=".function_unload_textdomain .collapse">
+<h2>Unloads translations for a domain</h2>
+<pre>unload_textdomain(string $domain) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$domain</h4>
+<code>string</code><p>Textdomain to be unloaded</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether textdomain was unloaded</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:56-05:00.<br></footer></div>
+</div>
+</body>
+</html>

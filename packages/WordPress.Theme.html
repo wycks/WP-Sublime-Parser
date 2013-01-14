@@ -1,0 +1,1392 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Theme</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.Theme.html" title="Theme"><i class="icon-folder-open"></i>Theme</a><ul class="nav nav-list nav-packages"><li>
+<span class="empty-package"><i class="icon-folder-close"></i>Compat</span><ul class="nav nav-list nav-packages"></ul>
+</li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function__custom_background_cb" title="_custom_background_cb :: Default custom background callback."><span class="description">Default custom background callback.</span><pre>_custom_background_cb</pre></a></li>
+<li class="function  "><a href="#function__custom_header_background_just_in_time" title="_custom_header_background_just_in_time :: Registers the internal custom header and background routines."><span class="description">Registers the internal custom header and background routines.</span><pre>_custom_header_background_just_in_time</pre></a></li>
+<li class="function  "><a href="#function__delete_attachment_theme_mod" title="_delete_attachment_theme_mod :: Checks an attachment being deleted to see if it's a header or background image."><span class="description">Checks an attachment being deleted to see if it's a header or background image.</span><pre>_delete_attachment_theme_mod</pre></a></li>
+<li class="function  "><a href="#function__get_random_header_data" title="_get_random_header_data :: Get random header image data from registered images in theme."><span class="description">Get random header image data from registered images in theme.</span><pre>_get_random_header_data</pre></a></li>
+<li class="function  "><a href="#function__preview_theme_stylesheet_filter" title="_preview_theme_stylesheet_filter :: Private function to modify the current stylesheet when previewing a theme"><span class="description">Private function to modify the current stylesheet when previewing a theme</span><pre>_preview_theme_stylesheet_filter</pre></a></li>
+<li class="function  "><a href="#function__preview_theme_template_filter" title="_preview_theme_template_filter :: Private function to modify the current template when previewing a theme"><span class="description">Private function to modify the current template when previewing a theme</span><pre>_preview_theme_template_filter</pre></a></li>
+<li class="function  "><a href="#function__remove_theme_support" title="_remove_theme_support :: Do not use."><span class="description">Do not use.</span><pre>_remove_theme_support</pre></a></li>
+<li class="function  "><a href="#function__wp_customize_include" title="_wp_customize_include :: Includes and instantiates the WP_Customize_Manager class."><span class="description">Includes and instantiates the WP_Customize_Manager class.</span><pre>_wp_customize_include</pre></a></li>
+<li class="function  "><a href="#function__wp_customize_loader_settings" title="_wp_customize_loader_settings :: Adds settings for the customize-loader script."><span class="description">Adds settings for the customize-loader script.</span><pre>_wp_customize_loader_settings</pre></a></li>
+<li class="function  "><a href="#function_add_editor_style" title="add_editor_style :: Add callback for custom TinyMCE editor stylesheets."><span class="description">Add callback for custom TinyMCE editor stylesheets.</span><pre>add_editor_style</pre></a></li>
+<li class="function  "><a href="#function_add_theme_support" title="add_theme_support :: Allows a theme to register its support of a certain feature"><span class="description">Allows a theme to register its support of a certain feature</span><pre>add_theme_support</pre></a></li>
+<li class="function  "><a href="#function_background_color" title="background_color :: Display background color value."><span class="description">Display background color value.</span><pre>background_color</pre></a></li>
+<li class="function  "><a href="#function_background_image" title="background_image :: Display background image path."><span class="description">Display background image path.</span><pre>background_image</pre></a></li>
+<li class="function  "><a href="#function_check_theme_switched" title="check_theme_switched :: Checks if a theme has been changed and runs 'after_switch_theme' hook on the next WP load"><span class="description">Checks if a theme has been changed and runs 'after_switch_theme' hook on the next WP load</span><pre>check_theme_switched</pre></a></li>
+<li class="function  "><a href="#function_current_theme_supports" title="current_theme_supports :: Checks a theme's support for a given feature"><span class="description">Checks a theme's support for a given feature</span><pre>current_theme_supports</pre></a></li>
+<li class="function  "><a href="#function_display_header_text" title="display_header_text :: Whether to display the header text."><span class="description">Whether to display the header text.</span><pre>display_header_text</pre></a></li>
+<li class="function  "><a href="#function_get_background_color" title="get_background_color :: Retrieve value for custom background color."><span class="description">Retrieve value for custom background color.</span><pre>get_background_color</pre></a></li>
+<li class="function  "><a href="#function_get_background_image" title="get_background_image :: Retrieve background image for custom background."><span class="description">Retrieve background image for custom background.</span><pre>get_background_image</pre></a></li>
+<li class="function  "><a href="#function_get_custom_header" title="get_custom_header :: Get the header image data."><span class="description">Get the header image data.</span><pre>get_custom_header</pre></a></li>
+<li class="function  "><a href="#function_get_header_image" title="get_header_image :: Retrieve header image for custom header."><span class="description">Retrieve header image for custom header.</span><pre>get_header_image</pre></a></li>
+<li class="function  "><a href="#function_get_header_textcolor" title="get_header_textcolor :: Retrieve text color for custom header."><span class="description">Retrieve text color for custom header.</span><pre>get_header_textcolor</pre></a></li>
+<li class="function  "><a href="#function_get_locale_stylesheet_uri" title="get_locale_stylesheet_uri :: Retrieve localized stylesheet URI."><span class="description">Retrieve localized stylesheet URI.</span><pre>get_locale_stylesheet_uri</pre></a></li>
+<li class="function  "><a href="#function_get_random_header_image" title="get_random_header_image :: Get random header image url from registered images in theme."><span class="description">Get random header image url from registered images in theme.</span><pre>get_random_header_image</pre></a></li>
+<li class="function  "><a href="#function_get_raw_theme_root" title="get_raw_theme_root :: Get the raw theme root relative to the content directory with no filters applied."><span class="description">Get the raw theme root relative to the content directory with no filters applied.</span><pre>get_raw_theme_root</pre></a></li>
+<li class="function  "><a href="#function_get_stylesheet" title="get_stylesheet :: Retrieve name of the current stylesheet."><span class="description">Retrieve name of the current stylesheet.</span><pre>get_stylesheet</pre></a></li>
+<li class="function  "><a href="#function_get_stylesheet_directory" title="get_stylesheet_directory :: Retrieve stylesheet directory path for current theme."><span class="description">Retrieve stylesheet directory path for current theme.</span><pre>get_stylesheet_directory</pre></a></li>
+<li class="function  "><a href="#function_get_stylesheet_directory_uri" title="get_stylesheet_directory_uri :: Retrieve stylesheet directory URI."><span class="description">Retrieve stylesheet directory URI.</span><pre>get_stylesheet_directory_uri</pre></a></li>
+<li class="function  "><a href="#function_get_stylesheet_uri" title="get_stylesheet_uri :: Retrieve URI of current theme stylesheet."><span class="description">Retrieve URI of current theme stylesheet.</span><pre>get_stylesheet_uri</pre></a></li>
+<li class="function  "><a href="#function_get_template" title="get_template :: Retrieve name of the current theme."><span class="description">Retrieve name of the current theme.</span><pre>get_template</pre></a></li>
+<li class="function  "><a href="#function_get_template_directory" title="get_template_directory :: Retrieve current theme directory."><span class="description">Retrieve current theme directory.</span><pre>get_template_directory</pre></a></li>
+<li class="function  "><a href="#function_get_template_directory_uri" title="get_template_directory_uri :: Retrieve theme directory URI."><span class="description">Retrieve theme directory URI.</span><pre>get_template_directory_uri</pre></a></li>
+<li class="function  "><a href="#function_get_theme_mod" title="get_theme_mod :: Retrieve theme modification value for the current theme."><span class="description">Retrieve theme modification value for the current theme.</span><pre>get_theme_mod</pre></a></li>
+<li class="function  "><a href="#function_get_theme_mods" title="get_theme_mods :: Retrieve all theme modifications."><span class="description">Retrieve all theme modifications.</span><pre>get_theme_mods</pre></a></li>
+<li class="function  "><a href="#function_get_theme_root" title="get_theme_root :: Retrieve path to themes directory."><span class="description">Retrieve path to themes directory.</span><pre>get_theme_root</pre></a></li>
+<li class="function  "><a href="#function_get_theme_root_uri" title="get_theme_root_uri :: Retrieve URI for themes directory."><span class="description">Retrieve URI for themes directory.</span><pre>get_theme_root_uri</pre></a></li>
+<li class="function  "><a href="#function_get_theme_roots" title="get_theme_roots :: Retrieve theme roots."><span class="description">Retrieve theme roots.</span><pre>get_theme_roots</pre></a></li>
+<li class="function  "><a href="#function_get_theme_support" title="get_theme_support :: Gets the theme support arguments passed when registering that support"><span class="description">Gets the theme support arguments passed when registering that support</span><pre>get_theme_support</pre></a></li>
+<li class="function  "><a href="#function_get_uploaded_header_images" title="get_uploaded_header_images :: Get the header images uploaded for the current theme."><span class="description">Get the header images uploaded for the current theme.</span><pre>get_uploaded_header_images</pre></a></li>
+<li class="function  "><a href="#function_header_image" title="header_image :: Display header image path."><span class="description">Display header image path.</span><pre>header_image</pre></a></li>
+<li class="function  "><a href="#function_header_textcolor" title="header_textcolor :: Display text color for custom header."><span class="description">Display text color for custom header.</span><pre>header_textcolor</pre></a></li>
+<li class="function  "><a href="#function_is_child_theme" title="is_child_theme :: Whether a child theme is in use."><span class="description">Whether a child theme is in use.</span><pre>is_child_theme</pre></a></li>
+<li class="function  "><a href="#function_is_random_header_image" title="is_random_header_image :: Check if random header image is in use."><span class="description">Check if random header image is in use.</span><pre>is_random_header_image</pre></a></li>
+<li class="function  "><a href="#function_locale_stylesheet" title="locale_stylesheet :: Display localized stylesheet link element."><span class="description">Display localized stylesheet link element.</span><pre>locale_stylesheet</pre></a></li>
+<li class="function  "><a href="#function_preview_theme" title="preview_theme :: Start preview theme output buffer."><span class="description">Start preview theme output buffer.</span><pre>preview_theme</pre></a></li>
+<li class="function  "><a href="#function_preview_theme_ob_filter" title="preview_theme_ob_filter :: Callback function for ob_start() to capture all links in the theme."><span class="description">Callback function for ob_start() to capture all links in the theme.</span><pre>preview_theme_ob_filter</pre></a></li>
+<li class="function  "><a href="#function_preview_theme_ob_filter_callback" title="preview_theme_ob_filter_callback :: Manipulates preview theme links in order to control and maintain location."><span class="description">Manipulates preview theme links in order to control and maintain location.</span><pre>preview_theme_ob_filter_callback</pre></a></li>
+<li class="function  "><a href="#function_register_default_headers" title="register_default_headers :: Register a selection of default headers to be displayed by the custom header admin UI."><span class="description">Register a selection of default headers to be displayed by the custom header admin UI.</span><pre>register_default_headers</pre></a></li>
+<li class="function  "><a href="#function_register_theme_directory" title="register_theme_directory :: Register a directory that contains themes."><span class="description">Register a directory that contains themes.</span><pre>register_theme_directory</pre></a></li>
+<li class="function  "><a href="#function_remove_editor_styles" title="remove_editor_styles :: Removes all visual editor stylesheets."><span class="description">Removes all visual editor stylesheets.</span><pre>remove_editor_styles</pre></a></li>
+<li class="function  "><a href="#function_remove_theme_mod" title="remove_theme_mod :: Remove theme modification name from current theme list."><span class="description">Remove theme modification name from current theme list.</span><pre>remove_theme_mod</pre></a></li>
+<li class="function  "><a href="#function_remove_theme_mods" title="remove_theme_mods :: Remove theme modifications option for current theme."><span class="description">Remove theme modifications option for current theme.</span><pre>remove_theme_mods</pre></a></li>
+<li class="function  "><a href="#function_remove_theme_support" title="remove_theme_support :: Allows a theme to de-register its support of a certain feature"><span class="description">Allows a theme to de-register its support of a certain feature</span><pre>remove_theme_support</pre></a></li>
+<li class="function  "><a href="#function_require_if_theme_supports" title="require_if_theme_supports :: Checks a theme's support for a given feature before loading the functions which implement it."><span class="description">Checks a theme's support for a given feature before loading the functions which implement it.</span><pre>require_if_theme_supports</pre></a></li>
+<li class="function  "><a href="#function_search_theme_directories" title="search_theme_directories :: Search all registered theme directories for complete and valid themes."><span class="description">Search all registered theme directories for complete and valid themes.</span><pre>search_theme_directories</pre></a></li>
+<li class="function  "><a href="#function_set_theme_mod" title="set_theme_mod :: Update theme modification value for the current theme."><span class="description">Update theme modification value for the current theme.</span><pre>set_theme_mod</pre></a></li>
+<li class="function  "><a href="#function_switch_theme" title="switch_theme :: Switches current theme to new template and stylesheet names."><span class="description">Switches current theme to new template and stylesheet names.</span><pre>switch_theme</pre></a></li>
+<li class="function  "><a href="#function_unregister_default_headers" title="unregister_default_headers :: Unregister default headers."><span class="description">Unregister default headers.</span><pre>unregister_default_headers</pre></a></li>
+<li class="function  "><a href="#function_validate_current_theme" title="validate_current_theme :: Checks that current theme files 'index.php' and 'style.css' exists."><span class="description">Checks that current theme files 'index.php' and 'style.css' exists.</span><pre>validate_current_theme</pre></a></li>
+<li class="function  "><a href="#function_wp_customize_support_script" title="wp_customize_support_script :: Prints a script to check whether or not the customizer is supported,
+and apply either the no-customize-support or customize-support class
+to the body."><span class="description">Prints a script to check whether or not the customizer is supported,
+and apply either the no-customize-support or customize-support class
+to the body.</span><pre>wp_customize_support_script</pre></a></li>
+<li class="function  "><a href="#function_wp_customize_url" title="wp_customize_url :: Returns a URL to load the theme customizer."><span class="description">Returns a URL to load the theme customizer.</span><pre>wp_customize_url</pre></a></li>
+<li class="function  "><a href="#function_wp_get_theme" title="wp_get_theme :: Gets a WP_Theme object for a theme."><span class="description">Gets a WP_Theme object for a theme.</span><pre>wp_get_theme</pre></a></li>
+<li class="function  "><a href="#function_wp_get_themes" title="wp_get_themes :: Returns an array of WP_Theme objects based on the arguments."><span class="description">Returns an array of WP_Theme objects based on the arguments.</span><pre>wp_get_themes</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#WP_Theme" title="WP_Theme Class">WP_Theme</a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#constant_BACKGROUND_COLOR" title="BACKGROUND_COLOR :: "><span class="description">BACKGROUND_COLOR</span><pre>BACKGROUND_COLOR</pre></a></li>
+<li class="constant  "><a href="#constant_BACKGROUND_IMAGE" title="BACKGROUND_IMAGE :: "><span class="description">BACKGROUND_IMAGE</span><pre>BACKGROUND_IMAGE</pre></a></li>
+<li class="constant  "><a href="#constant_HEADER_IMAGE" title="HEADER_IMAGE :: "><span class="description">HEADER_IMAGE</span><pre>HEADER_IMAGE</pre></a></li>
+<li class="constant  "><a href="#constant_HEADER_IMAGE_HEIGHT" title="HEADER_IMAGE_HEIGHT :: "><span class="description">HEADER_IMAGE_HEIGHT</span><pre>HEADER_IMAGE_HEIGHT</pre></a></li>
+<li class="constant  "><a href="#constant_HEADER_IMAGE_WIDTH" title="HEADER_IMAGE_WIDTH :: "><span class="description">HEADER_IMAGE_WIDTH</span><pre>HEADER_IMAGE_WIDTH</pre></a></li>
+<li class="constant  "><a href="#constant_HEADER_TEXTCOLOR" title="HEADER_TEXTCOLOR :: "><span class="description">HEADER_TEXTCOLOR</span><pre>HEADER_TEXTCOLOR</pre></a></li>
+<li class="constant  "><a href="#constant_NO_HEADER_TEXT" title="NO_HEADER_TEXT :: "><span class="description">NO_HEADER_TEXT</span><pre>NO_HEADER_TEXT</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Theme.html">Theme</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__custom_background_cb"></a><div class="element clickable function  function__custom_background_cb" data-toggle="collapse" data-target=".function__custom_background_cb .collapse">
+<h2>Default custom background callback.</h2>
+<pre>_custom_background_cb() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>protected</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function__custom_header_background_just_in_time"></a><div class="element clickable function  function__custom_header_background_just_in_time" data-toggle="collapse" data-target=".function__custom_header_background_just_in_time .collapse">
+<h2>Registers the internal custom header and background routines.</h2>
+<pre>_custom_header_background_just_in_time() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function__delete_attachment_theme_mod"></a><div class="element clickable function  function__delete_attachment_theme_mod" data-toggle="collapse" data-target=".function__delete_attachment_theme_mod .collapse">
+<h2>Checks an attachment being deleted to see if it's a header or background image.</h2>
+<pre>_delete_attachment_theme_mod(int $id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If true it removes the theme modification which would be pointing at the deleted
+attachment</p></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>the attachment id</p></div>
+</div></div>
+</div>
+<a id="function__get_random_header_data"></a><div class="element clickable function  function__get_random_header_data" data-toggle="collapse" data-target=".function__get_random_header_data .collapse">
+<h2>Get random header image data from registered images in theme.</h2>
+<pre>_get_random_header_data() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Path to header image</div>
+</div></div>
+</div>
+<a id="function__preview_theme_stylesheet_filter"></a><div class="element clickable function  function__preview_theme_stylesheet_filter" data-toggle="collapse" data-target=".function__preview_theme_stylesheet_filter .collapse">
+<h2>Private function to modify the current stylesheet when previewing a theme</h2>
+<pre>_preview_theme_stylesheet_filter() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function__preview_theme_template_filter"></a><div class="element clickable function  function__preview_theme_template_filter" data-toggle="collapse" data-target=".function__preview_theme_template_filter .collapse">
+<h2>Private function to modify the current template when previewing a theme</h2>
+<pre>_preview_theme_template_filter() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function__remove_theme_support"></a><div class="element clickable function  function__remove_theme_support" data-toggle="collapse" data-target=".function__remove_theme_support .collapse">
+<h2>Do not use.</h2>
+<pre>_remove_theme_support($feature) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Removes theme support internally, ignorant of the blacklist.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$feature</h4></div>
+</div></div>
+</div>
+<a id="function__wp_customize_include"></a><div class="element clickable function  function__wp_customize_include" data-toggle="collapse" data-target=".function__wp_customize_include .collapse">
+<h2>Includes and instantiates the WP_Customize_Manager class.</h2>
+<pre>_wp_customize_include() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Fires when ?wp_customize=on or on wp-admin/customize.php.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function__wp_customize_loader_settings"></a><div class="element clickable function  function__wp_customize_loader_settings" data-toggle="collapse" data-target=".function__wp_customize_loader_settings .collapse">
+<h2>Adds settings for the customize-loader script.</h2>
+<pre>_wp_customize_loader_settings() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_add_editor_style"></a><div class="element clickable function  function_add_editor_style" data-toggle="collapse" data-target=".function_add_editor_style .collapse">
+<h2>Add callback for custom TinyMCE editor stylesheets.</h2>
+<pre>add_editor_style(mixed $stylesheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The parameter $stylesheet is the name of the stylesheet, relative to
+the theme root. It also accepts an array of stylesheets.
+It is optional and defaults to 'editor-style.css'.</p>
+
+<p>This function automatically adds another stylesheet with -rtl prefix, e.g. editor-style-rtl.css.
+If that file doesn't exist, it is removed before adding the stylesheet(s) to TinyMCE.
+If an array of stylesheets is passed to add_editor_style(),
+RTL is only added for the first stylesheet.</p>
+
+<p>Since version 3.4 the TinyMCE body has .rtl CSS class.
+It is a better option to use that class and add any RTL styles to the main stylesheet.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stylesheet</h4>
+<code>mixed</code><p>Optional. Stylesheet name or array thereof, relative to theme root. Defaults to 'editor-style.css'</p>
+</div>
+</div></div>
+</div>
+<a id="function_add_theme_support"></a><div class="element clickable function  function_add_theme_support" data-toggle="collapse" data-target=".function_add_theme_support .collapse">
+<h2>Allows a theme to register its support of a certain feature</h2>
+<pre>add_theme_support(string $feature) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Must be called in the theme's functions.php file to work.
+If attached to a hook, it must be after_setup_theme.
+The init hook may be too late for some features.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>the feature being added</p></div>
+</div></div>
+</div>
+<a id="function_background_color"></a><div class="element clickable function  function_background_color" data-toggle="collapse" data-target=".function_background_color .collapse">
+<h2>Display background color value.</h2>
+<pre>background_color() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_background_image"></a><div class="element clickable function  function_background_image" data-toggle="collapse" data-target=".function_background_image .collapse">
+<h2>Display background image path.</h2>
+<pre>background_image() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_check_theme_switched"></a><div class="element clickable function  function_check_theme_switched" data-toggle="collapse" data-target=".function_check_theme_switched .collapse">
+<h2>Checks if a theme has been changed and runs 'after_switch_theme' hook on the next WP load</h2>
+<pre>check_theme_switched() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_current_theme_supports"></a><div class="element clickable function  function_current_theme_supports" data-toggle="collapse" data-target=".function_current_theme_supports .collapse">
+<h2>Checks a theme's support for a given feature</h2>
+<pre>current_theme_supports(string $feature) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>the feature being checked</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="function_display_header_text"></a><div class="element clickable function  function_display_header_text" data-toggle="collapse" data-target=".function_display_header_text .collapse">
+<h2>Whether to display the header text.</h2>
+<pre>display_header_text() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_get_background_color"></a><div class="element clickable function  function_get_background_color" data-toggle="collapse" data-target=".function_get_background_color .collapse">
+<h2>Retrieve value for custom background color.</h2>
+<pre>get_background_color() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_background_image"></a><div class="element clickable function  function_get_background_image" data-toggle="collapse" data-target=".function_get_background_image .collapse">
+<h2>Retrieve background image for custom background.</h2>
+<pre>get_background_image() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_custom_header"></a><div class="element clickable function  function_get_custom_header" data-toggle="collapse" data-target=".function_get_custom_header .collapse">
+<h2>Get the header image data.</h2>
+<pre>get_custom_header() : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>object</code></div>
+</div></div>
+</div>
+<a id="function_get_header_image"></a><div class="element clickable function  function_get_header_image" data-toggle="collapse" data-target=".function_get_header_image .collapse">
+<h2>Retrieve header image for custom header.</h2>
+<pre>get_header_image() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_header_textcolor"></a><div class="element clickable function  function_get_header_textcolor" data-toggle="collapse" data-target=".function_get_header_textcolor .collapse">
+<h2>Retrieve text color for custom header.</h2>
+<pre>get_header_textcolor() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_locale_stylesheet_uri"></a><div class="element clickable function  function_get_locale_stylesheet_uri" data-toggle="collapse" data-target=".function_get_locale_stylesheet_uri .collapse">
+<h2>Retrieve localized stylesheet URI.</h2>
+<pre>get_locale_stylesheet_uri() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The stylesheet directory for the localized stylesheet files are located, by
+default, in the base theme directory. The name of the locale file will be the
+locale followed by '.css'. If that does not exist, then the text direction
+stylesheet will be checked for existence, for example 'ltr.css'.</p>
+
+<p>The theme may change the location of the stylesheet directory by either using
+the 'stylesheet_directory_uri' filter or the 'locale_stylesheet_uri' filter.
+If you want to change the location of the stylesheet files for the entire
+WordPress workflow, then change the former. If you just have the locale in a
+separate folder, then change the latter.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_random_header_image"></a><div class="element clickable function  function_get_random_header_image" data-toggle="collapse" data-target=".function_get_random_header_image .collapse">
+<h2>Get random header image url from registered images in theme.</h2>
+<pre>get_random_header_image() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.2.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Path to header image</div>
+</div></div>
+</div>
+<a id="function_get_raw_theme_root"></a><div class="element clickable function  function_get_raw_theme_root" data-toggle="collapse" data-target=".function_get_raw_theme_root .collapse">
+<h2>Get the raw theme root relative to the content directory with no filters applied.</h2>
+<pre>get_raw_theme_root(string $stylesheet_or_template, bool $skip_cache) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stylesheet_or_template</h4>
+<code>string</code><p>The stylesheet or template name of the theme</p></div>
+<div class="subelement argument">
+<h4>$skip_cache</h4>
+<code>bool</code><p>Optional. Whether to skip the cache. Defaults to false, meaning the cache is used.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Theme root</div>
+</div></div>
+</div>
+<a id="function_get_stylesheet"></a><div class="element clickable function  function_get_stylesheet" data-toggle="collapse" data-target=".function_get_stylesheet .collapse">
+<h2>Retrieve name of the current stylesheet.</h2>
+<pre>get_stylesheet() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The theme name that the administrator has currently set the front end theme
+as.</p>
+
+<p>For all extensive purposes, the template name and the stylesheet name are
+going to be the same for most cases.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Stylesheet name.</div>
+</div></div>
+</div>
+<a id="function_get_stylesheet_directory"></a><div class="element clickable function  function_get_stylesheet_directory" data-toggle="collapse" data-target=".function_get_stylesheet_directory .collapse">
+<h2>Retrieve stylesheet directory path for current theme.</h2>
+<pre>get_stylesheet_directory() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Path to current theme directory.</div>
+</div></div>
+</div>
+<a id="function_get_stylesheet_directory_uri"></a><div class="element clickable function  function_get_stylesheet_directory_uri" data-toggle="collapse" data-target=".function_get_stylesheet_directory_uri .collapse">
+<h2>Retrieve stylesheet directory URI.</h2>
+<pre>get_stylesheet_directory_uri() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_stylesheet_uri"></a><div class="element clickable function  function_get_stylesheet_uri" data-toggle="collapse" data-target=".function_get_stylesheet_uri .collapse">
+<h2>Retrieve URI of current theme stylesheet.</h2>
+<pre>get_stylesheet_uri() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The stylesheet file name is 'style.css' which is appended to {@link
+get_stylesheet_directory_uri() stylesheet directory URI} path.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_template"></a><div class="element clickable function  function_get_template" data-toggle="collapse" data-target=".function_get_template .collapse">
+<h2>Retrieve name of the current theme.</h2>
+<pre>get_template() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Template name.</div>
+</div></div>
+</div>
+<a id="function_get_template_directory"></a><div class="element clickable function  function_get_template_directory" data-toggle="collapse" data-target=".function_get_template_directory .collapse">
+<h2>Retrieve current theme directory.</h2>
+<pre>get_template_directory() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Template directory path.</div>
+</div></div>
+</div>
+<a id="function_get_template_directory_uri"></a><div class="element clickable function  function_get_template_directory_uri" data-toggle="collapse" data-target=".function_get_template_directory_uri .collapse">
+<h2>Retrieve theme directory URI.</h2>
+<pre>get_template_directory_uri() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Template directory URI.</div>
+</div></div>
+</div>
+<a id="function_get_theme_mod"></a><div class="element clickable function  function_get_theme_mod" data-toggle="collapse" data-target=".function_get_theme_mod .collapse">
+<h2>Retrieve theme modification value for the current theme.</h2>
+<pre>get_theme_mod(string $name, bool | string $default) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the modification name does not exist, then the $default will be passed
+through <a href="http://php.net/sprintf">sprintf()</a> PHP function with the first
+string the template directory URI and the second string the stylesheet
+directory URI.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Theme modification name.</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>bool</code><code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_get_theme_mods"></a><div class="element clickable function  function_get_theme_mods" data-toggle="collapse" data-target=".function_get_theme_mods .collapse">
+<h2>Retrieve all theme modifications.</h2>
+<pre>get_theme_mods() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Theme modifications.</div>
+</div></div>
+</div>
+<a id="function_get_theme_root"></a><div class="element clickable function  function_get_theme_root" data-toggle="collapse" data-target=".function_get_theme_root .collapse">
+<h2>Retrieve path to themes directory.</h2>
+<pre>get_theme_root(string $stylesheet_or_template) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does not have trailing slash.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\apply_filters()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stylesheet_or_template</h4>
+<code>string</code><p>The stylesheet or template name of the theme</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Theme path.</div>
+</div></div>
+</div>
+<a id="function_get_theme_root_uri"></a><div class="element clickable function  function_get_theme_root_uri" data-toggle="collapse" data-target=".function_get_theme_root_uri .collapse">
+<h2>Retrieve URI for themes directory.</h2>
+<pre>get_theme_root_uri(string $stylesheet_or_template, string $theme_root) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does not have trailing slash.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stylesheet_or_template</h4>
+<code>string</code><p>Optional. The stylesheet or template name of the theme. Default is to leverage the main theme root.</p></div>
+<div class="subelement argument">
+<h4>$theme_root</h4>
+<code>string</code><p>Optional. The theme root for which calculations will be based, preventing the need for a get_raw_theme_root() call.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Themes URI.</div>
+</div></div>
+</div>
+<a id="function_get_theme_roots"></a><div class="element clickable function  function_get_theme_roots" data-toggle="collapse" data-target=".function_get_theme_roots .collapse">
+<h2>Retrieve theme roots.</h2>
+<pre>get_theme_roots() : array | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>string</code>An array of theme roots keyed by template/stylesheet or a single theme root if all themes have the same root.</div>
+</div></div>
+</div>
+<a id="function_get_theme_support"></a><div class="element clickable function  function_get_theme_support" data-toggle="collapse" data-target=".function_get_theme_support .collapse">
+<h2>Gets the theme support arguments passed when registering that support</h2>
+<pre>get_theme_support(string $feature) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>the feature to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The array of extra arguments</div>
+</div></div>
+</div>
+<a id="function_get_uploaded_header_images"></a><div class="element clickable function  function_get_uploaded_header_images" data-toggle="collapse" data-target=".function_get_uploaded_header_images .collapse">
+<h2>Get the header images uploaded for the current theme.</h2>
+<pre>get_uploaded_header_images() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.2.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_header_image"></a><div class="element clickable function  function_header_image" data-toggle="collapse" data-target=".function_header_image .collapse">
+<h2>Display header image path.</h2>
+<pre>header_image() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_header_textcolor"></a><div class="element clickable function  function_header_textcolor" data-toggle="collapse" data-target=".function_header_textcolor .collapse">
+<h2>Display text color for custom header.</h2>
+<pre>header_textcolor() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_is_child_theme"></a><div class="element clickable function  function_is_child_theme" data-toggle="collapse" data-target=".function_is_child_theme .collapse">
+<h2>Whether a child theme is in use.</h2>
+<pre>is_child_theme() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>true if a child theme is in use, false otherwise.</div>
+</div></div>
+</div>
+<a id="function_is_random_header_image"></a><div class="element clickable function  function_is_random_header_image" data-toggle="collapse" data-target=".function_is_random_header_image .collapse">
+<h2>Check if random header image is in use.</h2>
+<pre>is_random_header_image(string $type) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Always true if user expressly chooses the option in Appearance > Header.
+Also true if theme has multiple header images registered, no specific header image
+is chosen, and theme turns on random headers with add_theme_support().</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.2.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>The random pool to use. any|default|uploaded</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="function_locale_stylesheet"></a><div class="element clickable function  function_locale_stylesheet" data-toggle="collapse" data-target=".function_locale_stylesheet .collapse">
+<h2>Display localized stylesheet link element.</h2>
+<pre>locale_stylesheet() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_preview_theme"></a><div class="element clickable function  function_preview_theme" data-toggle="collapse" data-target=".function_preview_theme .collapse">
+<h2>Start preview theme output buffer.</h2>
+<pre>preview_theme() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will only preform task if the user has permissions and template and preview
+query variables exist.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_preview_theme_ob_filter"></a><div class="element clickable function  function_preview_theme_ob_filter" data-toggle="collapse" data-target=".function_preview_theme_ob_filter .collapse">
+<h2>Callback function for ob_start() to capture all links in the theme.</h2>
+<pre>preview_theme_ob_filter(string $content) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_preview_theme_ob_filter_callback"></a><div class="element clickable function  function_preview_theme_ob_filter_callback" data-toggle="collapse" data-target=".function_preview_theme_ob_filter_callback .collapse">
+<h2>Manipulates preview theme links in order to control and maintain location.</h2>
+<pre>preview_theme_ob_filter_callback(array $matches) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Callback function for preg_replace_callback() to accept and filter matches.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$matches</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="function_register_default_headers"></a><div class="element clickable function  function_register_default_headers" data-toggle="collapse" data-target=".function_register_default_headers .collapse">
+<h2>Register a selection of default headers to be displayed by the custom header admin UI.</h2>
+<pre>register_default_headers(array $headers) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headers</h4>
+<code>array</code><p>Array of headers keyed by a string id. The ids point to arrays containing 'url', 'thumbnail_url', and 'description' keys.</p>
+</div>
+</div></div>
+</div>
+<a id="function_register_theme_directory"></a><div class="element clickable function  function_register_theme_directory" data-toggle="collapse" data-target=".function_register_theme_directory .collapse">
+<h2>Register a directory that contains themes.</h2>
+<pre>register_theme_directory(string $directory) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$directory</h4>
+<code>string</code><p>Either the full filesystem path to a theme folder or a folder within WP_CONTENT_DIR</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_remove_editor_styles"></a><div class="element clickable function  function_remove_editor_styles" data-toggle="collapse" data-target=".function_remove_editor_styles .collapse">
+<h2>Removes all visual editor stylesheets.</h2>
+<pre>remove_editor_styles() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.1.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false if there were no stylesheets to remove.</div>
+</div></div>
+</div>
+<a id="function_remove_theme_mod"></a><div class="element clickable function  function_remove_theme_mod" data-toggle="collapse" data-target=".function_remove_theme_mod .collapse">
+<h2>Remove theme modification name from current theme list.</h2>
+<pre>remove_theme_mod(string $name) : null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If removing the name also removes all elements, then the entire option will
+be removed.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Theme modification name.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>null</code></div>
+</div></div>
+</div>
+<a id="function_remove_theme_mods"></a><div class="element clickable function  function_remove_theme_mods" data-toggle="collapse" data-target=".function_remove_theme_mods .collapse">
+<h2>Remove theme modifications option for current theme.</h2>
+<pre>remove_theme_mods() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_remove_theme_support"></a><div class="element clickable function  function_remove_theme_support" data-toggle="collapse" data-target=".function_remove_theme_support .collapse">
+<h2>Allows a theme to de-register its support of a certain feature</h2>
+<pre>remove_theme_support(string $feature) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Should be called in the theme's functions.php file. Generally would
+be used for child themes to override support from the parent theme.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\add_theme_support()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>the feature being added</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether feature was removed.</div>
+</div></div>
+</div>
+<a id="function_require_if_theme_supports"></a><div class="element clickable function  function_require_if_theme_supports" data-toggle="collapse" data-target=".function_require_if_theme_supports .collapse">
+<h2>Checks a theme's support for a given feature before loading the functions which implement it.</h2>
+<pre>require_if_theme_supports(string $feature, string $include) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$feature</h4>
+<code>string</code><p>the feature being checked</p></div>
+<div class="subelement argument">
+<h4>$include</h4>
+<code>string</code><p>the file containing the functions that implement the feature</p></div>
+</div></div>
+</div>
+<a id="function_search_theme_directories"></a><div class="element clickable function  function_search_theme_directories" data-toggle="collapse" data-target=".function_search_theme_directories .collapse">
+<h2>Search all registered theme directories for complete and valid themes.</h2>
+<pre>search_theme_directories(bool $force) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.9.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$force</h4>
+<code>bool</code><p>Optional. Whether to force a new directory scan. Defaults to false.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Valid themes found</div>
+</div></div>
+</div>
+<a id="function_set_theme_mod"></a><div class="element clickable function  function_set_theme_mod" data-toggle="collapse" data-target=".function_set_theme_mod .collapse">
+<h2>Update theme modification value for the current theme.</h2>
+<pre>set_theme_mod(string $name, string $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Theme modification name.</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>theme modification value.</p></div>
+</div></div>
+</div>
+<a id="function_switch_theme"></a><div class="element clickable function  function_switch_theme" data-toggle="collapse" data-target=".function_switch_theme .collapse">
+<h2>Switches current theme to new template and stylesheet names.</h2>
+<pre>switch_theme(string $template, string $stylesheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$template</h4>
+<code>string</code><p>Template name</p></div>
+<div class="subelement argument">
+<h4>$stylesheet</h4>
+<code>string</code><p>Stylesheet name.</p></div>
+</div></div>
+</div>
+<a id="function_unregister_default_headers"></a><div class="element clickable function  function_unregister_default_headers" data-toggle="collapse" data-target=".function_unregister_default_headers .collapse">
+<h2>Unregister default headers.</h2>
+<pre>unregister_default_headers(string | array $header) : True</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function must be called after register_default_headers() has already added the
+header you want to remove.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="">\global\register_default_headers()</a></td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$header</h4>
+<code>string</code><code>array</code><p>The header string id (key of array) to remove, or an array thereof.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>True</code>on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_validate_current_theme"></a><div class="element clickable function  function_validate_current_theme" data-toggle="collapse" data-target=".function_validate_current_theme .collapse">
+<h2>Checks that current theme files 'index.php' and 'style.css' exists.</h2>
+<pre>validate_current_theme() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Does not check the default theme, which is the fallback and should always exist.
+Will switch theme to the fallback theme if current theme does not validate.
+You can use the 'validate_current_theme' filter to return false to
+disable this functionality.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_DEFAULT_THEME</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a id="function_wp_customize_support_script"></a><div class="element clickable function  function_wp_customize_support_script" data-toggle="collapse" data-target=".function_wp_customize_support_script .collapse">
+<h2>Prints a script to check whether or not the customizer is supported,
+and apply either the no-customize-support or customize-support class
+to the body.</h2>
+<pre>wp_customize_support_script() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function MUST be called inside the body tag.</p>
+
+<p>Ideally, call this function immediately after the body tag is opened.
+This prevents a flash of unstyled content.</p>
+
+<p>It is also recommended that you add the "no-customize-support" class
+to the body tag by default.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_wp_customize_url"></a><div class="element clickable function  function_wp_customize_url" data-toggle="collapse" data-target=".function_wp_customize_url .collapse">
+<h2>Returns a URL to load the theme customizer.</h2>
+<pre>wp_customize_url(string $stylesheet) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stylesheet</h4>
+<code>string</code><p>Optional. Theme to customize. Defaults to current theme. The theme's stylesheet will be urlencoded if necessary.</p>
+</div>
+</div></div>
+</div>
+<a id="function_wp_get_theme"></a><div class="element clickable function  function_wp_get_theme" data-toggle="collapse" data-target=".function_wp_get_theme .collapse">
+<h2>Gets a WP_Theme object for a theme.</h2>
+<pre>wp_get_theme(string $stylesheet, string $theme_root) : <a href="../classes/WP_Theme.html">\WP_Theme</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$stylesheet</h4>
+<code>string</code><p>Directory name for the theme. Optional. Defaults to current theme.</p></div>
+<div class="subelement argument">
+<h4>$theme_root</h4>
+<code>string</code><p>Absolute path of the theme root to look in. Optional. If not specified, get_raw_theme_root() is used to calculate the theme root for the $stylesheet provided (or current theme).</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code><a href="../classes/WP_Theme.html">\WP_Theme</a></code>Theme object. Be sure to check the object's exists() method if you need to confirm the theme's existence.</div>
+</div></div>
+</div>
+<a id="function_wp_get_themes"></a><div class="element clickable function  function_wp_get_themes" data-toggle="collapse" data-target=".function_wp_get_themes .collapse">
+<h2>Returns an array of WP_Theme objects based on the arguments.</h2>
+<pre>wp_get_themes(array $args) : Array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Despite advances over get_themes(), this function is quite expensive, and grows
+linearly with additional themes. Stick to wp_get_theme() if possible.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.4.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>The search arguments. Optional. - errors mixed True to return themes with errors, false to return themes without errors, null to return all themes. Defaults to false. - allowed mixed (Multisite) True to return only allowed themes for a site. False to return only disallowed themes for a site. 'site' to return only site-allowed themes. 'network' to return only network-allowed themes. Null to return all themes. Defaults to null. - blog_id int (Multisite) The blog ID used to calculate which themes are allowed. Defaults to 0, synonymous for the current blog.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>Array</code>of WP_Theme objects.</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="WP_Theme" class="element ajax clickable class">
+<h1>WP_Theme<a href="../classes/WP_Theme.html">¶</a>
+</h1>
+<p class="short_description">WP_Theme Class</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Theme.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_BACKGROUND_COLOR"> </a><div class="element clickable constant  constant_BACKGROUND_COLOR" data-toggle="collapse" data-target=".constant_BACKGROUND_COLOR .collapse">
+<h2>BACKGROUND_COLOR</h2>
+<pre>BACKGROUND_COLOR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_BACKGROUND_IMAGE"> </a><div class="element clickable constant  constant_BACKGROUND_IMAGE" data-toggle="collapse" data-target=".constant_BACKGROUND_IMAGE .collapse">
+<h2>BACKGROUND_IMAGE</h2>
+<pre>BACKGROUND_IMAGE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE"> </a><div class="element clickable constant  constant_HEADER_IMAGE" data-toggle="collapse" data-target=".constant_HEADER_IMAGE .collapse">
+<h2>HEADER_IMAGE</h2>
+<pre>HEADER_IMAGE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE_HEIGHT"> </a><div class="element clickable constant  constant_HEADER_IMAGE_HEIGHT" data-toggle="collapse" data-target=".constant_HEADER_IMAGE_HEIGHT .collapse">
+<h2>HEADER_IMAGE_HEIGHT</h2>
+<pre>HEADER_IMAGE_HEIGHT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_IMAGE_WIDTH"> </a><div class="element clickable constant  constant_HEADER_IMAGE_WIDTH" data-toggle="collapse" data-target=".constant_HEADER_IMAGE_WIDTH .collapse">
+<h2>HEADER_IMAGE_WIDTH</h2>
+<pre>HEADER_IMAGE_WIDTH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_HEADER_TEXTCOLOR"> </a><div class="element clickable constant  constant_HEADER_TEXTCOLOR" data-toggle="collapse" data-target=".constant_HEADER_TEXTCOLOR .collapse">
+<h2>HEADER_TEXTCOLOR</h2>
+<pre>HEADER_TEXTCOLOR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_NO_HEADER_TEXT"> </a><div class="element clickable constant  constant_NO_HEADER_TEXT" data-toggle="collapse" data-target=".constant_NO_HEADER_TEXT .collapse">
+<h2>NO_HEADER_TEXT</h2>
+<pre>NO_HEADER_TEXT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:55-05:00.<br></footer></div>
+</div>
+</body>
+</html>

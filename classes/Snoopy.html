@@ -1,0 +1,666 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » \Snoopy</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method__check_timeout" title="_check_timeout :: "><span class="description">_check_timeout()
+        </span><pre>_check_timeout()</pre></a></li>
+<li class="method public "><a href="#method__connect" title="_connect :: "><span class="description">_connect()
+        </span><pre>_connect()</pre></a></li>
+<li class="method public "><a href="#method__disconnect" title="_disconnect :: "><span class="description">_disconnect()
+        </span><pre>_disconnect()</pre></a></li>
+<li class="method public "><a href="#method__expandlinks" title="_expandlinks :: "><span class="description">_expandlinks()
+        </span><pre>_expandlinks()</pre></a></li>
+<li class="method public "><a href="#method__httprequest" title="_httprequest :: "><span class="description">_httprequest()
+        </span><pre>_httprequest()</pre></a></li>
+<li class="method public "><a href="#method__httpsrequest" title="_httpsrequest :: "><span class="description">_httpsrequest()
+        </span><pre>_httpsrequest()</pre></a></li>
+<li class="method public "><a href="#method__prepare_post_body" title="_prepare_post_body :: "><span class="description">_prepare_post_body()
+        </span><pre>_prepare_post_body()</pre></a></li>
+<li class="method public "><a href="#method__stripform" title="_stripform :: "><span class="description">_stripform()
+        </span><pre>_stripform()</pre></a></li>
+<li class="method public "><a href="#method__striplinks" title="_striplinks :: "><span class="description">_striplinks()
+        </span><pre>_striplinks()</pre></a></li>
+<li class="method public "><a href="#method__striptext" title="_striptext :: "><span class="description">_striptext()
+        </span><pre>_striptext()</pre></a></li>
+<li class="method public "><a href="#method_fetch" title="fetch :: "><span class="description">fetch()
+        </span><pre>fetch()</pre></a></li>
+<li class="method public "><a href="#method_fetchform" title="fetchform :: "><span class="description">fetchform()
+        </span><pre>fetchform()</pre></a></li>
+<li class="method public "><a href="#method_fetchlinks" title="fetchlinks :: "><span class="description">fetchlinks()
+        </span><pre>fetchlinks()</pre></a></li>
+<li class="method public "><a href="#method_fetchtext" title="fetchtext :: "><span class="description">fetchtext()
+        </span><pre>fetchtext()</pre></a></li>
+<li class="method public "><a href="#method_set_submit_multipart" title="set_submit_multipart :: "><span class="description">set_submit_multipart()
+        </span><pre>set_submit_multipart()</pre></a></li>
+<li class="method public "><a href="#method_set_submit_normal" title="set_submit_normal :: "><span class="description">set_submit_normal()
+        </span><pre>set_submit_normal()</pre></a></li>
+<li class="method public "><a href="#method_setcookies" title="setcookies :: "><span class="description">setcookies()
+        </span><pre>setcookies()</pre></a></li>
+<li class="method public "><a href="#method_submit" title="submit :: "><span class="description">submit()
+        </span><pre>submit()</pre></a></li>
+<li class="method public "><a href="#method_submitlinks" title="submitlinks :: "><span class="description">submitlinks()
+        </span><pre>submitlinks()</pre></a></li>
+<li class="method public "><a href="#method_submittext" title="submittext :: "><span class="description">submittext()
+        </span><pre>submittext()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property__fp_timeout" title="$_fp_timeout :: "><span class="description">$_fp_timeout</span><pre>$_fp_timeout</pre></a></li>
+<li class="property public "><a href="#property__framedepth" title="$_framedepth :: "><span class="description">$_framedepth</span><pre>$_framedepth</pre></a></li>
+<li class="property public "><a href="#property__frameurls" title="$_frameurls :: "><span class="description">$_frameurls</span><pre>$_frameurls</pre></a></li>
+<li class="property public "><a href="#property__httpmethod" title="$_httpmethod :: "><span class="description">$_httpmethod</span><pre>$_httpmethod</pre></a></li>
+<li class="property public "><a href="#property__httpversion" title="$_httpversion :: "><span class="description">$_httpversion</span><pre>$_httpversion</pre></a></li>
+<li class="property public "><a href="#property__isproxy" title="$_isproxy :: "><span class="description">$_isproxy</span><pre>$_isproxy</pre></a></li>
+<li class="property public "><a href="#property__maxlinelen" title="$_maxlinelen :: "><span class="description">$_maxlinelen</span><pre>$_maxlinelen</pre></a></li>
+<li class="property public "><a href="#property__mime_boundary" title="$_mime_boundary :: "><span class="description">$_mime_boundary</span><pre>$_mime_boundary</pre></a></li>
+<li class="property public "><a href="#property__redirectaddr" title="$_redirectaddr :: "><span class="description">$_redirectaddr</span><pre>$_redirectaddr</pre></a></li>
+<li class="property public "><a href="#property__redirectdepth" title="$_redirectdepth :: "><span class="description">$_redirectdepth</span><pre>$_redirectdepth</pre></a></li>
+<li class="property public "><a href="#property__submit_method" title="$_submit_method :: "><span class="description">$_submit_method</span><pre>$_submit_method</pre></a></li>
+<li class="property public "><a href="#property__submit_type" title="$_submit_type :: "><span class="description">$_submit_type</span><pre>$_submit_type</pre></a></li>
+<li class="property public "><a href="#property_accept" title="$accept :: "><span class="description">$accept</span><pre>$accept</pre></a></li>
+<li class="property public "><a href="#property_agent" title="$agent :: "><span class="description">$agent</span><pre>$agent</pre></a></li>
+<li class="property public "><a href="#property_cookies" title="$cookies :: "><span class="description">$cookies</span><pre>$cookies</pre></a></li>
+<li class="property public "><a href="#property_curl_path" title="$curl_path :: "><span class="description">$curl_path</span><pre>$curl_path</pre></a></li>
+<li class="property public "><a href="#property_error" title="$error :: "><span class="description">$error</span><pre>$error</pre></a></li>
+<li class="property public "><a href="#property_expandlinks" title="$expandlinks :: "><span class="description">$expandlinks</span><pre>$expandlinks</pre></a></li>
+<li class="property public "><a href="#property_headers" title="$headers :: "><span class="description">$headers</span><pre>$headers</pre></a></li>
+<li class="property public "><a href="#property_host" title="$host :: "><span class="description">$host</span><pre>$host</pre></a></li>
+<li class="property public "><a href="#property_lastredirectaddr" title="$lastredirectaddr :: "><span class="description">$lastredirectaddr</span><pre>$lastredirectaddr</pre></a></li>
+<li class="property public "><a href="#property_maxframes" title="$maxframes :: "><span class="description">$maxframes</span><pre>$maxframes</pre></a></li>
+<li class="property public "><a href="#property_maxlength" title="$maxlength :: "><span class="description">$maxlength</span><pre>$maxlength</pre></a></li>
+<li class="property public "><a href="#property_maxredirs" title="$maxredirs :: "><span class="description">$maxredirs</span><pre>$maxredirs</pre></a></li>
+<li class="property public "><a href="#property_offsiteok" title="$offsiteok :: "><span class="description">$offsiteok</span><pre>$offsiteok</pre></a></li>
+<li class="property public "><a href="#property_pass" title="$pass :: "><span class="description">$pass</span><pre>$pass</pre></a></li>
+<li class="property public "><a href="#property_passcookies" title="$passcookies :: "><span class="description">$passcookies</span><pre>$passcookies</pre></a></li>
+<li class="property public "><a href="#property_port" title="$port :: "><span class="description">$port</span><pre>$port</pre></a></li>
+<li class="property public "><a href="#property_proxy_host" title="$proxy_host :: "><span class="description">$proxy_host</span><pre>$proxy_host</pre></a></li>
+<li class="property public "><a href="#property_proxy_pass" title="$proxy_pass :: "><span class="description">$proxy_pass</span><pre>$proxy_pass</pre></a></li>
+<li class="property public "><a href="#property_proxy_port" title="$proxy_port :: "><span class="description">$proxy_port</span><pre>$proxy_port</pre></a></li>
+<li class="property public "><a href="#property_proxy_user" title="$proxy_user :: "><span class="description">$proxy_user</span><pre>$proxy_user</pre></a></li>
+<li class="property public "><a href="#property_rawheaders" title="$rawheaders :: "><span class="description">$rawheaders</span><pre>$rawheaders</pre></a></li>
+<li class="property public "><a href="#property_read_timeout" title="$read_timeout :: "><span class="description">$read_timeout</span><pre>$read_timeout</pre></a></li>
+<li class="property public "><a href="#property_referer" title="$referer :: "><span class="description">$referer</span><pre>$referer</pre></a></li>
+<li class="property public "><a href="#property_response_code" title="$response_code :: "><span class="description">$response_code</span><pre>$response_code</pre></a></li>
+<li class="property public "><a href="#property_results" title="$results :: "><span class="description">$results</span><pre>$results</pre></a></li>
+<li class="property public "><a href="#property_status" title="$status :: "><span class="description">$status</span><pre>$status</pre></a></li>
+<li class="property public "><a href="#property_temp_dir" title="$temp_dir :: "><span class="description">$temp_dir</span><pre>$temp_dir</pre></a></li>
+<li class="property public "><a href="#property_timed_out" title="$timed_out :: "><span class="description">$timed_out</span><pre>$timed_out</pre></a></li>
+<li class="property public "><a href="#property_user" title="$user :: "><span class="description">$user</span><pre>$user</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\Snoopy"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Snoopy.html">Snoopy</a>
+</li>
+</ul>
+<div class="element class"><div class="details">
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method__check_timeout"></a><div class="element clickable method public method__check_timeout" data-toggle="collapse" data-target=".method__check_timeout .collapse">
+<h2>_check_timeout()
+        </h2>
+<pre>_check_timeout($fp) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$fp</h4></div>
+</div></div>
+</div>
+<a id="method__connect"></a><div class="element clickable method public method__connect" data-toggle="collapse" data-target=".method__connect .collapse">
+<h2>_connect()
+        </h2>
+<pre>_connect($fp) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$fp</h4></div>
+</div></div>
+</div>
+<a id="method__disconnect"></a><div class="element clickable method public method__disconnect" data-toggle="collapse" data-target=".method__disconnect .collapse">
+<h2>_disconnect()
+        </h2>
+<pre>_disconnect($fp) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$fp</h4></div>
+</div></div>
+</div>
+<a id="method__expandlinks"></a><div class="element clickable method public method__expandlinks" data-toggle="collapse" data-target=".method__expandlinks .collapse">
+<h2>_expandlinks()
+        </h2>
+<pre>_expandlinks($links, $URI) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$links</h4></div>
+<div class="subelement argument"><h4>$URI</h4></div>
+</div></div>
+</div>
+<a id="method__httprequest"></a><div class="element clickable method public method__httprequest" data-toggle="collapse" data-target=".method__httprequest .collapse">
+<h2>_httprequest()
+        </h2>
+<pre>_httprequest($url, $fp, $URI, $http_method, $content_type, $body) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$fp</h4></div>
+<div class="subelement argument"><h4>$URI</h4></div>
+<div class="subelement argument"><h4>$http_method</h4></div>
+<div class="subelement argument"><h4>$content_type</h4></div>
+<div class="subelement argument"><h4>$body</h4></div>
+</div></div>
+</div>
+<a id="method__httpsrequest"></a><div class="element clickable method public method__httpsrequest" data-toggle="collapse" data-target=".method__httpsrequest .collapse">
+<h2>_httpsrequest()
+        </h2>
+<pre>_httpsrequest($url, $URI, $http_method, $content_type, $body) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$URI</h4></div>
+<div class="subelement argument"><h4>$http_method</h4></div>
+<div class="subelement argument"><h4>$content_type</h4></div>
+<div class="subelement argument"><h4>$body</h4></div>
+</div></div>
+</div>
+<a id="method__prepare_post_body"></a><div class="element clickable method public method__prepare_post_body" data-toggle="collapse" data-target=".method__prepare_post_body .collapse">
+<h2>_prepare_post_body()
+        </h2>
+<pre>_prepare_post_body($formvars, $formfiles) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$formvars</h4></div>
+<div class="subelement argument"><h4>$formfiles</h4></div>
+</div></div>
+</div>
+<a id="method__stripform"></a><div class="element clickable method public method__stripform" data-toggle="collapse" data-target=".method__stripform .collapse">
+<h2>_stripform()
+        </h2>
+<pre>_stripform($document) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$document</h4></div>
+</div></div>
+</div>
+<a id="method__striplinks"></a><div class="element clickable method public method__striplinks" data-toggle="collapse" data-target=".method__striplinks .collapse">
+<h2>_striplinks()
+        </h2>
+<pre>_striplinks($document) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$document</h4></div>
+</div></div>
+</div>
+<a id="method__striptext"></a><div class="element clickable method public method__striptext" data-toggle="collapse" data-target=".method__striptext .collapse">
+<h2>_striptext()
+        </h2>
+<pre>_striptext($document) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$document</h4></div>
+</div></div>
+</div>
+<a id="method_fetch"></a><div class="element clickable method public method_fetch" data-toggle="collapse" data-target=".method_fetch .collapse">
+<h2>fetch()
+        </h2>
+<pre>fetch($URI) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+</div></div>
+</div>
+<a id="method_fetchform"></a><div class="element clickable method public method_fetchform" data-toggle="collapse" data-target=".method_fetchform .collapse">
+<h2>fetchform()
+        </h2>
+<pre>fetchform($URI) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+</div></div>
+</div>
+<a id="method_fetchlinks"></a><div class="element clickable method public method_fetchlinks" data-toggle="collapse" data-target=".method_fetchlinks .collapse">
+<h2>fetchlinks()
+        </h2>
+<pre>fetchlinks($URI) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+</div></div>
+</div>
+<a id="method_fetchtext"></a><div class="element clickable method public method_fetchtext" data-toggle="collapse" data-target=".method_fetchtext .collapse">
+<h2>fetchtext()
+        </h2>
+<pre>fetchtext($URI) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+</div></div>
+</div>
+<a id="method_set_submit_multipart"></a><div class="element clickable method public method_set_submit_multipart" data-toggle="collapse" data-target=".method_set_submit_multipart .collapse">
+<h2>set_submit_multipart()
+        </h2>
+<pre>set_submit_multipart() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_set_submit_normal"></a><div class="element clickable method public method_set_submit_normal" data-toggle="collapse" data-target=".method_set_submit_normal .collapse">
+<h2>set_submit_normal()
+        </h2>
+<pre>set_submit_normal() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_setcookies"></a><div class="element clickable method public method_setcookies" data-toggle="collapse" data-target=".method_setcookies .collapse">
+<h2>setcookies()
+        </h2>
+<pre>setcookies() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_submit"></a><div class="element clickable method public method_submit" data-toggle="collapse" data-target=".method_submit .collapse">
+<h2>submit()
+        </h2>
+<pre>submit($URI, $formvars, $formfiles) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+<div class="subelement argument"><h4>$formvars</h4></div>
+<div class="subelement argument"><h4>$formfiles</h4></div>
+</div></div>
+</div>
+<a id="method_submitlinks"></a><div class="element clickable method public method_submitlinks" data-toggle="collapse" data-target=".method_submitlinks .collapse">
+<h2>submitlinks()
+        </h2>
+<pre>submitlinks($URI, $formvars, $formfiles) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+<div class="subelement argument"><h4>$formvars</h4></div>
+<div class="subelement argument"><h4>$formfiles</h4></div>
+</div></div>
+</div>
+<a id="method_submittext"></a><div class="element clickable method public method_submittext" data-toggle="collapse" data-target=".method_submittext .collapse">
+<h2>submittext()
+        </h2>
+<pre>submittext($URI, $formvars, $formfiles) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$URI</h4></div>
+<div class="subelement argument"><h4>$formvars</h4></div>
+<div class="subelement argument"><h4>$formfiles</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__fp_timeout"> </a><div class="element clickable property public property__fp_timeout" data-toggle="collapse" data-target=".property__fp_timeout .collapse">
+<h2>$_fp_timeout</h2>
+<pre>$_fp_timeout </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__framedepth"> </a><div class="element clickable property public property__framedepth" data-toggle="collapse" data-target=".property__framedepth .collapse">
+<h2>$_framedepth</h2>
+<pre>$_framedepth </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__frameurls"> </a><div class="element clickable property public property__frameurls" data-toggle="collapse" data-target=".property__frameurls .collapse">
+<h2>$_frameurls</h2>
+<pre>$_frameurls </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__httpmethod"> </a><div class="element clickable property public property__httpmethod" data-toggle="collapse" data-target=".property__httpmethod .collapse">
+<h2>$_httpmethod</h2>
+<pre>$_httpmethod </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__httpversion"> </a><div class="element clickable property public property__httpversion" data-toggle="collapse" data-target=".property__httpversion .collapse">
+<h2>$_httpversion</h2>
+<pre>$_httpversion </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__isproxy"> </a><div class="element clickable property public property__isproxy" data-toggle="collapse" data-target=".property__isproxy .collapse">
+<h2>$_isproxy</h2>
+<pre>$_isproxy </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__maxlinelen"> </a><div class="element clickable property public property__maxlinelen" data-toggle="collapse" data-target=".property__maxlinelen .collapse">
+<h2>$_maxlinelen</h2>
+<pre>$_maxlinelen </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__mime_boundary"> </a><div class="element clickable property public property__mime_boundary" data-toggle="collapse" data-target=".property__mime_boundary .collapse">
+<h2>$_mime_boundary</h2>
+<pre>$_mime_boundary </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__redirectaddr"> </a><div class="element clickable property public property__redirectaddr" data-toggle="collapse" data-target=".property__redirectaddr .collapse">
+<h2>$_redirectaddr</h2>
+<pre>$_redirectaddr </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__redirectdepth"> </a><div class="element clickable property public property__redirectdepth" data-toggle="collapse" data-target=".property__redirectdepth .collapse">
+<h2>$_redirectdepth</h2>
+<pre>$_redirectdepth </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__submit_method"> </a><div class="element clickable property public property__submit_method" data-toggle="collapse" data-target=".property__submit_method .collapse">
+<h2>$_submit_method</h2>
+<pre>$_submit_method </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__submit_type"> </a><div class="element clickable property public property__submit_type" data-toggle="collapse" data-target=".property__submit_type .collapse">
+<h2>$_submit_type</h2>
+<pre>$_submit_type </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_accept"> </a><div class="element clickable property public property_accept" data-toggle="collapse" data-target=".property_accept .collapse">
+<h2>$accept</h2>
+<pre>$accept </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_agent"> </a><div class="element clickable property public property_agent" data-toggle="collapse" data-target=".property_agent .collapse">
+<h2>$agent</h2>
+<pre>$agent </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_cookies"> </a><div class="element clickable property public property_cookies" data-toggle="collapse" data-target=".property_cookies .collapse">
+<h2>$cookies</h2>
+<pre>$cookies </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_curl_path"> </a><div class="element clickable property public property_curl_path" data-toggle="collapse" data-target=".property_curl_path .collapse">
+<h2>$curl_path</h2>
+<pre>$curl_path </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_error"> </a><div class="element clickable property public property_error" data-toggle="collapse" data-target=".property_error .collapse">
+<h2>$error</h2>
+<pre>$error </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_expandlinks"> </a><div class="element clickable property public property_expandlinks" data-toggle="collapse" data-target=".property_expandlinks .collapse">
+<h2>$expandlinks</h2>
+<pre>$expandlinks </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_headers"> </a><div class="element clickable property public property_headers" data-toggle="collapse" data-target=".property_headers .collapse">
+<h2>$headers</h2>
+<pre>$headers </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_host"> </a><div class="element clickable property public property_host" data-toggle="collapse" data-target=".property_host .collapse">
+<h2>$host</h2>
+<pre>$host </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_lastredirectaddr"> </a><div class="element clickable property public property_lastredirectaddr" data-toggle="collapse" data-target=".property_lastredirectaddr .collapse">
+<h2>$lastredirectaddr</h2>
+<pre>$lastredirectaddr </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_maxframes"> </a><div class="element clickable property public property_maxframes" data-toggle="collapse" data-target=".property_maxframes .collapse">
+<h2>$maxframes</h2>
+<pre>$maxframes </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_maxlength"> </a><div class="element clickable property public property_maxlength" data-toggle="collapse" data-target=".property_maxlength .collapse">
+<h2>$maxlength</h2>
+<pre>$maxlength </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_maxredirs"> </a><div class="element clickable property public property_maxredirs" data-toggle="collapse" data-target=".property_maxredirs .collapse">
+<h2>$maxredirs</h2>
+<pre>$maxredirs </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_offsiteok"> </a><div class="element clickable property public property_offsiteok" data-toggle="collapse" data-target=".property_offsiteok .collapse">
+<h2>$offsiteok</h2>
+<pre>$offsiteok </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_pass"> </a><div class="element clickable property public property_pass" data-toggle="collapse" data-target=".property_pass .collapse">
+<h2>$pass</h2>
+<pre>$pass </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_passcookies"> </a><div class="element clickable property public property_passcookies" data-toggle="collapse" data-target=".property_passcookies .collapse">
+<h2>$passcookies</h2>
+<pre>$passcookies </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_port"> </a><div class="element clickable property public property_port" data-toggle="collapse" data-target=".property_port .collapse">
+<h2>$port</h2>
+<pre>$port </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_proxy_host"> </a><div class="element clickable property public property_proxy_host" data-toggle="collapse" data-target=".property_proxy_host .collapse">
+<h2>$proxy_host</h2>
+<pre>$proxy_host </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_proxy_pass"> </a><div class="element clickable property public property_proxy_pass" data-toggle="collapse" data-target=".property_proxy_pass .collapse">
+<h2>$proxy_pass</h2>
+<pre>$proxy_pass </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_proxy_port"> </a><div class="element clickable property public property_proxy_port" data-toggle="collapse" data-target=".property_proxy_port .collapse">
+<h2>$proxy_port</h2>
+<pre>$proxy_port </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_proxy_user"> </a><div class="element clickable property public property_proxy_user" data-toggle="collapse" data-target=".property_proxy_user .collapse">
+<h2>$proxy_user</h2>
+<pre>$proxy_user </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_rawheaders"> </a><div class="element clickable property public property_rawheaders" data-toggle="collapse" data-target=".property_rawheaders .collapse">
+<h2>$rawheaders</h2>
+<pre>$rawheaders </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_read_timeout"> </a><div class="element clickable property public property_read_timeout" data-toggle="collapse" data-target=".property_read_timeout .collapse">
+<h2>$read_timeout</h2>
+<pre>$read_timeout </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_referer"> </a><div class="element clickable property public property_referer" data-toggle="collapse" data-target=".property_referer .collapse">
+<h2>$referer</h2>
+<pre>$referer </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_response_code"> </a><div class="element clickable property public property_response_code" data-toggle="collapse" data-target=".property_response_code .collapse">
+<h2>$response_code</h2>
+<pre>$response_code </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_results"> </a><div class="element clickable property public property_results" data-toggle="collapse" data-target=".property_results .collapse">
+<h2>$results</h2>
+<pre>$results </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_status"> </a><div class="element clickable property public property_status" data-toggle="collapse" data-target=".property_status .collapse">
+<h2>$status</h2>
+<pre>$status </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_temp_dir"> </a><div class="element clickable property public property_temp_dir" data-toggle="collapse" data-target=".property_temp_dir .collapse">
+<h2>$temp_dir</h2>
+<pre>$temp_dir </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_timed_out"> </a><div class="element clickable property public property_timed_out" data-toggle="collapse" data-target=".property_timed_out .collapse">
+<h2>$timed_out</h2>
+<pre>$timed_out </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_user"> </a><div class="element clickable property public property_user" data-toggle="collapse" data-target=".property_user .collapse">
+<h2>$user</h2>
+<pre>$user </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:10-05:00.<br></footer></div>
+</div>
+</body>
+</html>

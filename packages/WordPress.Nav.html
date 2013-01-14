@@ -1,0 +1,696 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Nav</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<span class="empty-package"><i class="icon-folder-close"></i>Nav</span><ul class="nav nav-list nav-packages"><li>
+<a href="../packages/WordPress.Nav.Menus.html" title="Menus"><i class="icon-folder-open"></i>Menus</a><ul class="nav nav-list nav-packages"></ul>
+</li></ul>
+</li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Nav.html">Nav</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li>
+<span class="divider">\</span><a href="../packages/WordPress.Nav.html">Nav</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Nav.Menus.html">Menus</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function__is_valid_nav_menu_item"></a><div class="element clickable function  function__is_valid_nav_menu_item" data-toggle="collapse" data-target=".function__is_valid_nav_menu_item .collapse">
+<h2>Returns if a menu item is valid.</h2>
+<pre>_is_valid_nav_menu_item($item) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Bug #13958</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.2.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$item</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>false if invalid, else true.</div>
+</div></div>
+</div>
+<a id="function__nav_menu_item_id_use_once"></a><div class="element clickable function  function__nav_menu_item_id_use_once" data-toggle="collapse" data-target=".function__nav_menu_item_id_use_once .collapse">
+<h2>Prevents a menu item ID from being used more than once.</h2>
+<pre>_nav_menu_item_id_use_once($id, $item) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.1</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$item</h4></div>
+</div></div>
+</div>
+<a id="function__sort_nav_menu_items"></a><div class="element clickable function  function__sort_nav_menu_items" data-toggle="collapse" data-target=".function__sort_nav_menu_items .collapse">
+<h2>Sort menu items by the desired key.</h2>
+<pre>_sort_nav_menu_items(object $a, object $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>object</code><p>The first object to compare</p></div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>object</code><p>The second object to compare</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>-1, 0, or 1 if $a is considered to be respectively less than, equal to, or greater than $b.</div>
+</div></div>
+</div>
+<a id="function__wp_auto_add_pages_to_menu"></a><div class="element clickable function  function__wp_auto_add_pages_to_menu" data-toggle="collapse" data-target=".function__wp_auto_add_pages_to_menu .collapse">
+<h2>Automatically add newly published page objects to menus with that as an option.</h2>
+<pre>_wp_auto_add_pages_to_menu(string $new_status, string $old_status, object $post) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$new_status</h4>
+<code>string</code><p>The new status of the post object.</p></div>
+<div class="subelement argument">
+<h4>$old_status</h4>
+<code>string</code><p>The old status of the post object.</p></div>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><p>The post object being transitioned from one status to another.</p></div>
+</div></div>
+</div>
+<a id="function__wp_delete_post_menu_item"></a><div class="element clickable function  function__wp_delete_post_menu_item" data-toggle="collapse" data-target=".function__wp_delete_post_menu_item .collapse">
+<h2>Callback for handling a menu item when its original object is deleted.</h2>
+<pre>_wp_delete_post_menu_item(int $object_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object_id</h4>
+<code>int</code><p>The ID of the original object being trashed.</p></div>
+</div></div>
+</div>
+<a id="function__wp_delete_tax_menu_item"></a><div class="element clickable function  function__wp_delete_tax_menu_item" data-toggle="collapse" data-target=".function__wp_delete_tax_menu_item .collapse">
+<h2>Callback for handling a menu item when its original object is deleted.</h2>
+<pre>_wp_delete_tax_menu_item(int $object_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object_id</h4>
+<code>int</code><p>The ID of the original object being trashed.</p></div>
+</div></div>
+</div>
+<a id="function__wp_menu_item_classes_by_context"></a><div class="element clickable function  function__wp_menu_item_classes_by_context" data-toggle="collapse" data-target=".function__wp_menu_item_classes_by_context .collapse">
+<h2>Add the class property classes for the current context, if applicable.</h2>
+<pre>_wp_menu_item_classes_by_context(array $menu_items) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>access</th>
+<td>private</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu_items</h4>
+<code>array</code><p>The current menu item objects to which to add the class property information.</p></div>
+</div></div>
+</div>
+<a id="function_get_nav_menu_locations"></a><div class="element clickable function  function_get_nav_menu_locations" data-toggle="collapse" data-target=".function_get_nav_menu_locations .collapse">
+<h2>Returns an array with the registered navigation menu locations and the menu assigned to it</h2>
+<pre>get_nav_menu_locations() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_get_registered_nav_menus"></a><div class="element clickable function  function_get_registered_nav_menus" data-toggle="collapse" data-target=".function_get_registered_nav_menus .collapse">
+<h2>Returns an array of all registered navigation menus in a theme</h2>
+<pre>get_registered_nav_menus() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="function_has_nav_menu"></a><div class="element clickable function  function_has_nav_menu" data-toggle="collapse" data-target=".function_has_nav_menu .collapse">
+<h2>Whether a registered nav menu location has a menu assigned to it.</h2>
+<pre>has_nav_menu(string $location) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code>string</code><p>Menu location identifier.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether location has a menu.</div>
+</div></div>
+</div>
+<a id="function_is_nav_menu"></a><div class="element clickable function  function_is_nav_menu" data-toggle="collapse" data-target=".function_is_nav_menu .collapse">
+<h2>Check if the given ID is a navigation menu.</h2>
+<pre>is_nav_menu(int | string $menu) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Returns true if it is; false otherwise.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu</h4>
+<code>int</code><code>string</code><p>The menu to check (id, slug, or name)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether the menu exists.</div>
+</div></div>
+</div>
+<a id="function_is_nav_menu_item"></a><div class="element clickable function  function_is_nav_menu_item" data-toggle="collapse" data-target=".function_is_nav_menu_item .collapse">
+<h2>Determine whether the given ID is a nav menu item.</h2>
+<pre>is_nav_menu_item(int $menu_item_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu_item_id</h4>
+<code>int</code><p>The ID of the potential nav menu item.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Whether the given ID is that of a nav menu item.</div>
+</div></div>
+</div>
+<a id="function_register_nav_menu"></a><div class="element clickable function  function_register_nav_menu" data-toggle="collapse" data-target=".function_register_nav_menu .collapse">
+<h2>Register a navigation menu for a theme.</h2>
+<pre>register_nav_menu(string $location, string $description) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code>string</code><p>Menu location identifier, like a slug.</p></div>
+<div class="subelement argument">
+<h4>$description</h4>
+<code>string</code><p>Menu location descriptive text.</p></div>
+</div></div>
+</div>
+<a id="function_register_nav_menus"></a><div class="element clickable function  function_register_nav_menus" data-toggle="collapse" data-target=".function_register_nav_menus .collapse">
+<h2>Register navigation menus for a theme.</h2>
+<pre>register_nav_menus(array $locations) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$locations</h4>
+<code>array</code><p>Associative array of menu location identifiers (like a slug) and descriptive text.</p>
+</div>
+</div></div>
+</div>
+<a id="function_unregister_nav_menu"></a><div class="element clickable function  function_unregister_nav_menu" data-toggle="collapse" data-target=".function_unregister_nav_menu .collapse">
+<h2>Unregisters a navigation menu for a theme.</h2>
+<pre>unregister_nav_menu(array $location) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$location</h4>
+<code>array</code><p>the menu location identifier</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on success, false on failure.</div>
+</div></div>
+</div>
+<a id="function_walk_nav_menu_tree"></a><div class="element clickable function  function_walk_nav_menu_tree" data-toggle="collapse" data-target=".function_walk_nav_menu_tree .collapse">
+<h2>Retrieve the HTML list content for nav menu items.</h2>
+<pre>walk_nav_menu_tree($items, $depth, $r) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>uses</th>
+<td>\global\Walker_Nav_Menu</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\Walker::walk()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$items</h4></div>
+<div class="subelement argument"><h4>$depth</h4></div>
+<div class="subelement argument"><h4>$r</h4></div>
+</div></div>
+</div>
+<a id="function_wp_create_nav_menu"></a><div class="element clickable function  function_wp_create_nav_menu" data-toggle="collapse" data-target=".function_wp_create_nav_menu .collapse">
+<h2>Create a Navigation Menu.</h2>
+<pre>wp_create_nav_menu(string $menu_name) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu_name</h4>
+<code>string</code><p>Menu Name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Menu object on success|WP_Error on failure</div>
+</div></div>
+</div>
+<a id="function_wp_delete_nav_menu"></a><div class="element clickable function  function_wp_delete_nav_menu" data-toggle="collapse" data-target=".function_wp_delete_nav_menu .collapse">
+<h2>Delete a Navigation Menu.</h2>
+<pre>wp_delete_nav_menu(string $menu) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu</h4>
+<code>string</code><p>name|id|slug</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Menu object on success|WP_Error on failure</div>
+</div></div>
+</div>
+<a id="function_wp_get_associated_nav_menu_items"></a><div class="element clickable function  function_wp_get_associated_nav_menu_items" data-toggle="collapse" data-target=".function_wp_get_associated_nav_menu_items .collapse">
+<h2>Get the menu items associated with a particular object.</h2>
+<pre>wp_get_associated_nav_menu_items(int $object_id, string $object_type) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$object_id</h4>
+<code>int</code><p>The ID of the original object.</p></div>
+<div class="subelement argument">
+<h4>$object_type</h4>
+<code>string</code><p>The type of object, such as "taxonomy" or "post_type."</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The array of menu item IDs; empty array if none;</div>
+</div></div>
+</div>
+<a id="function_wp_get_nav_menu_items"></a><div class="element clickable function  function_wp_get_nav_menu_items" data-toggle="collapse" data-target=".function_wp_get_nav_menu_items .collapse">
+<h2>Returns all menu items of a navigation menu.</h2>
+<pre>wp_get_nav_menu_items(string $menu, string $args) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu</h4>
+<code>string</code><p>menu name, id, or slug</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>$items array of menu items, else false.</div>
+</div></div>
+</div>
+<a id="function_wp_get_nav_menu_object"></a><div class="element clickable function  function_wp_get_nav_menu_object" data-toggle="collapse" data-target=".function_wp_get_nav_menu_object .collapse">
+<h2>Returns a navigation menu object.</h2>
+<pre>wp_get_nav_menu_object(string $menu) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_term</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\get_term_by</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu</h4>
+<code>string</code><p>Menu id, slug or name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>false if $menu param isn't supplied or term does not exist, menu object if successful.</div>
+</div></div>
+</div>
+<a id="function_wp_get_nav_menus"></a><div class="element clickable function  function_wp_get_nav_menus" data-toggle="collapse" data-target=".function_wp_get_nav_menus .collapse">
+<h2>Returns all navigation menu objects.</h2>
+<pre>wp_get_nav_menus(array $args) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Array of arguments passed on to get_terms().</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>menu objects</div>
+</div></div>
+</div>
+<a id="function_wp_nav_menu"></a><div class="element clickable function  function_wp_nav_menu" data-toggle="collapse" data-target=".function_wp_nav_menu .collapse">
+<h2>Displays a navigation menu.</h2>
+<pre>wp_nav_menu(array $args) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Optional $args contents:</p>
+
+<p>menu - The menu that is desired. Accepts (matching in order) id, slug, name. Defaults to blank.
+menu_class - CSS class to use for the ul element which forms the menu. Defaults to 'menu'.
+menu_id - The ID that is applied to the ul element which forms the menu. Defaults to the menu slug, incremented.
+container - Whether to wrap the ul, and what to wrap it with. Defaults to 'div'.
+container_class - the class that is applied to the container. Defaults to 'menu-{menu slug}-container'.
+container_id - The ID that is applied to the container. Defaults to blank.
+fallback_cb - If the menu doesn't exists, a callback function will fire. Defaults to 'wp_page_menu'. Set to false for no fallback.
+before - Text before the link text.
+after - Text after the link text.
+link_before - Text before the link.
+link_after - Text after the link.
+echo - Whether to echo the menu or return it. Defaults to echo.
+depth - how many levels of the hierarchy are to be included. 0 means all. Defaults to 0.
+walker - allows a custom walker to be specified.
+theme_location - the location in the theme to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
+items_wrap - How the list items should be wrapped. Defaults to a ul with an id and class. Uses printf() format with numbered placeholders.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Arguments</p></div>
+</div></div>
+</div>
+<a id="function_wp_setup_nav_menu_item"></a><div class="element clickable function  function_wp_setup_nav_menu_item" data-toggle="collapse" data-target=".function_wp_setup_nav_menu_item .collapse">
+<h2>Decorates a menu item object with the shared navigation menu item properties.</h2>
+<pre>wp_setup_nav_menu_item(object $menu_item) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Properties:
+- db_id:        The DB ID of this item as a nav_menu_item object, if it exists (0 if it doesn't exist).
+- object_id:        The DB ID of the original object this menu item represents, e.g. ID for posts and term_id for categories.
+- type:     The family of objects originally represented, such as "post_type" or "taxonomy."
+- object:       The type of object originally represented, such as "category," "post", or "attachment."
+- type_label:   The singular label used to describe this type of menu item.
+- post_parent:  The DB ID of the original object's parent object, if any (0 otherwise).
+- menu_item_parent:     The DB ID of the nav_menu_item that is this item's menu parent, if any. 0 otherwise.
+- url:      The URL to which this menu item points.
+- title:        The title of this menu item.
+- target:       The target attribute of the link element for this menu item.
+- attr_title:   The title attribute of the link element for this menu item.
+- classes:      The array of class attribute values for the link element of this menu item.
+- xfn:      The XFN relationship expressed in the link of this menu item.
+- description:  The description of this menu item.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu_item</h4>
+<code>object</code><p>The menu item to modify.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>object</code>$menu_item The menu item with standard menu item properties.</div>
+</div></div>
+</div>
+<a id="function_wp_update_nav_menu_item"></a><div class="element clickable function  function_wp_update_nav_menu_item" data-toggle="collapse" data-target=".function_wp_update_nav_menu_item .collapse">
+<h2>Save the properties of a menu item or create a new one.</h2>
+<pre>wp_update_nav_menu_item(int $menu_id, int $menu_item_db_id, array $menu_item_data) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu_id</h4>
+<code>int</code><p>The ID of the menu. Required. If "0", makes the menu item a draft orphan.</p>
+</div>
+<div class="subelement argument">
+<h4>$menu_item_db_id</h4>
+<code>int</code><p>The ID of the menu item. If "0", creates a new menu item.</p>
+</div>
+<div class="subelement argument">
+<h4>$menu_item_data</h4>
+<code>array</code><p>The menu item's data.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The menu item's database ID or WP_Error object on failure.</div>
+</div></div>
+</div>
+<a id="function_wp_update_nav_menu_object"></a><div class="element clickable function  function_wp_update_nav_menu_object" data-toggle="collapse" data-target=".function_wp_update_nav_menu_object .collapse">
+<h2>Save the properties of a menu or create a new menu with those properties.</h2>
+<pre>wp_update_nav_menu_object(int $menu_id, array $menu_data) : int | \error</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$menu_id</h4>
+<code>int</code><p>The ID of the menu or "0" to create a new menu.</p>
+</div>
+<div class="subelement argument">
+<h4>$menu_data</h4>
+<code>array</code><p>The array of menu data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code><code>\error</code>object The menu's ID or WP_Error object.</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:52-05:00.<br></footer></div>
+</div>
+</body>
+</html>

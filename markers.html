@@ -1,0 +1,761 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="css/template.css" rel="stylesheet" media="all">
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="js/bootstrap.js" type="text/javascript"></script><script src="js/template.js" type="text/javascript"></script><script src="js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4"><ul class="side-nav nav nav-list">
+<li class="nav-header">Navigation</li>
+<li><a href="#wp-admin%5Cimport.php"><i class="icon-file"></i>wp-admin\import.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cclass-wp-upgrader.php"><i class="icon-file"></i>wp-admin\includes\class-wp-upgrader.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cclass-wp-users-list-table.php"><i class="icon-file"></i>wp-admin\includes\class-wp-users-list-table.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cimage.php"><i class="icon-file"></i>wp-admin\includes\image.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Ctemplate.php"><i class="icon-file"></i>wp-admin\includes\template.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cupgrade.php"><i class="icon-file"></i>wp-admin\includes\upgrade.php</a></li>
+<li><a href="#wp-admin%5Cinstall.php"><i class="icon-file"></i>wp-admin\install.php</a></li>
+<li><a href="#wp-admin%5Cnetwork.php"><i class="icon-file"></i>wp-admin\network.php</a></li>
+<li><a href="#wp-admin%5Cplugin-install.php"><i class="icon-file"></i>wp-admin\plugin-install.php</a></li>
+<li><a href="#wp-admin%5Cuser-edit.php"><i class="icon-file"></i>wp-admin\user-edit.php</a></li>
+<li><a href="#wp-content%5Cplugins%5Cakismet%5Cadmin.php"><i class="icon-file"></i>wp-content\plugins\akismet\admin.php</a></li>
+<li><a href="#wp-content%5Cthemes%5Ctwentyeleven%5Cinc%5Ctheme-options.php"><i class="icon-file"></i>wp-content\themes\twentyeleven\inc\theme-options.php</a></li>
+<li><a href="#wp-includes%5Ccategory-template.php"><i class="icon-file"></i>wp-includes\category-template.php</a></li>
+<li><a href="#wp-includes%5Cclass-http.php"><i class="icon-file"></i>wp-includes\class-http.php</a></li>
+<li><a href="#wp-includes%5Cclass-json.php"><i class="icon-file"></i>wp-includes\class-json.php</a></li>
+<li><a href="#wp-includes%5Cclass-phpmailer.php"><i class="icon-file"></i>wp-includes\class-phpmailer.php</a></li>
+<li><a href="#wp-includes%5Cclass-simplepie.php"><i class="icon-file"></i>wp-includes\class-simplepie.php</a></li>
+<li><a href="#wp-includes%5Cclass-wp-xmlrpc-server.php"><i class="icon-file"></i>wp-includes\class-wp-xmlrpc-server.php</a></li>
+<li><a href="#wp-includes%5Cformatting.php"><i class="icon-file"></i>wp-includes\formatting.php</a></li>
+<li><a href="#wp-includes%5Cfunctions.php"><i class="icon-file"></i>wp-includes\functions.php</a></li>
+<li><a href="#wp-includes%5Cms-functions.php"><i class="icon-file"></i>wp-includes\ms-functions.php</a></li>
+<li><a href="#wp-includes%5Cnav-menu-template.php"><i class="icon-file"></i>wp-includes\nav-menu-template.php</a></li>
+<li><a href="#wp-includes%5Cpluggable.php"><i class="icon-file"></i>wp-includes\pluggable.php</a></li>
+<li><a href="#wp-includes%5Cpomo%5Cmo.php"><i class="icon-file"></i>wp-includes\pomo\mo.php</a></li>
+<li><a href="#wp-includes%5Cpomo%5Cpo.php"><i class="icon-file"></i>wp-includes\pomo\po.php</a></li>
+<li><a href="#wp-includes%5Cpost-template.php"><i class="icon-file"></i>wp-includes\post-template.php</a></li>
+<li><a href="#wp-includes%5Cuser.php"><i class="icon-file"></i>wp-includes\user.php</a></li>
+</ul></div>
+<div class="span8">
+<ul class="breadcrumb">
+<li>
+<a href=""><i class="icon-map-marker"></i></a><span class="divider">\</span>
+</li>
+<li>Markers</li>
+</ul>
+<div class="alert alert-info">
+                        The following markers were found:
+                        <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul>
+</div>
+<div id="marker-accordion">
+<div class="package-contents">
+<a name="wp-admin%5Cimport.php" id="wp-admin\import.php"></a><h3>
+<i class="icon-file"></i>wp-admin\import.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>80</td>
+<td>make more helpful</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cincludes%5Cclass-wp-upgrader.php" id="wp-admin\includes\class-wp-upgrader.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\class-wp-upgrader.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>148</td>
+<td>optimizations, Copy when Move/Rename would suffice?</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cincludes%5Cclass-wp-users-list-table.php" id="wp-admin\includes\class-wp-users-list-table.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\class-wp-users-list-table.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>234</td>
+<td>make profile/user-edit determination a separate function</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cincludes%5Cimage.php" id="wp-admin\includes\image.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\image.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>207</td>
+<td>Try other exif libraries if available.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cincludes%5Ctemplate.php" id="wp-admin\includes\template.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\template.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>25</td>
+<td>decouple this</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cincludes%5Cupgrade.php" id="wp-admin\includes\upgrade.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\upgrade.php<small style="float: right;padding-right: 10px;">4</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>fixme</td>
+<td>725</td>
+<td>RESET_CAPS is temporary code to reset roles and caps if flag is set.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1737</td>
+<td>This does not copy arbitrary include dependencies. Only the</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1895</td>
+<td>rm -rf the site theme directory.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1900</td>
+<td>rm -rf the site theme directory.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cinstall.php" id="wp-admin\install.php"></a><h3>
+<i class="icon-file"></i>wp-admin\install.php<small style="float: right;padding-right: 10px;">4</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>199</td>
+<td>poka-yoke</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>206</td>
+<td>poka-yoke</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>210</td>
+<td>poka-yoke</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>214</td>
+<td>poka-yoke</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cnetwork.php" id="wp-admin\network.php"></a><h3>
+<i class="icon-file"></i>wp-admin\network.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>136</td>
+<td>Realistically, step 1 should be a welcome screen explaining what a Network is and such. Navigating to Tools > Network
+	should not be a sudden "Welcome to a new install process! Fill this out and click here." See also contextual help todo.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cplugin-install.php" id="wp-admin\plugin-install.php"></a><h3>
+<i class="icon-file"></i>wp-admin\plugin-install.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>8</td>
+<td>route this pages via a specific iframe handler instead of the do_action below</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-admin%5Cuser-edit.php" id="wp-admin\user-edit.php"></a><h3>
+<i class="icon-file"></i>wp-admin\user-edit.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>252</td>
+<td>create a function that does this: wp_get_user_role()</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-content%5Cplugins%5Cakismet%5Cadmin.php" id="wp-content\plugins\akismet\admin.php"></a><h3>
+<i class="icon-file"></i>wp-content\plugins\akismet\admin.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>fixme</td>
+<td>344</td>
+<td>placeholder</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-content%5Cthemes%5Ctwentyeleven%5Cinc%5Ctheme-options.php" id="wp-content\themes\twentyeleven\inc\theme-options.php"></a><h3>
+<i class="icon-file"></i>wp-content\themes\twentyeleven\inc\theme-options.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>326</td>
+<td>set up Reset Options action</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Ccategory-template.php" id="wp-includes\category-template.php"></a><h3>
+<i class="icon-file"></i>wp-includes\category-template.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>576</td>
+<td>Complete functionality.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>774</td>
+<td>Decouple this</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>919</td>
+<td>Decouple this</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cclass-http.php" id="wp-includes\class-http.php"></a><h3>
+<i class="icon-file"></i>wp-includes\class-http.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>36</td>
+<td>Refactor this code. The code in this method extends the scope of its original purpose
+	and should be refactored to allow for cleaner abstraction and reduce duplication of the
+	code. One suggestion is to create a class specifically for the arguments, however
+	preliminary refactoring to this affect has affect more than just the scope of the
+	arguments. Something to ponder at least.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>426</td>
+<td>Add support for footer chunked headers.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1420</td>
+<td>The WordPress convention is to use underscores instead of camelCase for function and method
+names. Need to switch to use underscores instead for the methods.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cclass-json.php" id="wp-includes\class-json.php"></a><h3>
+<i class="icon-file"></i>wp-includes\class-json.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>820</td>
+<td>Ultimately, this should just call PEAR::isError()</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>849</td>
+<td>Ultimately, this class shall be descended from PEAR_Error</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cclass-phpmailer.php" id="wp-includes\class-phpmailer.php"></a><h3>
+<i class="icon-file"></i>wp-includes\class-phpmailer.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>2346</td>
+<td>Should this not be using __set() magic function?</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1408</td>
+<td>check this worked</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1916</td>
+<td>using /e (equivalent to eval()) is probably not a good idea</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cclass-simplepie.php" id="wp-includes\class-simplepie.php"></a><h3>
+<i class="icon-file"></i>wp-includes\class-simplepie.php<small style="float: right;padding-right: 10px;">11</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>1947</td>
+<td>Cache atom:icon</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>2008</td>
+<td>If we have a perm redirect we should return the new URL</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>2008</td>
+<td>When we make the above change, let's support <itunes:new-feed-url> as well</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>2008</td>
+<td>Also, |atom:link|@rel=self</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>3767</td>
+<td>Add ability to prefer one type of content over another (in a media group).</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>3783</td>
+<td>Add support for end-user defined sorting of enclosures by type/handler (so we can prefer the faster-loading FLV over MP4).</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>3783</td>
+<td>If an element exists at a level, but it's value is empty, we should fall back to the value from the parent (if it exists).</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>6925</td>
+<td>If the dimensions for media:content are defined, use them when width/height are set to 'auto'.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>7643</td>
+<td>Move to properly supporting RFC2616 (HTTP/1.1)</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>11258</td>
+<td>Add support for EBCDIC</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>14945</td>
+<td>Move to using an actual HTML parser (this will allow tags to be properly stripped, and to switch between HTML and XHTML), this will also make it easier to shorten a string while preserving HTML tags</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cclass-wp-xmlrpc-server.php" id="wp-includes\class-wp-xmlrpc-server.php"></a><h3>
+<i class="icon-file"></i>wp-includes\class-wp-xmlrpc-server.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>fixme</td>
+<td>3417</td>
+<td>(or delete me) do we really want to cater to bad clients at the expense of good ones by BEEPing up their line breaks? commented. $content = str_replace("\n", "\r\n", $content);</td>
+</tr>
+<tr>
+<td>fixme</td>
+<td>4927</td>
+<td>does url_to_postid() cover all these cases already?</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>4963</td>
+<td>Attempt to extract a post ID from the given URL</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cformatting.php" id="wp-includes\formatting.php"></a><h3>
+<i class="icon-file"></i>wp-includes\formatting.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>1021</td>
+<td>Expand to support the full range of CDATA that a class attribute can contain.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cfunctions.php" id="wp-includes\functions.php"></a><h3>
+<i class="icon-file"></i>wp-includes\functions.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>413</td>
+<td>Tidy this ghetto code up and make the debug code optional</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cms-functions.php" id="wp-includes\ms-functions.php"></a><h3>
+<i class="icon-file"></i>wp-includes\ms-functions.php<small style="float: right;padding-right: 10px;">5</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>89</td>
+<td>Review this call to add_user_to_blog too - to get here the user must have a role on this blog?</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>610</td>
+<td>Check email too?</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>747</td>
+<td>Don't hard code activation link.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>798</td>
+<td>Don't hard code activation link.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>878</td>
+<td>What to do if we create a user but cannot create a blog?</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cnav-menu-template.php" id="wp-includes\nav-menu-template.php"></a><h3>
+<i class="icon-file"></i>wp-includes\nav-menu-template.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>25</td>
+<td>Decouple this.</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cpluggable.php" id="wp-includes\pluggable.php"></a><h3>
+<i class="icon-file"></i>wp-includes\pluggable.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>477</td>
+<td>what should the error message be? (Or would these even happen?)</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cpomo%5Cmo.php" id="wp-includes\pomo\mo.php"></a><h3>
+<i class="icon-file"></i>wp-includes\pomo\mo.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>91</td>
+<td>warnings for control characters</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>99</td>
+<td>warnings for control characters</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cpomo%5Cpo.php" id="wp-includes\pomo\po.php"></a><h3>
+<i class="icon-file"></i>wp-includes\pomo\po.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>48</td>
+<td>sorting</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cpost-template.php" id="wp-includes\post-template.php"></a><h3>
+<i class="icon-file"></i>wp-includes\post-template.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>1317</td>
+<td>split into two functions (list, form-table) ?</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>983</td>
+<td>Decouple this.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>1089</td>
+<td>Decouple this</td>
+</tr>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="wp-includes%5Cuser.php" id="wp-includes\user.php"></a><h3>
+<i class="icon-file"></i>wp-includes\user.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>todo</td>
+<td>195</td>
+<td>xmlrpc only. Maybe move to xmlrpc.php.</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>40</td>
+<td>do we deprecate the wp_authentication action?</td>
+</tr>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:21-05:00.<br></footer></div>
+</div>
+</body>
+</html>

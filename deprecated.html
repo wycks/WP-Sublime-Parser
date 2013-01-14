@@ -1,0 +1,2124 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="css/template.css" rel="stylesheet" media="all">
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="js/bootstrap.js" type="text/javascript"></script><script src="js/template.js" type="text/javascript"></script><script src="js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4"><ul class="side-nav nav nav-list">
+<li class="nav-header">Navigation</li>
+<li><a href="#wp-admin%5Cadmin-functions.php"><i class="icon-file"></i>wp-admin\admin-functions.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cclass-wp-filesystem-base.php"><i class="icon-file"></i>wp-admin\includes\class-wp-filesystem-base.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cdeprecated.php"><i class="icon-file"></i>wp-admin\includes\deprecated.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Cms-deprecated.php"><i class="icon-file"></i>wp-admin\includes\ms-deprecated.php</a></li>
+<li><a href="#wp-admin%5Cincludes%5Ctheme-install.php"><i class="icon-file"></i>wp-admin\includes\theme-install.php</a></li>
+<li><a href="#wp-admin%5Cupgrade-functions.php"><i class="icon-file"></i>wp-admin\upgrade-functions.php</a></li>
+<li><a href="#wp-app.php"><i class="icon-file"></i>wp-app.php</a></li>
+<li><a href="#wp-content%5Cthemes%5Ctwentyten%5Cfunctions.php"><i class="icon-file"></i>wp-content\themes\twentyten\functions.php</a></li>
+<li><a href="#wp-includes%5Cclass-wp-xmlrpc-server.php"><i class="icon-file"></i>wp-includes\class-wp-xmlrpc-server.php</a></li>
+<li><a href="#wp-includes%5Cdeprecated.php"><i class="icon-file"></i>wp-includes\deprecated.php</a></li>
+<li><a href="#wp-includes%5Cfunctions.php"><i class="icon-file"></i>wp-includes\functions.php</a></li>
+<li><a href="#wp-includes%5Clocale.php"><i class="icon-file"></i>wp-includes\locale.php</a></li>
+<li><a href="#wp-includes%5Cms-deprecated.php"><i class="icon-file"></i>wp-includes\ms-deprecated.php</a></li>
+<li><a href="#wp-includes%5Cms-functions.php"><i class="icon-file"></i>wp-includes\ms-functions.php</a></li>
+<li><a href="#wp-includes%5Cpluggable-deprecated.php"><i class="icon-file"></i>wp-includes\pluggable-deprecated.php</a></li>
+<li><a href="#wp-includes%5Ctheme-compat%5Ccomments-popup.php"><i class="icon-file"></i>wp-includes\theme-compat\comments-popup.php</a></li>
+<li><a href="#wp-includes%5Ctheme-compat%5Ccomments.php"><i class="icon-file"></i>wp-includes\theme-compat\comments.php</a></li>
+<li><a href="#wp-includes%5Ctheme-compat%5Cfooter.php"><i class="icon-file"></i>wp-includes\theme-compat\footer.php</a></li>
+<li><a href="#wp-includes%5Ctheme-compat%5Cheader.php"><i class="icon-file"></i>wp-includes\theme-compat\header.php</a></li>
+<li><a href="#wp-includes%5Ctheme-compat%5Csidebar.php"><i class="icon-file"></i>wp-includes\theme-compat\sidebar.php</a></li>
+<li><a href="#xmlrpc.php"><i class="icon-file"></i>xmlrpc.php</a></li>
+</ul></div>
+<div class="span8">
+<ul class="breadcrumb">
+<li>
+<a href=""><i class="icon-stop"></i></a><span class="divider">\</span>
+</li>
+<li>Deprecated elements</li>
+</ul>
+<div id="marker-accordion">
+<a name="wp-admin%5Cadmin-functions.php" id="wp-admin\admin-functions.php"></a><h3>
+<i class="icon-file"></i>wp-admin\admin-functions.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>2.5</td>
+</tr>
+</table></div>
+<a name="wp-admin%5Cincludes%5Cclass-wp-filesystem-base.php" id="wp-admin\includes\class-wp-filesystem-base.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\class-wp-filesystem-base.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>117</td>
+<td>2.7</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>99</td>
+<td>2.7</td>
+</tr>
+</table></div>
+<a name="wp-admin%5Cincludes%5Cdeprecated.php" id="wp-admin\includes\deprecated.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\deprecated.php<small style="float: right;padding-right: 10px;">47</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>128</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>128</td>
+<td>Use register_setting()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>147</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>147</td>
+<td>Use unregister_setting()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>15</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>15</td>
+<td>Use wp_editor().</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>165</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>178</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>189</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>200</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>217</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>240</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>27</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>274</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>291</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>39</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>39</td>
+<td>Use wp_constrain_dimensions()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>57</td>
+<td>2.6.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>57</td>
+<td>Use wp_category_checklist()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>630</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>663</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>677</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>691</td>
+<td>3.2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>691</td>
+<td>Use wp_dashboard_quick_press()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>704</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>704</td>
+<td>Use wp_editor()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>730</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>730</td>
+<td>Use wp_editor()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>739</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>739</td>
+<td>Use wp_editor()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>748</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>748</td>
+<td>Use wp_editor()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>75</td>
+<td>2.6.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>75</td>
+<td>Use wp_link_category_checklist()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>757</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>757</td>
+<td>Use $current_screen->render_screen_layout()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>778</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>778</td>
+<td>Use $current_screen->render_per_page_options()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>799</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>799</td>
+<td>Use $current_screen->render_screen_meta()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>812</td>
+<td>3.2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>862</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>862</td>
+<td>Use get_current_screen()->add_help_tab()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>884</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>884</td>
+<td>Use wp_get_themes()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>91</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>91</td>
+<td>Use wp_dropdown_categories()</td>
+</tr>
+</table></div>
+<a name="wp-admin%5Cincludes%5Cms-deprecated.php" id="wp-admin\includes\ms-deprecated.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\ms-deprecated.php<small style="float: right;padding-right: 10px;">6</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>12</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>20</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>33</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>41</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>50</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>59</td>
+<td>3.0.0</td>
+</tr>
+</table></div>
+<a name="wp-admin%5Cincludes%5Ctheme-install.php" id="wp-admin\includes\theme-install.php"></a><h3>
+<i class="icon-file"></i>wp-admin\includes\theme-install.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>132</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>22</td>
+<td>since 3.1.0 Use get_theme_feature_list() instead.</td>
+</tr>
+</table></div>
+<a name="wp-admin%5Cupgrade-functions.php" id="wp-admin\upgrade-functions.php"></a><h3>
+<i class="icon-file"></i>wp-admin\upgrade-functions.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>2.5</td>
+</tr>
+</table></div>
+<a name="wp-app.php" id="wp-app.php"></a><h3>
+<i class="icon-file"></i>wp-app.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>38</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>38</td>
+<td>Use error_log()</td>
+</tr>
+</table></div>
+<a name="wp-content%5Cthemes%5Ctwentyten%5Cfunctions.php" id="wp-content\themes\twentyten\functions.php"></a><h3>
+<i class="icon-file"></i>wp-content\themes\twentyten\functions.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>297</td>
+<td>Deprecated in Twenty Ten 1.2 for WordPress 3.1</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Cclass-wp-xmlrpc-server.php" id="wp-includes\class-wp-xmlrpc-server.php"></a><h3>
+<i class="icon-file"></i>wp-includes\class-wp-xmlrpc-server.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>160</td>
+<td>use wp_xmlrpc_server::login</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Cdeprecated.php" id="wp-includes\deprecated.php"></a><h3>
+<i class="icon-file"></i>wp-includes\deprecated.php<small style="float: right;padding-right: 10px;">249</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1029</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1029</td>
+<td>Use wp_list_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1075</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1075</td>
+<td>{@internal Use function instead is unknown}}</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1104</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1104</td>
+<td>Use sanitize_bookmark_field()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1118</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1118</td>
+<td>Use get_category()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1148</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1148</td>
+<td>Use post_comments_feed_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1163</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1163</td>
+<td>Use get_category_feed_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1185</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1185</td>
+<td>Use get_author_feed_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1206</td>
+<td>2.2</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1206</td>
+<td>Use get_post_comments_feed_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>121</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>121</td>
+<td>Use previous_post_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1221</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1221</td>
+<td>Use wp_create_user()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1239</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1249</td>
+<td>2.7</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1249</td>
+<td>Use get_comment()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1267</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1267</td>
+<td>Use get_cat_name()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1283</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1283</td>
+<td>Use get_term_children()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1321</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1321</td>
+<td>Use get_the_author_meta('description')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1336</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1336</td>
+<td>Use the_author_meta('description')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1349</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1349</td>
+<td>Use get_the_author_meta('login')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1364</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1364</td>
+<td>Use the_author_meta('login')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1377</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1377</td>
+<td>Use get_the_author_meta('first_name')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1392</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1392</td>
+<td>Use the_author_meta('first_name')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1405</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1405</td>
+<td>Use get_the_author_meta('last_name')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1420</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1420</td>
+<td>Use the_author_meta('last_name')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1433</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1433</td>
+<td>Use get_the_author_meta('nickname')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1448</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1448</td>
+<td>Use the_author_meta('nickname')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1461</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1461</td>
+<td>Use get_the_author_meta('email')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1476</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1476</td>
+<td>Use the_author_meta('email')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1489</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1489</td>
+<td>Use get_the_author_meta('icq')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>15</td>
+<td>1.5.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>15</td>
+<td>Use get_post()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1504</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1504</td>
+<td>Use the_author_meta('icq')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1517</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1517</td>
+<td>Use get_the_author_meta('yim')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1532</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1532</td>
+<td>Use the_author_meta('yim')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1545</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1545</td>
+<td>Use get_the_author_meta('msn')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1560</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1560</td>
+<td>Use the_author_meta('msn')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1573</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1573</td>
+<td>Use get_the_author_meta('aim')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>158</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>158</td>
+<td>Use next_post_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1588</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1588</td>
+<td>Use the_author_meta('aim')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1601</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1601</td>
+<td>Use get_the_author_meta('display_name')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1617</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1617</td>
+<td>Use get_the_author_meta('url')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1632</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1632</td>
+<td>Use the_author_meta('url')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1645</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1645</td>
+<td>Use get_the_author_meta('ID')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1660</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1660</td>
+<td>Use the_author_meta('ID')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1673</td>
+<td>2.9.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1673</td>
+<td>Use the_content_feed()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1741</td>
+<td>2.9.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1771</td>
+<td>2.9.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1771</td>
+<td>Use _x()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1798</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1798</td>
+<td>Use _x()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1817</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1817</td>
+<td>Use _nx()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1834</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1834</td>
+<td>Use _n()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1848</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1848</td>
+<td>Use _n_noop()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1863</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1863</td>
+<td>Use wp_load_alloptions())</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1878</td>
+<td>2.5.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1878</td>
+<td>Use wp_get_attachment_link()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1909</td>
+<td>2.5.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1909</td>
+<td>Use wp_get_attachment_image_src()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>194</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>194</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1953</td>
+<td>2.5.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1953</td>
+<td>Use wp_get_attachment_image()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2010</td>
+<td>2.5.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2010</td>
+<td>Use wp_get_attachment_image()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2037</td>
+<td>2.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2037</td>
+<td>Use get_bookmark()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2054</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2054</td>
+<td>Use esc_url_raw()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2071</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2071</td>
+<td>Use esc_url()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2096</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2096</td>
+<td>Use esc_js()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2114</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2114</td>
+<td>Use esc_html()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2131</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2131</td>
+<td>Use esc_attr()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>214</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>214</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2147</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2147</td>
+<td>Use wp_register_sidebar_widget()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2189</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2189</td>
+<td>Use wp_unregister_sidebar_widget()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2204</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2204</td>
+<td>Use wp_register_widget_control()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2248</td>
+<td>2.8.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2248</td>
+<td>Use wp_unregister_widget_control()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2263</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2263</td>
+<td>Use delete_user_meta()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2306</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2306</td>
+<td>Use get_user_meta()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>234</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>234</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2358</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2358</td>
+<td>Use update_user_meta()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2416</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2441</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2441</td>
+<td>Use add_theme_support( 'automatic-feed-links' )</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2459</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2459</td>
+<td>Use get_the_author_meta()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2476</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2476</td>
+<td>Use count_user_posts()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2489</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2503</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2529</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2529</td>
+<td>Use taxonomy_exists()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2545</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2545</td>
+<td>Use term_exists()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2563</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2563</td>
+<td>Use global $plugin_page and/or get_plugin_page_hookname() hooks.</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2585</td>
+<td>3.1.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2603</td>
+<td>3.2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2617</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2617</td>
+<td>Use wp_editor()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>263</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>263</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2638</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2669</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2706</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2748</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2764</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2779</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2791</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2822</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>283</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>283</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2834</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2855</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2855</td>
+<td>Use is_user_member_of_blog()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2872</td>
+<td>Use error_log()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2872</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2885</td>
+<td>Use error_log() instead.</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2885</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2899</td>
+<td>Use error_log()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2899</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2911</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2911</td>
+<td>Use wp_get_themes()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2946</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2946</td>
+<td>Use wp_get_theme()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2966</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2966</td>
+<td>Use (string) wp_get_theme()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2985</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3013</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3013</td>
+<td>Use add_theme_support('custom-header', $args)</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>303</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>303</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3036</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3036</td>
+<td>Use remove_theme_support('custom-header')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3051</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3051</td>
+<td>Use add_theme_support('custom-background, $args)</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3088</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3088</td>
+<td>Use wp_get_theme()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3125</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>3141</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>323</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>323</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>343</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>343</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>363</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>363</td>
+<td>Use current_user_can()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>386</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>386</td>
+<td>Use get_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>420</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>420</td>
+<td>Use wp_list_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>451</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>451</td>
+<td>Use get_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>484</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>484</td>
+<td>Use get_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>52</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>52</td>
+<td>Use The Loop - {@link http://codex.wordpress.org/The_Loop Use new WordPress Loop}</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>539</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>539</td>
+<td>Use get_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>567</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>567</td>
+<td>Use get_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>595</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>595</td>
+<td>No alternative function available</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>610</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>610</td>
+<td>Use wp_list_categories()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>646</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>646</td>
+<td>Use wp_list_categories()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>678</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>678</td>
+<td>Use wp_dropdown_categories()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>70</td>
+<td>0.71</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>70</td>
+<td>use get_the_category()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>715</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>715</td>
+<td>Use wp_list_authors()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>736</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>736</td>
+<td>Use wp_get_post_categories()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>751</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>751</td>
+<td>Use wp_set_post_categories()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>769</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>769</td>
+<td>Use wp_get_archives()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>789</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>789</td>
+<td>Use get_author_posts_url()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>812</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>812</td>
+<td>Use wp_link_pages()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>837</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>837</td>
+<td>Use get_option()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>854</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>854</td>
+<td>Use the_permalink()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>867</td>
+<td>2.3</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>867</td>
+<td>Use the_permalink_rss()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>882</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>882</td>
+<td>Use wp_list_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>923</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>923</td>
+<td>Use get_bookmarks()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>94</td>
+<td>0.71</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>94</td>
+<td>use get_the_category_by_ID()</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Cfunctions.php" id="wp-includes\functions.php"></a><h3>
+<i class="icon-file"></i>wp-includes\functions.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1845</td>
+<td>3.4.1</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1845</td>
+<td>Use wp_nonce_ays()</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Clocale.php" id="wp-includes\locale.php"></a><h3>
+<i class="icon-file"></i>wp-includes\locale.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>291</td>
+<td>For backwards compatibility only.</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Cms-deprecated.php" id="wp-includes\ms-deprecated.php"></a><h3>
+<i class="icon-file"></i>wp-includes\ms-deprecated.php<small style="float: right;padding-right: 10px;">22</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>109</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>109</td>
+<td>Use clean_post_cache()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>119</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>119</td>
+<td>Use is_main_site()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>130</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>130</td>
+<td>Use is_email()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>141</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>141</td>
+<td>No alternative available. For performance reasons this function is not recommended.</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>16</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>16</td>
+<td>Use wp_generate_password()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>168</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>168</td>
+<td>No alternative available. For performance reasons this function is not recommended.</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>204</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>204</td>
+<td>Use wp_redirect()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>252</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>252</td>
+<td>Use add_query_arg()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>27</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>27</td>
+<td>Use is_super_admin()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>61</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>61</td>
+<td>Use wp_die()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>98</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>98</td>
+<td>Use get_user_by()</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Cms-functions.php" id="wp-includes\ms-functions.php"></a><h3>
+<i class="icon-file"></i>wp-includes\ms-functions.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1170</td>
+<td>MU</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>1170</td>
+<td>Use wp_install_defaults()</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Cpluggable-deprecated.php" id="wp-includes\pluggable-deprecated.php"></a><h3>
+<i class="icon-file"></i>wp-includes\pluggable-deprecated.php<small style="float: right;padding-right: 10px;">13</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>116</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>116</td>
+<td>No alternative</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>137</td>
+<td>Use wp_signon()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>19</td>
+<td>3.0.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>19</td>
+<td>Use wp_set_current_user()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>40</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>40</td>
+<td>Use get_user_by('login')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>57</td>
+<td>3.3.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>57</td>
+<td>Use get_user_by('email')</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>74</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>74</td>
+<td>Use wp_set_auth_cookie()</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>99</td>
+<td>2.5</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>99</td>
+<td>Use wp_clear_auth_cookie()</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Ctheme-compat%5Ccomments-popup.php" id="wp-includes\theme-compat\comments-popup.php"></a><h3>
+<i class="icon-file"></i>wp-includes\theme-compat\comments-popup.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>3.0
+This file is here for Backwards compatibility with old themes and will be removed in a future version</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Ctheme-compat%5Ccomments.php" id="wp-includes\theme-compat\comments.php"></a><h3>
+<i class="icon-file"></i>wp-includes\theme-compat\comments.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>3.0
+This file is here for Backwards compatibility with old themes and will be removed in a future version</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Ctheme-compat%5Cfooter.php" id="wp-includes\theme-compat\footer.php"></a><h3>
+<i class="icon-file"></i>wp-includes\theme-compat\footer.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>3.0
+This file is here for Backwards compatibility with old themes and will be removed in a future version</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Ctheme-compat%5Cheader.php" id="wp-includes\theme-compat\header.php"></a><h3>
+<i class="icon-file"></i>wp-includes\theme-compat\header.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>3.0
+This file is here for Backwards compatibility with old themes and will be removed in a future version</td>
+</tr>
+</table></div>
+<a name="wp-includes%5Ctheme-compat%5Csidebar.php" id="wp-includes\theme-compat\sidebar.php"></a><h3>
+<i class="icon-file"></i>wp-includes\theme-compat\sidebar.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>2</td>
+<td>3.0
+This file is here for Backwards compatibility with old themes and will be removed in a future version</td>
+</tr>
+</table></div>
+<a name="xmlrpc.php" id="xmlrpc.php"></a><h3>
+<i class="icon-file"></i>xmlrpc.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>73</td>
+<td>3.4.0</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>73</td>
+<td>Use error_log()</td>
+</tr>
+</table></div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:25:21-05:00.<br></footer></div>
+</div>
+</body>
+</html>

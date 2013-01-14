@@ -1,0 +1,741 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>all wordpress » WordPress\Cache</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">all wordpress</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Akismet.html"><i class="icon-folder-open"></i> Akismet</a></li>
+<li><a href="../packages/AtomLib.html"><i class="icon-folder-open"></i> AtomLib</a></li>
+<li><a href="../packages/BackPress.html"><i class="icon-folder-open"></i> BackPress</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/External.html"><i class="icon-folder-open"></i> External</a></li>
+<li><a href="../packages/IXR.html"><i class="icon-folder-open"></i> IXR</a></li>
+<li><a href="../packages/MCManager.html"><i class="icon-folder-open"></i> MCManager</a></li>
+<li><a href="../packages/PHP.html"><i class="icon-folder-open"></i> PHP</a></li>
+<li><a href="../packages/PHPMailer.html"><i class="icon-folder-open"></i> PHPMailer</a></li>
+<li><a href="../packages/PemFTP.html"><i class="icon-folder-open"></i> PemFTP</a></li>
+<li><a href="../packages/SimplePie.html"><i class="icon-folder-open"></i> SimplePie</a></li>
+<li><a href="../packages/Text.html"><i class="icon-folder-open"></i> Text</a></li>
+<li><a href="../packages/WordPress.html"><i class="icon-folder-open"></i> WordPress</a></li>
+<li><a href="../packages/phpass.html"><i class="icon-folder-open"></i> phpass</a></li>
+<li><a href="../packages/plugins.html"><i class="icon-folder-open"></i> plugins</a></li>
+<li><a href="../packages/pomo.html"><i class="icon-folder-open"></i> pomo</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">2772</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul>
+<li>todo 
+                <span class="label label-info">57</span>
+</li>
+<li>fixme 
+                <span class="label label-info">4</span>
+</li>
+</ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">360</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/WordPress.Cache.html" title="Cache"><i class="icon-folder-open"></i>Cache</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#function_clean_attachment_cache" title="clean_attachment_cache :: Will clean the attachment in the cache."><span class="description">Will clean the attachment in the cache.</span><pre>clean_attachment_cache</pre></a></li>
+<li class="function  "><a href="#function_clean_comment_cache" title="clean_comment_cache :: Removes comment ID from the comment cache."><span class="description">Removes comment ID from the comment cache.</span><pre>clean_comment_cache</pre></a></li>
+<li class="function  "><a href="#function_clean_post_cache" title="clean_post_cache :: Will clean the post in the cache."><span class="description">Will clean the post in the cache.</span><pre>clean_post_cache</pre></a></li>
+<li class="function  "><a href="#function_update_comment_cache" title="update_comment_cache :: Updates the comment cache of given comments."><span class="description">Updates the comment cache of given comments.</span><pre>update_comment_cache</pre></a></li>
+<li class="function  "><a href="#function_update_post_cache" title="update_post_cache :: Updates posts in cache."><span class="description">Updates posts in cache.</span><pre>update_post_cache</pre></a></li>
+<li class="function  "><a href="#function_update_post_caches" title="update_post_caches :: Call major cache updating functions for list of Post objects."><span class="description">Call major cache updating functions for list of Post objects.</span><pre>update_post_caches</pre></a></li>
+<li class="function  "><a href="#function_update_postmeta_cache" title="update_postmeta_cache :: Updates metadata cache for list of post IDs."><span class="description">Updates metadata cache for list of post IDs.</span><pre>update_postmeta_cache</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_add" title="wp_cache_add :: Adds data to the cache, if the cache key doesn't already exist."><span class="description">Adds data to the cache, if the cache key doesn't already exist.</span><pre>wp_cache_add</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_add_global_groups" title="wp_cache_add_global_groups :: Adds a group or set of groups to the list of global groups."><span class="description">Adds a group or set of groups to the list of global groups.</span><pre>wp_cache_add_global_groups</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_add_non_persistent_groups" title="wp_cache_add_non_persistent_groups :: Adds a group or set of groups to the list of non-persistent groups."><span class="description">Adds a group or set of groups to the list of non-persistent groups.</span><pre>wp_cache_add_non_persistent_groups</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_close" title="wp_cache_close :: Closes the cache."><span class="description">Closes the cache.</span><pre>wp_cache_close</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_decr" title="wp_cache_decr :: Decrement numeric cache item's value"><span class="description">Decrement numeric cache item's value</span><pre>wp_cache_decr</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_delete" title="wp_cache_delete :: Removes the cache contents matching key and group."><span class="description">Removes the cache contents matching key and group.</span><pre>wp_cache_delete</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_flush" title="wp_cache_flush :: Removes all cache items."><span class="description">Removes all cache items.</span><pre>wp_cache_flush</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_get" title="wp_cache_get :: Retrieves the cache contents from the cache by key and group."><span class="description">Retrieves the cache contents from the cache by key and group.</span><pre>wp_cache_get</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_incr" title="wp_cache_incr :: Increment numeric cache item's value"><span class="description">Increment numeric cache item's value</span><pre>wp_cache_incr</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_init" title="wp_cache_init :: Sets up Object Cache Global and assigns it."><span class="description">Sets up Object Cache Global and assigns it.</span><pre>wp_cache_init</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_replace" title="wp_cache_replace :: Replaces the contents of the cache with new data."><span class="description">Replaces the contents of the cache with new data.</span><pre>wp_cache_replace</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_reset" title="wp_cache_reset :: Reset internal cache keys and structures."><span class="description">Reset internal cache keys and structures.</span><pre>wp_cache_reset</pre></a></li>
+<li class="function  "><a href="#function_wp_cache_set" title="wp_cache_set :: Saves the data to the cache."><span class="description">Saves the data to the cache.</span><pre>wp_cache_set</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#WP_Object_Cache" title="WordPress Object Cache">WP_Object_Cache</a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/WordPress.html">WordPress</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../packages/WordPress.Cache.html">Cache</a>
+</li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a id="function_clean_attachment_cache"></a><div class="element clickable function  function_clean_attachment_cache" data-toggle="collapse" data-target=".function_clean_attachment_cache .collapse">
+<h2>Will clean the attachment in the cache.</h2>
+<pre>clean_attachment_cache(int $id, bool $clean_terms) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Cleaning means delete from the cache. Optionally will clean the term
+object cache associated with the attachment ID.</p>
+
+<p>This function will not run if $_wp_suspend_cache_invalidation is not empty. See
+wp_suspend_cache_invalidation().</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+<tr>
+<th>since</th>
+<td>3.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>int</code><p>The attachment ID in the cache to clean</p></div>
+<div class="subelement argument">
+<h4>$clean_terms</h4>
+<code>bool</code><p>optional. Whether to clean terms cache</p></div>
+</div></div>
+</div>
+<a id="function_clean_comment_cache"></a><div class="element clickable function  function_clean_comment_cache" data-toggle="collapse" data-target=".function_clean_comment_cache .collapse">
+<h2>Removes comment ID from the comment cache.</h2>
+<pre>clean_comment_cache(int | array $ids) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$ids</h4>
+<code>int</code><code>array</code><p>Comment ID or array of comment IDs to remove from cache</p></div>
+</div></div>
+</div>
+<a id="function_clean_post_cache"></a><div class="element clickable function  function_clean_post_cache" data-toggle="collapse" data-target=".function_clean_post_cache .collapse">
+<h2>Will clean the post in the cache.</h2>
+<pre>clean_post_cache(object | int $post) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Cleaning means delete from the cache of the post. Will call to clean the term
+object cache associated with the post ID.</p>
+
+<p>clean_post_cache() will call itself recursively for each child post.</p>
+
+<p>This function not run if $_wp_suspend_cache_invalidation is not empty. See
+wp_suspend_cache_invalidation().</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\do_action()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post</h4>
+<code>object</code><code>int</code><p>The post object or ID to remove from the cache</p></div>
+</div></div>
+</div>
+<a id="function_update_comment_cache"></a><div class="element clickable function  function_update_comment_cache" data-toggle="collapse" data-target=".function_update_comment_cache .collapse">
+<h2>Updates the comment cache of given comments.</h2>
+<pre>update_comment_cache(array $comments) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Will add the comments in $comments to the cache. If comment ID already exists
+in the comment cache then it will not be updated. The comment is added to the
+cache using the comment group with the key using the ID of the comments.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.3.0</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$comments</h4>
+<code>array</code><p>Array of comment row objects</p></div>
+</div></div>
+</div>
+<a id="function_update_post_cache"></a><div class="element clickable function  function_update_post_cache" data-toggle="collapse" data-target=".function_update_post_cache .collapse">
+<h2>Updates posts in cache.</h2>
+<pre>update_post_cache(array $posts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.1</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$posts</h4>
+<code>array</code><p>Array of post objects</p></div>
+</div></div>
+</div>
+<a id="function_update_post_caches"></a><div class="element clickable function  function_update_post_caches" data-toggle="collapse" data-target=".function_update_post_caches .collapse">
+<h2>Call major cache updating functions for list of Post objects.</h2>
+<pre>update_post_caches(array $posts, string $post_type, bool $update_term_cache, bool $update_meta_cache) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.5.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\update_post_cache()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\update_object_term_cache()</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\update_postmeta_cache()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$posts</h4>
+<code>array</code><p>Array of Post objects</p></div>
+<div class="subelement argument">
+<h4>$post_type</h4>
+<code>string</code><p>The post type of the posts in $posts. Default is 'post'.</p>
+</div>
+<div class="subelement argument">
+<h4>$update_term_cache</h4>
+<code>bool</code><p>Whether to update the term cache. Default is true.</p></div>
+<div class="subelement argument">
+<h4>$update_meta_cache</h4>
+<code>bool</code><p>Whether to update the meta cache. Default is true.</p></div>
+</div></div>
+</div>
+<a id="function_update_postmeta_cache"></a><div class="element clickable function  function_update_postmeta_cache" data-toggle="collapse" data-target=".function_update_postmeta_cache .collapse">
+<h2>Updates metadata cache for list of post IDs.</h2>
+<pre>update_postmeta_cache(array $post_ids) : bool | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Performs SQL query to retrieve the metadata for the post IDs and updates the
+metadata cache for the posts. Therefore, the functions, which call this
+function, do not need to perform SQL queries on their own.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/WordPress.Cache.html">WordPress</a></td>
+</tr>
+<tr>
+<th>subpackage</th>
+<td>Cache</td>
+</tr>
+<tr>
+<th>since</th>
+<td>2.1.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wpdb</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$post_ids</h4>
+<code>array</code><p>List of post IDs.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>array</code>Returns false if there is nothing to update or an array of metadata.</div>
+</div></div>
+</div>
+<a id="function_wp_cache_add"></a><div class="element clickable function  function_wp_cache_add" data-toggle="collapse" data-target=".function_wp_cache_add .collapse">
+<h2>Adds data to the cache, if the cache key doesn't already exist.</h2>
+<pre>wp_cache_add(int | string $key, mixed $data, string $group, int $expire) : \unknown</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::add()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>The cache key to use for retrieval later</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code><p>The data to add to the cache store</p></div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>The group to add the cache to</p></div>
+<div class="subelement argument">
+<h4>$expire</h4>
+<code>int</code><p>When the cache data should be expired</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\unknown</code></div>
+</div></div>
+</div>
+<a id="function_wp_cache_add_global_groups"></a><div class="element clickable function  function_wp_cache_add_global_groups" data-toggle="collapse" data-target=".function_wp_cache_add_global_groups .collapse">
+<h2>Adds a group or set of groups to the list of global groups.</h2>
+<pre>wp_cache_add_global_groups(string | array $groups) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groups</h4>
+<code>string</code><code>array</code><p>A group or an array of groups to add</p></div>
+</div></div>
+</div>
+<a id="function_wp_cache_add_non_persistent_groups"></a><div class="element clickable function  function_wp_cache_add_non_persistent_groups" data-toggle="collapse" data-target=".function_wp_cache_add_non_persistent_groups .collapse">
+<h2>Adds a group or set of groups to the list of non-persistent groups.</h2>
+<pre>wp_cache_add_non_persistent_groups(string | array $groups) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$groups</h4>
+<code>string</code><code>array</code><p>A group or an array of groups to add</p></div>
+</div></div>
+</div>
+<a id="function_wp_cache_close"></a><div class="element clickable function  function_wp_cache_close" data-toggle="collapse" data-target=".function_wp_cache_close .collapse">
+<h2>Closes the cache.</h2>
+<pre>wp_cache_close() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This function has ceased to do anything since WordPress 2.5. The
+functionality was removed along with the rest of the persistent cache. This
+does not mean that plugins can't implement this function when they need to
+make sure that the cache is cleaned up after WordPress no longer needs it.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Always returns True</div>
+</div></div>
+</div>
+<a id="function_wp_cache_decr"></a><div class="element clickable function  function_wp_cache_decr" data-toggle="collapse" data-target=".function_wp_cache_decr .collapse">
+<h2>Decrement numeric cache item's value</h2>
+<pre>wp_cache_decr(int | string $key, int $offset, string $group) : false | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::decr()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>The cache key to increment</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code><p>The amount by which to decrement the item's value. Default is 1.</p>
+</div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>The group the key is in.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>false</code><code>int</code>False on failure, the item's new value on success.</div>
+</div></div>
+</div>
+<a id="function_wp_cache_delete"></a><div class="element clickable function  function_wp_cache_delete" data-toggle="collapse" data-target=".function_wp_cache_delete .collapse">
+<h2>Removes the cache contents matching key and group.</h2>
+<pre>wp_cache_delete(int | string $key, string $group) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::delete()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>What the contents in the cache are called</p></div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>Where the cache contents are grouped</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>True on successful removal, false on failure</div>
+</div></div>
+</div>
+<a id="function_wp_cache_flush"></a><div class="element clickable function  function_wp_cache_flush" data-toggle="collapse" data-target=".function_wp_cache_flush .collapse">
+<h2>Removes all cache items.</h2>
+<pre>wp_cache_flush() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::flush()</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>Always returns true</div>
+</div></div>
+</div>
+<a id="function_wp_cache_get"></a><div class="element clickable function  function_wp_cache_get" data-toggle="collapse" data-target=".function_wp_cache_get .collapse">
+<h2>Retrieves the cache contents from the cache by key and group.</h2>
+<pre>wp_cache_get(int | string $key, string $group, bool $force, \bool $found) : bool | mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::get()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>What the contents in the cache are called</p></div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>Where the cache contents are grouped</p></div>
+<div class="subelement argument">
+<h4>$force</h4>
+<code>bool</code><p>Whether to force an update of the local cache from the persistent cache (default is false)</p>
+</div>
+<div class="subelement argument">
+<h4>$found</h4>
+<code>\bool</code><p>Whether key was found in the cache. Disambiguates a return of false, a storable value.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>mixed</code>False on failure to retrieve contents or the cache
+	contents on success</div>
+</div></div>
+</div>
+<a id="function_wp_cache_incr"></a><div class="element clickable function  function_wp_cache_incr" data-toggle="collapse" data-target=".function_wp_cache_incr .collapse">
+<h2>Increment numeric cache item's value</h2>
+<pre>wp_cache_incr(int | string $key, int $offset, string $group) : false | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>3.3.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::incr()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>The cache key to increment</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code><p>The amount by which to increment the item's value. Default is 1.</p>
+</div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>The group the key is in.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>false</code><code>int</code>False on failure, the item's new value on success.</div>
+</div></div>
+</div>
+<a id="function_wp_cache_init"></a><div class="element clickable function  function_wp_cache_init" data-toggle="collapse" data-target=".function_wp_cache_init .collapse">
+<h2>Sets up Object Cache Global and assigns it.</h2>
+<pre>wp_cache_init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>global</th>
+<td>WP_Object_Cache $wp_object_cache WordPress Object Cache</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="function_wp_cache_replace"></a><div class="element clickable function  function_wp_cache_replace" data-toggle="collapse" data-target=".function_wp_cache_replace .collapse">
+<h2>Replaces the contents of the cache with new data.</h2>
+<pre>wp_cache_replace(int | string $key, mixed $data, string $group, int $expire) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::replace()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>What to call the contents in the cache</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code><p>The contents to store in the cache</p></div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>Where to group the cache contents</p></div>
+<div class="subelement argument">
+<h4>$expire</h4>
+<code>int</code><p>When to expire the cache contents</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False if cache key and group already exist, true on success</div>
+</div></div>
+</div>
+<a id="function_wp_cache_reset"></a><div class="element clickable function  function_wp_cache_reset" data-toggle="collapse" data-target=".function_wp_cache_reset .collapse">
+<h2>Reset internal cache keys and structures.</h2>
+<pre>wp_cache_reset() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the cache backend uses global blog or site IDs as part of its cache keys,
+this function instructs the backend to reset those keys and perform any cleanup since blog or site IDs have changed since cache init.</p></div>
+<table class="table table-bordered"><tr>
+<th>since</th>
+<td>2.6.0</td>
+</tr></table>
+</div></div>
+</div>
+<a id="function_wp_cache_set"></a><div class="element clickable function  function_wp_cache_set" data-toggle="collapse" data-target=".function_wp_cache_set .collapse">
+<h2>Saves the data to the cache.</h2>
+<pre>wp_cache_set(int | string $key, mixed $data, string $group, int $expire) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>since</th>
+<td>2.0</td>
+</tr>
+<tr>
+<th>uses</th>
+<td>\global\$wp_object_cache</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="">\global\WP_Object_Cache::set()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>int</code><code>string</code><p>What to call the contents in the cache</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code><p>The contents to store in the cache</p></div>
+<div class="subelement argument">
+<h4>$group</h4>
+<code>string</code><p>Where to group the cache contents</p></div>
+<div class="subelement argument">
+<h4>$expire</h4>
+<code>int</code><p>When to expire the cache contents</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>False if cache key and group already exist, true on success</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="WP_Object_Cache" class="element ajax clickable class">
+<h1>WP_Object_Cache<a href="../classes/WP_Object_Cache.html">¶</a>
+</h1>
+<p class="short_description">WordPress Object Cache</p>
+<div class="details collapse"></div>
+<a href="../classes/WP_Object_Cache.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2013-01-14T15:24:48-05:00.<br></footer></div>
+</div>
+</body>
+</html>
