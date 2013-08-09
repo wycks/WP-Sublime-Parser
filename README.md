@@ -1,6 +1,7 @@
 WordDoc
 =======
 
-PHP Documentor2 on WordPress
+WordPress Version 3.6   - Hooks and functions
 
-Is here: http://wycks.github.com/WordDoc/index.html
+Hooks: http://wycks.github.com/WordDoc/index.html
+Functions http://wycks.github.com/WordDoc/index.html
