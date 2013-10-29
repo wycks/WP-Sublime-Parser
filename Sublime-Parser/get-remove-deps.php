@@ -7,10 +7,6 @@ $good = file('wp-functions.json');
 $bad = file('wp-deprected.json');
 
 $output = array_diff($good, $bad);
-
-//var_dump($output);
-
-
-file_put_contents('WP-Functions-Completions.sublime-completions', implode($output));	
+file_put_contents('WP-Functions-Completions.sublime-completions', implode($output));
 
 ?>

@@ -7,9 +7,7 @@
 	$classes = get_declared_classes();
 
 	foreach ($classes as $key) {
-
 		echo '"' . $key . '",<br>';
-		# code...
 	}
 
 ?>
